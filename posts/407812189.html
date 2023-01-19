@@ -281,308 +281,224 @@ mjx-container[display="true"] + br {
             <div class="main-content">
 
                 
-                    $avatarWidth = 3rem
-$arrow-icon-width = 1rem
-$post-nav-max-width = 14rem
-$article-title-font-size = 1.6rem
-$toc-container-width = 15rem
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
 
+            <div class="article-title">
+                <span class="title-hover-animation">测试文档</span>
+            </div>
 
-.post-page-container {
-  position relative
-  display flex
-  justify-content space-between
-  box-sizing border-box
-  width 100%
-  height 100%
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/tou.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">huaziqi</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-01-19 22:44:32</span>
+        <span class="mobile">2023-01-19 22:44</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-01-19 22:44:42</span>
+    </span>
+    
+    
+    
 
+    
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
 
-  &.show-toc {
-    .toc-content-container {
-      display block
-    }
+                        </div>
+                    </div>
+                </div>
+            
 
-    .article-content-container {
-      width 'calc(100% - %s)' % $toc-container-width
-    }
-  }
+            <div class="article-content keep-markdown-body">
+                
 
+                
+            </div>
 
-  +keep-tablet() {
-    .toc-content-container {
-      display none !important
-    }
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">Post title</span>: <span class="content">测试文档</span>
+        </li>
+        <li class="post-author">
+            <span class="type">Post author</span>: <span class="content">huaziqi</span>
+        </li>
+        <li class="post-time">
+            <span class="type">Create time</span>: <span class="content">2023-01-19 22:44:32</span>
+        </li>
+        <li class="post-link">
+            <span class="type">Post link</span>: <span class="content">posts/407812189.html</span>
+        </li>
+        <li class="post-license">
+            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
 
-    .article-content-container {
-      width 100% !important
-    }
-  }
+                </div>
+            
 
+            
 
-  .article-content-container {
-    position relative
-    box-sizing border-box
-    width 100%
-    height 100%
-    keep-container(false, 0, 0, 2rem, 2rem)
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/posts/4191647622.html"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Hello-hexo -- hexo + github部署教程</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
 
-    +keep-mobile() {
-      padding 1.2rem 0.2rem
-      box-shadow none
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
 
-      &:hover {
-        box-shadow none
-      }
-    }
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
 
-
-    .article-title {
-      color var(--text-color-2)
-      font-weight 600
-      font-size $article-title-font-size
-
-      +keep-tablet() {
-        font-size $article-title-font-size * 0.9
-      }
-
-      +keep-mobile() {
-        font-size $article-title-font-size * 0.8
-      }
-    }
-
-
-    .article-header {
-      position relative
-      box-sizing border-box
-      width 100%
-      height $avatarWidth
-      padding-left $avatarWidth
-
-      .avatar {
-        position absolute
-        top 0
-        left 0
-        box-sizing border-box
-        width $avatarWidth
-        height $avatarWidth
-        padding 0.1rem
-        border 1px solid var(--border-color)
-        border-radius 50%
-
-        img {
-          width 100%
-          height 100%
-          background var(--avatar-background-color)
-          border-radius 50%
-        }
-      }
-
-
-      .info {
-        display flex
-        flex-direction column
-        justify-content space-between
-        box-sizing border-box
-        width 100%
-        height 100%
-        margin-left 0.8rem
-        padding 0.2rem 0
-
-        .author {
-          display flex
-          align-items center
-          font-weight 600
-          font-size 1.18rem
-
-          .name {
-            color var(--text-color-3)
-          }
-
-          .author-label {
-            margin-left 0.8rem
-            padding 0 0.4rem
-            color #fff
-            font-weight 500
-            font-size 0.8rem
-            background var(--selection-color)
-            border-radius 0.4rem
-          }
-        }
-      }
-    }
-
-
-    .article-header
-    .article-header-meta-info {
-      margin-top 1rem
-      +keep-tablet() {
-        transform scale(0.9)
-        transform-origin left top
-      }
-    }
-
-
-    .article-content {
-      margin-top $component-spacing-value
-      padding-bottom 2rem
-      color var(--text-color-3)
-      word-wrap break-word
-
-      .article-aging-tips {
-        position relative
-        display none
-        box-sizing border-box
-        margin-bottom 1.8rem
-        padding 1rem
-        color var(--article-aging-tips-color)
-        line-height 1.6
-        background var(--article-aging-tips-background-color)
-        border 0.1rem solid var(--article-aging-tips-border-color)
-        border-radius 0.4rem
-
-        i {
-          margin-right 0.4rem
-          color var(--article-aging-tips-color)
-        }
-
-        .days {
-          color var(--article-aging-tips-color)
-        }
-      }
-
-      if (hexo-config('post.copyright_info') == true || hexo-config('copyright_info.enable') == true) {
-        border-bottom 0.1rem dashed var(--border-color)
-      }
-    }
-
-
-    .post-tags-box {
-      display none
-      justify-content center
-      margin-top 1.6rem
-      font-size 1.1rem
-
-      +keep-tablet() {
-        display flex
-      }
-
-      +keep-mobile() {
-        margin-top 1.2rem
-        font-size 1rem
-      }
-
-
-      .tag-item {
-        margin 0 0.25rem
-      }
-    }
-
-
-    .post-copyright-info {
-      width 100%
-      margin-top $component-spacing-value
-
-      +keep-tablet() {
-        margin-top $component-spacing-value * 0.8
-      }
-    }
-
-
-    .article-nav {
-      height 2.8rem
-      margin-top $component-spacing-value
-
-      .article-prev
-      .article-next {
-        box-sizing border-box
-        max-width $post-nav-max-width
-        height 100%
-
-        keep-container(true, 1.03, 1.03, 0.8rem, 0)
-
-        a {
-          position relative
-          display block
-          box-sizing border-box
-          width 100%
-          height 100%
-
-          &.prev {
-            padding-left $arrow-icon-width
-          }
-
-          &.next {
-            padding-right $arrow-icon-width
-          }
-
-          .arrow-icon {
-            position absolute
-            top 0
-            width $arrow-icon-width
-            height 100%
-
-            &.left {
-              left 0
+            const config = {
+              el: '#vcomments',
+              appId: 'i4j8h2suZ3CImXMgr0dXDuSj-gzGzoHsz',
+              appKey: 'GRtU447Qe12VTivCtzxwZWDi',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '随便说点什么吧',
+              lang: 'en'.toLowerCase()
             }
 
-            &.right {
-              right 0
+            if ('') {
+              config.serverURLs = ''
             }
+
+            new Valine(config)
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'huaziqi'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
           }
 
-          .title {
-            width 100%
-            height 100%
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
           }
-        }
-      }
-
-      .article-prev {
-        float left
-      }
-
-      .article-next {
-        float right
-      }
-
-      .post-nav-item {
-        display none
-
-        +keep-tablet() {
-          display inline-block
-        }
-      }
+        </script>
+    </div>
 
 
-      .post-nav-title-item {
-        overflow hidden
-        white-space nowrap
-        text-overflow ellipsis
 
-        +keep-tablet() {
-          display none
-        }
-      }
-    }
-  }
+        
+    
+</div>
 
+                </div>
+            
+        </div>
 
-  .toc-content-container {
-    position sticky
-    top $header-height + $component-spacing-value
-    display none
-    box-sizing border-box
-    width $toc-container-width
-    max-height 'calc(100vh - %s)' % ($header-height + $component-spacing-value)
-    padding 2rem 0 2rem 1.4rem
-    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        
+    </div>
+</div>
 
-    .header-shrink & {
-      top $header-shrink-height + $component-spacing-value
-      max-height 'calc(100vh - %s)' % ($header-shrink-height + $component-spacing-value)
-    }
-  }
-}
+            </div>
+        
+    </div>
+</div>
 
 
                 

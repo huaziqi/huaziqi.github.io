@@ -281,308 +281,444 @@ mjx-container[display="true"] + br {
             <div class="main-content">
 
                 
-                    $avatarWidth = 3rem
-$arrow-icon-width = 1rem
-$post-nav-max-width = 14rem
-$article-title-font-size = 1.6rem
-$toc-container-width = 15rem
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
 
+            <div class="article-title">
+                <span class="title-hover-animation">Hello-hexo -- hexo + github部署教程</span>
+            </div>
 
-.post-page-container {
-  position relative
-  display flex
-  justify-content space-between
-  box-sizing border-box
-  width 100%
-  height 100%
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/tou.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">huaziqi</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-01-19 11:51:26</span>
+        <span class="mobile">2023-01-19 11:51</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-01-19 22:10:41</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%85%B6%E4%BB%96/">其他</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/hexo/">hexo</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
 
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.4k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>9 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
 
-  &.show-toc {
-    .toc-content-container {
-      display block
-    }
+                        </div>
+                    </div>
+                </div>
+            
 
-    .article-content-container {
-      width 'calc(100% - %s)' % $toc-container-width
-    }
-  }
+            <div class="article-content keep-markdown-body">
+                
 
+                <h1 id="hello-hexo-hexo-github部署教程"><a class="markdownIt-Anchor" href="#hello-hexo-hexo-github部署教程"></a> Hello hexo！—— hexo + github部署教程</h1>
+<p>前前后后搭了有两三天，终于算是搭好了。</p>
+<p>写一写搭建过程，搭建方法，遇到的问题……反正这篇博客成分复杂</p>
+<ul>
+<li>对历程不感兴趣的可以直接跳到搭建方法</li>
+</ul>
+<h2 id="搭建历程"><a class="markdownIt-Anchor" href="#搭建历程"></a> 搭建历程</h2>
+<p>开始有搭建的想法大约是高一下学期，那个时候接触了一些技术博客，并尝试着自己写博客。在感受到写博客的快乐与美好之后，搭建一个个人博客网站的想法被一个视频引起。</p>
+<h3 id="第一个想法"><a class="markdownIt-Anchor" href="#第一个想法"></a> 第一个想法</h3>
+<p>是一个知乎的视频，它具体教授了如何使用hexo与github pages 搭建博客。可惜我当时对于github完全没有接触，更不知道如何去使用。那个视频中还使用vim来编辑配置文件，当时我看的是一脸懵逼：他是如何保存那个文件的？ctrl s？不是，于是我在视频底下问他，却迟迟没有得到回复。第一次博客搭建计划失败</p>
+<h3 id="money"><a class="markdownIt-Anchor" href="#money"></a> money</h3>
+<p>在之后，我接触了其他的搭建博客的方法，例如WordPress。然而使用WordPress需要自己去买域名（一年30~50）和服务器（一年100往上）。当时还在学校，资金没有来源，何况这也不是一笔小数目。那个时候在csdn还是博客园上写博客（先是在CSDN，但是由于它不可美化且页面广告太多，也不美观，就转去了博客园）也就安于现状了。</p>
+<p>这期间学会了如何使用github，Markdown等工具，美化了自己的博客园，算是为之后做铺垫。</p>
+<h3 id="vim"><a class="markdownIt-Anchor" href="#vim"></a> vim</h3>
+<p>高二下学期，经过互联网上各路网友的推荐，我去学习了vim，对于它的各种快捷键略知一二了。然而使用起来还是不习惯，平时就没有过多使用。但是我终于知道了vim编辑器的保存方式是 <code>:wq</code>，于是兴冲冲地再去尝试，却被卡在了最后一步<code>hexo d</code>， 怎么都无法上传，网上找了各种方法~~（其实就两种）~~也没用。再一次失败了……</p>
+<h3 id="转机"><a class="markdownIt-Anchor" href="#转机"></a> 转机</h3>
+<p>昨天，我再一次尝试搭建博客。<s>这一次，我不能输！</s></p>
+<p>既然github不行，那就用gitee。于是找了网上hexo + gitee的教程。不同于之前github的教程的是，之前用的是repo，而这次使用的是ssh。碰巧看到一个视频就是讲之前的hexo博客搭建实际上已经过时了。</p>
+<p>考虑到gitee是国内网站，访问速度快，github访问不太稳定，于是想要使用gitee pages，可没想到，gitee居然还要实名认证：），实名时间还要1到2个工作日，我寻思有那么多人实名吗，我在博客园申请json权限，5分钟就通过了。更何况实名似乎根本就没有意义，国内的网站、软件环境都是这样，你就这么怕我们说什么东西吗？？</p>
+<p>还有为什么国内每个稍微大一点的网站都要手机号验证？真的蚌埠住，就这么不喜欢邮箱？邮箱不是都绑定过手机号了吗？</p>
+<p>于是转用了github，访问的问题是使用了netlify免费代理。</p>
+<h2 id="搭建方法"><a class="markdownIt-Anchor" href="#搭建方法"></a> 搭建方法</h2>
+<p>以下命令均在cmd(windows)/控制台(mac)使用</p>
+<h3 id="本地hexo环境搭建"><a class="markdownIt-Anchor" href="#本地hexo环境搭建"></a> 本地hexo环境搭建</h3>
+<ul>
+<li>首先下载<a class="link" target="_blank" rel="noopener" href="https://git-scm.com/downloads">git<i class="fas fa-external-link-alt"></i></a>与<a class="link" target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">node<i class="fas fa-external-link-alt"></i></a>（文字上有超链接）</li>
+</ul>
+<p>使用<code>git --version</code>检查git是否安装</p>
+<p>使用<code>node -v</code>检查node是否安装</p>
+<ul>
+<li>之后使用node安装hexo：</li>
+</ul>
+<p>输入 <code>npm install hexo-cli - g</code> 安装hexo</p>
+<h3 id="开始搭建hexo"><a class="markdownIt-Anchor" href="#开始搭建hexo"></a> 开始搭建hexo</h3>
+<p><code>hexo init 文件夹名称（随你写）</code></p>
+<p>比如<code>hexo init huaziqi</code>，就会创建一个叫”huaziqi“的文件夹，该文件夹保存在根目录，找不到可以用计算机搜索功能找一下。</p>
+<p>之后输入<code>cd 你的文件名（你刚刚创建的那个）</code></p>
+<blockquote>
+<p><code>cd 文件夹</code>的意思就是进入文件夹</p>
+<p><code>cd ..</code>是退出文件夹</p>
+<p><code>ls</code>是输出该文件夹下的所有文件夹和文件</p>
+<p>这些都是控制台的基本操作</p>
+</blockquote>
+<p>进入文件夹之后输入<code>npm install</code>，安装基本文件</p>
+<h3 id="hexo中的基本操作"><a class="markdownIt-Anchor" href="#hexo中的基本操作"></a> hexo中的基本操作</h3>
+<p><code>hexo g</code> 相当于编译，把你所有对于文件夹中的改变识别到，有错误的话会报错。</p>
+<p>完成之后输入<code>hexo s</code>就可以在本地访问你的网站</p>
+<p><img lazyload="" alt="" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/hexo%20s.png"></p>
+<p>加载完应该是这样，进入 <a class="link" target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/<i class="fas fa-external-link-alt"></i></a> 就是你的博客在本地的样子。</p>
+<p><mark>先别急着优化博客</mark>，确认它能够被流畅访问先，不然失败了的话就很难受</p>
+<h3 id="部署博客到github"><a class="markdownIt-Anchor" href="#部署博客到github"></a> 部署博客到github</h3>
+<p><code>npm install hexo-deployer-git --save</code> 下载上传的插件</p>
+<h4 id="获取ssh"><a class="markdownIt-Anchor" href="#获取ssh"></a> 获取ssh</h4>
+<p><sub>据我所知，现在部署博客有两种方法，一种是用repo，另一种使用ssh密钥。之前失败就是使用的前者。所以现在是用后者。</sub></p>
+<ul>
+<li>注意，这些操作都是在你创建的hexo文件夹里进行的</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"你的GitHub用户名"</span></span><br><span class="line">git config --global user.email <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure>
+<p>这两句进行后不会返回任何东西</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure>
+<p>如果他问你<code>Enter file in which to save the key (/Users/TMnoL/.ssh/id_rsa):</code>,你就填id_rsa</p>
+<p>接着他会让你输入密码，注意这个密码自己<mark>一定要记住</mark>，之后每一次部署你的博客都需要你输入一遍</p>
+<p>然后它会在该文件夹内产生两个文件：id_rsa、id_rsa.pub。</p>
+<p><img lazyload="" alt="截屏2023-01-19 15.05.09" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-01-19%2015.05.09.png"></p>
+<p>把这两个文件移动到上一级目录中的.ssh文件夹。</p>
+<blockquote>
+<p>这个文件夹是隐藏的，如何查看隐藏文件夹，mac是<code>command+shift+.</code>，这东西自己百度就行。</p>
+</blockquote>
+<h4 id="绑定ssh到github"><a class="markdownIt-Anchor" href="#绑定ssh到github"></a> 绑定ssh到github</h4>
+<p>然后去github（未注册自行注册，用户名不要乱取哦）</p>
+<p>之后点击自己的头像（右上角），点击settings。</p>
+<p>在左列找到 SSH and GPG keys</p>
+<p><img lazyload="" alt="截屏2023-01-19 15.20.46" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-01-19%2015.20.46.png"></p>
+<p>点击new SSH key，把刚刚生成的id_rsa.pub里的东西全都粘贴到下面的 key 框里，title随便填就好。</p>
+<p><img lazyload="" alt="" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-01-19%2015.23.02.png"></p>
+<p>Add SSH key</p>
+<h3 id="新建github库"><a class="markdownIt-Anchor" href="#新建github库"></a> 新建github库</h3>
+<p><s>建库不会自己去学。</s></p>
+<p>注意：<a class="link" target="_blank" rel="noopener" href="http://xn--github+-4t3kv36bha073snngc8bdvwhpopm2dy2ela747n7t1b0k7a.github.io">库的名称一定要是自己github的用户名+.github.io<i class="fas fa-external-link-alt"></i></a></p>
+<p>比如我的用户名是huaziqi，那就要建叫 <a href="http://huaziqi.github.io">huaziqi.github.io</a>，这也是之后你的网站名（当然自己有别的域名是可以改的）</p>
+<p>仓库类型当然是public，公开的。</p>
+<p><img lazyload="" alt="" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-01-19%2015.29.18.png"></p>
+<p>建好仓库以后打开仓库点击那个code，在里面吧SSH代码复制下来。</p>
+<h3 id="final"><a class="markdownIt-Anchor" href="#final"></a> FINAL</h3>
+<p>回到创建的文件夹，找到<code>_config.yml</code>文件打开。找到deploy，像我一样这么填。repo里填的是刚刚粘贴的SSH代码。保存文件。</p>
+<p><img lazyload="" alt="" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-01-19%2015.32.11-1.png"></p>
+<p>到控制台输入<code>hexo g</code>，加载完再输入<code>hexo d</code>，输入生成id_rsa.pub时自己输入的代码，等待片刻就成功了。</p>
+<p><a class="link" target="_blank" rel="noopener" href="http://xn--+github-l45kq16a8u9a7s7bkodxq5g213a.io">访问你的用户名+github.io<i class="fas fa-external-link-alt"></i></a>，其实就是你的仓库名。<a class="link" target="_blank" rel="noopener" href="http://xn--huaziqi-be7no01ats6b.github.io">我的是huaziqi.github.io<i class="fas fa-external-link-alt"></i></a>，欢迎来访问。</p>
+<h2 id="优化"><a class="markdownIt-Anchor" href="#优化"></a> 优化</h2>
+<p>github访问必然是太慢了</p>
+<p>我们可以使用netlify进行优化，访问速度更快。</p>
+<p>前往<a class="link" target="_blank" rel="noopener" href="https://www.netlify.com/">netlify站点<i class="fas fa-external-link-alt"></i></a>注册账号，前往个人主界面点击site，然后Add new site, import an exsiting project</p>
+<p>之后按照提示一步一步来就好了，不会的看下面这个教程</p>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.cnblogs.com/37Y37/p/12551839.html">netlify教程<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="更换-markdown渲染器"><a class="markdownIt-Anchor" href="#更换-markdown渲染器"></a> 更换 markdown渲染器</h2>
+<p>竟然只用两个指令</p>
+<ol>
+<li>卸载原来的渲染器<br>
+<code>npm uninstall hexo-renderer-marked --save</code></li>
+<li>下载新渲染器<br>
+<code>npm i @upupming/hexo-renderer-markdown-it-plus --save</code></li>
+</ol>
+<h2 id="美化"><a class="markdownIt-Anchor" href="#美化"></a> 美化</h2>
+<p>去hexo.io找主题下载，那里还有官方文档可以参照。</p>
+<p>主题配置每个主题下都有教程。</p>
+<h2 id="各个搜索引擎收录入口"><a class="markdownIt-Anchor" href="#各个搜索引擎收录入口"></a> 各个搜索引擎收录入口</h2>
+<p>让你的博客被更多的网站收录，访问</p>
+<p>谷歌博客搜索收录入口:<br>
+<a class="link" target="_blank" rel="noopener" href="http://blogsearch.google.com/ping">http://blogsearch.google.com/ping<i class="fas fa-external-link-alt"></i></a><br>
+百度收录入口:<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.baidu.com/search/url_submit.html">http://www.baidu.com/search/url_submit.html<i class="fas fa-external-link-alt"></i></a><br>
+百度博客收录入口:<br>
+<a class="link" target="_blank" rel="noopener" href="http://utility.baidu.com/blogsearch/submit.php">http://utility.baidu.com/blogsearch/submit.php<i class="fas fa-external-link-alt"></i></a><br>
+必应Bing收录入口:<br>
+<a class="link" target="_blank" rel="noopener" href="https://www.bing.com/toolbox/submit-site-url">https://www.bing.com/toolbox/submit-site-url<i class="fas fa-external-link-alt"></i></a><br>
+搜索引擎批量提交:<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.freewebsubmission.com/">http://www.freewebsubmission.com/<i class="fas fa-external-link-alt"></i></a><br>
+soso收录入口:<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.soso.com/help/usb/urlsubmit.shtml">http://www.soso.com/help/usb/urlsubmit.shtml<i class="fas fa-external-link-alt"></i></a><br>
+360搜索引擎登录入口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://info.so.360.cn/site_submit.html">http://info.so.360.cn/site_submit.html<i class="fas fa-external-link-alt"></i></a><br>
+搜狗提交入口:<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.sogou.com/feedback/urlfeedback.php">http://www.sogou.com/feedback/urlfeedback.php<i class="fas fa-external-link-alt"></i></a><br>
+盘古数据开放平台：<br>
+<a class="link" target="_blank" rel="noopener" href="http://open.panguso.com/data/resource/url/new">http://open.panguso.com/data/resource/url/new<i class="fas fa-external-link-alt"></i></a><br>
+简搜搜索引擎登陆口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.jianso.com/add_site.html">http://www.jianso.com/add_site.html<i class="fas fa-external-link-alt"></i></a><br>
+雅虎中国网站登录口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://sitemap.cn.yahoo.com/">http://sitemap.cn.yahoo.com/<i class="fas fa-external-link-alt"></i></a><br>
+网易有道搜索引擎登录口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://tellbot.youdao.com/report">http://tellbot.youdao.com/report<i class="fas fa-external-link-alt"></i></a><br>
+中搜免费登录服务：<br>
+<a class="link" target="_blank" rel="noopener" href="http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm">http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm<i class="fas fa-external-link-alt"></i></a><br>
+MSN必应网站登录口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://cn.bing.com/docs/submit.aspx?FORM=WSDD2">http://cn.bing.com/docs/submit.aspx?FORM=WSDD2<i class="fas fa-external-link-alt"></i></a><br>
+Alexa网站登录入口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.alexa.com/help/webmasters">http://www.alexa.com/help/webmasters<i class="fas fa-external-link-alt"></i></a><br>
+TOM搜索网站登录口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://search.tom.com/tools/weblog/log.php">http://search.tom.com/tools/weblog/log.php<i class="fas fa-external-link-alt"></i></a><br>
+铭万网B2B(必途)网址登陆口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://search.b2b.cn/pageIncluded/AddPage.php">http://search.b2b.cn/pageIncluded/AddPage.php<i class="fas fa-external-link-alt"></i></a><br>
+蚁搜搜索网站登录口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.antso.com/apply.asp">http://www.antso.com/apply.asp<i class="fas fa-external-link-alt"></i></a><br>
+快搜搜索网站登录口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp<i class="fas fa-external-link-alt"></i></a><br>
+汕头搜索登录口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.stsou.com/join.asp">http://www.stsou.com/join.asp<i class="fas fa-external-link-alt"></i></a><br>
+孙悟空搜索网站登录：<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.swkong.com/add.php">http://www.swkong.com/add.php<i class="fas fa-external-link-alt"></i></a><br>
+天网网站登陆口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://home.tianwang.com/denglu.htm">http://home.tianwang.com/denglu.htm<i class="fas fa-external-link-alt"></i></a><br>
+速搜全球登陆口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.suso.com.cn/suso/link.asp">http://www.suso.com.cn/suso/link.asp<i class="fas fa-external-link-alt"></i></a><br>
+酷帝网站目录提交入口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.coodir.com/accounts/addsite.asp">http://www.coodir.com/accounts/addsite.asp<i class="fas fa-external-link-alt"></i></a><br>
+快搜网站登陆口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp<i class="fas fa-external-link-alt"></i></a><br>
+搜猫搜索引擎登录入口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://test.somao123.com/search/url_submit.php">http://test.somao123.com/search/url_submit.php<i class="fas fa-external-link-alt"></i></a><br>
+泽许搜索网站登录入口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://www.zxyt.cn/search/zxsc.php">http://www.zxyt.cn/search/zxsc.php<i class="fas fa-external-link-alt"></i></a><br>
+一淘网开放搜索申请入口：<br>
+<a class="link" target="_blank" rel="noopener" href="http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ">http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ<i class="fas fa-external-link-alt"></i></a></p>
 
-  +keep-tablet() {
-    .toc-content-container {
-      display none !important
-    }
+            </div>
 
-    .article-content-container {
-      width 100% !important
-    }
-  }
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">Post title</span>: <span class="content">Hello-hexo -- hexo + github部署教程</span>
+        </li>
+        <li class="post-author">
+            <span class="type">Post author</span>: <span class="content">huaziqi</span>
+        </li>
+        <li class="post-time">
+            <span class="type">Create time</span>: <span class="content">2023-01-19 11:51:26</span>
+        </li>
+        <li class="post-link">
+            <span class="type">Post link</span>: <span class="content">posts/4191647622.html</span>
+        </li>
+        <li class="post-license">
+            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
 
+                </div>
+            
 
-  .article-content-container {
-    position relative
-    box-sizing border-box
-    width 100%
-    height 100%
-    keep-container(false, 0, 0, 2rem, 2rem)
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/hexo/">#hexo</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">#博客搭建</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
 
-    +keep-mobile() {
-      padding 1.2rem 0.2rem
-      box-shadow none
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/posts/407812189.html"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">测试文档</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/posts/3345621692.html"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">acwing-4700-何以包邮</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
 
-      &:hover {
-        box-shadow none
-      }
-    }
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
 
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
 
-    .article-title {
-      color var(--text-color-2)
-      font-weight 600
-      font-size $article-title-font-size
-
-      +keep-tablet() {
-        font-size $article-title-font-size * 0.9
-      }
-
-      +keep-mobile() {
-        font-size $article-title-font-size * 0.8
-      }
-    }
-
-
-    .article-header {
-      position relative
-      box-sizing border-box
-      width 100%
-      height $avatarWidth
-      padding-left $avatarWidth
-
-      .avatar {
-        position absolute
-        top 0
-        left 0
-        box-sizing border-box
-        width $avatarWidth
-        height $avatarWidth
-        padding 0.1rem
-        border 1px solid var(--border-color)
-        border-radius 50%
-
-        img {
-          width 100%
-          height 100%
-          background var(--avatar-background-color)
-          border-radius 50%
-        }
-      }
-
-
-      .info {
-        display flex
-        flex-direction column
-        justify-content space-between
-        box-sizing border-box
-        width 100%
-        height 100%
-        margin-left 0.8rem
-        padding 0.2rem 0
-
-        .author {
-          display flex
-          align-items center
-          font-weight 600
-          font-size 1.18rem
-
-          .name {
-            color var(--text-color-3)
-          }
-
-          .author-label {
-            margin-left 0.8rem
-            padding 0 0.4rem
-            color #fff
-            font-weight 500
-            font-size 0.8rem
-            background var(--selection-color)
-            border-radius 0.4rem
-          }
-        }
-      }
-    }
-
-
-    .article-header
-    .article-header-meta-info {
-      margin-top 1rem
-      +keep-tablet() {
-        transform scale(0.9)
-        transform-origin left top
-      }
-    }
-
-
-    .article-content {
-      margin-top $component-spacing-value
-      padding-bottom 2rem
-      color var(--text-color-3)
-      word-wrap break-word
-
-      .article-aging-tips {
-        position relative
-        display none
-        box-sizing border-box
-        margin-bottom 1.8rem
-        padding 1rem
-        color var(--article-aging-tips-color)
-        line-height 1.6
-        background var(--article-aging-tips-background-color)
-        border 0.1rem solid var(--article-aging-tips-border-color)
-        border-radius 0.4rem
-
-        i {
-          margin-right 0.4rem
-          color var(--article-aging-tips-color)
-        }
-
-        .days {
-          color var(--article-aging-tips-color)
-        }
-      }
-
-      if (hexo-config('post.copyright_info') == true || hexo-config('copyright_info.enable') == true) {
-        border-bottom 0.1rem dashed var(--border-color)
-      }
-    }
-
-
-    .post-tags-box {
-      display none
-      justify-content center
-      margin-top 1.6rem
-      font-size 1.1rem
-
-      +keep-tablet() {
-        display flex
-      }
-
-      +keep-mobile() {
-        margin-top 1.2rem
-        font-size 1rem
-      }
-
-
-      .tag-item {
-        margin 0 0.25rem
-      }
-    }
-
-
-    .post-copyright-info {
-      width 100%
-      margin-top $component-spacing-value
-
-      +keep-tablet() {
-        margin-top $component-spacing-value * 0.8
-      }
-    }
-
-
-    .article-nav {
-      height 2.8rem
-      margin-top $component-spacing-value
-
-      .article-prev
-      .article-next {
-        box-sizing border-box
-        max-width $post-nav-max-width
-        height 100%
-
-        keep-container(true, 1.03, 1.03, 0.8rem, 0)
-
-        a {
-          position relative
-          display block
-          box-sizing border-box
-          width 100%
-          height 100%
-
-          &.prev {
-            padding-left $arrow-icon-width
-          }
-
-          &.next {
-            padding-right $arrow-icon-width
-          }
-
-          .arrow-icon {
-            position absolute
-            top 0
-            width $arrow-icon-width
-            height 100%
-
-            &.left {
-              left 0
+            const config = {
+              el: '#vcomments',
+              appId: 'i4j8h2suZ3CImXMgr0dXDuSj-gzGzoHsz',
+              appKey: 'GRtU447Qe12VTivCtzxwZWDi',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '随便说点什么吧',
+              lang: 'en'.toLowerCase()
             }
 
-            &.right {
-              right 0
+            if ('') {
+              config.serverURLs = ''
             }
+
+            new Valine(config)
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'huaziqi'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
           }
 
-          .title {
-            width 100%
-            height 100%
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
           }
-        }
-      }
-
-      .article-prev {
-        float left
-      }
-
-      .article-next {
-        float right
-      }
-
-      .post-nav-item {
-        display none
-
-        +keep-tablet() {
-          display inline-block
-        }
-      }
+        </script>
+    </div>
 
 
-      .post-nav-title-item {
-        overflow hidden
-        white-space nowrap
-        text-overflow ellipsis
 
-        +keep-tablet() {
-          display none
-        }
-      }
-    }
-  }
+        
+    
+</div>
 
+                </div>
+            
+        </div>
 
-  .toc-content-container {
-    position sticky
-    top $header-height + $component-spacing-value
-    display none
-    box-sizing border-box
-    width $toc-container-width
-    max-height 'calc(100vh - %s)' % ($header-height + $component-spacing-value)
-    padding 2rem 0 2rem 1.4rem
-    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hello-hexo-hexo-github%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text"> Hello hexo！—— hexo + github部署教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text"> 搭建历程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 第一个想法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#money"><span class="nav-number">1.1.2.</span> <span class="nav-text"> money</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim"><span class="nav-number">1.1.3.</span> <span class="nav-text"> vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E6%9C%BA"><span class="nav-number">1.1.4.</span> <span class="nav-text"> 转机</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text"> 搭建方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 本地hexo环境搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAhexo"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 开始搭建hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.3.</span> <span class="nav-text"> hexo中的基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0github"><span class="nav-number">1.2.4.</span> <span class="nav-text"> 部署博客到github</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96ssh"><span class="nav-number">1.2.4.1.</span> <span class="nav-text"> 获取ssh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%91%E5%AE%9Assh%E5%88%B0github"><span class="nav-number">1.2.4.2.</span> <span class="nav-text"> 绑定ssh到github</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BAgithub%E5%BA%93"><span class="nav-number">1.2.5.</span> <span class="nav-text"> 新建github库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final"><span class="nav-number">1.2.6.</span> <span class="nav-text"> FINAL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-number">1.3.</span> <span class="nav-text"> 优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2-markdown%E6%B8%B2%E6%9F%93%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text"> 更换 markdown渲染器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%8E%E5%8C%96"><span class="nav-number">1.5.</span> <span class="nav-text"> 美化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E4%B8%AA%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%94%B6%E5%BD%95%E5%85%A5%E5%8F%A3"><span class="nav-number">1.6.</span> <span class="nav-text"> 各个搜索引擎收录入口</span></a></li></ol></li></ol>
+    </div>
+</div>
 
-    .header-shrink & {
-      top $header-shrink-height + $component-spacing-value
-      max-height 'calc(100vh - %s)' % ($header-shrink-height + $component-spacing-value)
-    }
-  }
-}
+            </div>
+        
+    </div>
+</div>
 
 
                 

@@ -281,308 +281,308 @@ mjx-container[display="true"] + br {
             <div class="main-content">
 
                 
-                    $avatarWidth = 3rem
-$arrow-icon-width = 1rem
-$post-nav-max-width = 14rem
-$article-title-font-size = 1.6rem
-$toc-container-width = 15rem
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
 
+            <div class="article-title">
+                <span class="title-hover-animation">字典树</span>
+            </div>
 
-.post-page-container {
-  position relative
-  display flex
-  justify-content space-between
-  box-sizing border-box
-  width 100%
-  height 100%
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/tou.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">huaziqi</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2022-05-14 09:22:23</span>
+        <span class="mobile">2022-05-14 09:22</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-01-19 09:56:17</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
 
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>790 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>3 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
 
-  &.show-toc {
-    .toc-content-container {
-      display block
-    }
+                        </div>
+                    </div>
+                </div>
+            
 
-    .article-content-container {
-      width 'calc(100% - %s)' % $toc-container-width
-    }
-  }
+            <div class="article-content keep-markdown-body">
+                
 
+                <h1 id="tire-字典树"><a href="#tire-字典树" class="headerlink" title="tire 字典树"></a>tire 字典树</h1><h2 id="先来个模板"><a href="#先来个模板" class="headerlink" title="先来个模板"></a>先来个模板</h2><p><a class="link" target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/144/">142. 前缀统计 - AcWing题库<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="什么是字典树呢？"><a href="#什么是字典树呢？" class="headerlink" title="什么是字典树呢？"></a>什么是字典树呢？</h3><p><del>就是存字典的树嘛</del>，差不多的赶脚。</p>
+<p>确实是将所有字符存入其中，方便查找（多是查找前缀）。怎么存捏？如下图</p>
+<p><img lazyload="" alt="trie" data-src="https://img-blog.csdnimg.cn/cd20dd2a360041949da584c0ce21bc0c.png#pic_center"></p>
+<h4 id="建树"><a href="#建树" class="headerlink" title="建树"></a>建树</h4><p>差不多是这个意思，但并非是把所有字符的空间给开出来，这就要讲到如何建树了。</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="type">int</span> root = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; str[i]; i ++)</span><br><span class="line">	{</span><br><span class="line">		<span class="type">int</span> s = str[i] - <span class="string">'a'</span>;</span><br><span class="line">		<span class="keyword">if</span>(!son[root][s]) son[root][s] = ++ idx;</span><br><span class="line">		root = son[root][s];</span><br><span class="line">	}</span><br><span class="line">	cnt[root]++;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
-  +keep-tablet() {
-    .toc-content-container {
-      display none !important
-    }
+<p>root 节点设为0。son{ root }{ s }表示root这个节点上的s的编号idx。倘若这个点没有被创建，那就 son{ root }{ s } = ++ idx; 感觉这个 root 有并查集那味儿。存储他儿子的编号，便于查找。这时候就有读者要问，这个cnt{ N }是干嘛用的呢？答案是记录以这个点为结尾的数量。在搜前缀时，不一定只有一个字符从这里结束，所以要记录一下数量。</p>
+<h4 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">search</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="type">int</span> root = <span class="number">0</span>, res = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; str[i]; i ++)</span><br><span class="line">	{</span><br><span class="line">		<span class="type">int</span> s = str[i] - <span class="string">'a'</span>;</span><br><span class="line">		<span class="keyword">if</span>(!son[root][s]) <span class="keyword">break</span>;</span><br><span class="line">		root = son[root][s];</span><br><span class="line">		res += cnt[root];</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
-    .article-content-container {
-      width 100% !important
-    }
-  }
+<p>如果说下面没有节点了就直接break掉。并且这里cnt数组派上用场了。res每次加一个cnt{ root }.最后返回答案。</p>
+<p>2022-5-12 21:09:37</p>
+<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><p><a class="link" target="_blank" rel="noopener" href="https://www.acwing.com/activity/content/problem/content/396/">AcWing 161. 电话列表 - AcWing<i class="fas fa-external-link-alt"></i></a></p>
+<p>给出一个电话列表，如果列表中存在其中一个号码是另一个号码的前缀这一情况，那么就称这个电话列表是不兼容的。</p>
+<p>假设电话列表如下：</p>
+<ul>
+<li><code>Emergency 911</code></li>
+<li><code>Alice 97 625 999</code></li>
+<li><code>Bob 91 12 54 26</code></li>
+</ul>
+<p>在此例中，报警电话号码（<code>911</code>）为 Bob 电话号码（<code>91 12 54 26</code>）的前缀，所以该列表不兼容。</p>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行输入整数 t，表示测试用例数量。</p>
+<p>对于每个测试用例，第一行输入整数 n，表示电话号码数量。</p>
+<p>接下来 n 行，每行输入一个电话号码，号码内数字之间无空格，电话号码不超过 10 位。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>对于每个测试用例，如果电话列表兼容，则输出 <code>YES</code>。</p>
+<p>否则，输出 <code>NO</code>。</p>
+<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>1≤t≤40,<br>1≤n≤10000</p>
+<h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">3</span><br><span class="line">911</span><br><span class="line">97625999</span><br><span class="line">91125426</span><br><span class="line">5</span><br><span class="line">113</span><br><span class="line">12340</span><br><span class="line">123440</span><br><span class="line">12345</span><br><span class="line">98346</span><br></pre></td></tr></table></figure>
 
+<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NO</span><br><span class="line">YES</span><br></pre></td></tr></table></figure>
 
-  .article-content-container {
-    position relative
-    box-sizing border-box
-    width 100%
-    height 100%
-    keep-container(false, 0, 0, 2rem, 2rem)
+<p>跟模板差不多，只不过在搜的时候要一个一个搜，并且它并非求前缀的数量，所以用bool判断就好了。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 500010</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> M 1000010</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, f;</span><br><span class="line"><span class="type">int</span> son[N][<span class="number">30</span>], idx, cnt[N], T;</span><br><span class="line"><span class="type">char</span> str[M][<span class="number">15</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">char</span> *s)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="type">int</span> root = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; s[i]; i ++)</span><br><span class="line">	{</span><br><span class="line">		<span class="type">int</span> st = s[i] - <span class="string">'0'</span>;</span><br><span class="line">		<span class="keyword">if</span>(!son[root][st]) son[root][st] = ++ idx;</span><br><span class="line">		root = son[root][st];</span><br><span class="line">		cnt[root]++;</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">search</span><span class="params">(<span class="type">char</span> *s)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="type">int</span> root = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; s[i]; i ++)</span><br><span class="line">	{</span><br><span class="line">		<span class="type">int</span> st = s[i] - <span class="string">'0'</span>;</span><br><span class="line">		<span class="keyword">if</span>(cnt[son[root][st]]==<span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		root = son[root][st];</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T --)</span><br><span class="line">	{</span><br><span class="line">		f=<span class="number">0</span>;</span><br><span class="line">		idx=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">memset</span>(son[<span class="number">0</span>],<span class="number">0</span>,<span class="keyword">sizeof</span> son);</span><br><span class="line">        <span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span> cnt);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%s"</span>, str[i]);</span><br><span class="line">			<span class="built_in">insert</span>(str[i]);</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="keyword">if</span>(<span class="built_in">search</span>(str[i]))</span><br><span class="line">			{</span><br><span class="line">				f=<span class="number">1</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">if</span>(f == <span class="number">1</span>) <span class="built_in">puts</span>(<span class="string">"NO"</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">"YES"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
 
-    +keep-mobile() {
-      padding 1.2rem 0.2rem
-      box-shadow none
+<p>2022-5-12 21:34:32</p>
 
-      &:hover {
-        box-shadow none
-      }
-    }
+            </div>
 
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">Post title</span>: <span class="content">字典树</span>
+        </li>
+        <li class="post-author">
+            <span class="type">Post author</span>: <span class="content">huaziqi</span>
+        </li>
+        <li class="post-time">
+            <span class="type">Create time</span>: <span class="content">2022-05-14 09:22:23</span>
+        </li>
+        <li class="post-link">
+            <span class="type">Post link</span>: <span class="content">posts/4003859050.html</span>
+        </li>
+        <li class="post-license">
+            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
 
-    .article-title {
-      color var(--text-color-2)
-      font-weight 600
-      font-size $article-title-font-size
+                </div>
+            
 
-      +keep-tablet() {
-        font-size $article-title-font-size * 0.9
-      }
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
 
-      +keep-mobile() {
-        font-size $article-title-font-size * 0.8
-      }
-    }
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/posts/2703488407.html"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">luogu-p1129-矩阵游戏</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/posts/3069203345.html"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">acwing-802-区间和</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
 
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
 
-    .article-header {
-      position relative
-      box-sizing border-box
-      width 100%
-      height $avatarWidth
-      padding-left $avatarWidth
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
 
-      .avatar {
-        position absolute
-        top 0
-        left 0
-        box-sizing border-box
-        width $avatarWidth
-        height $avatarWidth
-        padding 0.1rem
-        border 1px solid var(--border-color)
-        border-radius 50%
-
-        img {
-          width 100%
-          height 100%
-          background var(--avatar-background-color)
-          border-radius 50%
-        }
-      }
-
-
-      .info {
-        display flex
-        flex-direction column
-        justify-content space-between
-        box-sizing border-box
-        width 100%
-        height 100%
-        margin-left 0.8rem
-        padding 0.2rem 0
-
-        .author {
-          display flex
-          align-items center
-          font-weight 600
-          font-size 1.18rem
-
-          .name {
-            color var(--text-color-3)
-          }
-
-          .author-label {
-            margin-left 0.8rem
-            padding 0 0.4rem
-            color #fff
-            font-weight 500
-            font-size 0.8rem
-            background var(--selection-color)
-            border-radius 0.4rem
-          }
-        }
-      }
-    }
-
-
-    .article-header
-    .article-header-meta-info {
-      margin-top 1rem
-      +keep-tablet() {
-        transform scale(0.9)
-        transform-origin left top
-      }
-    }
-
-
-    .article-content {
-      margin-top $component-spacing-value
-      padding-bottom 2rem
-      color var(--text-color-3)
-      word-wrap break-word
-
-      .article-aging-tips {
-        position relative
-        display none
-        box-sizing border-box
-        margin-bottom 1.8rem
-        padding 1rem
-        color var(--article-aging-tips-color)
-        line-height 1.6
-        background var(--article-aging-tips-background-color)
-        border 0.1rem solid var(--article-aging-tips-border-color)
-        border-radius 0.4rem
-
-        i {
-          margin-right 0.4rem
-          color var(--article-aging-tips-color)
-        }
-
-        .days {
-          color var(--article-aging-tips-color)
-        }
-      }
-
-      if (hexo-config('post.copyright_info') == true || hexo-config('copyright_info.enable') == true) {
-        border-bottom 0.1rem dashed var(--border-color)
-      }
-    }
-
-
-    .post-tags-box {
-      display none
-      justify-content center
-      margin-top 1.6rem
-      font-size 1.1rem
-
-      +keep-tablet() {
-        display flex
-      }
-
-      +keep-mobile() {
-        margin-top 1.2rem
-        font-size 1rem
-      }
-
-
-      .tag-item {
-        margin 0 0.25rem
-      }
-    }
-
-
-    .post-copyright-info {
-      width 100%
-      margin-top $component-spacing-value
-
-      +keep-tablet() {
-        margin-top $component-spacing-value * 0.8
-      }
-    }
-
-
-    .article-nav {
-      height 2.8rem
-      margin-top $component-spacing-value
-
-      .article-prev
-      .article-next {
-        box-sizing border-box
-        max-width $post-nav-max-width
-        height 100%
-
-        keep-container(true, 1.03, 1.03, 0.8rem, 0)
-
-        a {
-          position relative
-          display block
-          box-sizing border-box
-          width 100%
-          height 100%
-
-          &.prev {
-            padding-left $arrow-icon-width
-          }
-
-          &.next {
-            padding-right $arrow-icon-width
-          }
-
-          .arrow-icon {
-            position absolute
-            top 0
-            width $arrow-icon-width
-            height 100%
-
-            &.left {
-              left 0
+            const config = {
+              el: '#vcomments',
+              appId: 'i4j8h2suZ3CImXMgr0dXDuSj-gzGzoHsz',
+              appKey: 'GRtU447Qe12VTivCtzxwZWDi',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '随便说点什么吧',
+              lang: 'en'.toLowerCase()
             }
 
-            &.right {
-              right 0
+            if ('') {
+              config.serverURLs = ''
             }
+
+            new Valine(config)
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'huaziqi'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
           }
 
-          .title {
-            width 100%
-            height 100%
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
           }
-        }
-      }
-
-      .article-prev {
-        float left
-      }
-
-      .article-next {
-        float right
-      }
-
-      .post-nav-item {
-        display none
-
-        +keep-tablet() {
-          display inline-block
-        }
-      }
+        </script>
+    </div>
 
 
-      .post-nav-title-item {
-        overflow hidden
-        white-space nowrap
-        text-overflow ellipsis
 
-        +keep-tablet() {
-          display none
-        }
-      }
-    }
-  }
+        
+    
+</div>
 
+                </div>
+            
+        </div>
 
-  .toc-content-container {
-    position sticky
-    top $header-height + $component-spacing-value
-    display none
-    box-sizing border-box
-    width $toc-container-width
-    max-height 'calc(100vh - %s)' % ($header-height + $component-spacing-value)
-    padding 2rem 0 2rem 1.4rem
-    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tire-%E5%AD%97%E5%85%B8%E6%A0%91"><span class="nav-number">1.</span> <span class="nav-text">tire 字典树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%88%E6%9D%A5%E4%B8%AA%E6%A8%A1%E6%9D%BF"><span class="nav-number">1.1.</span> <span class="nav-text">先来个模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E5%85%B8%E6%A0%91%E5%91%A2%EF%BC%9F"><span class="nav-number">1.1.1.</span> <span class="nav-text">什么是字典树呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BB%BA%E6%A0%91"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">建树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">搜索</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6"><span class="nav-number">1.2.</span> <span class="nav-text">进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">数据范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">输出样例：</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+</div>
 
-    .header-shrink & {
-      top $header-shrink-height + $component-spacing-value
-      max-height 'calc(100vh - %s)' % ($header-shrink-height + $component-spacing-value)
-    }
-  }
-}
+            </div>
+        
+    </div>
+</div>
 
 
                 
