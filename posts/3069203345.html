@@ -24,7 +24,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"huaziqi.github.io","root":"/","language":"en","path":"search.json"}
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"/images/icn.png","avatar":"/images/tou.png","font_size":"16px","font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"gitalk","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":"huaziqi","github_admins":null,"repository":"Comment","client_id":"4b61270c2b59e59168fa","client_secret":"04fc3f5b72c23b18f0561bfe62d201f6bef094de","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"/images/icn.png","avatar":"/images/tou.png","font_size":"16px","font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"gitalk","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":"huaziqi","github_admins":"huaziqi","repository":"Comment","client_id":"4b61270c2b59e59168fa","client_secret":"04fc3f5b72c23b18f0561bfe62d201f6bef094de","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
     KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
@@ -209,6 +209,14 @@ mjx-container[display="true"] + br {
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
                     
                         <li class="menu-item search search-popup-trigger">
                             <i class="fas fa-search"></i>
@@ -250,6 +258,11 @@ mjx-container[display="true"] + br {
                        href="/categories">分类</a>
                 </li>
             
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
         </ul>
     </div>
 
@@ -265,266 +278,308 @@ mjx-container[display="true"] + br {
             <div class="main-content">
 
                 
-                    <div class="fade-in-down-animation">
-    <div class="post-page-container">
-        <div class="article-content-container">
+                    $avatarWidth = 3rem
+$arrow-icon-width = 1rem
+$post-nav-max-width = 14rem
+$article-title-font-size = 1.6rem
+$toc-container-width = 15rem
 
-            <div class="article-title">
-                <span class="title-hover-animation">acwing-802-区间和</span>
-            </div>
 
-            
-                <div class="article-header">
-                    <div class="avatar">
-                        <img src="/images/tou.png">
-                    </div>
-                    <div class="info">
-                        <div class="author">
-                            <span class="name">huaziqi</span>
-                            
-                                <span class="author-label">Lv3</span>
-                            
-                        </div>
-                        <div class="meta-info">
-                            
-<div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        
-            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
-        
-        <span class="pc">2022-05-08 09:35:07</span>
-        <span class="mobile">2022-05-08 09:35</span>
-    </span>
-    
-        <span class="article-update-date article-meta-item">
-        <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-01-19 10:05:38</span>
-    </span>
-    
-    
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/acwing/">acwing</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        &gt; <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/">离散化</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
+.post-page-container {
+  position relative
+  display flex
+  justify-content space-between
+  box-sizing border-box
+  width 100%
+  height 100%
 
-    
-    
-    
-    
-        <span class="article-pv article-meta-item">
-            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            
+  &.show-toc {
+    .toc-content-container {
+      display block
+    }
 
-            <div class="article-content keep-markdown-body">
-                
+    .article-content-container {
+      width 'calc(100% - %s)' % $toc-container-width
+    }
+  }
 
-                <h1 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h1><hr>
-<ul>
-<li>就题论题来讲</li>
-</ul>
-<h2 id="acwing-802-区间和"><a href="#acwing-802-区间和" class="headerlink" title="acwing 802. 区间和"></a>acwing 802. 区间和</h2><p>假定有一个无限长的数轴，数轴上每个坐标上的数都是 0。<br>现在，我们首先进行 n次操作，每次操作将某一位置 x上的数加 c。</p>
-<p>接下来，进行 m次询问，每个询问包含两个整数 l 和 r ，你需要求出在区间 [l,r]之间的所有数的和。</p>
-<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含两个整数 n 和 m。</p>
-<p>接下来 n 行，每行包含两个整数 x 和 c 。</p>
-<p>再接下来 m 行，每行包含两个整数 l 和 r 。</p>
-<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>共 m 行，每行输出一个询问中所求的区间内数字和。</p>
-<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>-109≤x≤109,<br>1≤n,m≤10^5,<br>-109≤l≤r≤109,<br>-10000≤c≤10000</p>
-<h4 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3 3</span><br><span class="line">1 2</span><br><span class="line">3 6</span><br><span class="line">7 5</span><br><span class="line">1 3</span><br><span class="line">4 6</span><br><span class="line">7 8</span><br></pre></td></tr></table></figure>
 
-<h4 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">8</span><br><span class="line">0</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+  +keep-tablet() {
+    .toc-content-container {
+      display none !important
+    }
 
-<h2 id="简吸"><a href="#简吸" class="headerlink" title="简吸"></a>简吸</h2><p>离散化的整体思路还是简单的，就是当数据相差大而数量小时，用数组把每个数字映射到一个下标上。<br>~~刚开始不想看这题是因为对于pair的用法有点迷。~~~~~~</p>
-<p>浅浅一学以后其实感觉pair跟struct没什么区别。<br>其次就是这个auto，<del>之前学长来教的时候就没讲清楚.</del></p>
-<p>现在看了题解大概能猜出是什么用的，格式是for(auto opt : add)。<br>auto是自动的意思，那么这个语法相而易见就是自动地遍历add这个数组中所有数据。</p>
-<p>这题思路就是先把所有的数据中提到的点读入，即 n 个有数据的点，及 m 个 l，r（要求的区间和），并将数据中提到的数轴上的点和数值（x，c）放到add中，再把要求的区间 l，r 放入query中，以便后续将这些点在排序过后 point 中找出下标。</p>
-<p>当把 point全部排序去重后，遍历一遍add数组，用二分找出每一个数据在 point （存所有数据点）中的下标 i ，在数组 a[ i ] 中加上值 c 。</p>
-<p>既然要求区间和，那就用O(N)的时间复杂度 用前缀和的存入s[ N ] 中。<br>最后再用auto遍历query，用前缀和输出值。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 300010</span></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; PII;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m,x,c,a[N],s[N];</span><br><span class="line">vector&lt;PII&gt; adds,query;<span class="comment">//add 存储所给的点和数据，query存储要求的区间</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; point;<span class="comment">//point 存储的是包括 x（题中给出的有数据的点）及 l , r(要求的区间)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">    <span class="type">int</span> l=<span class="number">0</span>,r=point.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l&lt;r){</span><br><span class="line">        <span class="type">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (point[mid]&gt;=x)</span><br><span class="line">            r=mid;</span><br><span class="line">        <span class="keyword">else</span> l=mid+<span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> r+<span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n;i ++){</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;c);</span><br><span class="line">        adds.<span class="built_in">push_back</span>({x,c});</span><br><span class="line">        point.<span class="built_in">push_back</span>(x);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++){</span><br><span class="line">        <span class="type">int</span> l,r;</span><br><span class="line">        cin&gt;&gt;l&gt;&gt;r;</span><br><span class="line">        query.<span class="built_in">push_back</span>({l,r});</span><br><span class="line">        point.<span class="built_in">push_back</span>(l);</span><br><span class="line">        point.<span class="built_in">push_back</span>(r);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">sort</span>(point.<span class="built_in">begin</span>(),point.<span class="built_in">end</span>());</span><br><span class="line">    point.<span class="built_in">erase</span>(<span class="built_in">unique</span>(point.<span class="built_in">begin</span>(),point.<span class="built_in">end</span>()),point.<span class="built_in">end</span>());<span class="comment">//去重</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> opt : adds){</span><br><span class="line">        <span class="type">int</span> num=<span class="built_in">find</span>(opt.first);</span><br><span class="line">        a[num]+=opt.second;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=point.<span class="built_in">size</span>();i++)</span><br><span class="line">        s[i]=s[i<span class="number">-1</span>]+a[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> opt : query){</span><br><span class="line">        <span class="type">int</span> l=<span class="built_in">find</span>(opt.first),r=<span class="built_in">find</span>(opt.second);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,s[r]-s[l<span class="number">-1</span>]);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+    .article-content-container {
+      width 100% !important
+    }
+  }
 
-<p>2022-05-02 15:03:35 完结</p>
 
-            </div>
+  .article-content-container {
+    position relative
+    box-sizing border-box
+    width 100%
+    height 100%
+    keep-container(false, 0, 0, 2rem, 2rem)
 
-            
-                <div class="post-copyright-info">
-                    
-<div class="article-copyright-info-container">
-    <ul class="copyright-info-content">
-        <li class="post-title">
-            <span class="type">Post title</span>: <span class="content">acwing-802-区间和</span>
-        </li>
-        <li class="post-author">
-            <span class="type">Post author</span>: <span class="content">huaziqi</span>
-        </li>
-        <li class="post-time">
-            <span class="type">Create time</span>: <span class="content">2022-05-08 09:35:07</span>
-        </li>
-        <li class="post-link">
-            <span class="type">Post link</span>: <span class="content">posts/3069203345.html</span>
-        </li>
-        <li class="post-license">
-            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
-        </li>
-    </ul>
-    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
-        <i class="fa-solid fa-copy"></i>
-    </div>
-</div>
+    +keep-mobile() {
+      padding 1.2rem 0.2rem
+      box-shadow none
 
-                </div>
-            
+      &:hover {
+        box-shadow none
+      }
+    }
 
-            
-                <ul class="post-tags-box">
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/">#离散化</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            
 
-            
-                <div class="article-nav">
-                    
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/posts/4003859050.html"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">字典树</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                            </a>
-                        </div>
-                    
-                    
-                        <div class="article-next">
-                            <a class="next"
-                               rel="next"
-                               href="/posts/198006710.html"
-                            >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">栈的应用</span>
-                                <span class="post-nav-item">Next posts</span>
-                            </span>
-                                <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                            </a>
-                        </div>
-                    
-                </div>
-            
+    .article-title {
+      color var(--text-color-2)
+      font-weight 600
+      font-size $article-title-font-size
 
-            
-                <div class="comment-container">
-                    
-<div class="comments-container">
-    <div id="comments-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fas fa-comments"></i>&nbsp;Comments
-    </div>
-    
-        
-            
+      +keep-tablet() {
+        font-size $article-title-font-size * 0.9
+      }
 
-    <div class="gitalk-comment-container">
-        <div id="gitalk-container"></div>
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-        <script data-pjax src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-        <script data-pjax>
-          function loadGitalk() {
-            let __gitalk__pathname = decodeURI(location.pathname);
-            const __gitalk__pathnameLength = __gitalk__pathname.length;
-            const __gitalk__pathnameMaxLength = 50;
-            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
-              __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+      +keep-mobile() {
+        font-size $article-title-font-size * 0.8
+      }
+    }
+
+
+    .article-header {
+      position relative
+      box-sizing border-box
+      width 100%
+      height $avatarWidth
+      padding-left $avatarWidth
+
+      .avatar {
+        position absolute
+        top 0
+        left 0
+        box-sizing border-box
+        width $avatarWidth
+        height $avatarWidth
+        padding 0.1rem
+        border 1px solid var(--border-color)
+        border-radius 50%
+
+        img {
+          width 100%
+          height 100%
+          background var(--avatar-background-color)
+          border-radius 50%
+        }
+      }
+
+
+      .info {
+        display flex
+        flex-direction column
+        justify-content space-between
+        box-sizing border-box
+        width 100%
+        height 100%
+        margin-left 0.8rem
+        padding 0.2rem 0
+
+        .author {
+          display flex
+          align-items center
+          font-weight 600
+          font-size 1.18rem
+
+          .name {
+            color var(--text-color-3)
+          }
+
+          .author-label {
+            margin-left 0.8rem
+            padding 0 0.4rem
+            color #fff
+            font-weight 500
+            font-size 0.8rem
+            background var(--selection-color)
+            border-radius 0.4rem
+          }
+        }
+      }
+    }
+
+
+    .article-header
+    .article-header-meta-info {
+      margin-top 1rem
+      +keep-tablet() {
+        transform scale(0.9)
+        transform-origin left top
+      }
+    }
+
+
+    .article-content {
+      margin-top $component-spacing-value
+      padding-bottom 2rem
+      color var(--text-color-3)
+      word-wrap break-word
+
+      .article-aging-tips {
+        position relative
+        display none
+        box-sizing border-box
+        margin-bottom 1.8rem
+        padding 1rem
+        color var(--article-aging-tips-color)
+        line-height 1.6
+        background var(--article-aging-tips-background-color)
+        border 0.1rem solid var(--article-aging-tips-border-color)
+        border-radius 0.4rem
+
+        i {
+          margin-right 0.4rem
+          color var(--article-aging-tips-color)
+        }
+
+        .days {
+          color var(--article-aging-tips-color)
+        }
+      }
+
+      if (hexo-config('post.copyright_info') == true || hexo-config('copyright_info.enable') == true) {
+        border-bottom 0.1rem dashed var(--border-color)
+      }
+    }
+
+
+    .post-tags-box {
+      display none
+      justify-content center
+      margin-top 1.6rem
+      font-size 1.1rem
+
+      +keep-tablet() {
+        display flex
+      }
+
+      +keep-mobile() {
+        margin-top 1.2rem
+        font-size 1rem
+      }
+
+
+      .tag-item {
+        margin 0 0.25rem
+      }
+    }
+
+
+    .post-copyright-info {
+      width 100%
+      margin-top $component-spacing-value
+
+      +keep-tablet() {
+        margin-top $component-spacing-value * 0.8
+      }
+    }
+
+
+    .article-nav {
+      height 2.8rem
+      margin-top $component-spacing-value
+
+      .article-prev
+      .article-next {
+        box-sizing border-box
+        max-width $post-nav-max-width
+        height 100%
+
+        keep-container(true, 1.03, 1.03, 0.8rem, 0)
+
+        a {
+          position relative
+          display block
+          box-sizing border-box
+          width 100%
+          height 100%
+
+          &.prev {
+            padding-left $arrow-icon-width
+          }
+
+          &.next {
+            padding-right $arrow-icon-width
+          }
+
+          .arrow-icon {
+            position absolute
+            top 0
+            width $arrow-icon-width
+            height 100%
+
+            &.left {
+              left 0
             }
 
-            try {
-              Gitalk && new Gitalk({
-                clientID: '4b61270c2b59e59168fa',
-                clientSecret: '04fc3f5b72c23b18f0561bfe62d201f6bef094de',
-                repo: 'Comment',
-                owner: 'huaziqi',
-                admin: 'huaziqi',
-                id: __gitalk__pathname,
-                proxy: '',
-                language: 'en'
-              }).render('gitalk-container');
-            } catch (e) {
-              window.Gitalk = null;
+            &.right {
+              right 0
             }
           }
 
-          if ('true' === 'true') {
-            const loadGitalkTimeout = setTimeout(() => {
-              loadGitalk();
-              clearTimeout(loadGitalkTimeout);
-            }, 1000);
-          } else {
-            window.addEventListener('DOMContentLoaded', loadGitalk);
+          .title {
+            width 100%
+            height 100%
           }
-        </script>
-    </div>
+        }
+      }
+
+      .article-prev {
+        float left
+      }
+
+      .article-next {
+        float right
+      }
+
+      .post-nav-item {
+        display none
+
+        +keep-tablet() {
+          display inline-block
+        }
+      }
 
 
+      .post-nav-title-item {
+        overflow hidden
+        white-space nowrap
+        text-overflow ellipsis
 
-        
-    
-</div>
+        +keep-tablet() {
+          display none
+        }
+      }
+    }
+  }
 
-                </div>
-            
-        </div>
 
-        
-            <div class="toc-content-container">
-                <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A6%BB%E6%95%A3%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">离散化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#acwing-802-%E5%8C%BA%E9%97%B4%E5%92%8C"><span class="nav-number">1.1.</span> <span class="nav-text">acwing 802. 区间和</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">数据范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">输入样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">输出样例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%90%B8"><span class="nav-number">1.2.</span> <span class="nav-text">简吸</span></a></li></ol></li></ol>
-    </div>
-</div>
+  .toc-content-container {
+    position sticky
+    top $header-height + $component-spacing-value
+    display none
+    box-sizing border-box
+    width $toc-container-width
+    max-height 'calc(100vh - %s)' % ($header-height + $component-spacing-value)
+    padding 2rem 0 2rem 1.4rem
+    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
 
-            </div>
-        
-    </div>
-</div>
+    .header-shrink & {
+      top $header-shrink-height + $component-spacing-value
+      max-height 'calc(100vh - %s)' % ($header-shrink-height + $component-spacing-value)
+    }
+  }
+}
 
 
                 
@@ -533,45 +588,51 @@ mjx-container[display="true"] + br {
         </div>
 
         <div class="page-main-content-bottom">
-            
-<footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-                <span>2022</span> -
-            
-            2023
-            
-                &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">huaziqi</a>
-            
-        </div>
-        
-            <script async data-pjax
-                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <div class="website-count info-item">
-                
-                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
-                
-                
-                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
-                
-            </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
-        </div>
-        
-        
-            <div class="deploy-info info-item">
-                
-                    This site is provided with deployment services by <span class="tooltip" data-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span>
-                
-            </div>
-        
-    </div>
-</footer>
+            .footer {
+  color var(--text-color-4)
+  font-size 1rem
+
+  a {
+    color var(--text-color-4)
+
+    &:hover {
+      color var(--primary-color)
+    }
+  }
+
+  .info-container {
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    padding-bottom 1rem
+
+    .info-item {
+      margin 0.2rem 0
+      color var(--text-color-4)
+
+      &.deploy-info {
+        display flex
+
+        a
+        .tooltip {
+          display flex
+          align-items center
+        }
+
+        img {
+          height 1.2rem
+          margin 0 0.4rem
+        }
+      }
+    }
+  }
+
+
+  .icon-animate {
+    animation icon-animate 1.2s ease-in-out infinite
+  }
+}
 
         </div>
     </div>

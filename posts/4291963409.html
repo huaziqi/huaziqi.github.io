@@ -24,7 +24,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"huaziqi.github.io","root":"/","language":"en","path":"search.json"}
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"/images/icn.png","avatar":"/images/tou.png","font_size":"16px","font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"gitalk","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":"huaziqi","github_admins":null,"repository":"Comment","client_id":"4b61270c2b59e59168fa","client_secret":"04fc3f5b72c23b18f0561bfe62d201f6bef094de","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"/images/icn.png","avatar":"/images/tou.png","font_size":"16px","font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"gitalk","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":"huaziqi","github_admins":"huaziqi","repository":"Comment","client_id":"4b61270c2b59e59168fa","client_secret":"04fc3f5b72c23b18f0561bfe62d201f6bef094de","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
     KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
@@ -209,6 +209,14 @@ mjx-container[display="true"] + br {
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
                     
                         <li class="menu-item search search-popup-trigger">
                             <i class="fas fa-search"></i>
@@ -250,6 +258,11 @@ mjx-container[display="true"] + br {
                        href="/categories">分类</a>
                 </li>
             
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
         </ul>
     </div>
 
@@ -265,287 +278,308 @@ mjx-container[display="true"] + br {
             <div class="main-content">
 
                 
-                    <div class="fade-in-down-animation">
-    <div class="post-page-container">
-        <div class="article-content-container">
+                    $avatarWidth = 3rem
+$arrow-icon-width = 1rem
+$post-nav-max-width = 14rem
+$article-title-font-size = 1.6rem
+$toc-container-width = 15rem
 
-            <div class="article-title">
-                <span class="title-hover-animation">远足——从黑天到天黑</span>
-            </div>
 
-            
-                <div class="article-header">
-                    <div class="avatar">
-                        <img src="/images/tou.png">
-                    </div>
-                    <div class="info">
-                        <div class="author">
-                            <span class="name">huaziqi</span>
-                            
-                                <span class="author-label">Lv3</span>
-                            
-                        </div>
-                        <div class="meta-info">
-                            
-<div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        
-            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
-        
-        <span class="pc">2022-11-13 09:53:37</span>
-        <span class="mobile">2022-11-13 09:53</span>
-    </span>
-    
-        <span class="article-update-date article-meta-item">
-        <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-01-19 09:56:17</span>
-    </span>
-    
-    
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/">自讫漫记</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
+.post-page-container {
+  position relative
+  display flex
+  justify-content space-between
+  box-sizing border-box
+  width 100%
+  height 100%
 
-    
-    
-    
-    
-        <span class="article-pv article-meta-item">
-            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            
+  &.show-toc {
+    .toc-content-container {
+      display block
+    }
 
-            <div class="article-content keep-markdown-body">
-                
+    .article-content-container {
+      width 'calc(100% - %s)' % $toc-container-width
+    }
+  }
 
-                <h1 id="远足——从黑天到天黑"><a href="#远足——从黑天到天黑" class="headerlink" title="远足——从黑天到天黑"></a>远足——从黑天到天黑</h1><h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>轰隆隆的大巴车里，周围一片漆黑。</p>
-<p><img lazyload="" alt="image" data-src="https://pic1.imgdb.cn/item/6370955716f2c2beb19f86c4.png"></p>
-<p>车上没有了来时的欢声笑语，氤氲在空气中的，有丝丝酸痛，阵阵睡意，还有独属于少年的自信与热血。回想来时，真的很难相信自己居然一路走了这么远，不免令我想起一段话：</p>
-<blockquote>
-<p>生活没有你想象的那么好，但也没有你想象的那么糟糕。人的脆弱会超出自己的想象。有时候你发现一句话就会被感动得泪流满面，有时候咬咬牙就已经走了很远。</p>
-<pre><code>                                                        ——贺炜
-</code></pre>
-</blockquote>
-<p>还记得小时候吃饺子，妈妈问我要吃几个。我说，我13岁了，吃十三个。现在已经17岁了，我还是吃十三个。时间一点点过去，有些事变了，但我相信有些东西不能改变：敢去想，敢去做。很多人非常现实，他们或许会觉得你不过是白日做梦，痴心妄想，他们甚至会瞧不起你。在学校，我特别能感觉到以成绩论人的氛围。我时常感觉，人与人间的交往是充满傲慢与偏见的，似乎成绩即是一切。当然也并不否认成绩的重要性。在这个所谓的大环境下，只有结果会被看到。太多人才被埋没……世上不止读书高。</p>
-<p>心之所向，即是正道。当你在一条路上看到了光，那就走下去吧。</p>
-<h2 id="灰色的天"><a href="#灰色的天" class="headerlink" title="灰色的天"></a>灰色的天</h2><p>早上5：15，灰的天，雾蒙蒙的校园，我在睡意朦胧间醒来。寝室里只有两个人，看了会儿书我就下床了。6：50是开幕仪式，之后7：30就乘着车到了绿道的起点出发。</p>
-<p><img lazyload="" alt="image" data-src="https://pic1.imgdb.cn/item/6370971616f2c2beb1a36129.png"></p>
-<blockquote>
-<p>天空灰的像哭过。</p>
-<p>细密的雨粒才不分你我，</p>
-<p>它敲打我心窝，</p>
-<p>叫我将往事拾掇。</p>
-</blockquote>
-<p>过往似云烟细雨，打在脸上，不一会便会消失，却面颊上留下了淡淡的泪痕。或许什么都比不上此刻重要，因为过去是现在所创造的，未来也是。</p>
-<p><del>刚开始12公里我似乎还有力气搁这抒情，实际上到永宁公园我就快要没了。</del></p>
-<p><a target="_blank" rel="noopener" href="https://pic1.imgdb.cn/item/6370971216f2c2beb1a35ce2.png"><img lazyload="" alt="image" data-src="https://pic1.imgdb.cn/item/6370971216f2c2beb1a35ce2.png"></a></p>
-<p>一路上，因为有人一起唱歌，所以唱的时候并不尴尬。关于唱的内容，大部分（好像全是）老歌，关于为什么老歌所带来的感觉要远远强于近几年的新歌，我很早就想说一说了</p>
-<p><a target="_blank" rel="noopener" href="https://pic1.imgdb.cn/item/6370aa2c16f2c2beb1c35189.png"><img lazyload="" alt="image" data-src="https://pic1.imgdb.cn/item/6370aa2c16f2c2beb1c35189.png"></a></p>
-<h2 id="为什么我不喜欢新歌"><a href="#为什么我不喜欢新歌" class="headerlink" title="为什么我不喜欢新歌"></a>为什么我不喜欢新歌</h2><p>也并非完全否定近来的新歌，早几年我也曾一度喜欢听。然而问题就是：它太不耐听了，以至于我现在很少去听。在我看来，一方面，近几年的音乐大部分都偏向于阴郁，沉闷。调子带给人的惊喜不多，而且缺少较为激昂的高潮。这就好比一个人一直以一个调调讲话，讲话的时候还没有侧重点，好比念稿一样无聊，谁又会喜欢听呢？</p>
-<p>另一方面，如果它不符合我上面所说的特质，那它可能是被互联网毁了。有人可能会问：怎么会呢，互联网大大促进了歌曲的传播。然而在我看来，互联网的广泛传播，使其过于大众化。对于我这种比较喜欢个性化的人来说，与那些我认为品味参差的人为伍，可以说是俗气的。<del>比如《孤勇者》</del></p>
-<h2 id="为什么喜欢周杰伦"><a href="#为什么喜欢周杰伦" class="headerlink" title="为什么喜欢周杰伦"></a>为什么喜欢周杰伦</h2><p>包括周杰伦、陈奕迅、孙燕姿在内的老歌手我都非常喜欢，其中最喜欢的当属脚臭（jay chou）了。</p>
-<ol>
-<li>旋律与歌词</li>
-</ol>
-<p>这不必多说，好的旋律与歌词是喜欢一首歌的关键。他歌中的rap是我非常喜欢的，《手写的从前》、《发如雪》、《反方向的钟》……</p>
-<ol start="2">
-<li>共情</li>
-</ol>
-<p>这是十分重要的一点。他的歌总能让我引发共鸣。</p>
-<p>我这个人比较怂，却又比较多情。一次次的遇见，一次次的失去，我不敢去爱了。但当我被爱时，又不知如何去应对了。总是处于如此的矛盾之中，我在他的歌中听到了我的过去。与此同时，他的歌能激励我。当我解数学题解到崩溃，当我在物理题中怀疑人生，不止怎的，一戴上耳机，我仿佛抓住了什么。这可能就是音乐的魅力，每个国家有国歌，音乐是必修课，学校早中晚都在放歌……音乐已然成为生活。</p>
-<ol start="3">
-<li>个人</li>
-</ol>
-<p>周杰伦是个非常自信的的人，他的自信也并非没有原因。22年了，他的歌依旧能够收到广泛喜爱，这不是一般人能做到。在他身上，我看到了读书不是惟一的出路，热爱才是。</p>
-<h2 id="第二站"><a href="#第二站" class="headerlink" title="第二站"></a>第二站</h2><p><a target="_blank" rel="noopener" href="https://pic1.imgdb.cn/item/6370aa9f16f2c2beb1c3d174.png"><img lazyload="" alt=" " data-src="https://pic1.imgdb.cn/item/6370aa9f16f2c2beb1c3d174.png"></a></p>
-<p>在到这一站的路上，天晴了。</p>
-<p>美好的景色，美好的人，在这一刻净收眼底。</p>
-<p>眼睛是贪婪的，他将看到的全部收下；心灵是自私的，他只想感受美好的事物。</p>
-<p>到这里为止，旅途只剩下最后一段了，我的腿也报废了。再继续走下去，我的腿也只不过是在做机械的运动了。我们班主任最后一批到达休息点。说起班主任，他是一个有趣的人：冷静的外表下实际上尽显闷骚。在没有班级同学的地方，他更是放飞自我。</p>
-<h2 id="最后的路程"><a href="#最后的路程" class="headerlink" title="最后的路程"></a>最后的路程</h2><p>现在早已忘却当时的痛，没想到一个人忘记创伤竟如此之快。依稀回想起，只记得当时落日余晖，白马在远处的草坪上埋下头，养马的人在旁静候着。也就是这时，我才真正感受到了追逐梦想时的喜悦与煎熬，我才切身地感受到了什么叫双腿被铅灌了似的。</p>
-<p><img lazyload="" alt="image" data-src="https://pic.imgdb.cn/item/6379128816f2c2beb12baeb5.png"></p>
-<p>红军战士是伟大的，我们所走的42千米在两万五千里长征面前，连蝼蚁都不如。何况他们身后是枪林弹雨，敌军追击，我们走的是一眼能望到尽头的水泥路；他们吃的是花生粒，我们补充的是面包，茶叶蛋，玉米……；他们连夜赶路走了两年，我们不过从早上7点走到下午五点。如果说每一个人都去走一遍长征，我相信，坚持下来的，才是真正心系百姓的人。</p>
-<h2 id="终"><a href="#终" class="headerlink" title="终"></a>终</h2><p>我感觉好累，朦胧的意识，昏昏欲睡的大脑，这是终点，我成功了。躺在草坪上，一合上眼便睁不开来了。过了一会儿，爬起来，看看远方的长潭大坝躺在夕阳里，原来这世上真有那么美的东西。</p>
-<p><img lazyload="" alt="image" data-src="https://pic.imgdb.cn/item/6379126716f2c2beb12b8230.png"></p>
 
-            </div>
+  +keep-tablet() {
+    .toc-content-container {
+      display none !important
+    }
 
-            
-                <div class="post-copyright-info">
-                    
-<div class="article-copyright-info-container">
-    <ul class="copyright-info-content">
-        <li class="post-title">
-            <span class="type">Post title</span>: <span class="content">远足——从黑天到天黑</span>
-        </li>
-        <li class="post-author">
-            <span class="type">Post author</span>: <span class="content">huaziqi</span>
-        </li>
-        <li class="post-time">
-            <span class="type">Create time</span>: <span class="content">2022-11-13 09:53:37</span>
-        </li>
-        <li class="post-link">
-            <span class="type">Post link</span>: <span class="content">posts/4291963409.html</span>
-        </li>
-        <li class="post-license">
-            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
-        </li>
-    </ul>
-    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
-        <i class="fa-solid fa-copy"></i>
-    </div>
-</div>
+    .article-content-container {
+      width 100% !important
+    }
+  }
 
-                </div>
-            
 
-            
-                <ul class="post-tags-box">
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E8%AE%B0%E5%BD%95/">#记录</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            
+  .article-content-container {
+    position relative
+    box-sizing border-box
+    width 100%
+    height 100%
+    keep-container(false, 0, 0, 2rem, 2rem)
 
-            
-                <div class="article-nav">
-                    
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/posts/3345621692.html"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">acwing-4700-何以包邮</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                            </a>
-                        </div>
-                    
-                    
-                        <div class="article-next">
-                            <a class="next"
-                               rel="next"
-                               href="/posts/3660077721.html"
-                            >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">排序算法整理C++</span>
-                                <span class="post-nav-item">Next posts</span>
-                            </span>
-                                <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                            </a>
-                        </div>
-                    
-                </div>
-            
+    +keep-mobile() {
+      padding 1.2rem 0.2rem
+      box-shadow none
 
-            
-                <div class="comment-container">
-                    
-<div class="comments-container">
-    <div id="comments-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fas fa-comments"></i>&nbsp;Comments
-    </div>
-    
-        
-            
+      &:hover {
+        box-shadow none
+      }
+    }
 
-    <div class="gitalk-comment-container">
-        <div id="gitalk-container"></div>
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-        <script data-pjax src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-        <script data-pjax>
-          function loadGitalk() {
-            let __gitalk__pathname = decodeURI(location.pathname);
-            const __gitalk__pathnameLength = __gitalk__pathname.length;
-            const __gitalk__pathnameMaxLength = 50;
-            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
-              __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+
+    .article-title {
+      color var(--text-color-2)
+      font-weight 600
+      font-size $article-title-font-size
+
+      +keep-tablet() {
+        font-size $article-title-font-size * 0.9
+      }
+
+      +keep-mobile() {
+        font-size $article-title-font-size * 0.8
+      }
+    }
+
+
+    .article-header {
+      position relative
+      box-sizing border-box
+      width 100%
+      height $avatarWidth
+      padding-left $avatarWidth
+
+      .avatar {
+        position absolute
+        top 0
+        left 0
+        box-sizing border-box
+        width $avatarWidth
+        height $avatarWidth
+        padding 0.1rem
+        border 1px solid var(--border-color)
+        border-radius 50%
+
+        img {
+          width 100%
+          height 100%
+          background var(--avatar-background-color)
+          border-radius 50%
+        }
+      }
+
+
+      .info {
+        display flex
+        flex-direction column
+        justify-content space-between
+        box-sizing border-box
+        width 100%
+        height 100%
+        margin-left 0.8rem
+        padding 0.2rem 0
+
+        .author {
+          display flex
+          align-items center
+          font-weight 600
+          font-size 1.18rem
+
+          .name {
+            color var(--text-color-3)
+          }
+
+          .author-label {
+            margin-left 0.8rem
+            padding 0 0.4rem
+            color #fff
+            font-weight 500
+            font-size 0.8rem
+            background var(--selection-color)
+            border-radius 0.4rem
+          }
+        }
+      }
+    }
+
+
+    .article-header
+    .article-header-meta-info {
+      margin-top 1rem
+      +keep-tablet() {
+        transform scale(0.9)
+        transform-origin left top
+      }
+    }
+
+
+    .article-content {
+      margin-top $component-spacing-value
+      padding-bottom 2rem
+      color var(--text-color-3)
+      word-wrap break-word
+
+      .article-aging-tips {
+        position relative
+        display none
+        box-sizing border-box
+        margin-bottom 1.8rem
+        padding 1rem
+        color var(--article-aging-tips-color)
+        line-height 1.6
+        background var(--article-aging-tips-background-color)
+        border 0.1rem solid var(--article-aging-tips-border-color)
+        border-radius 0.4rem
+
+        i {
+          margin-right 0.4rem
+          color var(--article-aging-tips-color)
+        }
+
+        .days {
+          color var(--article-aging-tips-color)
+        }
+      }
+
+      if (hexo-config('post.copyright_info') == true || hexo-config('copyright_info.enable') == true) {
+        border-bottom 0.1rem dashed var(--border-color)
+      }
+    }
+
+
+    .post-tags-box {
+      display none
+      justify-content center
+      margin-top 1.6rem
+      font-size 1.1rem
+
+      +keep-tablet() {
+        display flex
+      }
+
+      +keep-mobile() {
+        margin-top 1.2rem
+        font-size 1rem
+      }
+
+
+      .tag-item {
+        margin 0 0.25rem
+      }
+    }
+
+
+    .post-copyright-info {
+      width 100%
+      margin-top $component-spacing-value
+
+      +keep-tablet() {
+        margin-top $component-spacing-value * 0.8
+      }
+    }
+
+
+    .article-nav {
+      height 2.8rem
+      margin-top $component-spacing-value
+
+      .article-prev
+      .article-next {
+        box-sizing border-box
+        max-width $post-nav-max-width
+        height 100%
+
+        keep-container(true, 1.03, 1.03, 0.8rem, 0)
+
+        a {
+          position relative
+          display block
+          box-sizing border-box
+          width 100%
+          height 100%
+
+          &.prev {
+            padding-left $arrow-icon-width
+          }
+
+          &.next {
+            padding-right $arrow-icon-width
+          }
+
+          .arrow-icon {
+            position absolute
+            top 0
+            width $arrow-icon-width
+            height 100%
+
+            &.left {
+              left 0
             }
 
-            try {
-              Gitalk && new Gitalk({
-                clientID: '4b61270c2b59e59168fa',
-                clientSecret: '04fc3f5b72c23b18f0561bfe62d201f6bef094de',
-                repo: 'Comment',
-                owner: 'huaziqi',
-                admin: 'huaziqi',
-                id: __gitalk__pathname,
-                proxy: '',
-                language: 'en'
-              }).render('gitalk-container');
-            } catch (e) {
-              window.Gitalk = null;
+            &.right {
+              right 0
             }
           }
 
-          if ('true' === 'true') {
-            const loadGitalkTimeout = setTimeout(() => {
-              loadGitalk();
-              clearTimeout(loadGitalkTimeout);
-            }, 1000);
-          } else {
-            window.addEventListener('DOMContentLoaded', loadGitalk);
+          .title {
+            width 100%
+            height 100%
           }
-        </script>
-    </div>
+        }
+      }
+
+      .article-prev {
+        float left
+      }
+
+      .article-next {
+        float right
+      }
+
+      .post-nav-item {
+        display none
+
+        +keep-tablet() {
+          display inline-block
+        }
+      }
 
 
+      .post-nav-title-item {
+        overflow hidden
+        white-space nowrap
+        text-overflow ellipsis
 
-        
-    
-</div>
+        +keep-tablet() {
+          display none
+        }
+      }
+    }
+  }
 
-                </div>
-            
-        </div>
 
-        
-            <div class="toc-content-container">
-                <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9C%E8%B6%B3%E2%80%94%E2%80%94%E4%BB%8E%E9%BB%91%E5%A4%A9%E5%88%B0%E5%A4%A9%E9%BB%91"><span class="nav-number">1.</span> <span class="nav-text">远足——从黑天到天黑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%81%B0%E8%89%B2%E7%9A%84%E5%A4%A9"><span class="nav-number">1.2.</span> <span class="nav-text">灰色的天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%B8%8D%E5%96%9C%E6%AC%A2%E6%96%B0%E6%AD%8C"><span class="nav-number">1.3.</span> <span class="nav-text">为什么我不喜欢新歌</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%96%9C%E6%AC%A2%E5%91%A8%E6%9D%B0%E4%BC%A6"><span class="nav-number">1.4.</span> <span class="nav-text">为什么喜欢周杰伦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%99"><span class="nav-number">1.5.</span> <span class="nav-text">第二站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%90%8E%E7%9A%84%E8%B7%AF%E7%A8%8B"><span class="nav-number">1.6.</span> <span class="nav-text">最后的路程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%88"><span class="nav-number">1.7.</span> <span class="nav-text">终</span></a></li></ol></li></ol>
-    </div>
-</div>
+  .toc-content-container {
+    position sticky
+    top $header-height + $component-spacing-value
+    display none
+    box-sizing border-box
+    width $toc-container-width
+    max-height 'calc(100vh - %s)' % ($header-height + $component-spacing-value)
+    padding 2rem 0 2rem 1.4rem
+    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
 
-            </div>
-        
-    </div>
-</div>
+    .header-shrink & {
+      top $header-shrink-height + $component-spacing-value
+      max-height 'calc(100vh - %s)' % ($header-shrink-height + $component-spacing-value)
+    }
+  }
+}
 
 
                 
@@ -554,45 +588,51 @@ mjx-container[display="true"] + br {
         </div>
 
         <div class="page-main-content-bottom">
-            
-<footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-                <span>2022</span> -
-            
-            2023
-            
-                &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">huaziqi</a>
-            
-        </div>
-        
-            <script async data-pjax
-                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <div class="website-count info-item">
-                
-                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
-                
-                
-                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
-                
-            </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
-        </div>
-        
-        
-            <div class="deploy-info info-item">
-                
-                    This site is provided with deployment services by <span class="tooltip" data-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span>
-                
-            </div>
-        
-    </div>
-</footer>
+            .footer {
+  color var(--text-color-4)
+  font-size 1rem
+
+  a {
+    color var(--text-color-4)
+
+    &:hover {
+      color var(--primary-color)
+    }
+  }
+
+  .info-container {
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    padding-bottom 1rem
+
+    .info-item {
+      margin 0.2rem 0
+      color var(--text-color-4)
+
+      &.deploy-info {
+        display flex
+
+        a
+        .tooltip {
+          display flex
+          align-items center
+        }
+
+        img {
+          height 1.2rem
+          margin 0 0.4rem
+        }
+      }
+    }
+  }
+
+
+  .icon-animate {
+    animation icon-animate 1.2s ease-in-out infinite
+  }
+}
 
         </div>
     </div>

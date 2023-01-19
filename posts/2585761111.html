@@ -24,7 +24,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"huaziqi.github.io","root":"/","language":"en","path":"search.json"}
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"/images/icn.png","avatar":"/images/tou.png","font_size":"16px","font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"gitalk","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":"huaziqi","github_admins":null,"repository":"Comment","client_id":"4b61270c2b59e59168fa","client_secret":"04fc3f5b72c23b18f0561bfe62d201f6bef094de","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"/images/icn.png","avatar":"/images/tou.png","font_size":"16px","font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"gitalk","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":"huaziqi","github_admins":"huaziqi","repository":"Comment","client_id":"4b61270c2b59e59168fa","client_secret":"04fc3f5b72c23b18f0561bfe62d201f6bef094de","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
     KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
@@ -209,6 +209,14 @@ mjx-container[display="true"] + br {
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
                     
                         <li class="menu-item search search-popup-trigger">
                             <i class="fas fa-search"></i>
@@ -250,6 +258,11 @@ mjx-container[display="true"] + br {
                        href="/categories">分类</a>
                 </li>
             
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
         </ul>
     </div>
 
@@ -265,304 +278,308 @@ mjx-container[display="true"] + br {
             <div class="main-content">
 
                 
-                    <div class="fade-in-down-animation">
-    <div class="post-page-container">
-        <div class="article-content-container">
+                    $avatarWidth = 3rem
+$arrow-icon-width = 1rem
+$post-nav-max-width = 14rem
+$article-title-font-size = 1.6rem
+$toc-container-width = 15rem
 
-            <div class="article-title">
-                <span class="title-hover-animation">luogu-p1488-肥猫的游戏</span>
-            </div>
 
-            
-                <div class="article-header">
-                    <div class="avatar">
-                        <img src="/images/tou.png">
-                    </div>
-                    <div class="info">
-                        <div class="author">
-                            <span class="name">huaziqi</span>
-                            
-                                <span class="author-label">Lv3</span>
-                            
-                        </div>
-                        <div class="meta-info">
-                            
-<div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        
-            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
-        
-        <span class="pc">2022-08-19 09:41:23</span>
-        <span class="mobile">2022-08-19 09:41</span>
-    </span>
-    
-        <span class="article-update-date article-meta-item">
-        <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-01-19 09:56:17</span>
-    </span>
-    
-    
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/%E6%B4%9B%E8%B0%B7/">洛谷</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
+.post-page-container {
+  position relative
+  display flex
+  justify-content space-between
+  box-sizing border-box
+  width 100%
+  height 100%
 
-    
-    
-    
-    
-        <span class="article-pv article-meta-item">
-            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            
-
-            <div class="article-content keep-markdown-body">
-                
-
-                <h1 id="肥猫的游戏"><a href="#肥猫的游戏" class="headerlink" title="肥猫的游戏"></a>肥猫的游戏</h1><p><a class="link" target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1488">P1488 肥猫的游戏 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)<i class="fas fa-external-link-alt"></i></a></p>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>野猫与胖子，合起来简称肥猫，是一个班的同学，他们也都是数学高手，所以经常在一起讨论数学问题也就不足为奇了。</p>
-<p>一次，野猫遇到了一道有趣的几何游戏题目，便拿给胖子看。游戏要求在一个有 n 个顶点凸多边形上进行，这个凸多边形的 n-3 条对角线将多边形分成 n-2 个三角形，这 n-3 条对角线在多边形的顶点相交。三角形中的一个被染成黑色，其余是白色。</p>
-<p>双方轮流进行游戏，当轮到一方时，他必须沿着画好的对角线，从多边形上切下一个三角形。切下黑色三角形的一方获胜。胖子一看觉得确实很有趣，不如就一起玩玩吧。假设游戏由野猫先开始，那么野猫是否有必胜的策略呢？请写一个程序帮助野猫算一算。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行为一个整数 n，表示多边形的顶点数，多边形的顶点由 0 至 n-1 顺时针标号。</p>
-<p>接着的 n-2 行描述组成多边形的三角形。第 i+1 行  有三个空格分隔的非负整数 a 、b 、c ，它们是第 i 个三角形的顶点编号。第一个给出的三角形是黑色的。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>只有一行，倘若野猫有必胜策略，输出 <code>JMcat Win</code>；否则，输出 <code>PZ Win</code>（注意大小写和空格）。</p>
-<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">0 1 2</span><br><span class="line">2 4 3</span><br><span class="line">4 2 0</span><br><span class="line">0 5 4</span><br></pre></td></tr></table></figure>
-
-<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JMcat Win</span><br></pre></td></tr></table></figure>
-
-<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>4 &lt;= n &lt;= 50000</p>
-<p>如果连接一个多边形中任意两点的线段都完全包含于这个多边形，则称这个多边形为凸多边形。</p>
-<p>题解在代码里</p>
-<pre><code class="cpp">#include&lt;iostream&gt;
-using namespace std;
-
-int n, a, b, c;
-
-int main()
-{
-    cin &gt;&gt; n;
-    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
-    if(a &gt; b)
-        swap(a, b);
-    if(a &gt; c)
-        swap(a, c);
-    if(b &gt; c)
-        swap(b, c);
-    if((a + 1 == b &amp;&amp; b + 1 == c) || (a == 0 &amp;&amp; c == n - 1))
-    {
-        puts("JMcat Win");
-        return 0;
+  &.show-toc {
+    .toc-content-container {
+      display block
     }
-/*
-假如顶点连续，则代表这个黑色三角形在外面。
-就像是一个多边形上连续三个点构成的三角形必然在外面
-那么先手的野猫就赢了
-当然还有一个特殊情况：假如黑色三角形同时包括 0 点和 n 点（首尾相连）
-就比如：
-6
-0 5 4
-0 1 2
-2 4 3
-4 2 0
-所以要特判一下这种情况
-*/
-    else if((n - 2) % 2 == 0)
-    {
-        puts("JMcat Win");
-        return 0;
-    }
-/*
-假如黑色三角形被包在里面
-先放着别的三角形不管
-假设最后只剩三个个三角形包着黑三角
-谁把其中一个三角切了谁就输了
-胜负就出来了
-所以只要考虑三角形个数的奇偶性就行了
-*/
-    else
-        puts("PZ Win");
 
-    return 0;
+    .article-content-container {
+      width 'calc(100% - %s)' % $toc-container-width
+    }
+  }
+
+
+  +keep-tablet() {
+    .toc-content-container {
+      display none !important
+    }
+
+    .article-content-container {
+      width 100% !important
+    }
+  }
+
+
+  .article-content-container {
+    position relative
+    box-sizing border-box
+    width 100%
+    height 100%
+    keep-container(false, 0, 0, 2rem, 2rem)
+
+    +keep-mobile() {
+      padding 1.2rem 0.2rem
+      box-shadow none
+
+      &:hover {
+        box-shadow none
+      }
+    }
+
+
+    .article-title {
+      color var(--text-color-2)
+      font-weight 600
+      font-size $article-title-font-size
+
+      +keep-tablet() {
+        font-size $article-title-font-size * 0.9
+      }
+
+      +keep-mobile() {
+        font-size $article-title-font-size * 0.8
+      }
+    }
+
+
+    .article-header {
+      position relative
+      box-sizing border-box
+      width 100%
+      height $avatarWidth
+      padding-left $avatarWidth
+
+      .avatar {
+        position absolute
+        top 0
+        left 0
+        box-sizing border-box
+        width $avatarWidth
+        height $avatarWidth
+        padding 0.1rem
+        border 1px solid var(--border-color)
+        border-radius 50%
+
+        img {
+          width 100%
+          height 100%
+          background var(--avatar-background-color)
+          border-radius 50%
+        }
+      }
+
+
+      .info {
+        display flex
+        flex-direction column
+        justify-content space-between
+        box-sizing border-box
+        width 100%
+        height 100%
+        margin-left 0.8rem
+        padding 0.2rem 0
+
+        .author {
+          display flex
+          align-items center
+          font-weight 600
+          font-size 1.18rem
+
+          .name {
+            color var(--text-color-3)
+          }
+
+          .author-label {
+            margin-left 0.8rem
+            padding 0 0.4rem
+            color #fff
+            font-weight 500
+            font-size 0.8rem
+            background var(--selection-color)
+            border-radius 0.4rem
+          }
+        }
+      }
+    }
+
+
+    .article-header
+    .article-header-meta-info {
+      margin-top 1rem
+      +keep-tablet() {
+        transform scale(0.9)
+        transform-origin left top
+      }
+    }
+
+
+    .article-content {
+      margin-top $component-spacing-value
+      padding-bottom 2rem
+      color var(--text-color-3)
+      word-wrap break-word
+
+      .article-aging-tips {
+        position relative
+        display none
+        box-sizing border-box
+        margin-bottom 1.8rem
+        padding 1rem
+        color var(--article-aging-tips-color)
+        line-height 1.6
+        background var(--article-aging-tips-background-color)
+        border 0.1rem solid var(--article-aging-tips-border-color)
+        border-radius 0.4rem
+
+        i {
+          margin-right 0.4rem
+          color var(--article-aging-tips-color)
+        }
+
+        .days {
+          color var(--article-aging-tips-color)
+        }
+      }
+
+      if (hexo-config('post.copyright_info') == true || hexo-config('copyright_info.enable') == true) {
+        border-bottom 0.1rem dashed var(--border-color)
+      }
+    }
+
+
+    .post-tags-box {
+      display none
+      justify-content center
+      margin-top 1.6rem
+      font-size 1.1rem
+
+      +keep-tablet() {
+        display flex
+      }
+
+      +keep-mobile() {
+        margin-top 1.2rem
+        font-size 1rem
+      }
+
+
+      .tag-item {
+        margin 0 0.25rem
+      }
+    }
+
+
+    .post-copyright-info {
+      width 100%
+      margin-top $component-spacing-value
+
+      +keep-tablet() {
+        margin-top $component-spacing-value * 0.8
+      }
+    }
+
+
+    .article-nav {
+      height 2.8rem
+      margin-top $component-spacing-value
+
+      .article-prev
+      .article-next {
+        box-sizing border-box
+        max-width $post-nav-max-width
+        height 100%
+
+        keep-container(true, 1.03, 1.03, 0.8rem, 0)
+
+        a {
+          position relative
+          display block
+          box-sizing border-box
+          width 100%
+          height 100%
+
+          &.prev {
+            padding-left $arrow-icon-width
+          }
+
+          &.next {
+            padding-right $arrow-icon-width
+          }
+
+          .arrow-icon {
+            position absolute
+            top 0
+            width $arrow-icon-width
+            height 100%
+
+            &.left {
+              left 0
+            }
+
+            &.right {
+              right 0
+            }
+          }
+
+          .title {
+            width 100%
+            height 100%
+          }
+        }
+      }
+
+      .article-prev {
+        float left
+      }
+
+      .article-next {
+        float right
+      }
+
+      .post-nav-item {
+        display none
+
+        +keep-tablet() {
+          display inline-block
+        }
+      }
+
+
+      .post-nav-title-item {
+        overflow hidden
+        white-space nowrap
+        text-overflow ellipsis
+
+        +keep-tablet() {
+          display none
+        }
+      }
+    }
+  }
+
+
+  .toc-content-container {
+    position sticky
+    top $header-height + $component-spacing-value
+    display none
+    box-sizing border-box
+    width $toc-container-width
+    max-height 'calc(100vh - %s)' % ($header-height + $component-spacing-value)
+    padding 2rem 0 2rem 1.4rem
+    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
+
+    .header-shrink & {
+      top $header-shrink-height + $component-spacing-value
+      max-height 'calc(100vh - %s)' % ($header-shrink-height + $component-spacing-value)
+    }
+  }
 }
-</code></pre>
-
-            </div>
-
-            
-                <div class="post-copyright-info">
-                    
-<div class="article-copyright-info-container">
-    <ul class="copyright-info-content">
-        <li class="post-title">
-            <span class="type">Post title</span>: <span class="content">luogu-p1488-肥猫的游戏</span>
-        </li>
-        <li class="post-author">
-            <span class="type">Post author</span>: <span class="content">huaziqi</span>
-        </li>
-        <li class="post-time">
-            <span class="type">Create time</span>: <span class="content">2022-08-19 09:41:23</span>
-        </li>
-        <li class="post-link">
-            <span class="type">Post link</span>: <span class="content">posts/2585761111.html</span>
-        </li>
-        <li class="post-license">
-            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
-        </li>
-    </ul>
-    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
-        <i class="fa-solid fa-copy"></i>
-    </div>
-</div>
-
-                </div>
-            
-
-            
-                <ul class="post-tags-box">
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            
-
-            
-                <div class="article-nav">
-                    
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/posts/3596120880.html"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">风</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                            </a>
-                        </div>
-                    
-                    
-                        <div class="article-next">
-                            <a class="next"
-                               rel="next"
-                               href="/posts/3737033367.html"
-                            >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">哈夫曼编码详解</span>
-                                <span class="post-nav-item">Next posts</span>
-                            </span>
-                                <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                            </a>
-                        </div>
-                    
-                </div>
-            
-
-            
-                <div class="comment-container">
-                    
-<div class="comments-container">
-    <div id="comments-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fas fa-comments"></i>&nbsp;Comments
-    </div>
-    
-        
-            
-
-    <div class="gitalk-comment-container">
-        <div id="gitalk-container"></div>
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-        <script data-pjax src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-        <script data-pjax>
-          function loadGitalk() {
-            let __gitalk__pathname = decodeURI(location.pathname);
-            const __gitalk__pathnameLength = __gitalk__pathname.length;
-            const __gitalk__pathnameMaxLength = 50;
-            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
-              __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
-            }
-
-            try {
-              Gitalk && new Gitalk({
-                clientID: '4b61270c2b59e59168fa',
-                clientSecret: '04fc3f5b72c23b18f0561bfe62d201f6bef094de',
-                repo: 'Comment',
-                owner: 'huaziqi',
-                admin: 'huaziqi',
-                id: __gitalk__pathname,
-                proxy: '',
-                language: 'en'
-              }).render('gitalk-container');
-            } catch (e) {
-              window.Gitalk = null;
-            }
-          }
-
-          if ('true' === 'true') {
-            const loadGitalkTimeout = setTimeout(() => {
-              loadGitalk();
-              clearTimeout(loadGitalkTimeout);
-            }, 1000);
-          } else {
-            window.addEventListener('DOMContentLoaded', loadGitalk);
-          }
-        </script>
-    </div>
-
-
-
-        
-    
-</div>
-
-                </div>
-            
-        </div>
-
-        
-            <div class="toc-content-container">
-                <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%82%A5%E7%8C%AB%E7%9A%84%E6%B8%B8%E6%88%8F"><span class="nav-number">1.</span> <span class="nav-text">肥猫的游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">1.4.</span> <span class="nav-text">样例 #1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">样例输入 #1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">样例输出 #1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA"><span class="nav-number">1.5.</span> <span class="nav-text">提示</span></a></li></ol></li></ol>
-    </div>
-</div>
-
-            </div>
-        
-    </div>
-</div>
 
 
                 
@@ -571,45 +588,51 @@ int main()
         </div>
 
         <div class="page-main-content-bottom">
-            
-<footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-                <span>2022</span> -
-            
-            2023
-            
-                &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">huaziqi</a>
-            
-        </div>
-        
-            <script async data-pjax
-                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <div class="website-count info-item">
-                
-                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
-                
-                
-                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
-                
-            </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
-        </div>
-        
-        
-            <div class="deploy-info info-item">
-                
-                    This site is provided with deployment services by <span class="tooltip" data-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span>
-                
-            </div>
-        
-    </div>
-</footer>
+            .footer {
+  color var(--text-color-4)
+  font-size 1rem
+
+  a {
+    color var(--text-color-4)
+
+    &:hover {
+      color var(--primary-color)
+    }
+  }
+
+  .info-container {
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    padding-bottom 1rem
+
+    .info-item {
+      margin 0.2rem 0
+      color var(--text-color-4)
+
+      &.deploy-info {
+        display flex
+
+        a
+        .tooltip {
+          display flex
+          align-items center
+        }
+
+        img {
+          height 1.2rem
+          margin 0 0.4rem
+        }
+      }
+    }
+  }
+
+
+  .icon-animate {
+    animation icon-animate 1.2s ease-in-out infinite
+  }
+}
 
         </div>
     </div>
