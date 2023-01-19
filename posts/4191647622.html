@@ -311,7 +311,7 @@ mjx-container[display="true"] + br {
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-01-19 15:52:27</span>
+        <span class="pc">2023-01-19 19:25:28</span>
     </span>
     
     
@@ -406,8 +406,8 @@ mjx-container[display="true"] + br {
 <p>进入文件夹之后输入<code>npm install</code>，安装基本文件</p>
 <h3 id="hexo中的基本操作"><a href="#hexo中的基本操作" class="headerlink" title="hexo中的基本操作"></a>hexo中的基本操作</h3><p><code>hexo g</code> 相当于编译，把你所有对于文件夹中的改变识别到，有错误的话会报错。</p>
 <p>完成之后输入<code>hexo s</code>就可以在本地访问你的网站</p>
-<p><img lazyload="" alt="hexo s" data-src="https://raw.githubusercontents.com/huaziqi/my-Figure-bed/main/PIcGo/hexo%20s.png"></p>
-<p>加载完应该是这样，进入<a class="link" target="_blank" rel="noopener" href="http://localhost:4000/%E5%B0%B1%E6%98%AF%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%9A%84%E6%A0%B7%E5%AD%90%E3%80%82">http://localhost:4000/就是你的博客在本地的样子。<i class="fas fa-external-link-alt"></i></a></p>
+<p><img lazyload="" alt="image" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/hexo%20s.png"></p>
+<p>加载完应该是这样，进入 <a class="link" target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/<i class="fas fa-external-link-alt"></i></a> 就是你的博客在本地的样子。</p>
 <p>==先别急着优化博客==，确认它能够被流畅访问先，不然失败了的话就很难受</p>
 <h3 id="部署博客到github"><a href="#部署博客到github" class="headerlink" title="部署博客到github"></a>部署博客到github</h3><p><code>npm install hexo-deployer-git --save</code> 下载上传的插件</p>
 <h4 id="获取ssh"><a href="#获取ssh" class="headerlink" title="获取ssh"></a>获取ssh</h4><p><del>据我所知，现在部署博客有两种方法，一种是用repo，另一种使用ssh密钥。之前失败就是使用的前者。所以现在是用后者。</del></p>
@@ -422,7 +422,7 @@ mjx-container[display="true"] + br {
 <p>如果他问你<code>Enter file in which to save the key (/Users/TMnoL/.ssh/id_rsa): </code>,你就填id_rsa</p>
 <p>接着他会让你输入密码，注意这个密码自己==一定要记住==，之后每一次部署你的博客都需要你输入一遍</p>
 <p>然后它会在该文件夹内产生两个文件：id_rsa、id_rsa.pub。</p>
-<p><img lazyload="" alt="image" data-src="https://raw.githubusercontents.com/huaziqi/my-Figure-bed/main/PIcGo/%E6%88%AA%E5%B1%8F2023-01-19%2015.05.09.png"></p>
+<p><img lazyload="" alt="截屏2023-01-19 15.05.09" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-01-19%2015.05.09.png"></p>
 <p>把这两个文件移动到上一级目录中的.ssh文件夹。</p>
 <blockquote>
 <p>这个文件夹是隐藏的，如何查看隐藏文件夹，mac是<code>command+shift+.</code>，这东西自己百度就行。</p>
@@ -430,18 +430,18 @@ mjx-container[display="true"] + br {
 <h4 id="绑定ssh到github"><a href="#绑定ssh到github" class="headerlink" title="绑定ssh到github"></a>绑定ssh到github</h4><p>然后去github（未注册自行注册，用户名不要乱取哦）</p>
 <p>之后点击自己的头像（右上角），点击settings。</p>
 <p>在左列找到 SSH and GPG keys</p>
-<p><img lazyload="" alt="image" data-src="https://raw.githubusercontents.com/huaziqi/my-Figure-bed/main/PIcGo/%E6%88%AA%E5%B1%8F2023-01-19%2015.20.46.png"></p>
+<p><img lazyload="" alt="截屏2023-01-19 15.20.46" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-01-19%2015.20.46.png"></p>
 <p>点击new SSH key，把刚刚生成的id_rsa.pub里的东西全都粘贴到下面的 key 框里，title随便填就好。</p>
-<p><img lazyload="" alt="image" data-src="https://raw.githubusercontents.com/huaziqi/my-Figure-bed/main/PIcGo/%E6%88%AA%E5%B1%8F2023-01-19%2015.23.02.png"></p>
+<p><img lazyload="" alt="image" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-01-19%2015.23.02.png"></p>
 <p>Add SSH key</p>
 <h3 id="新建github库"><a href="#新建github库" class="headerlink" title="新建github库"></a>新建github库</h3><p><del>建库不会自己去学。</del></p>
 <p>注意：库的名称一定要是自己github的用户名+.github.io</p>
 <p>比如我的用户名是huaziqi，那就要建叫 huaziqi.github.io，这也是之后你的网站名（当然自己有别的域名是可以改的）</p>
 <p>仓库类型当然是public，公开的。</p>
-<p><img lazyload="" alt="image" data-src="https://raw.githubusercontents.com/huaziqi/my-Figure-bed/main/PIcGo/%E6%88%AA%E5%B1%8F2023-01-19%2015.29.18.png"></p>
+<p><img lazyload="" alt="image" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-01-19%2015.29.18.png"></p>
 <p>建好仓库以后打开仓库点击那个code，在里面吧SSH代码复制下来。</p>
 <h3 id="FINAL"><a href="#FINAL" class="headerlink" title="FINAL"></a>FINAL</h3><p>回到创建的文件夹，找到<code>_config.yml</code>文件打开。找到deploy，像我一样这么填。repo里填的是刚刚粘贴的SSH代码。保存文件。</p>
-<p><img lazyload="" alt="image" data-src="https://raw.githubusercontents.com/huaziqi/my-Figure-bed/main/PIcGo/%E6%88%AA%E5%B1%8F2023-01-19%2015.32.11.png"></p>
+<p><img lazyload="" alt="image" data-src="https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-01-19%2015.32.11-1.png"></p>
 <p>到控制台输入<code>hexo g</code>，加载完再输入<code>hexo d</code>，输入生成id_rsa.pub时自己输入的代码，等待片刻就成功了。</p>
 <p>访问你的用户名+github.io，其实就是你的仓库名。我的是huaziqi.github.io，欢迎来访问。</p>
 <h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>github访问必然是太慢了</p>
@@ -523,88 +523,47 @@ mjx-container[display="true"] + br {
 
             
                 <div class="comment-container">
-                    
-<div class="comments-container">
-    <div id="comments-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fas fa-comments"></i>&nbsp;Comments
-    </div>
-    
-        
-            
+                    if (hexo-config('comment.enable') == true && hexo-config('comment.use') != "") {
+  if (hexo-config('comment.use') == "valine") {
+    @import "./valine.styl"
+  }
+  else if (hexo-config('comment.use') == "gitalk") {
+    @import "./gitalk.styl"
+  }
+  else if (hexo-config('comment.use') == "twikoo") {
+    @import "./twikoo.styl"
+  }
+  else if (hexo-config('comment.use') == "waline") {
+    @import "./waline.styl"
+  }
+}
 
-    <div class="valine-container">
-        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
-        <div id="vcomments"></div>
-        <script data-pjax>
-          function loadValine() {
+.comments-container {
+  display inline-block
+  width 100%
+  margin-top $component-spacing-value
 
-            const config = {
-              el: '#vcomments',
-              appId: 'i4j8h2suZ3CImXMgr0dXDuSj-gzGzoHsz',
-              appKey: 'GRtU447Qe12VTivCtzxwZWDi',
-              meta: ['nick', 'mail', 'link'],
-              avatar: 'wavatar',
-              enableQQ: true,
-              placeholder: '随便说点什么吧',
-              lang: 'en'.toLowerCase()
-            }
+  #comments-anchor {
+    width 100%
+    height 0.8rem
+  }
 
-            if ('') {
-              config.serverURLs = ''
-            }
+  .comment-area-title {
+    width 100%
+    margin 0.8rem 0
+    color var(--text-color-3)
+    font-size 1.38rem
 
-            new Valine(config)
+    i {
+      color var(--text-color-3)
+    }
 
-            function getAuthor(language) {
-              switch (language) {
-                case 'en':
-                  return 'Author'
-                case 'zh-CN':
-                  return '博主'
-                default:
-                  return 'Master'
-              }
-            }
-
-            // Add "Author" identify
-            const getValineDomTimer = setInterval(() => {
-              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
-              if (vcards.length > 0) {
-                let author = 'huaziqi'
-
-                if (author) {
-                  for (let vcard of vcards) {
-                    const vnick_dom = vcard.querySelector('.vhead .vnick')
-                    const vnick = vnick_dom.innerHTML
-                    if (vnick === author) {
-                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
-                    }
-                  }
-                }
-                clearInterval(getValineDomTimer)
-              } else {
-                clearInterval(getValineDomTimer)
-              }
-            }, 2000)
-          }
-
-          if ('true' === 'true') {
-            const loadValineTimeout = setTimeout(() => {
-              loadValine()
-              clearTimeout(loadValineTimeout)
-            }, 1000)
-          } else {
-            window.addEventListener('DOMContentLoaded', loadValine)
-          }
-        </script>
-    </div>
-
-
-
-        
-    
-</div>
+    +keep-tablet() {
+      margin 0.4rem 0
+      font-size 1.2rem
+    }
+  }
+}
 
                 </div>
             
