@@ -9,7 +9,7 @@
     
     <title>
         
-            Hello-hexo |
+            Hello-hexo -- hexo + github部署教程 |
         
         ziqiの小窝
     </title>
@@ -270,7 +270,7 @@ mjx-container[display="true"] + br {
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">Hello-hexo</span>
+                <span class="title-hover-animation">Hello-hexo -- hexo + github部署教程</span>
             </div>
 
             
@@ -298,7 +298,7 @@ mjx-container[display="true"] + br {
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-01-19 15:48:13</span>
+        <span class="pc">2023-01-19 15:52:27</span>
     </span>
     
     
@@ -350,7 +350,10 @@ mjx-container[display="true"] + br {
 
                 <h1 id="Hello-hexo！——-hexo-github部署教程"><a href="#Hello-hexo！——-hexo-github部署教程" class="headerlink" title="Hello hexo！—— hexo + github部署教程"></a>Hello hexo！—— hexo + github部署教程</h1><p>前前后后搭了有两三天，终于算是搭好了。</p>
 <p>写一写搭建过程，搭建方法，遇到的问题……反正这篇博客成分复杂</p>
-<h2 id="搭建历程"><a href="#搭建历程" class="headerlink" title="搭建历程"></a>搭建历程</h2><p>开始有搭建的想法大约是高一下，那个时候接触了一些技术博客，并尝试着自己写博客。在感受到写博客的快乐与美好之后，搭建一个个人博客网站的想法被一个视频引起。</p>
+<ul>
+<li>对历程不感兴趣的可以直接跳到搭建方法</li>
+</ul>
+<h2 id="搭建历程"><a href="#搭建历程" class="headerlink" title="搭建历程"></a>搭建历程</h2><p>开始有搭建的想法大约是高一下学期，那个时候接触了一些技术博客，并尝试着自己写博客。在感受到写博客的快乐与美好之后，搭建一个个人博客网站的想法被一个视频引起。</p>
 <h3 id="第一个想法"><a href="#第一个想法" class="headerlink" title="第一个想法"></a>第一个想法</h3><p>是一个知乎的视频，它具体教授了如何使用hexo与github pages 搭建博客。可惜我当时对于github完全没有接触，更不知道如何去使用。那个视频中还使用vim来编辑配置文件，当时我看的是一脸懵逼：他是如何保存那个文件的？ctrl s？不是，于是我在视频底下问他，却迟迟没有得到回复。第一次博客搭建计划失败</p>
 <h3 id="money"><a href="#money" class="headerlink" title="money"></a>money</h3><p>在之后，我接触了其他的搭建博客的方法，例如WordPress。然而使用WordPress需要自己去买域名（一年30~50）和服务器（一年100往上）。当时还在学校，资金没有来源，何况这也不是一笔小数目。那个时候在csdn还是博客园上写博客（先是在CSDN，但是由于它不可美化且页面广告太多，也不美观，就转去了博客园）也就安于现状了。</p>
 <p>这期间学会了如何使用github，Markdown等工具，美化了自己的博客园，算是为之后做铺垫。</p>
@@ -438,7 +441,7 @@ mjx-container[display="true"] + br {
 <div class="article-copyright-info-container">
     <ul class="copyright-info-content">
         <li class="post-title">
-            <span class="type">Post title</span>: <span class="content">Hello-hexo</span>
+            <span class="type">Post title</span>: <span class="content">Hello-hexo -- hexo + github部署教程</span>
         </li>
         <li class="post-author">
             <span class="type">Post author</span>: <span class="content">huaziqi</span>
@@ -499,47 +502,61 @@ mjx-container[display="true"] + br {
 
             
                 <div class="comment-container">
-                    if (hexo-config('comment.enable') == true && hexo-config('comment.use') != "") {
-  if (hexo-config('comment.use') == "valine") {
-    @import "./valine.styl"
-  }
-  else if (hexo-config('comment.use') == "gitalk") {
-    @import "./gitalk.styl"
-  }
-  else if (hexo-config('comment.use') == "twikoo") {
-    @import "./twikoo.styl"
-  }
-  else if (hexo-config('comment.use') == "waline") {
-    @import "./waline.styl"
-  }
-}
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
 
-.comments-container {
-  display inline-block
-  width 100%
-  margin-top $component-spacing-value
+    <div class="gitalk-comment-container">
+        <div id="gitalk-container"></div>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+        <script data-pjax>
+          function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+              __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
 
-  #comments-anchor {
-    width 100%
-    height 0.8rem
-  }
+            try {
+              Gitalk && new Gitalk({
+                clientID: '4b61270c2b59e59168fa',
+                clientSecret: '04fc3f5b72c23b18f0561bfe62d201f6bef094de',
+                repo: 'Comment',
+                owner: 'huaziqi',
+                admin: 'huaziqi',
+                id: __gitalk__pathname,
+                proxy: '',
+                language: 'en'
+              }).render('gitalk-container');
+            } catch (e) {
+              window.Gitalk = null;
+            }
+          }
 
-  .comment-area-title {
-    width 100%
-    margin 0.8rem 0
-    color var(--text-color-3)
-    font-size 1.38rem
+          if ('true' === 'true') {
+            const loadGitalkTimeout = setTimeout(() => {
+              loadGitalk();
+              clearTimeout(loadGitalkTimeout);
+            }, 1000);
+          } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+          }
+        </script>
+    </div>
 
-    i {
-      color var(--text-color-3)
-    }
 
-    +keep-tablet() {
-      margin 0.4rem 0
-      font-size 1.2rem
-    }
-  }
-}
+
+        
+    
+</div>
 
                 </div>
             
