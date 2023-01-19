@@ -9,7 +9,7 @@
     
     <title>
         
-            哈夫曼编码详解 |
+            风 |
         
         ziqi小园
     </title>
@@ -270,7 +270,7 @@ mjx-container[display="true"] + br {
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">哈夫曼编码详解</span>
+                <span class="title-hover-animation">风</span>
             </div>
 
             
@@ -292,13 +292,13 @@ mjx-container[display="true"] + br {
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2022-08-17 09:39:28</span>
-        <span class="mobile">2022-08-17 09:39</span>
+        <span class="pc">2022-08-27 09:44:21</span>
+        <span class="mobile">2022-08-27 09:44</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-01-19 10:05:26</span>
+        <span class="pc">2023-01-19 09:56:17</span>
     </span>
     
     
@@ -307,11 +307,7 @@ mjx-container[display="true"] + br {
             <ul>
                 
                     <li>
-                        <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        &gt; <a href="/categories/%E7%BC%96%E7%A0%81/">编码</a>&nbsp;
+                        <a href="/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/">自讫漫记</a>&nbsp;
                     </li>
                 
             </ul>
@@ -323,7 +319,7 @@ mjx-container[display="true"] + br {
             <ul>
                 
                     <li>
-                        <a href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">哈夫曼编码</a>&nbsp;
+                        <a href="/tags/%E5%9B%9E%E5%BF%86/">回忆</a>&nbsp;
                     </li>
                 
             </ul>
@@ -348,34 +344,13 @@ mjx-container[display="true"] + br {
             <div class="article-content keep-markdown-body">
                 
 
-                <h2 id="暗道里能听懂"><a href="#暗道里能听懂" class="headerlink" title="暗道里能听懂"></a>暗道里能听懂</h2><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>成绩录入的时候，常常会遇到这种情况<del>（可能没多少学校会这么干）</del></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/vBEa6g"><img lazyload="" alt="vBEa6g.png" data-src="https://s1.ax1x.com/2022/08/17/vBEa6g.png"></a></p>
-<p>上图中，如果说数据足够多，且都集中于良好的话，每一次录入就需要更多的时间。并且有些时候分支不止这么点。</p>
-<h2 id="路径长度"><a href="#路径长度" class="headerlink" title="路径长度"></a>路径长度</h2><p>这个时候，我们就需要让数据大的分支与根节点靠近一点。这里再引入一个概念————路径长度。在一棵树中，一个节点向下，与可以达到的子孙之间的通路成为路径。路径中的分支数成为路径长度。下图中，1 到 5的路径长度为 <strong>2</strong>。当然也可以这么记，路径长度 = 终止层数 - 起始层数。</p>
-<p><img lazyload="" alt="树.png" data-src="https://github.com/huaziqi/my-Figure-bed/blob/main/%E6%A0%91.png?raw=true"></p>
-<p>那么当每个节点都带有权时，我们要想办法让权大的路径长度小（默认起点为根节点）。这里我们规定：节点的带权路径长度为：从根节点到该节点之间路径长度与该节点的权值乘积。</p>
-<ul>
-<li>比如上图，权值为 6 的点，带权路径长度即为2 * 6 = 12.</li>
-</ul>
-<h2 id="哈夫曼树的含义"><a href="#哈夫曼树的含义" class="headerlink" title="哈夫曼树的含义"></a>哈夫曼树的含义</h2><p>这就回到了文章开头的背景：要让录入成绩效率最高，我们就要构造一棵所有点的带权路径长度最小的树。这样的树，我们就称之为哈夫曼树。</p>
-<p>显然，权值越大，越要靠根节点。那么我们可以采用以下建法：</p>
-<ol>
-<li>将 n 个节点看做是 n 棵子树，权值为 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.608ex" height="1.342ex" role="img" focusable="false" viewBox="0 -443 1152.6 593"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D464" d="M580 385Q580 406 599 424T641 443Q659 443 674 425T690 368Q690 339 671 253Q656 197 644 161T609 80T554 12T482 -11Q438 -11 404 5T355 48Q354 47 352 44Q311 -11 252 -11Q226 -11 202 -5T155 14T118 53T104 116Q104 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 293 29 315T52 366T96 418T161 441Q204 441 227 416T250 358Q250 340 217 250T184 111Q184 65 205 46T258 26Q301 26 334 87L339 96V119Q339 122 339 128T340 136T341 143T342 152T345 165T348 182T354 206T362 238T373 281Q402 395 406 404Q419 431 449 431Q468 431 475 421T483 402Q483 389 454 274T422 142Q420 131 420 107V100Q420 85 423 71T442 42T487 26Q558 26 600 148Q609 171 620 213T632 273Q632 306 619 325T593 357T580 385Z"></path></g><g data-mml-node="mn" transform="translate(749,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></g></svg></mjx-container>, <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.608ex" height="1.342ex" role="img" focusable="false" viewBox="0 -443 1152.6 593"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D464" d="M580 385Q580 406 599 424T641 443Q659 443 674 425T690 368Q690 339 671 253Q656 197 644 161T609 80T554 12T482 -11Q438 -11 404 5T355 48Q354 47 352 44Q311 -11 252 -11Q226 -11 202 -5T155 14T118 53T104 116Q104 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 293 29 315T52 366T96 418T161 441Q204 441 227 416T250 358Q250 340 217 250T184 111Q184 65 205 46T258 26Q301 26 334 87L339 96V119Q339 122 339 128T340 136T341 143T342 152T345 165T348 182T354 206T362 238T373 281Q402 395 406 404Q419 431 449 431Q468 431 475 421T483 402Q483 389 454 274T422 142Q420 131 420 107V100Q420 85 423 71T442 42T487 26Q558 26 600 148Q609 171 620 213T632 273Q632 306 619 325T593 357T580 385Z"></path></g><g data-mml-node="mn" transform="translate(749,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container>, <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.375ex;" xmlns="http://www.w3.org/2000/svg" width="2.608ex" height="1.377ex" role="img" focusable="false" viewBox="0 -443 1152.6 608.6"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D464" d="M580 385Q580 406 599 424T641 443Q659 443 674 425T690 368Q690 339 671 253Q656 197 644 161T609 80T554 12T482 -11Q438 -11 404 5T355 48Q354 47 352 44Q311 -11 252 -11Q226 -11 202 -5T155 14T118 53T104 116Q104 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 293 29 315T52 366T96 418T161 441Q204 441 227 416T250 358Q250 340 217 250T184 111Q184 65 205 46T258 26Q301 26 334 87L339 96V119Q339 122 339 128T340 136T341 143T342 152T345 165T348 182T354 206T362 238T373 281Q402 395 406 404Q419 431 449 431Q468 431 475 421T483 402Q483 389 454 274T422 142Q420 131 420 107V100Q420 85 423 71T442 42T487 26Q558 26 600 148Q609 171 620 213T632 273Q632 306 619 325T593 357T580 385Z"></path></g><g data-mml-node="mn" transform="translate(749,-150) scale(0.707)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g></g></g></g></svg></mjx-container>, …, <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex;" xmlns="http://www.w3.org/2000/svg" width="2.768ex" height="1.359ex" role="img" focusable="false" viewBox="0 -443 1223.3 600.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D464" d="M580 385Q580 406 599 424T641 443Q659 443 674 425T690 368Q690 339 671 253Q656 197 644 161T609 80T554 12T482 -11Q438 -11 404 5T355 48Q354 47 352 44Q311 -11 252 -11Q226 -11 202 -5T155 14T118 53T104 116Q104 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 293 29 315T52 366T96 418T161 441Q204 441 227 416T250 358Q250 340 217 250T184 111Q184 65 205 46T258 26Q301 26 334 87L339 96V119Q339 122 339 128T340 136T341 143T342 152T345 165T348 182T354 206T362 238T373 281Q402 395 406 404Q419 431 449 431Q468 431 475 421T483 402Q483 389 454 274T422 142Q420 131 420 107V100Q420 85 423 71T442 42T487 26Q558 26 600 148Q609 171 620 213T632 273Q632 306 619 325T593 357T580 385Z"></path></g><g data-mml-node="mi" transform="translate(749,-150) scale(0.707)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>.选取其中<strong>根节点权值最小</strong>的两个子树，合并为一棵树。两个子树分别为左右子树，根节点权值为两节点之和</li>
-<li>删除两棵被合并的子树，加入新树</li>
-<li>重复上述步骤，知道只剩下一棵树。</li>
-</ol>
-<p>再下面这图应该更好理解。</p>
-<p><img lazyload="" alt="屏幕截图 2022-08-17 105024.png" data-src="https://github.com/huaziqi/my-Figure-bed/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-08-17%20105024.png?raw=true"></p>
-<blockquote>
-<p> 哈夫曼树的构建运用了<strong>贪心</strong>的思想</p>
-</blockquote>
-<h2 id="应用：哈弗曼编码"><a href="#应用：哈弗曼编码" class="headerlink" title="应用：哈弗曼编码"></a>应用：哈弗曼编码</h2><p>为了一些特殊的用途（<del>如间谍</del>），我们需要将字母或符号转化为01编码。</p>
-<p>因为01编码很长，我们要保证不产生歧义。例如 A 的编码是 10， B 是 1， C 是 0。那么101，就会有多个解读：AB? BCB? 关键是必须使任一字符的编码都不是另一字符的编码的前缀。</p>
-<p>译码过程：先统计每个字符出现个数，然后构建一个哈夫曼树。</p>
-<p>接下来从根节点出发，左0 右1。</p>
-<p><img lazyload="" alt="哈夫曼编码1.PNG" data-src="https://github.com/huaziqi/my-Figure-bed/blob/main/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%811.PNG?raw=true"></p>
-<p>完结撒花</p>
-<p>2022-8-17 11:14:50</p>
+                <p>风，微风、狂风、耳边的风、溜过指隙的风、记忆中的风、未曾赶来的风……我痴迷于这样一个刮风天，它总能带我回到过去，让泪在风中飘扬。</p>
+<p>偶然间，翻开初中的图册。依稀记起，与他们每一个人的相遇。那时的我们，什么都没有，却仿佛拥有着一切。刚进初中，我写了一篇随笔怀念小学同学，而今似乎迎来了一个新的循环。在这嘈杂的时代，偶尔停下来，风滑过脸颊，吹干了汗水，回想过去的种种。也许人就是这样，不断地在回头看着，也不断向前跑着。</p>
+<p>最难忘的，无疑是初三，那是我与他熟识的一年……我们都热爱运动，足球，篮球，乒乓球；我们都喜欢诗词，幻想着，哪天能作出“位卑未敢忘忧国”这样都诗句；我们常在那样的一个夜晚，晚风轻轻吹着，我们在昏黄的路灯下走着，就这么走着，走着；我们都不曾忘记那个黄昏，淡淡的云被遗落在天与山连接的地方，秋的落叶将它染成无以言喻的颜色；我们躺在球场上，汗水与露水渗透了校服，草轻轻地扎在背上，痒丝丝的……也许便是一个转角，一个人，一颗无处安放的心就此停下。<br>那天上午，太阳不是很温柔。铃声响起，我没有想象中那么兴奋。似乎就是一个正常的课间，心中却多了一丝悲凉。我走出考场，一级一级踏下台阶。身边是嬉闹的人群，一股脑流下楼道。我就好似洪流中的一块顽石，只是被水流愈加磨得光滑。<br>回到教室，没有几个人留下。他也坐在座位上。我们相视一笑，前后走出教室。做出抉择时，没有多大的波澜。毕竟我们终究不是一个人，我们有自己所向往的未来。也许旁人会说，我们的友谊就如此脆弱，但我们终究不是一个人，我们对未来有所期许。世上没有不离别的伴侣，当我们想通了以后，这一切似乎都是顺其自然。倘若由于自私，而让对方错过他期待的未来，我们会有多么后悔。</p>
+<p>不想就此别过，无奈世事，便是如此。</p>
+<p>那天下午就开了毕业典礼。我没有落泪。自有记忆起，我好像便只由于父母的责骂而哭泣过。每次眼泪在打转，于是乎又收了回去。可能我把一切都看得太深沉，眼泪没来得及出来就干涸了。<br>我们分开了，此后陆陆续续的联系着，但如同水龙头上的水珠，愈滴愈少了。<br>不久就来到高中。我一度不想交朋友，因为没有人再与他一样了。</p>
+<p>小心翼翼地走在路旁的小石障上，独自一人。<br>这是一条很少有人走的路。<br>时节既是晚秋，湖上微波四起。堤岸杨柳垂绿，湖中亭上独立。西石南园风景，谁知我凭栏意？惟吾感遇由心，晓他凄寒随意。本是该伤晨蜉而暮灭，但他初冬暖阳，叫人怎样也无法不向上看。那是一束足以慰风尘、抚涟漪的斜照，一道从云层中透出的光芒。<br>光把风带来。风，她把落叶都吹到一起，然后再吹散，我们身不由己。散了以后呢?光带给我们希望，光是多么伟大……</p>
+<p>何时才能回到那段时光，似乎也如现在一般平平淡淡，却止不住让人挂念。也许会有后悔，也许感到遗憾，但我记得你说过的话。你说你会记得我，你说多年之后我们一定会重逢，不论以那种形式，但一定是在一个新的高度。</p>
 
             </div>
 
@@ -385,16 +360,16 @@ mjx-container[display="true"] + br {
 <div class="article-copyright-info-container">
     <ul class="copyright-info-content">
         <li class="post-title">
-            <span class="type">Post title</span>: <span class="content">哈夫曼编码详解</span>
+            <span class="type">Post title</span>: <span class="content">风</span>
         </li>
         <li class="post-author">
             <span class="type">Post author</span>: <span class="content">huaziqi</span>
         </li>
         <li class="post-time">
-            <span class="type">Create time</span>: <span class="content">2022-08-17 09:39:28</span>
+            <span class="type">Create time</span>: <span class="content">2022-08-27 09:44:21</span>
         </li>
         <li class="post-link">
-            <span class="type">Post link</span>: <span class="content">posts/3737033367/</span>
+            <span class="type">Post link</span>: <span class="content">posts/3596120880.html</span>
         </li>
         <li class="post-license">
             <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
@@ -412,7 +387,7 @@ mjx-container[display="true"] + br {
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">#哈夫曼编码</a>&nbsp;
+                            <a href="/tags/%E5%9B%9E%E5%BF%86/">#回忆</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -424,13 +399,13 @@ mjx-container[display="true"] + br {
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/posts/2585761111/"
+                               href="/posts/3660077721.html"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">luogu-p1488-肥猫的游戏</span>
+                                <span class="post-nav-title-item">排序算法整理C++</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                             </a>
@@ -440,10 +415,10 @@ mjx-container[display="true"] + br {
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/posts/3514781743/"
+                               href="/posts/2585761111.html"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">正睿-1139-序列</span>
+                                <span class="post-nav-title-item">luogu-p1488-肥猫的游戏</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
@@ -521,7 +496,7 @@ mjx-container[display="true"] + br {
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9A%97%E9%81%93%E9%87%8C%E8%83%BD%E5%90%AC%E6%87%82"><span class="nav-number">1.</span> <span class="nav-text">暗道里能听懂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84%E9%95%BF%E5%BA%A6"><span class="nav-number">3.</span> <span class="nav-text">路径长度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E7%9A%84%E5%90%AB%E4%B9%89"><span class="nav-number">4.</span> <span class="nav-text">哈夫曼树的含义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%EF%BC%9A%E5%93%88%E5%BC%97%E6%9B%BC%E7%BC%96%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">应用：哈弗曼编码</span></a></li></ol>
+        
     </div>
 </div>
 

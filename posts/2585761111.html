@@ -9,7 +9,7 @@
     
     <title>
         
-            C++中的输入输出 |
+            luogu-p1488-肥猫的游戏 |
         
         ziqi小园
     </title>
@@ -270,7 +270,7 @@ mjx-container[display="true"] + br {
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">C++中的输入输出</span>
+                <span class="title-hover-animation">luogu-p1488-肥猫的游戏</span>
             </div>
 
             
@@ -292,8 +292,8 @@ mjx-container[display="true"] + br {
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2022-04-30 09:27:40</span>
-        <span class="mobile">2022-04-30 09:27</span>
+        <span class="pc">2022-08-19 09:41:23</span>
+        <span class="mobile">2022-08-19 09:41</span>
     </span>
     
         <span class="article-update-date article-meta-item">
@@ -307,7 +307,7 @@ mjx-container[display="true"] + br {
             <ul>
                 
                     <li>
-                        <a href="/categories/%E8%AF%AD%E6%B3%95/">语法</a>&nbsp;
+                        <a href="/categories/%E6%B4%9B%E8%B0%B7/">洛谷</a>&nbsp;
                     </li>
                 
             </ul>
@@ -319,11 +319,7 @@ mjx-container[display="true"] + br {
             <ul>
                 
                     <li>
-                        <a href="/tags/C/">C++</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E8%AF%AD%E6%B3%95/">语法</a>&nbsp;
+                        <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
                     </li>
                 
             </ul>
@@ -348,62 +344,72 @@ mjx-container[display="true"] + br {
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="C-中的输入输出"><a href="#C-中的输入输出" class="headerlink" title="C++中的输入输出"></a>C++中的输入输出</h1><hr>
-<h2 id="cin与cout"><a href="#cin与cout" class="headerlink" title="cin与cout"></a>cin与cout</h2><p>C++中的标准输入输出流对象，在头文件iostream内。</p>
-<h3 id="关于缓冲区"><a href="#关于缓冲区" class="headerlink" title="关于缓冲区"></a>关于缓冲区</h3><p>缓冲区就是暂时存储数据的地方，可大大提升电脑运行效率。暂时把内容放在一个特定存储区域，而不是存入硬盘，就减少了硬盘的读写。<br>就像打印一张文件之前，先存入电脑，以便修改。<br>cin输入时会将会把换行符 \n 也算作一个字节放入缓冲区。</p>
-<ul>
-<li>cin 以tab，空格，换行作为分隔符读入。</li>
-<li>string类型字符串最好用 cin 输入，cout 输出.~~ 其他的我也打不来 ~~</li>
-</ul>
-<p>cout没什么好说的，拓展一下就是使用 endl 时会刷新一下缓冲区。</p>
-<h2 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h2><h3 id="十进制"><a href="#十进制" class="headerlink" title="十进制"></a>十进制</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a);  </span><br></pre></td></tr></table></figure>
+                <h1 id="肥猫的游戏"><a href="#肥猫的游戏" class="headerlink" title="肥猫的游戏"></a>肥猫的游戏</h1><p><a class="link" target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1488">P1488 肥猫的游戏 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>野猫与胖子，合起来简称肥猫，是一个班的同学，他们也都是数学高手，所以经常在一起讨论数学问题也就不足为奇了。</p>
+<p>一次，野猫遇到了一道有趣的几何游戏题目，便拿给胖子看。游戏要求在一个有 n 个顶点凸多边形上进行，这个凸多边形的 n-3 条对角线将多边形分成 n-2 个三角形，这 n-3 条对角线在多边形的顶点相交。三角形中的一个被染成黑色，其余是白色。</p>
+<p>双方轮流进行游戏，当轮到一方时，他必须沿着画好的对角线，从多边形上切下一个三角形。切下黑色三角形的一方获胜。胖子一看觉得确实很有趣，不如就一起玩玩吧。假设游戏由野猫先开始，那么野猫是否有必胜的策略呢？请写一个程序帮助野猫算一算。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行为一个整数 n，表示多边形的顶点数，多边形的顶点由 0 至 n-1 顺时针标号。</p>
+<p>接着的 n-2 行描述组成多边形的三角形。第 i+1 行  有三个空格分隔的非负整数 a 、b 、c ，它们是第 i 个三角形的顶点编号。第一个给出的三角形是黑色的。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>只有一行，倘若野猫有必胜策略，输出 <code>JMcat Win</code>；否则，输出 <code>PZ Win</code>（注意大小写和空格）。</p>
+<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">0 1 2</span><br><span class="line">2 4 3</span><br><span class="line">4 2 0</span><br><span class="line">0 5 4</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>%表示占位符。</li>
-</ul>
-<h3 id="八与十六进制"><a href="#八与十六进制" class="headerlink" title="八与十六进制"></a>八与十六进制</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%o"</span>,&amp;a); <span class="comment">//八进制 </span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%x"</span>,&amp;a); <span class="comment">//十六进制 </span></span><br></pre></td></tr></table></figure>
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JMcat Win</span><br></pre></td></tr></table></figure>
 
-<h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;c);</span><br></pre></td></tr></table></figure>
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>4 &lt;= n &lt;= 50000</p>
+<p>如果连接一个多边形中任意两点的线段都完全包含于这个多边形，则称这个多边形为凸多边形。</p>
+<p>题解在代码里</p>
+<pre><code class="cpp">#include&lt;iostream&gt;
+using namespace std;
 
-<h3 id="字符"><a href="#字符" class="headerlink" title="字符\"></a>字符\</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> a;</span><br><span class="line">string aa;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;a);<span class="comment">//字符 </span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>,aa); <span class="comment">//字符串，注意不加 &amp;（非string)</span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>,aa+<span class="number">1</span>);<span class="comment">//小技巧，从c[1]开始读入</span></span><br></pre></td></tr></table></figure>
+int n, a, b, c;
 
-<h3 id="long-long"><a href="#long-long" class="headerlink" title="long long"></a>long long</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%lld"</span>,%a);</span><br></pre></td></tr></table></figure>
+int main()
+{
+    cin &gt;&gt; n;
+    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+    if(a &gt; b)
+        swap(a, b);
+    if(a &gt; c)
+        swap(a, c);
+    if(b &gt; c)
+        swap(b, c);
+    if((a + 1 == b &amp;&amp; b + 1 == c) || (a == 0 &amp;&amp; c == n - 1))
+    {
+        puts("JMcat Win");
+        return 0;
+    }
+/*
+假如顶点连续，则代表这个黑色三角形在外面。
+就像是一个多边形上连续三个点构成的三角形必然在外面
+那么先手的野猫就赢了
+当然还有一个特殊情况：假如黑色三角形同时包括 0 点和 n 点（首尾相连）
+就比如：
+6
+0 5 4
+0 1 2
+2 4 3
+4 2 0
+所以要特判一下这种情况
+*/
+    else if((n - 2) % 2 == 0)
+    {
+        puts("JMcat Win");
+        return 0;
+    }
+/*
+假如黑色三角形被包在里面
+先放着别的三角形不管
+假设最后只剩三个个三角形包着黑三角
+谁把其中一个三角切了谁就输了
+胜负就出来了
+所以只要考虑三角形个数的奇偶性就行了
+*/
+    else
+        puts("PZ Win");
 
-<h3 id="限制数字个数输入"><a href="#限制数字个数输入" class="headerlink" title="限制数字个数输入"></a>限制数字个数输入</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%nd"</span>,&amp;a)<span class="comment">//n表示限制数字个数</span></span><br><span class="line"><span class="comment">//例如输入123456，n=2，就会输入12，34，56</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>关键时刻十分好用</li>
-</ul>
-<h2 id="printf"><a href="#printf" class="headerlink" title="printf"></a>printf</h2><h3 id="关于单精浮点数（float）与双精浮点数（double）"><a href="#关于单精浮点数（float）与双精浮点数（double）" class="headerlink" title="关于单精浮点数（float）与双精浮点数（double）"></a>关于单精浮点数（float）与双精浮点数（double）</h3><h4 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h4><blockquote>
-<p>float占4字节<br>double占8字节</p>
-</blockquote>
-<h4 id="有效数字"><a href="#有效数字" class="headerlink" title="有效数字"></a>有效数字</h4><blockquote>
-<p>float有效数字位为6 – 7位，第7位不一定有效<br>double有效数字位为15 – 16位，第16位不一定有效</p>
-</blockquote>
-<h4 id="范围"><a href="#范围" class="headerlink" title="范围"></a>范围</h4><blockquote>
-<p>float 的表示范围：-3.40E+38 ~ +3.40E+38<br>double 浮点的表示范围：-1.79E+308 ~ +1.79E+308</p>
-</blockquote>
-<ul>
-<li>总结下来感觉还是double好用</li>
-</ul>
-<h3 id="long-long-1"><a href="#long-long-1" class="headerlink" title="long long"></a>long long</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="type">long</span> a=<span class="number">1000</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%lld"</span>,a);</span><br></pre></td></tr></table></figure>
-
-<h3 id="小数输出"><a href="#小数输出" class="headerlink" title="小数输出"></a>小数输出</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> a=<span class="number">1.101</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a=%.2lf"</span>,a);<span class="comment">//输出double类型</span></span><br></pre></td></tr></table></figure>
-
-<p><img lazyload="" alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/6cf9ef6c60b6405da4e1982126fd3109.png#pic_center"></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"a=%.2f"</span>,a);<span class="comment">//输出float类型，可与double混用</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="字符与字符串"><a href="#字符与字符串" class="headerlink" title="字符与字符串"></a>字符与字符串</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> c;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"c=%c"</span>,c);<span class="comment">//字符 char</span></span><br><span class="line"><span class="type">char</span> c[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"c=%s"</span>,c);<span class="comment">//字符串 char</span></span><br><span class="line"><span class="comment">//字符串如果是从c[1]开始输入，输出时c[0]的空格自动忽略</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="一些也许有用的输出"><a href="#一些也许有用的输出" class="headerlink" title="一些也许有用的输出"></a>一些也许有用的输出</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">1000</span>,b=<span class="number">-1000</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%+d %+d"</span>,a,b);<span class="comment">//输出正负号</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> a=<span class="number">1000</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%6d\n"</span>,a);          <span class="comment">//默认右对齐,左边补空格</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%-6d\n"</span>,a);        <span class="comment">//左对齐,右边补空格</span></span><br><span class="line"></span><br><span class="line"><span class="type">double</span> a=<span class="number">1000.0</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%.0f %#.0f\n"</span>,a,a);当小数点后不输出值时依然输出小数点</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> a=<span class="number">1000</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%05d\n"</span>,a);<span class="comment">//前面补0</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="快读"><a href="#快读" class="headerlink" title="快读"></a>快读</h2><p>虽然说可以从网上直接找，但是比赛时还是要自己打。<br>还是得学一下。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">read</span><span class="params">()</span></span>{ </span><br><span class="line">	<span class="type">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;<span class="comment">//f表示正负</span></span><br><span class="line">	<span class="type">char</span> c=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span>(c&lt;<span class="string">'0'</span>||c&gt;<span class="string">'9'</span>){</span><br><span class="line">		<span class="keyword">if</span>(c==<span class="string">'-'</span>)</span><br><span class="line">			f=<span class="number">-1</span>;</span><br><span class="line">		c=<span class="built_in">getchar</span>();</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>)</span><br><span class="line">		x=x*<span class="number">10</span>+c-<span class="string">'0'</span>,c=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">return</span> x*f;</span><br><span class="line">}<span class="comment">//好像没什么好说的</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="快写"><a href="#快写" class="headerlink" title="快写"></a>快写</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">write</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">	<span class="keyword">if</span>(x &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">'-'</span>); x = -x;</span><br><span class="line">	<span class="keyword">if</span>(x &gt; <span class="number">9</span>)</span><br><span class="line">		<span class="built_in">write</span>(x/<span class="number">10</span>);<span class="comment">//上一位</span></span><br><span class="line">	<span class="built_in">putchar</span>(x % <span class="number">10</span> + <span class="string">'0'</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至于其他感觉没什么好写了，用以上的大部分都可以解决。</p>
-<p>2022-05-01 18:52:17 完结</p>
+    return 0;
+}
+</code></pre>
 
             </div>
 
@@ -413,16 +419,16 @@ mjx-container[display="true"] + br {
 <div class="article-copyright-info-container">
     <ul class="copyright-info-content">
         <li class="post-title">
-            <span class="type">Post title</span>: <span class="content">C++中的输入输出</span>
+            <span class="type">Post title</span>: <span class="content">luogu-p1488-肥猫的游戏</span>
         </li>
         <li class="post-author">
             <span class="type">Post author</span>: <span class="content">huaziqi</span>
         </li>
         <li class="post-time">
-            <span class="type">Create time</span>: <span class="content">2022-04-30 09:27:40</span>
+            <span class="type">Create time</span>: <span class="content">2022-08-19 09:41:23</span>
         </li>
         <li class="post-link">
-            <span class="type">Post link</span>: <span class="content">posts/3526251997/</span>
+            <span class="type">Post link</span>: <span class="content">posts/2585761111.html</span>
         </li>
         <li class="post-license">
             <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
@@ -440,11 +446,7 @@ mjx-container[display="true"] + br {
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/C/">#C++</a>&nbsp;
-                        </li>
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E8%AF%AD%E6%B3%95/">#语法</a>&nbsp;
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -456,13 +458,13 @@ mjx-container[display="true"] + br {
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/posts/3754426420/"
+                               href="/posts/3596120880.html"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">noip_2014_寻找道路</span>
+                                <span class="post-nav-title-item">风</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                             </a>
@@ -472,10 +474,10 @@ mjx-container[display="true"] + br {
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/posts/1746650463/"
+                               href="/posts/3737033367.html"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">luogu_p2882_FaceTheRightWayG</span>
+                                <span class="post-nav-title-item">哈夫曼编码详解</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
@@ -553,7 +555,7 @@ mjx-container[display="true"] + br {
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E4%B8%AD%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="nav-number">1.</span> <span class="nav-text">C++中的输入输出</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cin%E4%B8%8Ecout"><span class="nav-number">1.1.</span> <span class="nav-text">cin与cout</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="nav-number">1.1.1.</span> <span class="nav-text">关于缓冲区</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scanf"><span class="nav-number">1.2.</span> <span class="nav-text">scanf</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E8%BF%9B%E5%88%B6"><span class="nav-number">1.2.1.</span> <span class="nav-text">十进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AB%E4%B8%8E%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6"><span class="nav-number">1.2.2.</span> <span class="nav-text">八与十六进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="nav-number">1.2.3.</span> <span class="nav-text">浮点数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6"><span class="nav-number">1.2.4.</span> <span class="nav-text">字符\</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#long-long"><span class="nav-number">1.2.5.</span> <span class="nav-text">long long</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%90%E5%88%B6%E6%95%B0%E5%AD%97%E4%B8%AA%E6%95%B0%E8%BE%93%E5%85%A5"><span class="nav-number">1.2.6.</span> <span class="nav-text">限制数字个数输入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#printf"><span class="nav-number">1.3.</span> <span class="nav-text">printf</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%8D%95%E7%B2%BE%E6%B5%AE%E7%82%B9%E6%95%B0%EF%BC%88float%EF%BC%89%E4%B8%8E%E5%8F%8C%E7%B2%BE%E6%B5%AE%E7%82%B9%E6%95%B0%EF%BC%88double%EF%BC%89"><span class="nav-number">1.3.1.</span> <span class="nav-text">关于单精浮点数（float）与双精浮点数（double）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E5%AD%98"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">内存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">有效数字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8C%83%E5%9B%B4"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">范围</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#long-long-1"><span class="nav-number">1.3.2.</span> <span class="nav-text">long long</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%8F%E6%95%B0%E8%BE%93%E5%87%BA"><span class="nav-number">1.3.3.</span> <span class="nav-text">小数输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.3.4.</span> <span class="nav-text">字符与字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E4%B9%9F%E8%AE%B8%E6%9C%89%E7%94%A8%E7%9A%84%E8%BE%93%E5%87%BA"><span class="nav-number">1.3.5.</span> <span class="nav-text">一些也许有用的输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E8%AF%BB"><span class="nav-number">1.4.</span> <span class="nav-text">快读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E5%86%99"><span class="nav-number">1.5.</span> <span class="nav-text">快写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.6.</span> <span class="nav-text">总结</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%82%A5%E7%8C%AB%E7%9A%84%E6%B8%B8%E6%88%8F"><span class="nav-number">1.</span> <span class="nav-text">肥猫的游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">1.4.</span> <span class="nav-text">样例 #1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">样例输入 #1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">样例输出 #1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA"><span class="nav-number">1.5.</span> <span class="nav-text">提示</span></a></li></ol></li></ol>
     </div>
 </div>
 
