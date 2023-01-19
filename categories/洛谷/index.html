@@ -24,7 +24,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"huaziqi.github.io","root":"/","language":"en","path":"search.json"}
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"/images/icn.png","avatar":"/images/tou.png","font_size":"18px","font_family":"STHeiti","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"gitalk","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":"huaziqi","github_admins":null,"repository":"Comment","client_id":"4b61270c2b59e59168fa","client_secret":"04fc3f5b72c23b18f0561bfe62d201f6bef094de","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"/images/icn.png","avatar":"/images/tou.png","font_size":"16px","font_family":"STKaiti","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"gitalk","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":"huaziqi","github_admins":null,"repository":"Comment","client_id":"4b61270c2b59e59168fa","client_secret":"04fc3f5b72c23b18f0561bfe62d201f6bef094de","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
     KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
@@ -50,311 +50,101 @@
     <div class="page-main-content">
 
         <div class="page-main-content-top">
-            $logo-title-font-size = 2rem
-$pc-search-icon-font-size = 1.5rem
-$menu-bar-line-height = 2.5px
-$logo-image-box-width = 46px
+            
+<header class="header-wrapper">
 
-.header-wrapper {
-  display flex
-  align-items center
-  justify-content center
-  box-sizing border-box
-  width 100%
-  height 100%
-  padding-top $scroll-progress-bar-height
-  background var(--background-color-1)
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+               ziqi小园
+            </a>
+        </div>
 
-  hover-style(false, 0, 0)
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                主页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  .header-content {
-    position relative
-    z-index $z-index-5
-    display flex
-    flex-direction row
-    align-items center
-    justify-content space-between
-    width $main-content-width
-    max-width $content-max-width
-    height 100%
-    transition-t("max-width, width", "0, 0", "0.1, 0.1", "ease, ease")
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">主页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/categories">分类</a>
+                </li>
+            
+        </ul>
+    </div>
 
+    <div class="window-mask"></div>
 
-    &.has-first-screen {
-      max-width $has-fs-content-max-width
-    }
+</header>
 
-    .has-toc & {
-      max-width $has-toc-content-max-width
-    }
-
-    +keep-tablet() {
-      width $main-content-width-tablet
-    }
-
-    +keep-mobile() {
-      width $main-content-width-mobile
-    }
-
-    .left {
-      display flex
-      align-items center
-      transition-t("transform", "0", "0.2", "linear")
-
-      .header-shrink & {
-        transform scale(0.72)
-        transform-origin left
-      }
-
-
-      if (hexo-config('base_info.logo_img') || hexo-config('style.logo')) {
-        .logo-image {
-          width $logo-image-box-width
-          height $logo-image-box-width
-          margin-right 8px
-
-
-          +keep-tablet() {
-            width $logo-image-box-width * 0.9
-            height $logo-image-box-width * 0.9
-          }
-
-          +keep-mobile() {
-            width $logo-image-box-width * 0.8
-            height $logo-image-box-width * 0.8
-          }
-
-          img {
-            width 100%
-            border-radius 6px
-          }
-        }
-      }
-
-      .logo-title {
-        color var(--text-color-1)
-        font-weight bold
-        font-size $logo-title-font-size
-        line-height 1
-        letter-spacing 1px
-
-        +keep-tablet() {
-          font-size $logo-title-font-size * 0.9
-        }
-
-        +keep-mobile() {
-          font-size $logo-title-font-size * 0.8
-        }
-      }
-    }
-
-
-    .right {
-
-      .pc {
-
-        .menu-list {
-          display flex
-          align-items center
-
-          +keep-tablet() {
-            display none
-          }
-
-
-          .menu-item {
-            position relative
-            float left
-            margin-left 2rem
-            color var(--text-color-3)
-            font-size 1rem
-            cursor pointer
-
-            &:first-child {
-              margin-left 0
-            }
-
-
-            a:hover
-            .active {
-
-              &::after {
-                position absolute
-                bottom -10px
-                left 50%
-                width 100%
-                height 2px
-                background var(--primary-color)
-                transform translateX(-50%)
-                content ''
-                transition-t("transform, bottom", "0, 0", "0.2, 0.2", "linear, linear")
-
-                .header-shrink & {
-                  bottom -($header-shrink-height / 2 - 12)
-                }
-              }
-            }
-
-            &.search {
-              margin-left 26px
-              font-size $pc-search-icon-font-size
-
-              i {
-                color var(--text-color-3)
-              }
-            }
-          }
-        }
-      }
-
-
-      .mobile {
-        display flex
-        align-items center
-        justify-content space-between
-
-        .icon-item {
-          position relative
-          display none
-          width 20px
-          height 20px
-          margin-left 12px
-          color var(--text-color-3)
-          font-size 18px
-          cursor pointer
-
-          i {
-            color var(--text-color-3)
-          }
-
-          &:first-child {
-            margin-left 0
-          }
-
-          +keep-tablet() {
-            display flex
-            align-items center
-            justify-content center
-          }
-        }
-
-        .menu-bar {
-
-          .menu-bar-middle {
-            position relative
-            width 18px
-            height $menu-bar-line-height
-            background var(--text-color-3)
-
-            .header-drawer-show & {
-              background transparent
-            }
-
-
-            &::before
-            &::after {
-              position absolute
-              left 0
-              width 100%
-              height $menu-bar-line-height
-              background var(--text-color-3)
-              content ''
-              transition-t("transform", "0", "0.38", "ease")
-            }
-
-
-            &::before {
-              top -6px
-
-              .header-drawer-show & {
-                transform translateY(6px) rotate(45deg)
-              }
-            }
-
-
-            &::after {
-              bottom -6px
-
-              .header-drawer-show & {
-                transform translateY(-6px) rotate(-45deg)
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-
-  .header-drawer {
-    position absolute
-    top 0
-    left 0
-    z-index $z-index-2
-    width 100%
-    padding $header-height 0 20px 0
-    background var(--background-color-1)
-    transform scaleY(0)
-    transform-origin top
-    transition-t("transform", "0", "0.38", "ease")
-
-    .header-drawer-show & {
-      transform scaleY(1)
-    }
-
-    .drawer-menu-list {
-      display flex
-      flex-direction column
-      align-items center
-      justify-content flex-start
-
-      .drawer-menu-item {
-        height 38px
-        margin 6px 0
-        font-size 1rem
-
-        a {
-          padding 6px 20px
-          color var(--text-color-3)
-          border-radius 20px
-
-          &:hover {
-            color var(--text-color-2)
-            border 1px solid var(--text-color-3)
-          }
-
-
-          &.active {
-            color var(--text-color-2)
-            border 1px solid var(--text-color-3)
-          }
-        }
-      }
-    }
-  }
-
-
-  .window-mask {
-    position absolute
-    top 0
-    z-index $z-index-1
-    width 100%
-    height 100vh
-    background rgba(0, 0, 0, 0.4)
-    visibility hidden
-    opacity 0
-    transition-t("transform, opacity", "0, 0", "0.38, 0.38", "ease, ease")
-
-    .header-drawer-show & {
-      visibility visible
-      opacity 1
-    }
-  }
-}
-
-.header-drawer-show {
-  overflow hidden
-}
 
         </div>
 
@@ -369,90 +159,48 @@ $logo-image-box-width = 46px
             <i class="fas fa-folder"></i>&nbsp;洛谷
         </div>
         <div class="category-post-list">
-            $archive-year-font-size = 1.8rem
-$archive-year-count-font-size = 1.2rem
-$article-title-font-size = 1.2rem
-$article-date-font-size = 1rem
-
-.archive-list-container {
-
-  .archive-item {
-    margin-bottom $component-spacing-value
-
-    &:last-child {
-      margin-bottom 0
-    }
-
-    .archive-item-header {
-      margin-bottom 0.8rem
-
-      .archive-year {
-        margin-right 6px
-        color var(--text-color-2)
-        font-weight 600
-        font-size $archive-year-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-font-size - 0.2rem
-        }
-      }
-
-
-      .archive-year-post-count {
-        color var(--text-color-2)
-        font-weight 500
-        font-size $archive-year-count-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-count-font-size * 0.9
-        }
-      }
-    }
-
-
-    .article-list {
-
-      padding-left 0.8rem
-
-      +keep-tablet() {
-        padding-left 0
-      }
-
-      .article-item {
-        margin-top 1.2rem
-        font-size 1rem
-
-        +keep-tablet() {
-          margin-top 1.1rem
-        }
-
-        +keep-mobile() {
-          margin-top 1rem
-        }
-
-        &:hover {
-          a.article-title
-          .article-date {
-            color var(--primary-color)
-          }
-        }
-
-
-        a.article-title {
-          color var(--text-color-3)
-        }
-
-        .article-date {
-          float right
-          color var(--text-color-3)
-          font-size $article-date-font-size
-        }
-      }
-    }
-  }
-}
-
-
+            
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2022</span>
+                <span class="archive-year-post-count">[4]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/posts/2585761111.html"
+                        >luogu-p1488-肥猫的游戏</a>
+                        <span class="article-date">08-19</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/posts/3671682965.html"
+                        >luogu-P1311-选择客栈</a>
+                        <span class="article-date">07-20</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/posts/2703488407.html"
+                        >luogu-p1129-矩阵游戏</a>
+                        <span class="article-date">07-19</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/posts/1746650463.html"
+                        >luogu_p2882_FaceTheRightWayG</a>
+                        <span class="article-date">01-19</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+</div>
 
         </div>
     </div>
