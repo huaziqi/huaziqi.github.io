@@ -282,356 +282,308 @@ mjx-container[display="true"] + br {
             <div class="main-content">
 
                 
-                    <div class="fade-in-down-animation">
-    <div class="post-page-container">
-        <div class="article-content-container">
+                    $avatarWidth = 3rem
+$arrow-icon-width = 1rem
+$post-nav-max-width = 14rem
+$article-title-font-size = 1.6rem
+$toc-container-width = 15rem
 
-            <div class="article-title">
-                <span class="title-hover-animation">luogu-p1488-肥猫的游戏</span>
-            </div>
 
-            
-                <div class="article-header">
-                    <div class="avatar">
-                        <img src="/images/tou.png">
-                    </div>
-                    <div class="info">
-                        <div class="author">
-                            <span class="name">huaziqi</span>
-                            
-                                <span class="author-label">Lv3</span>
-                            
-                        </div>
-                        <div class="meta-info">
-                            
-<div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        
-            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
-        
-        <span class="pc">2022-08-19 09:41:23</span>
-        <span class="mobile">2022-08-19 09:41</span>
-    </span>
-    
-        <span class="article-update-date article-meta-item">
-        <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-01-19 09:56:17</span>
-    </span>
-    
-    
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/%E6%B4%9B%E8%B0%B7/">洛谷</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-
-    
-    
-        <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>769 Words</span>
-        </span>
-    
-    
-        <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>2 Mins</span>
-        </span>
-    
-    
-        <span class="article-pv article-meta-item">
-            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
-    
-</div>
-
-                        </div>
-                    </div>
-                </div>
-            
-
-            <div class="article-content keep-markdown-body">
-                
-
-                <h1 id="肥猫的游戏"><a href="#肥猫的游戏" class="headerlink" title="肥猫的游戏"></a>肥猫的游戏</h1><p><a class="link" target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1488">P1488 肥猫的游戏 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)<i class="fas fa-external-link-alt"></i></a></p>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>野猫与胖子，合起来简称肥猫，是一个班的同学，他们也都是数学高手，所以经常在一起讨论数学问题也就不足为奇了。</p>
-<p>一次，野猫遇到了一道有趣的几何游戏题目，便拿给胖子看。游戏要求在一个有 n 个顶点凸多边形上进行，这个凸多边形的 n-3 条对角线将多边形分成 n-2 个三角形，这 n-3 条对角线在多边形的顶点相交。三角形中的一个被染成黑色，其余是白色。</p>
-<p>双方轮流进行游戏，当轮到一方时，他必须沿着画好的对角线，从多边形上切下一个三角形。切下黑色三角形的一方获胜。胖子一看觉得确实很有趣，不如就一起玩玩吧。假设游戏由野猫先开始，那么野猫是否有必胜的策略呢？请写一个程序帮助野猫算一算。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行为一个整数 n，表示多边形的顶点数，多边形的顶点由 0 至 n-1 顺时针标号。</p>
-<p>接着的 n-2 行描述组成多边形的三角形。第 i+1 行  有三个空格分隔的非负整数 a 、b 、c ，它们是第 i 个三角形的顶点编号。第一个给出的三角形是黑色的。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>只有一行，倘若野猫有必胜策略，输出 <code>JMcat Win</code>；否则，输出 <code>PZ Win</code>（注意大小写和空格）。</p>
-<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">0 1 2</span><br><span class="line">2 4 3</span><br><span class="line">4 2 0</span><br><span class="line">0 5 4</span><br></pre></td></tr></table></figure>
-
-<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JMcat Win</span><br></pre></td></tr></table></figure>
-
-<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>4 &lt;= n &lt;= 50000</p>
-<p>如果连接一个多边形中任意两点的线段都完全包含于这个多边形，则称这个多边形为凸多边形。</p>
-<p>题解在代码里</p>
-<pre><code class="cpp">#include&lt;iostream&gt;
-using namespace std;
-
-int n, a, b, c;
-
-int main()
-{
-    cin &gt;&gt; n;
-    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
-    if(a &gt; b)
-        swap(a, b);
-    if(a &gt; c)
-        swap(a, c);
-    if(b &gt; c)
-        swap(b, c);
-    if((a + 1 == b &amp;&amp; b + 1 == c) || (a == 0 &amp;&amp; c == n - 1))
-    {
-        puts("JMcat Win");
-        return 0;
-    }
-/*
-假如顶点连续，则代表这个黑色三角形在外面。
-就像是一个多边形上连续三个点构成的三角形必然在外面
-那么先手的野猫就赢了
-当然还有一个特殊情况：假如黑色三角形同时包括 0 点和 n 点（首尾相连）
-就比如：
-6
-0 5 4
-0 1 2
-2 4 3
-4 2 0
-所以要特判一下这种情况
-*/
-    else if((n - 2) % 2 == 0)
-    {
-        puts("JMcat Win");
-        return 0;
-    }
-/*
-假如黑色三角形被包在里面
-先放着别的三角形不管
-假设最后只剩三个个三角形包着黑三角
-谁把其中一个三角切了谁就输了
-胜负就出来了
-所以只要考虑三角形个数的奇偶性就行了
-*/
-    else
-        puts("PZ Win");
-
-    return 0;
-}
-</code></pre>
-
-            </div>
-
-            
-                <div class="post-copyright-info">
-                    .article-copyright-info-container {
+.post-page-container {
   position relative
+  display flex
+  justify-content space-between
   box-sizing border-box
   width 100%
-  padding 0.8rem 0.8rem 0.8rem 1.3rem
-  font-size 1rem
-  background var(--background-color-2)
-
-  &::after {
-    position absolute
-    top 0
-    left 0
-    width 0.5rem
-    height 100%
-    background var(--copyright-info-color)
-    content ''
-  }
+  height 100%
 
 
-  &:hover {
-    .copy-copyright-info {
-      visibility visible
+  &.show-toc {
+    .toc-content-container {
+      display block
+    }
+
+    .article-content-container {
+      width 'calc(100% - %s)' % $toc-container-width
     }
   }
 
 
-  .copyright-info-content {
+  +keep-tablet() {
+    .toc-content-container {
+      display none !important
+    }
+
+    .article-content-container {
+      width 100% !important
+    }
+  }
+
+
+  .article-content-container {
     position relative
     box-sizing border-box
-    overflow-x auto
+    width 100%
+    height 100%
+    keep-container(false, 0, 0, 2rem, 2rem)
 
-    &::-webkit-scrollbar {
-      width 0.3rem
-      height 0.3rem
-      transition all 0.2s ease
+    +keep-mobile() {
+      padding 1.2rem 0.2rem
+      box-shadow none
+
+      &:hover {
+        box-shadow none
+      }
     }
 
-    &::-webkit-scrollbar-thumb {
-      background var(--text-color-4)
+
+    .article-title {
+      color var(--text-color-2)
+      font-weight 600
+      font-size $article-title-font-size
+
+      +keep-tablet() {
+        font-size $article-title-font-size * 0.9
+      }
+
+      +keep-mobile() {
+        font-size $article-title-font-size * 0.8
+      }
     }
 
-    &::-webkit-scrollbar-track {
-      background transparent
+
+    .article-header {
+      position relative
+      box-sizing border-box
+      width 100%
+      height $avatarWidth
+      padding-left $avatarWidth
+
+      .avatar {
+        position absolute
+        top 0
+        left 0
+        box-sizing border-box
+        width $avatarWidth
+        height $avatarWidth
+        padding 0.1rem
+        border 1px solid var(--border-color)
+        border-radius 50%
+
+        img {
+          width 100%
+          height 100%
+          background var(--avatar-background-color)
+          border-radius 50%
+        }
+      }
+
+
+      .info {
+        display flex
+        flex-direction column
+        justify-content space-between
+        box-sizing border-box
+        width 100%
+        height 100%
+        margin-left 0.8rem
+        padding 0.2rem 0
+
+        .author {
+          display flex
+          align-items center
+          font-weight 600
+          font-size 1.18rem
+
+          .name {
+            color var(--text-color-3)
+          }
+
+          .author-label {
+            margin-left 0.8rem
+            padding 0 0.4rem
+            color #fff
+            font-weight 500
+            font-size 0.8rem
+            background var(--selection-color)
+            border-radius 0.4rem
+          }
+        }
+      }
     }
 
-    li {
-      margin-bottom 0.4rem
+
+    .article-header
+    .article-header-meta-info {
+      margin-top 1rem
+      +keep-tablet() {
+        transform scale(0.9)
+        transform-origin left top
+      }
+    }
+
+
+    .article-content {
+      margin-top $component-spacing-value
+      padding-bottom 2rem
       color var(--text-color-3)
-      white-space nowrap
+      word-wrap break-word
 
-      .type
-      .content {
-        color var(--text-color-3)
+      .article-aging-tips {
+        position relative
+        display none
+        box-sizing border-box
+        margin-bottom 1.8rem
+        padding 1rem
+        color var(--article-aging-tips-color)
+        line-height 1.6
+        background var(--article-aging-tips-background-color)
+        border 0.1rem solid var(--article-aging-tips-border-color)
+        border-radius 0.4rem
+
+        i {
+          margin-right 0.4rem
+          color var(--article-aging-tips-color)
+        }
+
+        .days {
+          color var(--article-aging-tips-color)
+        }
       }
 
-      .license {
-        font-weight bold
+      if (hexo-config('post.copyright_info') == true || hexo-config('copyright_info.enable') == true) {
+        border-bottom 0.1rem dashed var(--border-color)
+      }
+    }
+
+
+    .post-tags-box {
+      display none
+      justify-content center
+      margin-top 1.6rem
+      font-size 1.1rem
+
+      +keep-tablet() {
+        display flex
       }
 
-      &:last-child {
-        margin-bottom 0
+      +keep-mobile() {
+        margin-top 1.2rem
+        font-size 1rem
+      }
+
+
+      .tag-item {
+        margin 0 0.25rem
+      }
+    }
+
+
+    .post-copyright-info {
+      width 100%
+      margin-top $component-spacing-value
+
+      +keep-tablet() {
+        margin-top $component-spacing-value * 0.8
+      }
+    }
+
+
+    .article-nav {
+      height 2.8rem
+      margin-top $component-spacing-value
+
+      .article-prev
+      .article-next {
+        box-sizing border-box
+        max-width $post-nav-max-width
+        height 100%
+
+        keep-container(true, 1.03, 1.03, 0.8rem, 0)
+
+        a {
+          position relative
+          display block
+          box-sizing border-box
+          width 100%
+          height 100%
+
+          &.prev {
+            padding-left $arrow-icon-width
+          }
+
+          &.next {
+            padding-right $arrow-icon-width
+          }
+
+          .arrow-icon {
+            position absolute
+            top 0
+            width $arrow-icon-width
+            height 100%
+
+            &.left {
+              left 0
+            }
+
+            &.right {
+              right 0
+            }
+          }
+
+          .title {
+            width 100%
+            height 100%
+          }
+        }
+      }
+
+      .article-prev {
+        float left
+      }
+
+      .article-next {
+        float right
+      }
+
+      .post-nav-item {
+        display none
+
+        +keep-tablet() {
+          display inline-block
+        }
+      }
+
+
+      .post-nav-title-item {
+        overflow hidden
+        white-space nowrap
+        text-overflow ellipsis
+
+        +keep-tablet() {
+          display none
+        }
       }
     }
   }
 
 
-  .copy-copyright-info {
-    position absolute
-    top 0.4rem
-    right 0.4rem
+  .toc-content-container {
+    position sticky
+    top $header-height + $component-spacing-value
+    display none
     box-sizing border-box
-    padding 0.3rem
-    visibility hidden
-    cursor pointer
-    transition-t("visibility", "0", "0.2", "ease-in-out")
+    width $toc-container-width
+    max-height 'calc(100vh - %s)' % ($header-height + $component-spacing-value)
+    padding 2rem 0 2rem 1.4rem
+    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
 
-    i {
-      color var(--text-color-3)
+    .header-shrink & {
+      top $header-shrink-height + $component-spacing-value
+      max-height 'calc(100vh - %s)' % ($header-shrink-height + $component-spacing-value)
     }
   }
 }
-
-                </div>
-            
-
-            
-                <ul class="post-tags-box">
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            
-
-            
-                <div class="article-nav">
-                    
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/posts/3596120880.html"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">风</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                            </a>
-                        </div>
-                    
-                    
-                        <div class="article-next">
-                            <a class="next"
-                               rel="next"
-                               href="/posts/3737033367.html"
-                            >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">哈夫曼编码详解</span>
-                                <span class="post-nav-item">Next posts</span>
-                            </span>
-                                <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                            </a>
-                        </div>
-                    
-                </div>
-            
-
-            
-                <div class="comment-container">
-                    
-<div class="comments-container">
-    <div id="comments-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fas fa-comments"></i>&nbsp;Comments
-    </div>
-    
-        
-            
-
-    <div class="waline-comment-container">
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css"/>
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline-meta.css"/>
-        <script data-pjax src="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.js"></script>
-        <div id="waline-comment"></div>
-        <script data-pjax>
-          function loadWaline() {
-            Waline.init({
-              el: '#waline-comment',
-              serverURL: 'https://walinee-beryl.vercel.app/',
-              lang: 'en' || 'zh-CN',
-              comment: '.post-comments-count',
-              reaction: 'true' === 'true'
-            })
-          }
-
-          if ('true' === 'true') {
-            setTimeout(() => {
-              loadWaline()
-            }, 1000)
-          } else {
-            window.addEventListener('DOMContentLoaded', loadWaline)
-          }
-        </script>
-    </div>
-
-
-
-        
-    
-</div>
-
-                </div>
-            
-        </div>
-
-        
-            <div class="toc-content-container">
-                <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%82%A5%E7%8C%AB%E7%9A%84%E6%B8%B8%E6%88%8F"><span class="nav-number">1.</span> <span class="nav-text">肥猫的游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">1.4.</span> <span class="nav-text">样例 #1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">样例输入 #1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">样例输出 #1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA"><span class="nav-number">1.5.</span> <span class="nav-text">提示</span></a></li></ol></li></ol>
-    </div>
-</div>
-
-            </div>
-        
-    </div>
-</div>
 
 
                 
