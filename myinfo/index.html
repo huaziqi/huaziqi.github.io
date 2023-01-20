@@ -109,14 +109,6 @@
                             </a>
                         </li>
                     
-                        <li class="menu-item">
-                            <a class=""
-                               href="/huaziqi.github.io/shuoshuo/"
-                            >
-                                说说
-                            </a>
-                        </li>
-                    
                     
                         <li class="menu-item search search-popup-trigger">
                             <i class="fas fa-search"></i>
@@ -163,11 +155,6 @@
                        href="/about">关于作者</a>
                 </li>
             
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/huaziqi.github.io/shuoshuo/">说说</a>
-                </li>
-            
         </ul>
     </div>
 
@@ -183,24 +170,163 @@
             <div class="main-content">
 
                 
-                    
-<div class="fade-in-down-animation">
-    <div class="page-template-container">
-        
-        
-        <div class="page-template-content keep-markdown-body">
-            
-                <p>qq：2946048113</p>
-<p>邮箱：</p>
-<p><a class="link"   href="mailto:&#x32;&#57;&#x34;&#x36;&#x30;&#52;&#x38;&#49;&#x31;&#x33;&#64;&#x71;&#113;&#46;&#99;&#111;&#109;" >&#x32;&#57;&#x34;&#x36;&#x30;&#52;&#x38;&#49;&#x31;&#x33;&#64;&#x71;&#113;&#46;&#99;&#111;&#109;<i class="fas fa-external-link-alt"></i></a></p>
-<p><a class="link"   href="mailto:&#72;&#50;&#x39;&#52;&#x36;&#x30;&#x34;&#x38;&#49;&#49;&#51;&#64;&#49;&#54;&#x33;&#46;&#99;&#x6f;&#x6d;" >&#72;&#50;&#x39;&#52;&#x36;&#x30;&#x34;&#x38;&#49;&#49;&#51;&#64;&#49;&#54;&#x33;&#46;&#99;&#x6f;&#x6d;<i class="fas fa-external-link-alt"></i></a></p>
-<p>wyy：huaziq1</p>
+                    $friend-link-item-height = 82px
+$friend-link-item-height-tablet = 68px
+$friend-link-item-interval = 16px
+$friend-link-item-border-radius = 6px
 
-            
-        </div>
-        
-    </div>
-</div>
+.page-template-container {
+
+  keep-container(false, 0, 0, 2rem, 2rem)
+
+  .page-template-content {
+    color var(--text-color-3)
+
+    h1
+    h2
+    h3
+    h4
+    h5
+    h6 {
+
+      &:first-child {
+        margin-top 0
+      }
+    }
+  }
+
+
+  if (hexo-config('menu.Links')) {
+    .friends-link-container {
+
+      .friends-link-list {
+        position relative
+
+        .friends-link-item {
+          position relative
+          float left
+          box-sizing border-box
+          width 50%
+          height $friend-link-item-height
+          padding-bottom $friend-link-item-interval
+          cursor pointer
+
+          +keep-tablet() {
+            height $friend-link-item-height-tablet
+          }
+
+          &:nth-child(odd) {
+            padding-right $friend-link-item-interval * 0.5
+          }
+
+          &:nth-child(even) {
+            padding-left $friend-link-item-interval * 0.5
+          }
+
+          .content {
+            position relative
+            box-sizing border-box
+            width 100%
+            height 100%
+            padding-left $friend-link-item-height - $friend-link-item-interval
+            border-radius $friend-link-item-border-radius
+            box-shadow 1px 1px 2px var(--shadow-color)
+
+
+            +keep-tablet() {
+              padding-left $friend-link-item-height-tablet - $friend-link-item-interval
+            }
+
+            &:hover {
+              box-shadow 1px 1px 6px var(--shadow-color)
+
+              .info .name {
+                color var(--primary-color)
+              }
+            }
+
+            .radius {
+              border-top-left-radius $friend-link-item-border-radius
+              border-bottom-left-radius $friend-link-item-border-radius
+            }
+
+            .avatar {
+              position absolute
+              top 0
+              left 0
+              display flex
+              align-items center
+              justify-content center
+              width $friend-link-item-height  - $friend-link-item-interval
+              height 100%
+              color var(--text-color-2)
+              font-size 2rem
+              background var(--background-color-2)
+
+
+              +keep-tablet() {
+                width $friend-link-item-height-tablet  - $friend-link-item-interval
+              }
+
+              img {
+                position relative
+                box-sizing border-box
+                width 100%
+                height 100%
+              }
+            }
+
+
+            .info {
+              position relative
+              display flex
+              flex-direction column
+              align-items center
+              justify-items flex-start
+              box-sizing border-box
+              width 100%
+              height 100%
+              padding 10px
+
+              +keep-tablet() {
+                padding 6px
+              }
+
+              .name {
+                width 100%
+                height 60%
+                color var(--text-color-2)
+                font-size 1.28rem
+
+                +keep-tablet() {
+                  font-size 1.08rem
+                }
+              }
+
+              .description {
+                width 100%
+                height 40%
+                color var(--text-color-4)
+                font-size 1rem
+
+
+                +keep-tablet() {
+                  font-size 0.98rem
+                }
+              }
+
+              .ellipsis {
+                overflow hidden
+                white-space nowrap
+                text-overflow ellipsis
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 
                 

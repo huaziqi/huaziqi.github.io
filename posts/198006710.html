@@ -221,14 +221,6 @@ mjx-container[display="true"] + br {
                             </a>
                         </li>
                     
-                        <li class="menu-item">
-                            <a class=""
-                               href="/huaziqi.github.io/shuoshuo/"
-                            >
-                                说说
-                            </a>
-                        </li>
-                    
                     
                         <li class="menu-item search search-popup-trigger">
                             <i class="fas fa-search"></i>
@@ -273,11 +265,6 @@ mjx-container[display="true"] + br {
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/about">关于作者</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/huaziqi.github.io/shuoshuo/">说说</a>
                 </li>
             
         </ul>
@@ -693,24 +680,83 @@ mjx-container[display="true"] + br {
 
     
         <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-            <li class="tools-item flex-center toggle-show-toc">
-                <i class="fas fa-list"></i>
-            </li>
-        
+            $li-border-radius = 0.4rem
+$li-margin-bottom = 0.8rem
 
-        <!-- go comment -->
-        
-            <li class="tools-item flex-center go-to-comments">
-                <i class="fas fa-comment"></i>
-                <span class="post-comments-count"></span>
-            </li>
-        
-    </ul>
-</div>
+.post-tools-container {
+  position relative
+  box-sizing border-box
+  padding-top 2rem
+
+  .tools-list {
+
+    li {
+      position relative
+      box-sizing border-box
+      width $post-tool-button-width
+      height $post-tool-button-width
+      margin-bottom $li-margin-bottom
+      color var(--text-color-3)
+      font-size 1.2rem
+      background var(--background-color-1)
+      border-radius 50%
+      cursor pointer
+
+      i {
+        color var(--text-color-3)
+      }
+
+      &:hover {
+        color var(--background-color-1)
+        background var(--primary-color)
+
+        i {
+          color var(--background-color-1)
+        }
+      }
+
+
+      &:last-child {
+        margin-bottom 0
+      }
+
+
+      hover-style(true, 1.06, 1.06)
+
+      &.toggle-show-toc {
+        display none
+
+        +keep-tablet() {
+          display none !important
+        }
+      }
+
+
+      &.go-to-comments {
+        .post-comments-count {
+          position absolute
+          top 0
+          right -1rem
+          display none
+          align-items center
+          justify-content center
+          box-sizing border-box
+          min-width 1.1rem
+          height 1.1rem
+          padding 0 0.2rem
+          color var(--badge-color)
+          font-size 12px
+          background var(--badge-background-color)
+          border-radius 0.4rem
+
+          +keep-tablet() {
+            display none !important
+          }
+        }
+      }
+    }
+  }
+}
 
         </div>
     
