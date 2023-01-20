@@ -12,7 +12,7 @@
     
     <title>
         
-            acwing-802-区间和 |
+            acwing_802_区间和 |
         
         ziqiの小屋
     </title>
@@ -287,7 +287,7 @@ mjx-container[display="true"] + br {
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">acwing-802-区间和</span>
+                <span class="title-hover-animation">acwing_802_区间和</span>
             </div>
 
             
@@ -315,7 +315,7 @@ mjx-container[display="true"] + br {
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-01-19 10:05:38</span>
+        <span class="pc">2023-01-20 22:09:06</span>
     </span>
     
     
@@ -369,29 +369,42 @@ mjx-container[display="true"] + br {
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h1><hr>
+                <h1 id="离散化"><a class="markdownIt-Anchor" href="#离散化"></a> 离散化</h1>
+<hr>
 <ul>
 <li>就题论题来讲</li>
 </ul>
-<h2 id="acwing-802-区间和"><a href="#acwing-802-区间和" class="headerlink" title="acwing 802. 区间和"></a>acwing 802. 区间和</h2><p>假定有一个无限长的数轴，数轴上每个坐标上的数都是 0。<br>现在，我们首先进行 n次操作，每次操作将某一位置 x上的数加 c。</p>
+<h2 id="acwing-802-区间和"><a class="markdownIt-Anchor" href="#acwing-802-区间和"></a> acwing 802. 区间和</h2>
+<p>假定有一个无限长的数轴，数轴上每个坐标上的数都是 0。<br>
+现在，我们首先进行 n次操作，每次操作将某一位置 x上的数加 c。</p>
 <p>接下来，进行 m次询问，每个询问包含两个整数 l 和 r ，你需要求出在区间 [l,r]之间的所有数的和。</p>
-<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含两个整数 n 和 m。</p>
+<h4 id="输入格式"><a class="markdownIt-Anchor" href="#输入格式"></a> 输入格式</h4>
+<p>第一行包含两个整数 n 和 m。</p>
 <p>接下来 n 行，每行包含两个整数 x 和 c 。</p>
 <p>再接下来 m 行，每行包含两个整数 l 和 r 。</p>
-<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>共 m 行，每行输出一个询问中所求的区间内数字和。</p>
-<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>-109≤x≤109,<br>1≤n,m≤10^5,<br>-109≤l≤r≤109,<br>-10000≤c≤10000</p>
-<h4 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3 3</span><br><span class="line">1 2</span><br><span class="line">3 6</span><br><span class="line">7 5</span><br><span class="line">1 3</span><br><span class="line">4 6</span><br><span class="line">7 8</span><br></pre></td></tr></table></figure>
-
-<h4 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">8</span><br><span class="line">0</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
-
-<h2 id="简吸"><a href="#简吸" class="headerlink" title="简吸"></a>简吸</h2><p>离散化的整体思路还是简单的，就是当数据相差大而数量小时，用数组把每个数字映射到一个下标上。<br>~~刚开始不想看这题是因为对于pair的用法有点迷。~~~~~~</p>
-<p>浅浅一学以后其实感觉pair跟struct没什么区别。<br>其次就是这个auto，<del>之前学长来教的时候就没讲清楚.</del></p>
-<p>现在看了题解大概能猜出是什么用的，格式是for(auto opt : add)。<br>auto是自动的意思，那么这个语法相而易见就是自动地遍历add这个数组中所有数据。</p>
+<h4 id="输出格式"><a class="markdownIt-Anchor" href="#输出格式"></a> 输出格式</h4>
+<p>共 m 行，每行输出一个询问中所求的区间内数字和。</p>
+<h4 id="数据范围"><a class="markdownIt-Anchor" href="#数据范围"></a> 数据范围</h4>
+<p>-109≤x≤109,<br>
+1≤n,m≤10^5,<br>
+-109≤l≤r≤109,<br>
+-10000≤c≤10000</p>
+<h4 id="输入样例"><a class="markdownIt-Anchor" href="#输入样例"></a> 输入样例</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3 3</span><br><span class="line">1 2</span><br><span class="line">3 6</span><br><span class="line">7 5</span><br><span class="line">1 3</span><br><span class="line">4 6</span><br><span class="line">7 8</span><br></pre></td></tr></table></figure>
+<h4 id="输出样例"><a class="markdownIt-Anchor" href="#输出样例"></a> 输出样例</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">8</span><br><span class="line">0</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+<h2 id="简吸"><a class="markdownIt-Anchor" href="#简吸"></a> 简吸</h2>
+<p>离散化的整体思路还是简单的，就是当数据相差大而数量小时，用数组把每个数字映射到一个下标上。<br>
+<s>刚开始不想看这题是因为对于pair的用法有点迷。</s>~~~~</p>
+<p>浅浅一学以后其实感觉pair跟struct没什么区别。<br>
+其次就是这个auto，<s>之前学长来教的时候就没讲清楚.</s></p>
+<p>现在看了题解大概能猜出是什么用的，格式是for(auto opt : add)。<br>
+auto是自动的意思，那么这个语法相而易见就是自动地遍历add这个数组中所有数据。</p>
 <p>这题思路就是先把所有的数据中提到的点读入，即 n 个有数据的点，及 m 个 l，r（要求的区间和），并将数据中提到的数轴上的点和数值（x，c）放到add中，再把要求的区间 l，r 放入query中，以便后续将这些点在排序过后 point 中找出下标。</p>
 <p>当把 point全部排序去重后，遍历一遍add数组，用二分找出每一个数据在 point （存所有数据点）中的下标 i ，在数组 a[ i ] 中加上值 c 。</p>
-<p>既然要求区间和，那就用O(N)的时间复杂度 用前缀和的存入s[ N ] 中。<br>最后再用auto遍历query，用前缀和输出值。</p>
+<p>既然要求区间和，那就用O(N)的时间复杂度 用前缀和的存入s[ N ] 中。<br>
+最后再用auto遍历query，用前缀和输出值。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 300010</span></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; PII;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m,x,c,a[N],s[N];</span><br><span class="line">vector&lt;PII&gt; adds,query;<span class="comment">//add 存储所给的点和数据，query存储要求的区间</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; point;<span class="comment">//point 存储的是包括 x（题中给出的有数据的点）及 l , r(要求的区间)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">    <span class="type">int</span> l=<span class="number">0</span>,r=point.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l&lt;r){</span><br><span class="line">        <span class="type">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (point[mid]&gt;=x)</span><br><span class="line">            r=mid;</span><br><span class="line">        <span class="keyword">else</span> l=mid+<span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> r+<span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n;i ++){</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;c);</span><br><span class="line">        adds.<span class="built_in">push_back</span>({x,c});</span><br><span class="line">        point.<span class="built_in">push_back</span>(x);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++){</span><br><span class="line">        <span class="type">int</span> l,r;</span><br><span class="line">        cin&gt;&gt;l&gt;&gt;r;</span><br><span class="line">        query.<span class="built_in">push_back</span>({l,r});</span><br><span class="line">        point.<span class="built_in">push_back</span>(l);</span><br><span class="line">        point.<span class="built_in">push_back</span>(r);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">sort</span>(point.<span class="built_in">begin</span>(),point.<span class="built_in">end</span>());</span><br><span class="line">    point.<span class="built_in">erase</span>(<span class="built_in">unique</span>(point.<span class="built_in">begin</span>(),point.<span class="built_in">end</span>()),point.<span class="built_in">end</span>());<span class="comment">//去重</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> opt : adds){</span><br><span class="line">        <span class="type">int</span> num=<span class="built_in">find</span>(opt.first);</span><br><span class="line">        a[num]+=opt.second;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=point.<span class="built_in">size</span>();i++)</span><br><span class="line">        s[i]=s[i<span class="number">-1</span>]+a[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> opt : query){</span><br><span class="line">        <span class="type">int</span> l=<span class="built_in">find</span>(opt.first),r=<span class="built_in">find</span>(opt.second);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,s[r]-s[l<span class="number">-1</span>]);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-
 <p>2022-05-02 15:03:35 完结</p>
 
             </div>
@@ -402,7 +415,7 @@ mjx-container[display="true"] + br {
 <div class="article-copyright-info-container">
     <ul class="copyright-info-content">
         <li class="post-title">
-            <span class="type">Post title</span>: <span class="content">acwing-802-区间和</span>
+            <span class="type">Post title</span>: <span class="content">acwing_802_区间和</span>
         </li>
         <li class="post-author">
             <span class="type">Post author</span>: <span class="content">huaziqi</span>
@@ -565,7 +578,7 @@ mjx-container[display="true"] + br {
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A6%BB%E6%95%A3%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">离散化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#acwing-802-%E5%8C%BA%E9%97%B4%E5%92%8C"><span class="nav-number">1.1.</span> <span class="nav-text">acwing 802. 区间和</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">数据范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">输入样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">输出样例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%90%B8"><span class="nav-number">1.2.</span> <span class="nav-text">简吸</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A6%BB%E6%95%A3%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text"> 离散化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#acwing-802-%E5%8C%BA%E9%97%B4%E5%92%8C"><span class="nav-number">1.1.</span> <span class="nav-text"> acwing 802. 区间和</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.1.0.1.</span> <span class="nav-text"> 输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.1.0.2.</span> <span class="nav-text"> 输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="nav-number">1.1.0.3.</span> <span class="nav-text"> 数据范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.0.4.</span> <span class="nav-text"> 输入样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.0.5.</span> <span class="nav-text"> 输出样例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%90%B8"><span class="nav-number">1.2.</span> <span class="nav-text"> 简吸</span></a></li></ol></li></ol>
     </div>
 </div>
 
