@@ -475,47 +475,88 @@ mjx-container[display="true"] + br {
 
             
                 <div class="comment-container">
-                    if (hexo-config('comment.enable') == true && hexo-config('comment.use') != "") {
-  if (hexo-config('comment.use') == "valine") {
-    @import "./valine.styl"
-  }
-  else if (hexo-config('comment.use') == "gitalk") {
-    @import "./gitalk.styl"
-  }
-  else if (hexo-config('comment.use') == "twikoo") {
-    @import "./twikoo.styl"
-  }
-  else if (hexo-config('comment.use') == "waline") {
-    @import "./waline.styl"
-  }
-}
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
 
-.comments-container {
-  display inline-block
-  width 100%
-  margin-top $component-spacing-value
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
 
-  #comments-anchor {
-    width 100%
-    height 0.8rem
-  }
+            const config = {
+              el: '#vcomments',
+              appId: 'i4j8h2suZ3CImXMgr0dXDuSj-gzGzoHsz',
+              appKey: 'GRtU447Qe12VTivCtzxwZWDi',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '随便说点什么吧',
+              lang: 'en'.toLowerCase()
+            }
 
-  .comment-area-title {
-    width 100%
-    margin 0.8rem 0
-    color var(--text-color-3)
-    font-size 1.38rem
+            if ('') {
+              config.serverURLs = ''
+            }
 
-    i {
-      color var(--text-color-3)
-    }
+            new Valine(config)
 
-    +keep-tablet() {
-      margin 0.4rem 0
-      font-size 1.2rem
-    }
-  }
-}
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'huaziqi'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
+          }
+
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
+          }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
 
                 </div>
             
