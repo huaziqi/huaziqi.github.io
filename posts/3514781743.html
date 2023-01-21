@@ -604,11 +604,95 @@ mjx-container[display="true"] + br {
 
         
             <div class="toc-content-container">
-                <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E7%9D%BF-1139-%E7%BA%BF%E4%B8%8A%E8%AE%AD%E7%BB%83-1%E5%BA%8F%E5%88%97"><span class="nav-number">1.</span> <span class="nav-text"> 正睿 #1139. 【线上训练 1】序列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text"> 题目描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA"><span class="nav-number">1.1.2.</span> <span class="nav-text"> 输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.3.</span> <span class="nav-text"> 样例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5-2"><span class="nav-number">1.1.3.1.</span> <span class="nav-text"> 输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA-2"><span class="nav-number">1.1.3.2.</span> <span class="nav-text"> 输出</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%A6%E5%AE%9A"><span class="nav-number">1.1.4.</span> <span class="nav-text"> 约定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90"><span class="nav-number">1.2.</span> <span class="nav-text"> 分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.3.</span> <span class="nav-text"> 代码</span></a></li></ol></li></ol>
-    </div>
-</div>
+                .post-toc-wrap {
+  position relative
+  box-sizing border-box
+  width 100%
+  height 100%
+  overflow-y auto
+  font-size 0.92rem
+
+  &::-webkit-scrollbar-thumb {
+    background var(--toc-scrollbar-color)
+    border-radius 0.3rem
+  }
+
+  &::-webkit-scrollbar-track {
+    background transparent
+  }
+
+  .post-toc {
+
+    ol {
+      margin 0
+      padding 0 0.1rem 0.8rem 0.6rem
+      text-align left
+      list-style none
+
+      &:last-child {
+        padding-bottom 0
+      }
+
+      > ol {
+        padding-left 0
+      }
+
+      a {
+        transition-property all
+        transition()
+      }
+    }
+
+
+    .nav-item {
+      margin-bottom 0.2rem
+      overflow hidden
+      line-height 1.8
+      white-space nowrap
+      text-overflow ellipsis
+    }
+
+
+    .nav {
+      .nav-child {
+        display hexo-config('toc.expand_all') ? block:none
+      }
+
+      .active > .nav-child {
+        display block
+      }
+
+      .active-current > .nav-child {
+        display block
+
+        > .nav-item {
+          display block
+        }
+      }
+
+
+      .nav-number
+      .nav-text {
+        color var(--toc-text-color)
+      }
+
+      .active > a {
+        .nav-number
+        .nav-text {
+          color var(--primary-color)
+        }
+      }
+
+      .active-current > a {
+        .nav-number
+        .nav-text {
+          color var(--primary-color)
+        }
+      }
+    }
+  }
+}
+
 
             </div>
         

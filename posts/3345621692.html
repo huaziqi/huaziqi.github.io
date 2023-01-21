@@ -607,11 +607,95 @@ mjx-container[display="true"] + br {
 
         
             <div class="toc-content-container">
-                <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#acwing-4700-%E4%BD%95%E4%BB%A5%E5%8C%85%E9%82%AE"><span class="nav-number">1.</span> <span class="nav-text"> acwing 4700. 何以包邮？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text"> 题目描述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.1.0.1.</span> <span class="nav-text"> 输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.1.0.2.</span> <span class="nav-text"> 输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="nav-number">1.1.0.3.</span> <span class="nav-text"> 数据范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B1"><span class="nav-number">1.1.0.4.</span> <span class="nav-text"> 输入样例1：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B1"><span class="nav-number">1.1.0.5.</span> <span class="nav-text"> 输出样例1：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B1%E8%A7%A3%E9%87%8A"><span class="nav-number">1.1.0.6.</span> <span class="nav-text"> 样例1解释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B2"><span class="nav-number">1.1.0.7.</span> <span class="nav-text"> 输入样例2：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B2"><span class="nav-number">1.1.0.8.</span> <span class="nav-text"> 输出样例2：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B2%E8%A7%A3%E9%87%8A"><span class="nav-number">1.1.0.9.</span> <span class="nav-text"> 样例2解释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B3"><span class="nav-number">1.1.0.10.</span> <span class="nav-text"> 输入样例3：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B3"><span class="nav-number">1.1.0.11.</span> <span class="nav-text"> 输出样例3：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B3%E8%A7%A3%E9%87%8A"><span class="nav-number">1.1.0.12.</span> <span class="nav-text"> 样例3解释</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dfs%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text"> dfs法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8A%B6%E5%8E%8B%E6%B3%95"><span class="nav-number">1.3.</span> <span class="nav-text"> 状压法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E8%A7%84%E6%B3%95"><span class="nav-number">1.4.</span> <span class="nav-text"> 动规法</span></a></li></ol></li></ol>
-    </div>
-</div>
+                .post-toc-wrap {
+  position relative
+  box-sizing border-box
+  width 100%
+  height 100%
+  overflow-y auto
+  font-size 0.92rem
+
+  &::-webkit-scrollbar-thumb {
+    background var(--toc-scrollbar-color)
+    border-radius 0.3rem
+  }
+
+  &::-webkit-scrollbar-track {
+    background transparent
+  }
+
+  .post-toc {
+
+    ol {
+      margin 0
+      padding 0 0.1rem 0.8rem 0.6rem
+      text-align left
+      list-style none
+
+      &:last-child {
+        padding-bottom 0
+      }
+
+      > ol {
+        padding-left 0
+      }
+
+      a {
+        transition-property all
+        transition()
+      }
+    }
+
+
+    .nav-item {
+      margin-bottom 0.2rem
+      overflow hidden
+      line-height 1.8
+      white-space nowrap
+      text-overflow ellipsis
+    }
+
+
+    .nav {
+      .nav-child {
+        display hexo-config('toc.expand_all') ? block:none
+      }
+
+      .active > .nav-child {
+        display block
+      }
+
+      .active-current > .nav-child {
+        display block
+
+        > .nav-item {
+          display block
+        }
+      }
+
+
+      .nav-number
+      .nav-text {
+        color var(--toc-text-color)
+      }
+
+      .active > a {
+        .nav-number
+        .nav-text {
+          color var(--primary-color)
+        }
+      }
+
+      .active-current > a {
+        .nav-number
+        .nav-text {
+          color var(--primary-color)
+        }
+      }
+    }
+  }
+}
+
 
             </div>
         
