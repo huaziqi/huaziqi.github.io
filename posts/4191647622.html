@@ -27,7 +27,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"huaziqi.github.io","root":"/","language":"en","path":"search.json"}
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/icn.png","avatar":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/tou.png","font_size":"16px","font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"valine","valine":{"appid":"i4j8h2suZ3CImXMgr0dXDuSj-gzGzoHsz","appkey":"GRtU447Qe12VTivCtzxwZWDi","server_urls":null,"placeholder":"随便说点什么吧，最好把邮箱和网站都填上喔"},"gitalk":{"github_id":"huaziqi","github_admins":"huaziqi","repository":"Comment","client_id":"6fee752c1045aac6a0db","client_secret":"d23e3da128455495410a6e0ac881912ca7694133","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":"https://walinee-beryl.vercel.app/","reaction":true,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":false},"img_align":"center","copyright_info":true},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/icn.png","avatar":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/tou.png","font_size":"16px","font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"valine","valine":{"appid":"i4j8h2suZ3CImXMgr0dXDuSj-gzGzoHsz","appkey":"GRtU447Qe12VTivCtzxwZWDi","server_urls":null,"placeholder":"随便说点什么吧，最好把邮箱和网站都填上喔","avatar":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/icn.png","pageSize":10,"visitor":true},"gitalk":{"github_id":"huaziqi","github_admins":"huaziqi","repository":"Comment","client_id":"6fee752c1045aac6a0db","client_secret":"d23e3da128455495410a6e0ac881912ca7694133","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":"https://walinee-beryl.vercel.app/","reaction":true,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":false},"img_align":"center","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
     KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
@@ -558,29 +558,87 @@ TOM搜索网站登录口：<br>
 
             
                 <div class="post-copyright-info">
-                    
-<div class="article-copyright-info-container">
-    <ul class="copyright-info-content">
-        <li class="post-title">
-            <span class="type">Post title</span>: <span class="content">Hello-hexo -- hexo + github部署教程</span>
-        </li>
-        <li class="post-author">
-            <span class="type">Post author</span>: <span class="content">huaziqi</span>
-        </li>
-        <li class="post-time">
-            <span class="type">Create time</span>: <span class="content">2023-01-19 11:51:26</span>
-        </li>
-        <li class="post-link">
-            <span class="type">Post link</span>: <span class="content">posts/4191647622.html</span>
-        </li>
-        <li class="post-license">
-            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
-        </li>
-    </ul>
-    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
-        <i class="fa-solid fa-copy"></i>
-    </div>
-</div>
+                    .article-copyright-info-container {
+  position relative
+  box-sizing border-box
+  width 100%
+  padding 0.8rem 0.8rem 0.8rem 1.3rem
+  font-size 1rem
+  background var(--background-color-2)
+
+  &::after {
+    position absolute
+    top 0
+    left 0
+    width 0.5rem
+    height 100%
+    background var(--copyright-info-color)
+    content ''
+  }
+
+
+  &:hover {
+    .copy-copyright-info {
+      visibility visible
+    }
+  }
+
+
+  .copyright-info-content {
+    position relative
+    box-sizing border-box
+    overflow-x auto
+
+    &::-webkit-scrollbar {
+      width 0.3rem
+      height 0.3rem
+      transition all 0.2s ease
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background var(--text-color-4)
+    }
+
+    &::-webkit-scrollbar-track {
+      background transparent
+    }
+
+    li {
+      margin-bottom 0.4rem
+      color var(--text-color-3)
+      white-space nowrap
+
+      .type
+      .content {
+        color var(--text-color-3)
+      }
+
+      .license {
+        font-weight bold
+      }
+
+      &:last-child {
+        margin-bottom 0
+      }
+    }
+  }
+
+
+  .copy-copyright-info {
+    position absolute
+    top 0.4rem
+    right 0.4rem
+    box-sizing border-box
+    padding 0.3rem
+    visibility hidden
+    cursor pointer
+    transition-t("visibility", "0", "0.2", "ease-in-out")
+
+    i {
+      color var(--text-color-3)
+    }
+  }
+}
 
                 </div>
             
@@ -727,95 +785,11 @@ TOM搜索网站登录口：<br>
 
         
             <div class="toc-content-container">
-                .post-toc-wrap {
-  position relative
-  box-sizing border-box
-  width 100%
-  height 100%
-  overflow-y auto
-  font-size 0.92rem
-
-  &::-webkit-scrollbar-thumb {
-    background var(--toc-scrollbar-color)
-    border-radius 0.3rem
-  }
-
-  &::-webkit-scrollbar-track {
-    background transparent
-  }
-
-  .post-toc {
-
-    ol {
-      margin 0
-      padding 0 0.1rem 0.8rem 0.6rem
-      text-align left
-      list-style none
-
-      &:last-child {
-        padding-bottom 0
-      }
-
-      > ol {
-        padding-left 0
-      }
-
-      a {
-        transition-property all
-        transition()
-      }
-    }
-
-
-    .nav-item {
-      margin-bottom 0.2rem
-      overflow hidden
-      line-height 1.8
-      white-space nowrap
-      text-overflow ellipsis
-    }
-
-
-    .nav {
-      .nav-child {
-        display hexo-config('toc.expand_all') ? block:none
-      }
-
-      .active > .nav-child {
-        display block
-      }
-
-      .active-current > .nav-child {
-        display block
-
-        > .nav-item {
-          display block
-        }
-      }
-
-
-      .nav-number
-      .nav-text {
-        color var(--toc-text-color)
-      }
-
-      .active > a {
-        .nav-number
-        .nav-text {
-          color var(--primary-color)
-        }
-      }
-
-      .active-current > a {
-        .nav-number
-        .nav-text {
-          color var(--primary-color)
-        }
-      }
-    }
-  }
-}
-
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hello-hexo-hexo-github%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text"> Hello hexo！—— hexo + github部署教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text"> 搭建历程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 第一个想法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#money"><span class="nav-number">1.1.2.</span> <span class="nav-text"> money</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim"><span class="nav-number">1.1.3.</span> <span class="nav-text"> vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E6%9C%BA"><span class="nav-number">1.1.4.</span> <span class="nav-text"> 转机</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text"> 搭建方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 本地hexo环境搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAhexo"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 开始搭建hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.3.</span> <span class="nav-text"> hexo中的基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0github"><span class="nav-number">1.2.4.</span> <span class="nav-text"> 部署博客到github</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96ssh"><span class="nav-number">1.2.4.1.</span> <span class="nav-text"> 获取ssh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%91%E5%AE%9Assh%E5%88%B0github"><span class="nav-number">1.2.4.2.</span> <span class="nav-text"> 绑定ssh到github</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BAgithub%E5%BA%93"><span class="nav-number">1.2.5.</span> <span class="nav-text"> 新建github库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final"><span class="nav-number">1.2.6.</span> <span class="nav-text"> FINAL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-number">1.3.</span> <span class="nav-text"> 优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2-markdown%E6%B8%B2%E6%9F%93%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text"> 更换 markdown渲染器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA"><span class="nav-number">1.5.</span> <span class="nav-text"> 博客评论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%9B%A0"><span class="nav-number">1.5.1.</span> <span class="nav-text"> 原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%8E%E5%8C%96"><span class="nav-number">1.6.</span> <span class="nav-text"> 美化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E4%B8%AA%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%94%B6%E5%BD%95%E5%85%A5%E5%8F%A3"><span class="nav-number">1.7.</span> <span class="nav-text"> 各个搜索引擎收录入口</span></a></li></ol></li></ol>
+    </div>
+</div>
 
             </div>
         

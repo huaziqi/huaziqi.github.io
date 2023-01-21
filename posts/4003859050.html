@@ -27,7 +27,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"huaziqi.github.io","root":"/","language":"en","path":"search.json"}
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/icn.png","avatar":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/tou.png","font_size":"16px","font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"valine","valine":{"appid":"i4j8h2suZ3CImXMgr0dXDuSj-gzGzoHsz","appkey":"GRtU447Qe12VTivCtzxwZWDi","server_urls":null,"placeholder":"随便说点什么吧，最好把邮箱和网站都填上喔"},"gitalk":{"github_id":"huaziqi","github_admins":"huaziqi","repository":"Comment","client_id":"6fee752c1045aac6a0db","client_secret":"d23e3da128455495410a6e0ac881912ca7694133","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":"https://walinee-beryl.vercel.app/","reaction":true,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":false},"img_align":"center","copyright_info":true},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#2980b9","logo":null,"favicon":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/icn.png","avatar":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/tou.png","font_size":"16px","font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/back.png","description":"无关风月，我题序等你归","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"valine","valine":{"appid":"i4j8h2suZ3CImXMgr0dXDuSj-gzGzoHsz","appkey":"GRtU447Qe12VTivCtzxwZWDi","server_urls":null,"placeholder":"随便说点什么吧，最好把邮箱和网站都填上喔","avatar":"https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/icn.png","pageSize":10,"visitor":true},"gitalk":{"github_id":"huaziqi","github_admins":"huaziqi","repository":"Comment","client_id":"6fee752c1045aac6a0db","client_secret":"d23e3da128455495410a6e0ac881912ca7694133","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":"https://walinee-beryl.vercel.app/","reaction":true,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":false},"img_align":"center","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
     KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
@@ -425,29 +425,87 @@ mjx-container[display="true"] + br {
 
             
                 <div class="post-copyright-info">
-                    
-<div class="article-copyright-info-container">
-    <ul class="copyright-info-content">
-        <li class="post-title">
-            <span class="type">Post title</span>: <span class="content">字典树</span>
-        </li>
-        <li class="post-author">
-            <span class="type">Post author</span>: <span class="content">huaziqi</span>
-        </li>
-        <li class="post-time">
-            <span class="type">Create time</span>: <span class="content">2022-05-14 09:22:23</span>
-        </li>
-        <li class="post-link">
-            <span class="type">Post link</span>: <span class="content">posts/4003859050.html</span>
-        </li>
-        <li class="post-license">
-            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
-        </li>
-    </ul>
-    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
-        <i class="fa-solid fa-copy"></i>
-    </div>
-</div>
+                    .article-copyright-info-container {
+  position relative
+  box-sizing border-box
+  width 100%
+  padding 0.8rem 0.8rem 0.8rem 1.3rem
+  font-size 1rem
+  background var(--background-color-2)
+
+  &::after {
+    position absolute
+    top 0
+    left 0
+    width 0.5rem
+    height 100%
+    background var(--copyright-info-color)
+    content ''
+  }
+
+
+  &:hover {
+    .copy-copyright-info {
+      visibility visible
+    }
+  }
+
+
+  .copyright-info-content {
+    position relative
+    box-sizing border-box
+    overflow-x auto
+
+    &::-webkit-scrollbar {
+      width 0.3rem
+      height 0.3rem
+      transition all 0.2s ease
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background var(--text-color-4)
+    }
+
+    &::-webkit-scrollbar-track {
+      background transparent
+    }
+
+    li {
+      margin-bottom 0.4rem
+      color var(--text-color-3)
+      white-space nowrap
+
+      .type
+      .content {
+        color var(--text-color-3)
+      }
+
+      .license {
+        font-weight bold
+      }
+
+      &:last-child {
+        margin-bottom 0
+      }
+    }
+  }
+
+
+  .copy-copyright-info {
+    position absolute
+    top 0.4rem
+    right 0.4rem
+    box-sizing border-box
+    padding 0.3rem
+    visibility hidden
+    cursor pointer
+    transition-t("visibility", "0", "0.2", "ease-in-out")
+
+    i {
+      color var(--text-color-3)
+    }
+  }
+}
 
                 </div>
             
@@ -590,95 +648,11 @@ mjx-container[display="true"] + br {
 
         
             <div class="toc-content-container">
-                .post-toc-wrap {
-  position relative
-  box-sizing border-box
-  width 100%
-  height 100%
-  overflow-y auto
-  font-size 0.92rem
-
-  &::-webkit-scrollbar-thumb {
-    background var(--toc-scrollbar-color)
-    border-radius 0.3rem
-  }
-
-  &::-webkit-scrollbar-track {
-    background transparent
-  }
-
-  .post-toc {
-
-    ol {
-      margin 0
-      padding 0 0.1rem 0.8rem 0.6rem
-      text-align left
-      list-style none
-
-      &:last-child {
-        padding-bottom 0
-      }
-
-      > ol {
-        padding-left 0
-      }
-
-      a {
-        transition-property all
-        transition()
-      }
-    }
-
-
-    .nav-item {
-      margin-bottom 0.2rem
-      overflow hidden
-      line-height 1.8
-      white-space nowrap
-      text-overflow ellipsis
-    }
-
-
-    .nav {
-      .nav-child {
-        display hexo-config('toc.expand_all') ? block:none
-      }
-
-      .active > .nav-child {
-        display block
-      }
-
-      .active-current > .nav-child {
-        display block
-
-        > .nav-item {
-          display block
-        }
-      }
-
-
-      .nav-number
-      .nav-text {
-        color var(--toc-text-color)
-      }
-
-      .active > a {
-        .nav-number
-        .nav-text {
-          color var(--primary-color)
-        }
-      }
-
-      .active-current > a {
-        .nav-number
-        .nav-text {
-          color var(--primary-color)
-        }
-      }
-    }
-  }
-}
-
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tire-%E5%AD%97%E5%85%B8%E6%A0%91"><span class="nav-number">1.</span> <span class="nav-text"> tire 字典树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%88%E6%9D%A5%E4%B8%AA%E6%A8%A1%E6%9D%BF"><span class="nav-number">1.1.</span> <span class="nav-text"> 先来个模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E5%85%B8%E6%A0%91%E5%91%A2"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 什么是字典树呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BB%BA%E6%A0%91"><span class="nav-number">1.1.1.1.</span> <span class="nav-text"> 建树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2"><span class="nav-number">1.1.1.2.</span> <span class="nav-text"> 搜索</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6"><span class="nav-number">1.2.</span> <span class="nav-text"> 进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.0.1.</span> <span class="nav-text"> 输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.0.2.</span> <span class="nav-text"> 输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="nav-number">1.2.0.3.</span> <span class="nav-text"> 数据范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.2.0.4.</span> <span class="nav-text"> 输入样例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.2.0.5.</span> <span class="nav-text"> 输出样例：</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+</div>
 
             </div>
         
