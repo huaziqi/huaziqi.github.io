@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://huaziqi.github.io/music/index.html</loc>
+    
+    <lastmod>2023-01-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://huaziqi.github.io/shuoshuo/index.html</loc>
     
-    <lastmod>2023-01-21</lastmod>
+    <lastmod>2023-01-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
