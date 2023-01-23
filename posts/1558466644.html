@@ -329,7 +329,7 @@ mjx-container[display="true"] + br {
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-01-23 10:13:14</span>
+        <span class="pc">2023-01-23 11:56:05</span>
     </span>
     
     
@@ -425,7 +425,7 @@ mjx-container[display="true"] + br {
 <h2 id="链式前向星"><a class="markdownIt-Anchor" href="#链式前向星"></a> 链式前向星</h2>
 <p><img lazyload="" alt="多叉树0" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E5%A4%9A%E5%8F%89%E6%A0%910.67d9y3wjgnc0.jpg"></p>
 <p>来个大点的图，将其改为二叉树，其中一种方案是这样的</p>
-<p><img lazyload="" alt="二叉树0" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E4%BA%8C%E5%8F%89%E6%A0%910.36d6updr4wk0.jpg"></p>
+<p><img lazyload="" alt="二叉树" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E4%BA%8C%E5%8F%89%E6%A0%91.6e1bxpaei8k0.jpg"></p>
 <p>运用链式前向星的思想，每个节点创建一个单链表，链表存储的是父节点与子节点。<strong>1</strong> 是根节点，<strong>2 3 4 5</strong>是子节点，被放在该链表内。可以看到我用虚线隔开的三个区域，中间的区域就包含着<strong>2 3 4 5</strong>，<strong>6 7</strong>是2的子节点，<strong>8</strong>是<strong>4</strong>的子节点。从上图应该能够看出一点规律来：兄弟节点被排成了一列。</p>
 <p>这可以说是一个有趣的性质，启发我们使用链式前向星存图。</p>
 <h2 id="递归与贪心"><a class="markdownIt-Anchor" href="#递归与贪心"></a> 递归与贪心</h2>
