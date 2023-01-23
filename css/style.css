@@ -772,6 +772,30 @@ button {
 .keep-markdown-body > table tr:nth-child(2n) {
   background-color: var(--background-color-2);
 }
+.tips {
+  padding-left: 10px;
+  background-color: rgba(52,152,219,0.3);
+  border-left: 4px solid #3498db;
+  color: #217bb8;
+}
+.success {
+  padding-left: 10px;
+  background-color: rgba(46,204,113,0.3);
+  border-left: 4px solid #2ecc71;
+  color: #25a35a;
+}
+.warning {
+  padding-left: 10px;
+  background-color: rgba(241,196,15,0.3);
+  border-left: 4px solid #f1c40f;
+  color: #c29d0b;
+}
+.danger {
+  padding-left: 10px;
+  background-color: rgba(231,76,60,0.3);
+  border-left: 4px solid #e74c3c;
+  color: #cf2b1a;
+}
 :root {
   --primary-color: #2980b9;
   --primary-color-light-1: #2e90d0;
@@ -2654,7 +2678,7 @@ pre .javascript .function {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: url("https://huaziqicomment.oss-cn-hangzhou.aliyuncs.com/img/back.png") center center/cover no-repeat;
+  background: url("https://cdn.staticaly.com/gh/huaziqi/pic@main/20230123/back.452p5cky7rs0.jpg") center center/cover no-repeat;
   background-position-y: 70px;
 }
 @media (max-width: 800px) {

@@ -379,47 +379,47 @@ mjx-container[display="true"] + br {
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="肥猫的游戏"><a class="markdownIt-Anchor" href="#肥猫的游戏"></a> 肥猫的游戏</h1>
+                <h1>肥猫的游戏</h1>
 <p><a class="link" target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1488">P1488 肥猫的游戏 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)<i class="fas fa-external-link-alt"></i></a></p>
-<h2 id="题目描述"><a class="markdownIt-Anchor" href="#题目描述"></a> 题目描述</h2>
+<h2 id="题目描述">题目描述</h2>
 <p>野猫与胖子，合起来简称肥猫，是一个班的同学，他们也都是数学高手，所以经常在一起讨论数学问题也就不足为奇了。</p>
 <p>一次，野猫遇到了一道有趣的几何游戏题目，便拿给胖子看。游戏要求在一个有 n 个顶点凸多边形上进行，这个凸多边形的 n-3 条对角线将多边形分成 n-2 个三角形，这 n-3 条对角线在多边形的顶点相交。三角形中的一个被染成黑色，其余是白色。</p>
 <p>双方轮流进行游戏，当轮到一方时，他必须沿着画好的对角线，从多边形上切下一个三角形。切下黑色三角形的一方获胜。胖子一看觉得确实很有趣，不如就一起玩玩吧。假设游戏由野猫先开始，那么野猫是否有必胜的策略呢？请写一个程序帮助野猫算一算。</p>
-<h2 id="输入格式"><a class="markdownIt-Anchor" href="#输入格式"></a> 输入格式</h2>
+<h2 id="输入格式">输入格式</h2>
 <p>第一行为一个整数 n，表示多边形的顶点数，多边形的顶点由 0 至 n-1 顺时针标号。</p>
 <p>接着的 n-2 行描述组成多边形的三角形。第 i+1 行  有三个空格分隔的非负整数 a 、b 、c ，它们是第 i 个三角形的顶点编号。第一个给出的三角形是黑色的。</p>
-<h2 id="输出格式"><a class="markdownIt-Anchor" href="#输出格式"></a> 输出格式</h2>
+<h2 id="输出格式">输出格式</h2>
 <p>只有一行，倘若野猫有必胜策略，输出 <code>JMcat Win</code>；否则，输出 <code>PZ Win</code>（注意大小写和空格）。</p>
-<h2 id="样例-1"><a class="markdownIt-Anchor" href="#样例-1"></a> 样例 #1</h2>
-<h3 id="样例输入-1"><a class="markdownIt-Anchor" href="#样例输入-1"></a> 样例输入 #1</h3>
+<h2 id="样例-1">样例 #1</h2>
+<h3 id="样例输入-1">样例输入 #1</h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">0 1 2</span><br><span class="line">2 4 3</span><br><span class="line">4 2 0</span><br><span class="line">0 5 4</span><br></pre></td></tr></table></figure>
-<h3 id="样例输出-1"><a class="markdownIt-Anchor" href="#样例输出-1"></a> 样例输出 #1</h3>
+<h3 id="样例输出-1">样例输出 #1</h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JMcat Win</span><br></pre></td></tr></table></figure>
-<h2 id="提示"><a class="markdownIt-Anchor" href="#提示"></a> 提示</h2>
+<h2 id="提示">提示</h2>
 <p>4 &lt;= n &lt;= 50000</p>
 <p>如果连接一个多边形中任意两点的线段都完全包含于这个多边形，则称这个多边形为凸多边形。</p>
 <p>题解在代码里</p>
-<pre class="highlight"><code class="cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+using namespace std;
 
-<span class="hljs-keyword">int</span> n, a, b, c;
+int n, a, b, c;
 
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
-</span>{
-    <span class="hljs-built_in">cin</span> &gt;&gt; n;
-    <span class="hljs-built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; c;
-    <span class="hljs-keyword">if</span>(a &gt; b)
+int main()
+{
+    cin &gt;&gt; n;
+    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+    if(a &gt; b)
         swap(a, b);
-    <span class="hljs-keyword">if</span>(a &gt; c)
+    if(a &gt; c)
         swap(a, c);
-    <span class="hljs-keyword">if</span>(b &gt; c)
+    if(b &gt; c)
         swap(b, c);
-    <span class="hljs-keyword">if</span>((a + <span class="hljs-number">1</span> == b &amp;&amp; b + <span class="hljs-number">1</span> == c) || (a == <span class="hljs-number">0</span> &amp;&amp; c == n - <span class="hljs-number">1</span>))
+    if((a + 1 == b &amp;&amp; b + 1 == c) || (a == 0 &amp;&amp; c == n - 1))
     {
-        <span class="hljs-built_in">puts</span>(<span class="hljs-string">"JMcat Win"</span>);
-        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        puts("JMcat Win");
+        return 0;
     }
-<span class="hljs-comment">/*
+/*
 假如顶点连续，则代表这个黑色三角形在外面。
 就像是一个多边形上连续三个点构成的三角形必然在外面
 那么先手的野猫就赢了
@@ -431,24 +431,24 @@ mjx-container[display="true"] + br {
 2 4 3
 4 2 0
 所以要特判一下这种情况
-*/</span>
-    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>((n - <span class="hljs-number">2</span>) % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)
+*/
+    else if((n - 2) % 2 == 0)
     {
-        <span class="hljs-built_in">puts</span>(<span class="hljs-string">"JMcat Win"</span>);
-        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        puts("JMcat Win");
+        return 0;
     }
-<span class="hljs-comment">/*
+/*
 假如黑色三角形被包在里面
 先放着别的三角形不管
 假设最后只剩三个个三角形包着黑三角
 谁把其中一个三角切了谁就输了
 胜负就出来了
 所以只要考虑三角形个数的奇偶性就行了
-*/</span>
-    <span class="hljs-keyword">else</span>
-        <span class="hljs-built_in">puts</span>(<span class="hljs-string">"PZ Win"</span>);
+*/
+    else
+        puts("PZ Win");
 
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    return 0;
 }
 </code></pre>
 
@@ -623,7 +623,7 @@ mjx-container[display="true"] + br {
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%82%A5%E7%8C%AB%E7%9A%84%E6%B8%B8%E6%88%8F"><span class="nav-number">1.</span> <span class="nav-text"> 肥猫的游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text"> 题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text"> 输入格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text"> 输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">1.4.</span> <span class="nav-text"> 样例 #1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-1"><span class="nav-number">1.4.1.</span> <span class="nav-text"> 样例输入 #1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-1"><span class="nav-number">1.4.2.</span> <span class="nav-text"> 样例输出 #1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA"><span class="nav-number">1.5.</span> <span class="nav-text"> 提示</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">肥猫的游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">1.4.</span> <span class="nav-text">样例 #1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">样例输入 #1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">样例输出 #1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA"><span class="nav-number">1.5.</span> <span class="nav-text">提示</span></a></li></ol></li></ol>
     </div>
 </div>
 
