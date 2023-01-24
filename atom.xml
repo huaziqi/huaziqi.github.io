@@ -6,7 +6,7 @@
   <link href="http://huaziqi.github.io/atom.xml" rel="self"/>
   
   <link href="http://huaziqi.github.io/"/>
-  <updated>2023-01-23T06:05:47.466Z</updated>
+  <updated>2023-01-23T09:55:33.460Z</updated>
   <id>http://huaziqi.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux入门笔记（一）</title>
+    <link href="http://huaziqi.github.io/posts/3544467744.html"/>
+    <id>http://huaziqi.github.io/posts/3544467744.html</id>
+    <published>2023-01-23T08:28:44.000Z</published>
+    <updated>2023-01-23T09:55:33.460Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="关于系统安装">关于系统安装</h2><p>我用的是visualbox，免费且好用。</p><p>关于操作系统文件我是从<a class="link" href="https://next.itellyou.cn/Original/Index">MSDN<i class="fas fa-external-link-alt"></i></a>下来的。</p><p>第一个遇到的问题就是安装源的基本软件包，在里面新建，填上http://mirrors.aliyun.com/centos/8-stream/BaseOS/x86_64/os/就解决了。</p><div class="tips"><p>注意：额外软件仓库下面的不用填写。</p></div><p><img lazyload="" alt="centos安装源" data-src="https://cdn.staticaly.com/gh/huaziqi/pic@main/centos%E5%AE%89%E8%A3%85%E6%BA%90.2c4v8kdjscro.jpg"></p><h2 id="finalshell">finalshell</h2><p><a class="link" href="http://www.hostbuf.com/t/988.html">http://www.hostbuf.com/t/988.html<i class="fas fa-external-link-alt"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>cf_1783b_Matrix of Differences</title>
