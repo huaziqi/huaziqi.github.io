@@ -38,96 +38,430 @@
 
 
 <body>
-.page-container {
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  background: var(--background-color-1);
-}
-.page-container .page-main-content {
-  position: relative;
-  box-sizing: border-box;
-  padding-top: $header-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content.is-home .transparent-1 {
-  background: var(--header-transparent-background-1);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-}
-.page-container .page-main-content.is-home .transparent-2 {
-  background: var(--header-transparent-background-2);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-}
-.header-shrink .page-container .page-main-content {
-  padding-top: $header-shrink-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: $z-index-5;
-  box-sizing: border-box;
-  width: 100%;
-  height: $header-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-top.hide {
-  transform: translateY(-105%);
-}
-.header-shrink .page-container .page-main-content .page-main-content-top {
-  height: $header-shrink-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-middle {
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 100%;
-  padding: $component-spacing-value 0;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-middle .main-content {
-  position: relative;
-  box-sizing: border-box;
-  width: $main-content-width;
-  max-width: $content-max-width;
-  height: 100%;
-keep-tablet()
-keep-mobile()
-}
-.has-toc .page-container .page-main-content .page-main-content-middle .main-content {
-  max-width: $has-toc-content-max-width;
-}
-.page-container .page-main-content .page-main-content-bottom {
-  width: 100%;
-}
-.page-container .post-tools {
-  position: fixed;
-  top: $header-height$component-spacing-value;
-  left: calc((100vw - $content-max-width / 2) - 5rem);
-  box-sizing: border-box;
-  opacity: 0;
-keep-tablet()
-keep-mobile()
-}
-.header-shrink .page-container .post-tools {
-  top: $header-shrink-height$component-spacing-value;
-keep-tablet()
-}
-.page-container .right-bottom-side-tools {
-  position: fixed;
-  right: 0;
-  bottom: 5%;
-}
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+               ziqiの小屋
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                主页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于作者
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               target="_blank" rel="noopener" href="https://www.huaziqi.top/shuoshuo/"
+                            >
+                                说说
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">主页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于作者</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       target="_blank" rel="noopener" href="https://www.huaziqi.top/shuoshuo/">说说</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    
+<div class="fade-in-down-animation">
+    <div class="page-template-container">
+        
+        
+        <div class="page-template-content keep-markdown-body">
+            
+                <h1>说说</h1>
+<ul class="lvl-0">
+<li class="lvl-2">2023-01-30 17:49:39</li>
+</ul>
+<blockquote>
+<p>今天下午出学考成绩了，终于可以丢掉政治了。呜呼~~</p>
+<p>下午还发现补习班老师是B站up一数，粉丝700多万😰</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://cdn.staticaly.com/gh/huaziqi/pic@main/20230130/WechatIMG28.w9ednh84uww.jpg"
+                      alt="WechatIMG28"
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://cdn.staticaly.com/gh/huaziqi/pic@main/20230130/%E6%88%AA%E5%B1%8F2023-01-30-17.4qjcfx7rkqo0.jpg"
+                      alt="截屏2023-01-30-17"
+                ></p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>2023-01-29 09:22:35</p>
+</li>
+</ul>
+<blockquote>
+<p>昨天刚从富山看外婆回来，才发现时间真的不多了。</p>
+<p>回来去了趟医院，医生跟我说手错位了，但是</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://cdn.staticaly.com/gh/huaziqi/pic@main/20230129/%E6%88%AA%E5%B1%8F2023-01-29-09.50diqr1ghkg0.jpg"
+                      alt="截屏2023-01-29-09"
+                ></p>
+<p><mark>网图</mark></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://cdn.staticaly.com/gh/huaziqi/pic@main/20230129/5811674953698_.3tz1708oh4c0.jpg"
+                      alt="5811674953698_"
+                ></p>
+<p>今天尽快把富山感遇2023写出来</p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>2023-01-24 19:49:36</p>
+</li>
+</ul>
+<blockquote>
+<p>昨天晚上加上今天一个白天，总算是做完了。</p>
+<p>用PySimpleGUI做了一个打卡升级的小工具，算是初涉自动化办公</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://cdn.staticaly.com/gh/huaziqi/pic@main/20230124/%E6%88%AA%E5%B1%8F2023-01-24-19.6ln9awwo1240.jpg"
+                      alt="截屏2023-01-24-19"
+                ></p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>2023-01-23 10:30:24</p>
+</li>
+</ul>
+<blockquote>
+<p>换了个图床，<a class="link"   target="_blank" rel="noopener" href="https://picx.xpoet.cn" >https://picx.xpoet.cn<i class="fas fa-external-link-alt"></i></a>，真的好用，试了才知道。之前还给阿里云OSS充了钱，简直太蠢力</p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>2023-01-23 08:35:50</p>
+</li>
+</ul>
+<blockquote>
+<p>今早7点出去跑了10分钟，明天继续</p>
+<p>对于推特的申诉真的很满意，几分钟就完成了。</p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>2023-01-22 20:43:35</p>
+</li>
+</ul>
+<blockquote>
+<p>今天整理房间，感觉桌上线太乱，想到可以把桌子拉出来，把线藏在下面。天才</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/IMG_20230122_194525.1pzsuvqy849s.jpg"
+                      alt="IMG_20230122_194525"
+                ></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>2023-01-22 00:33:44</p>
+</li>
+</ul>
+<blockquote>
+<p>跨年夜，本来不想打cf845的，但看到张老板这么认真，于是起来看C题。</p>
+<p>乍一看题目精简，但是解决起来属实有点麻烦。一是时间复杂度卡的死死的$10<sup>4$*$10</sup>5$（我想出来的方法是这样），想到用线性筛，但是开始做时只剩下50分钟，看懂题还有3,40分钟。最后还要解决就是最大值得到最小值。只剩下十分钟时又发现自己取模的对象看反了。💥</p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>2023-01-21 14:46:40</p>
+</li>
+</ul>
+<blockquote>
+<p>原来今天每日一题没题目了，成功错过瓜分ac币😄</p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>2023-01-20 23:32:31</p>
+</li>
+</ul>
+<blockquote>
+<p>去acwing每日一题抽了三发日历，最后还剩下个10月没抽到，只有明天一个机会了</p>
+<p><s>严重怀疑10月日历是用来控制人数的</s></p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>2023-01-20 20:32:53</p>
+</li>
+</ul>
+<blockquote>
+<p>搭了半天的artitalk。终于成功后，我发现哦：国际版的leancloud得翻墙，国内版的贼🤮，要备案号什么的。</p>
+<p>先就这样用好了。</p>
+</blockquote>
+
+            
+        </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2022</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">huaziqi</a>
+            
+        </div>
+        
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+            <div class="deploy-info info-item">
+                
+                    This site is provided with deployment services by <span class="tooltip" data-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
 
 <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
 

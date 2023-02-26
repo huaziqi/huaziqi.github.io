@@ -150,96 +150,641 @@ mjx-container[display="true"] + br {
 
 
 <body>
-.page-container {
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  background: var(--background-color-1);
-}
-.page-container .page-main-content {
-  position: relative;
-  box-sizing: border-box;
-  padding-top: $header-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content.is-home .transparent-1 {
-  background: var(--header-transparent-background-1);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-}
-.page-container .page-main-content.is-home .transparent-2 {
-  background: var(--header-transparent-background-2);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-}
-.header-shrink .page-container .page-main-content {
-  padding-top: $header-shrink-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: $z-index-5;
-  box-sizing: border-box;
-  width: 100%;
-  height: $header-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-top.hide {
-  transform: translateY(-105%);
-}
-.header-shrink .page-container .page-main-content .page-main-content-top {
-  height: $header-shrink-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-middle {
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 100%;
-  padding: $component-spacing-value 0;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-middle .main-content {
-  position: relative;
-  box-sizing: border-box;
-  width: $main-content-width;
-  max-width: $content-max-width;
-  height: 100%;
-keep-tablet()
-keep-mobile()
-}
-.has-toc .page-container .page-main-content .page-main-content-middle .main-content {
-  max-width: $has-toc-content-max-width;
-}
-.page-container .page-main-content .page-main-content-bottom {
-  width: 100%;
-}
-.page-container .post-tools {
-  position: fixed;
-  top: $header-height$component-spacing-value;
-  left: calc((100vw - $content-max-width / 2) - 5rem);
-  box-sizing: border-box;
-  opacity: 0;
-keep-tablet()
-keep-mobile()
-}
-.header-shrink .page-container .post-tools {
-  top: $header-shrink-height$component-spacing-value;
-keep-tablet()
-}
-.page-container .right-bottom-side-tools {
-  position: fixed;
-  right: 0;
-  bottom: 5%;
-}
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+               ziqiの小屋
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                主页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于作者
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               target="_blank" rel="noopener" href="https://www.huaziqi.top/shuoshuo/"
+                            >
+                                说说
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">主页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于作者</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       target="_blank" rel="noopener" href="https://www.huaziqi.top/shuoshuo/">说说</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">远足——从黑天到天黑</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/tou.7b7sqpxrj400.jpg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">huaziqi</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2022-11-13 09:53:37</span>
+        <span class="mobile">2022-11-13 09:53</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-01-19 09:56:17</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/">自讫漫记</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.7k Words</span>
+        </span>
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1>远足——从黑天到天黑</h1>
+<h2 id="序">序</h2>
+<p>轰隆隆的大巴车里，周围一片漆黑。</p>
+<p><img lazyload="" alt="" data-src="https://pic1.imgdb.cn/item/6370955716f2c2beb19f86c4.png"></p>
+<p>车上没有了来时的欢声笑语，氤氲在空气中的，有丝丝酸痛，阵阵睡意，还有独属于少年的自信与热血。回想来时，真的很难相信自己居然一路走了这么远，不免令我想起一段话：</p>
+<blockquote>
+<p>生活没有你想象的那么好，但也没有你想象的那么糟糕。人的脆弱会超出自己的想象。有时候你发现一句话就会被感动得泪流满面，有时候咬咬牙就已经走了很远。</p>
+<pre><code>  													——贺炜
+</code></pre>
+</blockquote>
+<p>还记得小时候吃饺子，妈妈问我要吃几个。我说，我13岁了，吃十三个。现在已经17岁了，我还是吃十三个。时间一点点过去，有些事变了，但我相信有些东西不能改变：敢去想，敢去做。很多人非常现实，他们或许会觉得你不过是白日做梦，痴心妄想，他们甚至会瞧不起你。在学校，我特别能感觉到以成绩论人的氛围。我时常感觉，人与人间的交往是充满傲慢与偏见的，似乎成绩即是一切。当然也并不否认成绩的重要性。在这个所谓的大环境下，只有结果会被看到。太多人才被埋没……世上不止读书高。</p>
+<p>心之所向，即是正道。当你在一条路上看到了光，那就走下去吧。</p>
+<h2 id="灰色的天">灰色的天</h2>
+<p>早上5：15，灰的天，雾蒙蒙的校园，我在睡意朦胧间醒来。寝室里只有两个人，看了会儿书我就下床了。6：50是开幕仪式，之后7：30就乘着车到了绿道的起点出发。</p>
+<p><img lazyload="" alt="" data-src="https://pic1.imgdb.cn/item/6370971616f2c2beb1a36129.png"></p>
+<blockquote>
+<p>天空灰的像哭过。</p>
+<p>细密的雨粒才不分你我，</p>
+<p>它敲打我心窝，</p>
+<p>叫我将往事拾掇。</p>
+</blockquote>
+<p>过往似云烟细雨，打在脸上，不一会便会消失，却面颊上留下了淡淡的泪痕。或许什么都比不上此刻重要，因为过去是现在所创造的，未来也是。</p>
+<p><s>刚开始12公里我似乎还有力气搁这抒情，实际上到永宁公园我就快要没了。</s></p>
+<p><a target="_blank" rel="noopener" href="https://pic1.imgdb.cn/item/6370971216f2c2beb1a35ce2.png"><img lazyload="" alt="" data-src="https://pic1.imgdb.cn/item/6370971216f2c2beb1a35ce2.png"></a></p>
+<p>一路上，因为有人一起唱歌，所以唱的时候并不尴尬。关于唱的内容，大部分（好像全是）老歌，关于为什么老歌所带来的感觉要远远强于近几年的新歌，我很早就想说一说了</p>
+<p><a target="_blank" rel="noopener" href="https://pic1.imgdb.cn/item/6370aa2c16f2c2beb1c35189.png"><img lazyload="" alt="" data-src="https://pic1.imgdb.cn/item/6370aa2c16f2c2beb1c35189.png"></a></p>
+<h2 id="为什么我不喜欢新歌">为什么我不喜欢新歌</h2>
+<p>也并非完全否定近来的新歌，早几年我也曾一度喜欢听。然而问题就是：它太不耐听了，以至于我现在很少去听。在我看来，一方面，近几年的音乐大部分都偏向于阴郁，沉闷。调子带给人的惊喜不多，而且缺少较为激昂的高潮。这就好比一个人一直以一个调调讲话，讲话的时候还没有侧重点，好比念稿一样无聊，谁又会喜欢听呢？</p>
+<p>另一方面，如果它不符合我上面所说的特质，那它可能是被互联网毁了。有人可能会问：怎么会呢，互联网大大促进了歌曲的传播。然而在我看来，互联网的广泛传播，使其过于大众化。对于我这种比较喜欢个性化的人来说，与那些我认为品味参差的人为伍，可以说是俗气的。<s>比如《孤勇者》</s></p>
+<h2 id="为什么喜欢周杰伦">为什么喜欢周杰伦</h2>
+<p>包括周杰伦、陈奕迅、孙燕姿在内的老歌手我都非常喜欢，其中最喜欢的当属脚臭（jay chou）了。</p>
+<ol>
+<li class="lvl-3">
+<p>旋律与歌词</p>
+</li>
+</ol>
+<p>这不必多说，好的旋律与歌词是喜欢一首歌的关键。他歌中的rap是我非常喜欢的，《手写的从前》、《发如雪》、《反方向的钟》……</p>
+<ol start="2">
+<li class="lvl-3">
+<p>共情</p>
+</li>
+</ol>
+<p>这是十分重要的一点。他的歌总能让我引发共鸣。</p>
+<p>我这个人比较怂，却又比较多情。一次次的遇见，一次次的失去，我不敢去爱了。但当我被爱时，又不知如何去应对了。总是处于如此的矛盾之中，我在他的歌中听到了我的过去。与此同时，他的歌能激励我。当我解数学题解到崩溃，当我在物理题中怀疑人生，不止怎的，一戴上耳机，我仿佛抓住了什么。这可能就是音乐的魅力，每个国家有国歌，音乐是必修课，学校早中晚都在放歌……音乐已然成为生活。</p>
+<ol start="3">
+<li class="lvl-3">
+<p>个人</p>
+</li>
+</ol>
+<p>周杰伦是个非常自信的的人，他的自信也并非没有原因。22年了，他的歌依旧能够收到广泛喜爱，这不是一般人能做到。在他身上，我看到了读书不是惟一的出路，热爱才是。</p>
+<h2 id="第二站">第二站</h2>
+<p><a target="_blank" rel="noopener" href="https://pic1.imgdb.cn/item/6370aa9f16f2c2beb1c3d174.png"><img lazyload="" alt=" " data-src="https://pic1.imgdb.cn/item/6370aa9f16f2c2beb1c3d174.png"></a></p>
+<p>在到这一站的路上，天晴了。</p>
+<p>美好的景色，美好的人，在这一刻净收眼底。</p>
+<p>眼睛是贪婪的，他将看到的全部收下；心灵是自私的，他只想感受美好的事物。</p>
+<p>到这里为止，旅途只剩下最后一段了，我的腿也报废了。再继续走下去，我的腿也只不过是在做机械的运动了。我们班主任最后一批到达休息点。说起班主任，他是一个有趣的人：冷静的外表下实际上尽显闷骚。在没有班级同学的地方，他更是放飞自我。</p>
+<h2 id="最后的路程">最后的路程</h2>
+<p>现在早已忘却当时的痛，没想到一个人忘记创伤竟如此之快。依稀回想起，只记得当时落日余晖，白马在远处的草坪上埋下头，养马的人在旁静候着。也就是这时，我才真正感受到了追逐梦想时的喜悦与煎熬，我才切身地感受到了什么叫双腿被铅灌了似的。</p>
+<p><img lazyload="" alt="" data-src="https://pic.imgdb.cn/item/6379128816f2c2beb12baeb5.png"></p>
+<p>红军战士是伟大的，我们所走的42千米在两万五千里长征面前，连蝼蚁都不如。何况他们身后是枪林弹雨，敌军追击，我们走的是一眼能望到尽头的水泥路；他们吃的是花生粒，我们补充的是面包，茶叶蛋，玉米……；他们连夜赶路走了两年，我们不过从早上7点走到下午五点。如果说每一个人都去走一遍长征，我相信，坚持下来的，才是真正心系百姓的人。</p>
+<h2 id="终">终</h2>
+<p>我感觉好累，朦胧的意识，昏昏欲睡的大脑，这是终点，我成功了。躺在草坪上，一合上眼便睁不开来了。过了一会儿，爬起来，看看远方的长潭大坝躺在夕阳里，原来这世上真有那么美的东西。</p>
+<p><img lazyload="" alt="" data-src="https://pic.imgdb.cn/item/6379126716f2c2beb12b8230.png"></p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">Post title</span>: <span class="content">远足——从黑天到天黑</span>
+        </li>
+        <li class="post-author">
+            <span class="type">Post author</span>: <span class="content">huaziqi</span>
+        </li>
+        <li class="post-time">
+            <span class="type">Create time</span>: <span class="content">2022-11-13 09:53:37</span>
+        </li>
+        <li class="post-link">
+            <span class="type">Post link</span>: <span class="content">posts/4291963409.html</span>
+        </li>
+        <li class="post-license">
+            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E8%AE%B0%E5%BD%95/">#记录</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/posts/3345621692.html"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">acwing_4700_何以包邮</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/posts/3660077721.html"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">排序算法整理C++</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
+
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
+
+            const config = {
+              el: '#vcomments',
+              appId: 'qmndAF53EyB01bATLUe7fpFQ-gzGzoHsz',
+              appKey: 'bhfVVQbeqS8chXlosFJcKvXZ',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '随便说点什么吧，最好把邮箱和网站都填上喔',
+              lang: 'en'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            new Valine(config)
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'huaziqi'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
+          }
+
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
+          }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">远足——从黑天到天黑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%81%B0%E8%89%B2%E7%9A%84%E5%A4%A9"><span class="nav-number">1.2.</span> <span class="nav-text">灰色的天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%B8%8D%E5%96%9C%E6%AC%A2%E6%96%B0%E6%AD%8C"><span class="nav-number">1.3.</span> <span class="nav-text">为什么我不喜欢新歌</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%96%9C%E6%AC%A2%E5%91%A8%E6%9D%B0%E4%BC%A6"><span class="nav-number">1.4.</span> <span class="nav-text">为什么喜欢周杰伦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%99"><span class="nav-number">1.5.</span> <span class="nav-text">第二站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%90%8E%E7%9A%84%E8%B7%AF%E7%A8%8B"><span class="nav-number">1.6.</span> <span class="nav-text">最后的路程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%88"><span class="nav-number">1.7.</span> <span class="nav-text">终</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2022</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">huaziqi</a>
+            
+        </div>
+        
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+            <div class="deploy-info info-item">
+                
+                    This site is provided with deployment services by <span class="tooltip" data-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
 
 <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
 
