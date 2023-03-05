@@ -1,5 +1,6 @@
-http://huaziqi.github.io/posts/2448711451.html
 http://huaziqi.github.io/shuoshuo/index.html
+http://huaziqi.github.io/about/index.html
+http://huaziqi.github.io/posts/2448711451.html
 http://huaziqi.github.io/posts/198006710.html
 http://huaziqi.github.io/posts/1558466644.html
 http://huaziqi.github.io/posts/2703488407.html
@@ -17,7 +18,6 @@ http://huaziqi.github.io/posts/407812189.html
 http://huaziqi.github.io/posts/4191647622.html
 http://huaziqi.github.io/music/index.html
 http://huaziqi.github.io/artitalk/index.html
-http://huaziqi.github.io/about/index.html
 http://huaziqi.github.io/myinfo/index.html
 http://huaziqi.github.io/posts/3596120880.html
 http://huaziqi.github.io/posts/4291963409.html

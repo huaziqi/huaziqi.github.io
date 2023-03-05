@@ -2,18 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://huaziqi.github.io/posts/2448711451.html</loc>
+    <loc>http://huaziqi.github.io/shuoshuo/index.html</loc>
     
-    <lastmod>2023-02-05</lastmod>
+    <lastmod>2023-03-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://huaziqi.github.io/shuoshuo/index.html</loc>
+    <loc>http://huaziqi.github.io/about/index.html</loc>
     
-    <lastmod>2023-01-30</lastmod>
+    <lastmod>2023-03-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://huaziqi.github.io/posts/2448711451.html</loc>
+    
+    <lastmod>2023-02-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -167,15 +176,6 @@
     <loc>http://huaziqi.github.io/artitalk/index.html</loc>
     
     <lastmod>2023-01-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://huaziqi.github.io/about/index.html</loc>
-    
-    <lastmod>2023-01-20</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
