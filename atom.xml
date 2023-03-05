@@ -6,7 +6,7 @@
   <link href="http://huaziqi.github.io/atom.xml" rel="self"/>
   
   <link href="http://huaziqi.github.io/"/>
-  <updated>2023-01-28T01:01:22.926Z</updated>
+  <updated>2023-03-05T02:25:14.428Z</updated>
   <id>http://huaziqi.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html_css入门</title>
+    <link href="http://huaziqi.github.io/posts/803941246.html"/>
+    <id>http://huaziqi.github.io/posts/803941246.html</id>
+    <published>2023-03-05T02:14:53.000Z</published>
+    <updated>2023-03-05T02:25:14.428Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="www,huaziqi.top/HTML">直接放网站了</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="http://huaziqi.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="html" scheme="http://huaziqi.github.io/categories/%E5%89%8D%E7%AB%AF/html/"/>
+    
+    <category term="css" scheme="http://huaziqi.github.io/categories/%E5%89%8D%E7%AB%AF/html/css/"/>
+    
+    
+    <category term="前端开发" scheme="http://huaziqi.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>clock-levelup</title>
@@ -489,32 +517,6 @@
     <category term="数据结构" scheme="http://huaziqi.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="栈" scheme="http://huaziqi.github.io/tags/%E6%A0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>noip_2014_寻找道路</title>
-    <link href="http://huaziqi.github.io/posts/3754426420.html"/>
-    <id>http://huaziqi.github.io/posts/3754426420.html</id>
-    <published>2022-05-03T01:20:47.000Z</published>
-    <updated>2023-01-19T01:56:17.058Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>寻找道路</h1><hr><h2 id="题目描述">题目描述</h2><p>在有向图 G 中，每条边的长度均为 1，现给定起点和终点，请你在图中找一条从起点到终点的路径，该路径满足以下条件：</p><ol><li class="lvl-3"><p>路径上的所有点的出边所指向的点都直接或间接与终点连通.</p></li><li class="lvl-3"><p>在满足条件1的情况下使路径最短。</p></li></ol><ul class="lvl-0"><li class="lvl-2"><p>注意：图 G 中可能存在重边和自环，题目保证终点没有出边。</p></li></ul><p>请你输出符合条件的路径的长度。</p><h3 id="输入输出格式">输入输出格式</h3><h4 id="输入格式：">输入格式：</h4><p>第一行有两个用一个空格隔开的整数 n 和 m，表示图有 n 个点和 m 条边。接下来的 m 行每行 2 个整数 x，y。之间用一个空格隔开，表示有一条边从点 x 指向点y。最后一行有两个用一个空格隔开的整数 s，t，表示起点为 s，终点为 t。</p><h4 id="输出格式：">输出格式：</h4><p>输出只有一行，包含一个整数，表示满足题目描述的最短路径的长度。如果这样的路径不存在，输出 -1 。</p><h2 id="简吸">简吸</h2><p>模拟赛的时候实在是想不到怎么找。<s>然后写了个floyed上去。骗了10分。</s></p><p>赛后看洛谷题解的时候，就感觉让人十分 niupi。大概是这样：</p><p>我们可以将全部的点分为以下三类：<br>1.指向的点也能连接终点。<br>2.自己联通终点。<br>3.在图G上的点。</p><p>感觉这题的核心是建一个反向图筛点。</p><p>显然 3 类点已经读入，那么接下来是筛选 2 类点。做法就是从终点开始广搜（反向图），搜到的做个标记就是2号店。如果终点没有标记直接 return 0。</p><p>接下来是找 1 类点，做法是在有 2 类点中进行暴搜，对于 2 类点所连接的点进行判断，如果连接点不是 2 类点，那么这个点就不是 3 类点。</p><p>最后再用广搜找最短路。</p><h2 id="代码">代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> M 10010</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m,one[M],two[M],s,t,dis[M];</span><br><span class="line"></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; edge[M];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; rev[M];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++){</span><br><span class="line"><span class="type">int</span> x,y;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">edge[x].<span class="built_in">push_back</span>(y);</span><br><span class="line">rev[y].<span class="built_in">push_back</span>(x);</span><br><span class="line">}</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;s,&amp;t);</span><br><span class="line">two[t]=<span class="number">1</span>;</span><br><span class="line">queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">q.<span class="built_in">push</span>(t);</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(!q.<span class="built_in">empty</span>()){</span><br><span class="line"><span class="type">int</span> now=q.<span class="built_in">front</span>();</span><br><span class="line">q.<span class="built_in">pop</span>();</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=rev[now].<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--){</span><br><span class="line"><span class="type">int</span> to=rev[now][i];</span><br><span class="line"><span class="keyword">if</span>(!two[to]){</span><br><span class="line">q.<span class="built_in">push</span>(to);</span><br><span class="line">two[to]=<span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line"><span class="keyword">if</span>(!two[s]){</span><br><span class="line">cout&lt;&lt;<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++){</span><br><span class="line"><span class="keyword">if</span>(two[i]){</span><br><span class="line">one[i]=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> j=edge[i].<span class="built_in">size</span>()<span class="number">-1</span>;j&gt;=<span class="number">0</span>;j--){</span><br><span class="line"><span class="type">int</span> to=edge[i][j];</span><br><span class="line"><span class="keyword">if</span>(!two[to]){</span><br><span class="line">one[i]=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line"><span class="keyword">if</span>(!one[s]){</span><br><span class="line">cout&lt;&lt;<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line">dis[s]=<span class="number">1</span>;</span><br><span class="line">q.<span class="built_in">push</span>(s);</span><br><span class="line"><span class="keyword">while</span>(!q.<span class="built_in">empty</span>()){</span><br><span class="line"><span class="type">int</span> now=q.<span class="built_in">front</span>();</span><br><span class="line">q.<span class="built_in">pop</span>();</span><br><span class="line"><span class="keyword">if</span>(now==t){</span><br><span class="line">cout&lt;&lt;dis[t]<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=edge[now].<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--){</span><br><span class="line"><span class="type">int</span> to=edge[now][i];</span><br><span class="line"><span class="keyword">if</span>(one[to]&amp;&amp;!dis[to]){</span><br><span class="line">dis[to]=dis[now]+<span class="number">1</span>;</span><br><span class="line">q.<span class="built_in">push</span>(to);</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line">cout&lt;&lt;<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure><p><s>话说这段代码用控制变量法调了好久</s></p><p>2022-05-03 14:58:24</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="题集" scheme="http://huaziqi.github.io/categories/%E9%A2%98%E9%9B%86/"/>
-    
-    
-    <category term="noip" scheme="http://huaziqi.github.io/tags/noip/"/>
-    
-    <category term="图论" scheme="http://huaziqi.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
     
   </entry>
   
