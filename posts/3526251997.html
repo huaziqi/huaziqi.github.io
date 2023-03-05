@@ -150,96 +150,665 @@ mjx-container[display="true"] + br {
 
 
 <body>
-.page-container {
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  background: var(--background-color-1);
-}
-.page-container .page-main-content {
-  position: relative;
-  box-sizing: border-box;
-  padding-top: $header-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content.is-home .transparent-1 {
-  background: var(--header-transparent-background-1);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-}
-.page-container .page-main-content.is-home .transparent-2 {
-  background: var(--header-transparent-background-2);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-}
-.header-shrink .page-container .page-main-content {
-  padding-top: $header-shrink-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: $z-index-5;
-  box-sizing: border-box;
-  width: 100%;
-  height: $header-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-top.hide {
-  transform: translateY(-105%);
-}
-.header-shrink .page-container .page-main-content .page-main-content-top {
-  height: $header-shrink-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-middle {
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 100%;
-  padding: $component-spacing-value 0;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-middle .main-content {
-  position: relative;
-  box-sizing: border-box;
-  width: $main-content-width;
-  max-width: $content-max-width;
-  height: 100%;
-keep-tablet()
-keep-mobile()
-}
-.has-toc .page-container .page-main-content .page-main-content-middle .main-content {
-  max-width: $has-toc-content-max-width;
-}
-.page-container .page-main-content .page-main-content-bottom {
-  width: 100%;
-}
-.page-container .post-tools {
-  position: fixed;
-  top: $header-height$component-spacing-value;
-  left: calc((100vw - $content-max-width / 2) - 5rem);
-  box-sizing: border-box;
-  opacity: 0;
-keep-tablet()
-keep-mobile()
-}
-.header-shrink .page-container .post-tools {
-  top: $header-shrink-height$component-spacing-value;
-keep-tablet()
-}
-.page-container .right-bottom-side-tools {
-  position: fixed;
-  right: 0;
-  bottom: 5%;
-}
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+               ziqiの小屋
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                主页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于作者
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               target="_blank" rel="noopener" href="https://www.huaziqi.top/shuoshuo/"
+                            >
+                                说说
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">主页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于作者</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       target="_blank" rel="noopener" href="https://www.huaziqi.top/shuoshuo/">说说</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">C++中的输入输出</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/tou.7b7sqpxrj400.jpg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">huaziqi</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2022-04-30 09:27:40</span>
+        <span class="mobile">2022-04-30 09:27</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-01-19 09:56:17</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E8%AF%AD%E6%B3%95/">语法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/C/">C++</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E8%AF%AD%E6%B3%95/">语法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>763 Words</span>
+        </span>
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1>C++中的输入输出</h1>
+<hr>
+<h2 id="cin与cout">cin与cout</h2>
+<p>C++中的标准输入输出流对象，在头文件iostream内。</p>
+<h3 id="关于缓冲区">关于缓冲区</h3>
+<p>缓冲区就是暂时存储数据的地方，可大大提升电脑运行效率。暂时把内容放在一个特定存储区域，而不是存入硬盘，就减少了硬盘的读写。就像打印一张文件之前，先存入电脑，以便修改。<br>
+cin输入时会将会把换行符 \n 也算作一个字节放入缓冲区。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>cin 以tab，空格，换行作为分隔符读入。</p>
+</li>
+<li class="lvl-2">
+<p>string类型字符串最好用 cin 输入，cout 输出.~~ 其他的我也打不来 ~~</p>
+</li>
+</ul>
+<p>cout没什么好说的，拓展一下就是使用 endl 时会刷新一下缓冲区。</p>
+<h2 id="scanf">scanf</h2>
+<h3 id="十进制">十进制</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a);  </span><br></pre></td></tr></table></figure>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>%表示占位符。</p>
+</li>
+</ul>
+<h3 id="八与十六进制">八与十六进制</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%o"</span>,&amp;a); <span class="comment">//八进制 </span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%x"</span>,&amp;a); <span class="comment">//十六进制 </span></span><br></pre></td></tr></table></figure>
+<h3 id="浮点数">浮点数</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;c);</span><br></pre></td></tr></table></figure>
+<h3 id="字符">字符\</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> a;</span><br><span class="line">string aa;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;a);<span class="comment">//字符 </span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>,aa); <span class="comment">//字符串，注意不加 &amp;（非string)</span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>,aa+<span class="number">1</span>);<span class="comment">//小技巧，从c[1]开始读入</span></span><br></pre></td></tr></table></figure>
+<h3 id="long-long">long long</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%lld"</span>,%a);</span><br></pre></td></tr></table></figure>
+<h3 id="限制数字个数输入">限制数字个数输入</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%nd"</span>,&amp;a)<span class="comment">//n表示限制数字个数</span></span><br><span class="line"><span class="comment">//例如输入123456，n=2，就会输入12，34，56</span></span><br></pre></td></tr></table></figure>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>关键时刻十分好用</p>
+</li>
+</ul>
+<h2 id="printf">printf</h2>
+<h3 id="关于单精浮点数（float）与双精浮点数（double）">关于单精浮点数（float）与双精浮点数（double）</h3>
+<h4 id="内存">内存</h4>
+<blockquote>
+<p>float占4字节<br>
+double占8字节</p>
+</blockquote>
+<h4 id="有效数字">有效数字</h4>
+<blockquote>
+<p>float有效数字位为6 – 7位，第7位不一定有效<br>
+double有效数字位为15 – 16位，第16位不一定有效</p>
+</blockquote>
+<h4 id="范围">范围</h4>
+<blockquote>
+<p>float 的表示范围：-3.40E+38 ~ +3.40E+38<br>
+double 浮点的表示范围：-1.79E+308 ~ +1.79E+308</p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>总结下来感觉还是double好用</p>
+</li>
+</ul>
+<h3 id="long-long-2">long long</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="type">long</span> a=<span class="number">1000</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%lld"</span>,a);</span><br></pre></td></tr></table></figure>
+<h3 id="小数输出">小数输出</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> a=<span class="number">1.101</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a=%.2lf"</span>,a);<span class="comment">//输出double类型</span></span><br></pre></td></tr></table></figure>
+<p><img lazyload="" alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/6cf9ef6c60b6405da4e1982126fd3109.png#pic_center"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"a=%.2f"</span>,a);<span class="comment">//输出float类型，可与double混用</span></span><br></pre></td></tr></table></figure>
+<h3 id="字符与字符串">字符与字符串</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> c;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"c=%c"</span>,c);<span class="comment">//字符 char</span></span><br><span class="line"><span class="type">char</span> c[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"c=%s"</span>,c);<span class="comment">//字符串 char</span></span><br><span class="line"><span class="comment">//字符串如果是从c[1]开始输入，输出时c[0]的空格自动忽略</span></span><br></pre></td></tr></table></figure>
+<h3 id="一些也许有用的输出">一些也许有用的输出</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">1000</span>,b=<span class="number">-1000</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%+d %+d"</span>,a,b);<span class="comment">//输出正负号</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> a=<span class="number">1000</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%6d\n"</span>,a);          <span class="comment">//默认右对齐,左边补空格</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%-6d\n"</span>,a);        <span class="comment">//左对齐,右边补空格</span></span><br><span class="line"></span><br><span class="line"><span class="type">double</span> a=<span class="number">1000.0</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%.0f %#.0f\n"</span>,a,a);当小数点后不输出值时依然输出小数点</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> a=<span class="number">1000</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%05d\n"</span>,a);<span class="comment">//前面补0</span></span><br></pre></td></tr></table></figure>
+<h2 id="快读">快读</h2>
+<p>虽然说可以从网上直接找，但是比赛时还是要自己打。还是得学一下。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">read</span><span class="params">()</span></span>{ </span><br><span class="line">	<span class="type">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;<span class="comment">//f表示正负</span></span><br><span class="line">	<span class="type">char</span> c=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span>(c&lt;<span class="string">'0'</span>||c&gt;<span class="string">'9'</span>){</span><br><span class="line">		<span class="keyword">if</span>(c==<span class="string">'-'</span>)</span><br><span class="line">			f=<span class="number">-1</span>;</span><br><span class="line">		c=<span class="built_in">getchar</span>();</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>)</span><br><span class="line">		x=x*<span class="number">10</span>+c-<span class="string">'0'</span>,c=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">return</span> x*f;</span><br><span class="line">}<span class="comment">//好像没什么好说的</span></span><br></pre></td></tr></table></figure>
+<h2 id="快写">快写</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">write</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">	<span class="keyword">if</span>(x &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">'-'</span>); x = -x;</span><br><span class="line">	<span class="keyword">if</span>(x &gt; <span class="number">9</span>)</span><br><span class="line">		<span class="built_in">write</span>(x/<span class="number">10</span>);<span class="comment">//上一位</span></span><br><span class="line">	<span class="built_in">putchar</span>(x % <span class="number">10</span> + <span class="string">'0'</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="总结">总结</h2>
+<p>至于其他感觉没什么好写了，用以上的大部分都可以解决。</p>
+<p>2022-05-01 18:52:17 完结</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">Post title</span>: <span class="content">C++中的输入输出</span>
+        </li>
+        <li class="post-author">
+            <span class="type">Post author</span>: <span class="content">huaziqi</span>
+        </li>
+        <li class="post-time">
+            <span class="type">Create time</span>: <span class="content">2022-04-30 09:27:40</span>
+        </li>
+        <li class="post-link">
+            <span class="type">Post link</span>: <span class="content">posts/3526251997.html</span>
+        </li>
+        <li class="post-license">
+            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/C/">#C++</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E8%AF%AD%E6%B3%95/">#语法</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/posts/3754426420.html"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">noip_2014_寻找道路</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/posts/1746650463.html"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">luogu_p2882_FaceTheRightWayG</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
+
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
+
+            const config = {
+              el: '#vcomments',
+              appId: 'qmndAF53EyB01bATLUe7fpFQ-gzGzoHsz',
+              appKey: 'bhfVVQbeqS8chXlosFJcKvXZ',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '随便说点什么吧，最好把邮箱和网站都填上喔',
+              lang: 'en'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            new Valine(config)
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'huaziqi'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
+          }
+
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
+          }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">C++中的输入输出</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cin%E4%B8%8Ecout"><span class="nav-number">1.1.</span> <span class="nav-text">cin与cout</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="nav-number">1.1.1.</span> <span class="nav-text">关于缓冲区</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scanf"><span class="nav-number">1.2.</span> <span class="nav-text">scanf</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E8%BF%9B%E5%88%B6"><span class="nav-number">1.2.1.</span> <span class="nav-text">十进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AB%E4%B8%8E%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6"><span class="nav-number">1.2.2.</span> <span class="nav-text">八与十六进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="nav-number">1.2.3.</span> <span class="nav-text">浮点数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6"><span class="nav-number">1.2.4.</span> <span class="nav-text">字符\</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#long-long"><span class="nav-number">1.2.5.</span> <span class="nav-text">long long</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%90%E5%88%B6%E6%95%B0%E5%AD%97%E4%B8%AA%E6%95%B0%E8%BE%93%E5%85%A5"><span class="nav-number">1.2.6.</span> <span class="nav-text">限制数字个数输入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#printf"><span class="nav-number">1.3.</span> <span class="nav-text">printf</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%8D%95%E7%B2%BE%E6%B5%AE%E7%82%B9%E6%95%B0%EF%BC%88float%EF%BC%89%E4%B8%8E%E5%8F%8C%E7%B2%BE%E6%B5%AE%E7%82%B9%E6%95%B0%EF%BC%88double%EF%BC%89"><span class="nav-number">1.3.1.</span> <span class="nav-text">关于单精浮点数（float）与双精浮点数（double）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E5%AD%98"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">内存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">有效数字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8C%83%E5%9B%B4"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">范围</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#long-long-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">long long</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%8F%E6%95%B0%E8%BE%93%E5%87%BA"><span class="nav-number">1.3.3.</span> <span class="nav-text">小数输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.3.4.</span> <span class="nav-text">字符与字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E4%B9%9F%E8%AE%B8%E6%9C%89%E7%94%A8%E7%9A%84%E8%BE%93%E5%87%BA"><span class="nav-number">1.3.5.</span> <span class="nav-text">一些也许有用的输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E8%AF%BB"><span class="nav-number">1.4.</span> <span class="nav-text">快读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E5%86%99"><span class="nav-number">1.5.</span> <span class="nav-text">快写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.6.</span> <span class="nav-text">总结</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2022</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">huaziqi</a>
+            
+        </div>
+        
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+            <div class="deploy-info info-item">
+                
+                    This site is provided with deployment services by <span class="tooltip" data-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
 
 <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
 
