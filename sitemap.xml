@@ -281,6 +281,20 @@
 
   
   <url>
+    <loc>http://huaziqi.github.io/tags/hexo/</loc>
+    <lastmod>2023-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://huaziqi.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2023-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://huaziqi.github.io/tags/C/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -310,20 +324,6 @@
   
   <url>
     <loc>http://huaziqi.github.io/tags/%E8%B4%AA%E5%BF%83/</loc>
-    <lastmod>2023-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://huaziqi.github.io/tags/hexo/</loc>
-    <lastmod>2023-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://huaziqi.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -386,6 +386,13 @@
   </url>
   
   <url>
+    <loc>http://huaziqi.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2023-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://huaziqi.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -400,20 +407,6 @@
   </url>
   
   <url>
-    <loc>http://huaziqi.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2023-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://huaziqi.github.io/tags/USACO07MAR/</loc>
-    <lastmod>2023-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://huaziqi.github.io/tags/noip/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -422,6 +415,13 @@
   
   <url>
     <loc>http://huaziqi.github.io/tags/%E5%9B%BE%E8%AE%BA/</loc>
+    <lastmod>2023-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://huaziqi.github.io/tags/USACO07MAR/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -449,14 +449,14 @@
   </url>
   
   <url>
-    <loc>http://huaziqi.github.io/tags/%E6%A0%88/</loc>
+    <loc>http://huaziqi.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://huaziqi.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
+    <loc>http://huaziqi.github.io/tags/%E6%A0%88/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -479,6 +479,13 @@
 
   
   <url>
+    <loc>http://huaziqi.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
+    <lastmod>2023-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://huaziqi.github.io/categories/%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -493,13 +500,6 @@
   </url>
   
   <url>
-    <loc>http://huaziqi.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
-    <lastmod>2023-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://huaziqi.github.io/categories/python%E5%8A%9E%E5%85%AC/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -507,14 +507,14 @@
   </url>
   
   <url>
-    <loc>http://huaziqi.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>http://huaziqi.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://huaziqi.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>http://huaziqi.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

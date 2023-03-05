@@ -6,7 +6,7 @@
   <link href="http://huaziqi.github.io/atom.xml" rel="self"/>
   
   <link href="http://huaziqi.github.io/"/>
-  <updated>2023-03-05T02:25:14.428Z</updated>
+  <updated>2023-03-05T02:28:53.116Z</updated>
   <id>http://huaziqi.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://huaziqi.github.io/posts/803941246.html"/>
     <id>http://huaziqi.github.io/posts/803941246.html</id>
     <published>2023-03-05T02:14:53.000Z</published>
-    <updated>2023-03-05T02:25:14.428Z</updated>
+    <updated>2023-03-05T02:28:53.116Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="www,huaziqi.top/HTML">直接放网站了</a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a class="link" href="https://www.huaziqi.top/HTML/">直接放网站了<i class="fas fa-external-link-alt"></i></a></p>]]></content>
     
     
       
