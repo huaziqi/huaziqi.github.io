@@ -38,75 +38,15 @@
 
 
 <body>
-.progress-bar-container {
-  position fixed
-  top 0
-  left 0
-  z-index $z-index-9
-  width 100%
+<div class="progress-bar-container">
+    
 
-  if (hexo-config('pjax.enable') == true) {
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
 
-    .pjax-progress-bar {
-      position absolute
-      top 0
-      left 0
-      z-index $z-index-8
-      width 0
-      height 2px
-      background var(--pjax-progress-bar-color)
-      visibility hidden
-      opacity 0
-      transition-t("width, opacity", "0, 0", "0.1, 0.1", "linear")
-
-
-      &.show {
-        visibility visible
-        opacity 1
-      }
-    }
-
-
-    .pjax-progress-icon {
-      position absolute
-      top 0.4rem
-      right 0.3rem
-      z-index $z-index-8
-      color var(--text-color-3)
-      font-size 1.1rem
-      visibility hidden
-
-      +keep-tablet() {
-        top 0.3rem
-        right 0.2rem
-        font-size 1rem
-      }
-
-      &.show {
-        visibility visible
-      }
-    }
-  }
-
-  if (hexo-config('style.scroll.progress_bar') == true) {
-
-    .scroll-progress-bar {
-      position absolute
-      top 0
-      left 0
-      z-index $z-index-7
-      width 0
-      height $scroll-progress-bar-height
-      background var(--primary-color)
-      visibility hidden
-      transition-t("width", "0", "0.1", "linear")
-
-      &.hide {
-        display none !important
-      }
-    }
-  }
-}
 
 <main class="page-container">
 
@@ -244,15 +184,21 @@
             <div class="main-content">
 
                 
-                    
-    <div class="fade-in-down-animation">
-        <div class="tagcloud-container">
-            <div class="tagcloud-content">
-                <a href="/tags/C/" style="font-size: 1rem;">C++</a> <a href="/tags/USACO07MAR/" style="font-size: 1rem;">USACO07MAR</a> <a href="/tags/codeforces/" style="font-size: 1rem;">codeforces</a> <a href="/tags/dfs/" style="font-size: 1rem;">dfs</a> <a href="/tags/dp/" style="font-size: 1rem;">dp</a> <a href="/tags/hexo/" style="font-size: 1rem;">hexo</a> <a href="/tags/noip/" style="font-size: 1rem;">noip</a> <a href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/" style="font-size: 1rem;">二分图匹配</a> <a href="/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" style="font-size: 1rem;">优先队列</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 1rem;">博客搭建</a> <a href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/" style="font-size: 1rem;">哈夫曼编码</a> <a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 1rem;">回忆</a> <a href="/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 1rem;">图论</a> <a href="/tags/%E6%89%93%E5%8D%A1/" style="font-size: 1rem;">打卡</a> <a href="/tags/%E6%89%BE%E8%A7%84%E5%BE%8B/" style="font-size: 1rem;">找规律</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 1rem;">排序</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.4rem;">数据结构</a> <a href="/tags/%E6%A0%88/" style="font-size: 1rem;">栈</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 1rem;">游记</a> <a href="/tags/%E7%8A%B6%E5%8E%8B/" style="font-size: 1rem;">状压</a> <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" style="font-size: 1rem;">离散化</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.6rem;">算法</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/" style="font-size: 1rem;">自动化办公</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 1.2rem;">记录</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 1rem;">语法</a> <a href="/tags/%E8%B4%AA%E5%BF%83/" style="font-size: 1rem;">贪心</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 1rem;">链表</a>
-            </div>
-        </div>
-    </div>
+                    .tagcloud-container {
 
+  keep-container(false, 0, 0, 1.5rem, 0)
+
+  .tagcloud-content {
+
+    text-align justify
+
+    a {
+      display inline-block
+      box-sizing border-box
+      padding 0.7rem 0.5rem
+    }
+  }
+}
 
 
                 
