@@ -13,6 +13,8 @@
     
     <title>
         
+            网络组成与构建 |
+        
         ziqiの小屋
     </title>
     
@@ -162,7 +164,7 @@ mjx-container[display="true"] + br {
 
     
 
-    <div class="page-main-content is-home">
+    <div class="page-main-content">
 
         <div class="page-main-content-top">
             
@@ -181,7 +183,7 @@ mjx-container[display="true"] + br {
                 <ul class="menu-list">
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/"
                             >
                                 主页
@@ -250,7 +252,7 @@ mjx-container[display="true"] + br {
         <ul class="drawer-menu-list">
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/">主页</a>
                 </li>
             
@@ -294,429 +296,331 @@ mjx-container[display="true"] + br {
             <div class="main-content">
 
                 
-                    <div class="home-content-container fade-in-down-animation">
-    <ul class="home-article-list">
-        
-            <li class="home-article-item">
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
 
+            <div class="article-title">
+                <span class="title-hover-animation">网络组成与构建</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/tou.7b7sqpxrj400.jpg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">huaziqi</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-04-05 10:27:53</span>
+        <span class="mobile">2023-04-05 10:27</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-04-05 14:01:58</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
                 
-
-                <h3 class="home-article-title">
-                    <a href="/posts/4003859050.html">
-                        字典树
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        tire 字典树
-先来个模板
-142. 前缀统计 - AcWing题库
-什么是字典树呢？
-就是存字典的树嘛，差不多的赶脚。
-确实是将所有字符存入其中，方便查找（多是查找前缀）。怎么存捏？如下图
-
-建树
-差不多是这个意思，但并非是把所有字符的空间给开出...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Thu Jan 19 2023 09:56:17 GMT+0800">
-                2023-01-19
-            </span>
+                    <li>
+                        <a href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>&nbsp;
+                    </li>
+                
+            </ul>
         </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%BD%91%E7%BB%9C/">网络</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
 
-    <a class="read-more" href="/posts/4003859050.html">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>946 Words</span>
+        </span>
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
 </div>
 
-            </li>
-        
-            <li class="home-article-item">
+                        </div>
+                    </div>
+                </div>
+            
 
+            <div class="article-content keep-markdown-body">
                 
 
-                <h3 class="home-article-title">
-                    <a href="/posts/3069203345.html">
-                        acwing_802_区间和
-                    </a>
-                </h3>
+                <h1>网络的组成与构建</h1>
+<p><s>由于选到了一个比较难的讲题（必修二），这是一个基本知识的整理</s></p>
+<h2 id="网络的组成">网络的组成</h2>
+<p>从狭义的定义来说，网络似乎是个虚无缥缈的东西。但如果我们从广义的角度来看，组成网络的实体其实在我们身边无处不在。</p>
+<h3 id="计算机系统">计算机系统</h3>
+<h4 id="终端">终端</h4>
+<p>想要上网，我们自己肯定得先有一台“设备”，以便于我们与其他“设备”形成联系。这里的“设备”可以是电脑，手机等等，专业一点的叫法就是“终端”。</p>
+<blockquote>
+<p>终端是网络中数量大、分布广的设备，是用户进行网络操作、实现人机对话的工具。</p>
+</blockquote>
+<h4 id="服务器">服务器</h4>
+<blockquote>
+<p>服务器负责数据处理和网络控制，并构成网络的主要资源。</p>
+</blockquote>
+<p>我们之前有用flask搭建网页，并且把自己的电脑变成了一个服务器来使。但服务器相对于我们的电脑，稳定性、安全性、性能等方面要求更高，它可以分为大型机，中小型机等。假如我们用机房电脑发布一个网站，万一极域把网给掐了，或者北师大又停电了，就💥了。通过服务器我们可以获取网络上的各种资源，但服务器再强大也会有崩溃的一天。经典服务器宕机的事例就有前不久的b站崩溃，导致我们无法获取摸鱼资源😠。</p>
+<h3 id="数据信息系统">数据信息系统</h3>
+<p>主要由传输介质和网络互联设备等组成。</p>
+<h4 id="传输介质">传输介质</h4>
+<p>顾名思义，指的是各种传输数据物理通道，也就是各种线（有线与无线）。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>双绞线</p>
+</li>
+</ul>
+<p><img lazyload="" alt="双绞线" data-src="https://cdn.staticaly.com/gh/huaziqi/pic@main/20230405/%E5%8F%8C%E7%BB%9E%E7%BA%BF.6171jvwi84o0.jpg"></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>同轴电缆</p>
+</li>
+</ul>
+<p><img lazyload="" alt="同轴电缆" data-src="https://cdn.staticaly.com/gh/huaziqi/pic@main/20230405/%E5%90%8C%E8%BD%B4%E7%94%B5%E7%BC%86.3w7vecsnr0q0.jpg"></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>光缆</p>
+</li>
+</ul>
+<p><img lazyload="" alt="光缆" data-src="https://cdn.staticaly.com/gh/huaziqi/pic@main/20230405/%E5%85%89%E7%BC%86.4yxflh7nfs00.jpg"></p>
+<p>无线的有无线电微波信号和红外信号等</p>
+<h4 id="网络互联设备">网络互联设备</h4>
+<p><strong>调制解调器</strong>、<strong>路由器</strong>、<strong>交换机</strong>。</p>
+<p>调制解调器（Modem），也就是我们平时所说的“猫”，是 modulator（调制器）和 demodulator（解调器）的合成，就是“调制解调器”。他将传输进来的模拟信号转化成数字信号，这是解调的功能；同时他还能将我们要发出的数字信号转换成模拟信号便于传输，这便是调制的功能。</p>
+<p>路由器（Router）又称网关设备（Gateway），它实现了多设备一起上网的功能，具备无线WiFi网络供移动设备一起上网。倘若没有路由器，家里拉进来的光纤或网线只能供一台设备使用。</p>
+<p>交换机相较于路由器，通常被用于局域网内部，根据MAC地址将数据包转发到目标设备，而路由器则根据IP地址将数据包转发到目标网络。</p>
+<p><mark>以上说的都是硬件层面的，接下来则是软件</mark></p>
+<h3 id="网络软件和网络协议">网络软件和网络协议</h3>
+<h4 id="网络软件">网络软件</h4>
+<p>包括网络操作系统、通信软件以及管理和服务软件。网络操作系统用于控制整个网络软、硬件资源以及网络通信和任务的调度，提供用户与网络的接口。（建议直接看书，大概理解就好）。</p>
+<h4 id="网络协议">网络协议</h4>
+<p>就像是一门公认的语言，网络协议为不同的终端、不同的网络之间的互相识别与通信提供了准则，是计算机网络正常工作的基础。</p>
+<p>国际标准化组织（ISO）在1978年提出了“开放系统互联参考模型”，即著名的OSI/RM模型。协议就是不同设备这些层之间传输数据的标准</p>
+<table>
+<thead>
+<tr>
+<th>应用层</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表示层</td>
+</tr>
+<tr>
+<td>会话层</td>
+</tr>
+<tr>
+<td>传输层</td>
+</tr>
+<tr>
+<td>网络层</td>
+</tr>
+<tr>
+<td>数据链路层</td>
+</tr>
+<tr>
+<td>物理层</td>
+</tr>
+</tbody>
+</table>
+<p><img lazyload="" alt="" data-src="https://cdn.staticaly.com/gh/huaziqi/pic@main/20230405/%E6%88%AA%E5%B1%8F2023-04-05-10.10yyd0u51qtc.jpg"></p>
+<h2 id="网络的构建">网络的构建</h2>
 
-                <div class="home-article-content keep-markdown-body">
+            </div>
+
+            
+                <div class="post-copyright-info">
                     
-                        离散化
-
-
-
-就题论题来讲
-
-
-acwing 802. 区间和
-假定有一个无限长的数轴，数轴上每个坐标上的数都是 0。现在，我们首先进行 n次操作，每次操作将某一位置 x上的数加 c。
-接下来，进行 m次询问，每个询问包含两个整数 l 和 r ，你需...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Jan 30 2023 15:53:22 GMT+0800">
-                2023-01-30
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E9%A2%98%E9%9B%86/">题集</a>&nbsp;
-                        </li>
-                    
-                    
-                        <li>
-                            &gt; 
-                            <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/">离散化</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/posts/3069203345.html">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/posts/198006710.html">
-                        栈的应用
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        栈的应用
-acwing150 括号画家
-题目描述
-达达是一名漫画家，她有一个奇特的爱好，就是在纸上画括号。
-和大括号 { }，总长度为 N。
-这排随意绘制的括号序列显得杂乱无章，于是达达定义了什么样的括号序列是美观的：
-空的括号序列是美观的；若括号序...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Jan 30 2023 15:54:37 GMT+0800">
-                2023-01-30
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E9%A2%98%E9%9B%86/">题集</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E6%A0%88/">栈</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/posts/198006710.html">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/posts/3754426420.html">
-                        noip_2014_寻找道路
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        寻找道路
-
-题目描述
-在有向图 G 中，每条边的长度均为 1，现给定起点和终点，请你在图中找一条从起点到终点的路径，该路径满足以下条件：
-
-
-路径上的所有点的出边所指向的点都直接或间接与终点连通.
-
-
-在满足条件1的情况下使路径最短。
-
-
-
-
-注意：...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Thu Jan 19 2023 09:56:17 GMT+0800">
-                2023-01-19
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E9%A2%98%E9%9B%86/">题集</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/noip/">noip</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/posts/3754426420.html">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/posts/3526251997.html">
-                        C++中的输入输出
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        C++中的输入输出
-
-cin与cout
-C++中的标准输入输出流对象，在头文件iostream内。
-关于缓冲区
-缓冲区就是暂时存储数据的地方，可大大提升电脑运行效率。暂时把内容放在一个特定存储区域，而不是存入硬盘，就减少了硬盘的读写。就像打印一张文件...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Thu Jan 19 2023 09:56:17 GMT+0800">
-                2023-01-19
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E8%AF%AD%E6%B3%95/">语法</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/C/">C++</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E8%AF%AD%E6%B3%95/">语法</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/posts/3526251997.html">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/posts/1746650463.html">
-                        luogu_p2882_FaceTheRightWayG
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        Face The Right Way G
-题目描述
-Farmer John has arranged his N (1 ≤ N ≤ 5,000) cows in a row and many of them are facing forward, l...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Jan 30 2023 15:52:38 GMT+0800">
-                2023-01-30
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E9%A2%98%E9%9B%86/">题集</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/USACO07MAR/">USACO07MAR</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/posts/1746650463.html">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">Post title</span>: <span class="content">网络组成与构建</span>
+        </li>
+        <li class="post-author">
+            <span class="type">Post author</span>: <span class="content">huaziqi</span>
+        </li>
+        <li class="post-time">
+            <span class="type">Create time</span>: <span class="content">2023-04-05 10:27:53</span>
+        </li>
+        <li class="post-link">
+            <span class="type">Post link</span>: <span class="content">posts/1297831079.html</span>
+        </li>
+        <li class="post-license">
+            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
+        </li>
     </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
 
-    <div class="home-paginator">
-        <div class="paginator">
-    
-        <a class="prev btn"
-           href="/page/3/"
-        >Prev</a>
-    
+                </div>
+            
 
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%BD%91%E7%BB%9C/">#网络</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/posts/803941246.html"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">html_css入门</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
+
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
+
+            const config = {
+              el: '#vcomments',
+              appId: 'qmndAF53EyB01bATLUe7fpFQ-gzGzoHsz',
+              appKey: 'bhfVVQbeqS8chXlosFJcKvXZ',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '随便说点什么吧，最好把邮箱和网站都填上喔',
+              lang: 'en'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            new Valine(config)
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'huaziqi'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
+          }
+
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
+          }
+        </script>
+    </div>
+
+
+
+        
     
 </div>
 
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">网络的组成与构建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-number">1.1.</span> <span class="nav-text">网络的组成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.1.1.</span> <span class="nav-text">计算机系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%88%E7%AB%AF"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">终端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">服务器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.1.2.</span> <span class="nav-text">数据信息系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">传输介质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E4%BA%92%E8%81%94%E8%AE%BE%E5%A4%87"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">网络互联设备</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%BD%AF%E4%BB%B6%E5%92%8C%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.1.3.</span> <span class="nav-text">网络软件和网络协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">网络软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">网络协议</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%9A%84%E6%9E%84%E5%BB%BA"><span class="nav-number">1.2.</span> <span class="nav-text">网络的构建</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
     </div>
 </div>
 
@@ -770,6 +674,28 @@ Farmer John has arranged his N (1 ≤ N ≤ 5,000) cows in a row and many of the
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -861,7 +787,6 @@ Farmer John has arranged his N (1 ≤ N ≤ 5,000) cows in a row and many of the
 
 
 
-
 <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
 
 
@@ -879,6 +804,14 @@ Farmer John has arranged his N (1 ≤ N ≤ 5,000) cows in a row and many of the
 
 
 <div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
+        
     
 </div>
 
