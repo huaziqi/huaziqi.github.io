@@ -6,7 +6,7 @@
   <link href="http://huaziqi.github.io/atom.xml" rel="self"/>
   
   <link href="http://huaziqi.github.io/"/>
-  <updated>2023-04-09T03:46:42.266Z</updated>
+  <updated>2023-08-08T15:34:57.906Z</updated>
   <id>http://huaziqi.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简评《黑客与画家》</title>
+    <link href="http://huaziqi.github.io/posts/1606539604.html"/>
+    <id>http://huaziqi.github.io/posts/1606539604.html</id>
+    <published>2023-08-08T14:51:16.000Z</published>
+    <updated>2023-08-08T15:34:57.906Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>《黑客与画家》简评</h1><p>本书的作者保罗•格雷厄姆，被誉为硅谷创业之父。本书中，他提出了许多观点，初看与全书主题无关，当回头再看时竟全都服务于这个标题，是一本优秀的教育书籍。文章以参叙参议的形式，阐述了“黑客”这个名词的较为“公正”的含义，作者在其中也传授了一些自己的创业经验。</p><p>作者善用类比来更为详尽地表达自己的看法。书名便是如此——黑客与画家，将黑客与画家进行类比，指出黑客与画家的高度相似性：他们都在创造美的事物，他们所做的事也许都会在许多年后才被流传、称赞，他们都是一个时代拥有明锐嗅觉的先驱。这样的类比还有例如：书呆子与“怪人”，编程与挑选衣服等。</p><p>其次，作者善用亲身经历来论证观点。例如在第一章中，作者阐述“书呆子”的各种特点时，以自己的亲身经历为基础，使得叙述更加可信，也更易与读者产生共鸣。包括后面在描述编程语言的优劣时，列举了当初自己的创业经历。</p><p>接着开头所说到的分论点服务于书名，全书共15大章，每一大章又分许多小标题。看似毫无关联，实则作者讲述了一个优秀“黑客”所具有的潜质。将每一个标题用一条线串起来，浑然成了“一本”书。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="书评" scheme="http://huaziqi.github.io/categories/%E4%B9%A6%E8%AF%84/"/>
+    
+    
+    <category term="《黑客与画家》" scheme="http://huaziqi.github.io/tags/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B/"/>
+    
+    <category term="书评" scheme="http://huaziqi.github.io/tags/%E4%B9%A6%E8%AF%84/"/>
+    
+  </entry>
   
   <entry>
     <title>网络组成与构建</title>
@@ -489,32 +515,6 @@
     
     
     <category term="数据结构" scheme="http://huaziqi.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>acwing_802_区间和</title>
-    <link href="http://huaziqi.github.io/posts/3069203345.html"/>
-    <id>http://huaziqi.github.io/posts/3069203345.html</id>
-    <published>2022-05-08T01:35:07.000Z</published>
-    <updated>2023-01-30T07:53:22.005Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>离散化</h1><hr><ul class="lvl-0"><li class="lvl-2"><p>就题论题来讲</p></li></ul><h2 id="acwing-802-区间和">acwing 802. 区间和</h2><p>假定有一个无限长的数轴，数轴上每个坐标上的数都是 0。现在，我们首先进行 n次操作，每次操作将某一位置 x上的数加 c。</p><p>接下来，进行 m次询问，每个询问包含两个整数 l 和 r ，你需要求出在区间 [l,r]之间的所有数的和。</p><h4 id="输入格式">输入格式</h4><p>第一行包含两个整数 n 和 m。</p><p>接下来 n 行，每行包含两个整数 x 和 c 。</p><p>再接下来 m 行，每行包含两个整数 l 和 r 。</p><h4 id="输出格式">输出格式</h4><p>共 m 行，每行输出一个询问中所求的区间内数字和。</p><h4 id="数据范围">数据范围</h4><p>-109≤x≤109,<br>1≤n,m≤10^5,<br>-109≤l≤r≤109,<br>-10000≤c≤10000</p><h4 id="输入样例">输入样例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3 3</span><br><span class="line">1 2</span><br><span class="line">3 6</span><br><span class="line">7 5</span><br><span class="line">1 3</span><br><span class="line">4 6</span><br><span class="line">7 8</span><br></pre></td></tr></table></figure><h4 id="输出样例">输出样例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">8</span><br><span class="line">0</span><br><span class="line">5</span><br></pre></td></tr></table></figure><h2 id="简吸">简吸</h2><p>离散化的整体思路还是简单的，就是当数据相差大而数量小时，用数组把每个数字映射到一个下标上。<s>刚开始不想看这题是因为对于pair的用法有点迷。</s>~~~~</p><p>浅浅一学以后其实感觉pair跟struct没什么区别。其次就是这个auto，<s>之前学长来教的时候就没讲清楚.</s></p><p>现在看了题解大概能猜出是什么用的，格式是for(auto opt : add)。<br>auto是自动的意思，那么这个语法相而易见就是自动地遍历add这个数组中所有数据。</p><p>这题思路就是先把所有的数据中提到的点读入，即 n 个有数据的点，及 m 个 l，r（要求的区间和），并将数据中提到的数轴上的点和数值（x，c）放到add中，再把要求的区间 l，r 放入query中，以便后续将这些点在排序过后 point 中找出下标。</p><p>当把 point全部排序去重后，遍历一遍add数组，用二分找出每一个数据在 point （存所有数据点）中的下标 i ，在数组 a[ i ] 中加上值 c 。</p><p>既然要求区间和，那就用O(N)的时间复杂度 用前缀和的存入s[ N ] 中。最后再用auto遍历query，用前缀和输出值。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 300010</span></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; PII;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m,x,c,a[N],s[N];</span><br><span class="line">vector&lt;PII&gt; adds,query;<span class="comment">//add 存储所给的点和数据，query存储要求的区间</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; point;<span class="comment">//point 存储的是包括 x（题中给出的有数据的点）及 l , r(要求的区间)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">    <span class="type">int</span> l=<span class="number">0</span>,r=point.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l&lt;r){</span><br><span class="line">        <span class="type">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (point[mid]&gt;=x)</span><br><span class="line">            r=mid;</span><br><span class="line">        <span class="keyword">else</span> l=mid+<span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> r+<span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n;i ++){</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;c);</span><br><span class="line">        adds.<span class="built_in">push_back</span>({x,c});</span><br><span class="line">        point.<span class="built_in">push_back</span>(x);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++){</span><br><span class="line">        <span class="type">int</span> l,r;</span><br><span class="line">        cin&gt;&gt;l&gt;&gt;r;</span><br><span class="line">        query.<span class="built_in">push_back</span>({l,r});</span><br><span class="line">        point.<span class="built_in">push_back</span>(l);</span><br><span class="line">        point.<span class="built_in">push_back</span>(r);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">sort</span>(point.<span class="built_in">begin</span>(),point.<span class="built_in">end</span>());</span><br><span class="line">    point.<span class="built_in">erase</span>(<span class="built_in">unique</span>(point.<span class="built_in">begin</span>(),point.<span class="built_in">end</span>()),point.<span class="built_in">end</span>());<span class="comment">//去重</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> opt : adds){</span><br><span class="line">        <span class="type">int</span> num=<span class="built_in">find</span>(opt.first);</span><br><span class="line">        a[num]+=opt.second;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=point.<span class="built_in">size</span>();i++)</span><br><span class="line">        s[i]=s[i<span class="number">-1</span>]+a[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> opt : query){</span><br><span class="line">        <span class="type">int</span> l=<span class="built_in">find</span>(opt.first),r=<span class="built_in">find</span>(opt.second);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,s[r]-s[l<span class="number">-1</span>]);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure><p>2022-05-02 15:03:35 完结</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="题集" scheme="http://huaziqi.github.io/categories/%E9%A2%98%E9%9B%86/"/>
-    
-    <category term="算法" scheme="http://huaziqi.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="离散化" scheme="http://huaziqi.github.io/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/"/>
     
   </entry>
   
