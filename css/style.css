@@ -2678,7 +2678,7 @@ pre .javascript .function {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: url("https://cdn.staticaly.com/gh/huaziqi/pic@main/20230123/back.452p5cky7rs0.jpg") center center/cover no-repeat;
+  background: url("https://cdn.jsdelivr.net/gh/huaziqi/pic@main/20230123/back.452p5cky7rs0.jpg") center center/cover no-repeat;
   background-position-y: 70px;
 }
 @media (max-width: 800px) {
