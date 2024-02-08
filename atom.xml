@@ -3,11 +3,11 @@
   <title>ziqiの小屋</title>
   
   
-  <link href="http://huaziqi.github.io/atom.xml" rel="self"/>
+  <link href="http://huaziqi.top/atom.xml" rel="self"/>
   
-  <link href="http://huaziqi.github.io/"/>
+  <link href="http://huaziqi.top/"/>
   <updated>2023-08-08T15:35:29.375Z</updated>
-  <id>http://huaziqi.github.io/</id>
+  <id>http://huaziqi.top/</id>
   
   <author>
     <name>huaziqi</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>简评《黑客与画家》</title>
-    <link href="http://huaziqi.github.io/posts/1606539604.html"/>
-    <id>http://huaziqi.github.io/posts/1606539604.html</id>
+    <link href="http://huaziqi.top/posts/1606539604.html"/>
+    <id>http://huaziqi.top/posts/1606539604.html</id>
     <published>2023-08-08T14:51:16.000Z</published>
     <updated>2023-08-08T15:35:29.375Z</updated>
     
@@ -33,19 +33,19 @@
     
     
     
-    <category term="书评" scheme="http://huaziqi.github.io/categories/%E4%B9%A6%E8%AF%84/"/>
+    <category term="书评" scheme="http://huaziqi.top/categories/%E4%B9%A6%E8%AF%84/"/>
     
     
-    <category term="《黑客与画家》" scheme="http://huaziqi.github.io/tags/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B/"/>
+    <category term="《黑客与画家》" scheme="http://huaziqi.top/tags/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B/"/>
     
-    <category term="书评" scheme="http://huaziqi.github.io/tags/%E4%B9%A6%E8%AF%84/"/>
+    <category term="书评" scheme="http://huaziqi.top/tags/%E4%B9%A6%E8%AF%84/"/>
     
   </entry>
   
   <entry>
     <title>网络组成与构建</title>
-    <link href="http://huaziqi.github.io/posts/1297831079.html"/>
-    <id>http://huaziqi.github.io/posts/1297831079.html</id>
+    <link href="http://huaziqi.top/posts/1297831079.html"/>
+    <id>http://huaziqi.top/posts/1297831079.html</id>
     <published>2023-04-05T02:27:53.000Z</published>
     <updated>2023-04-09T03:46:42.266Z</updated>
     
@@ -59,17 +59,17 @@
     
     
     
-    <category term="网络" scheme="http://huaziqi.github.io/categories/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="http://huaziqi.top/categories/%E7%BD%91%E7%BB%9C/"/>
     
     
-    <category term="网络" scheme="http://huaziqi.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="http://huaziqi.top/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>html_css入门</title>
-    <link href="http://huaziqi.github.io/posts/803941246.html"/>
-    <id>http://huaziqi.github.io/posts/803941246.html</id>
+    <link href="http://huaziqi.top/posts/803941246.html"/>
+    <id>http://huaziqi.top/posts/803941246.html</id>
     <published>2023-03-05T02:14:53.000Z</published>
     <updated>2023-03-05T02:54:41.302Z</updated>
     
@@ -83,21 +83,21 @@
     
     
     
-    <category term="前端开发" scheme="http://huaziqi.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    <category term="前端开发" scheme="http://huaziqi.top/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
     
-    <category term="前端" scheme="http://huaziqi.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://huaziqi.top/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="html" scheme="http://huaziqi.github.io/tags/html/"/>
+    <category term="html" scheme="http://huaziqi.top/tags/html/"/>
     
-    <category term="css" scheme="http://huaziqi.github.io/tags/css/"/>
+    <category term="css" scheme="http://huaziqi.top/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>clock-levelup</title>
-    <link href="http://huaziqi.github.io/posts/4184408069.html"/>
-    <id>http://huaziqi.github.io/posts/4184408069.html</id>
+    <link href="http://huaziqi.top/posts/4184408069.html"/>
+    <id>http://huaziqi.top/posts/4184408069.html</id>
     <published>2023-01-28T00:58:17.000Z</published>
     <updated>2023-01-28T01:01:22.926Z</updated>
     
@@ -111,19 +111,19 @@
     
     
     
-    <category term="python办公" scheme="http://huaziqi.github.io/categories/python%E5%8A%9E%E5%85%AC/"/>
+    <category term="python办公" scheme="http://huaziqi.top/categories/python%E5%8A%9E%E5%85%AC/"/>
     
     
-    <category term="自动化办公" scheme="http://huaziqi.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/"/>
+    <category term="自动化办公" scheme="http://huaziqi.top/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/"/>
     
-    <category term="打卡" scheme="http://huaziqi.github.io/tags/%E6%89%93%E5%8D%A1/"/>
+    <category term="打卡" scheme="http://huaziqi.top/tags/%E6%89%93%E5%8D%A1/"/>
     
   </entry>
   
   <entry>
     <title>富山感遇2023</title>
-    <link href="http://huaziqi.github.io/posts/2448711451.html"/>
-    <id>http://huaziqi.github.io/posts/2448711451.html</id>
+    <link href="http://huaziqi.top/posts/2448711451.html"/>
+    <id>http://huaziqi.top/posts/2448711451.html</id>
     <published>2023-01-25T02:14:00.000Z</published>
     <updated>2023-02-05T17:19:30.881Z</updated>
     
@@ -137,19 +137,19 @@
     
     
     
-    <category term="自讫漫记" scheme="http://huaziqi.github.io/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/"/>
+    <category term="自讫漫记" scheme="http://huaziqi.top/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/"/>
     
     
-    <category term="记录" scheme="http://huaziqi.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    <category term="记录" scheme="http://huaziqi.top/tags/%E8%AE%B0%E5%BD%95/"/>
     
-    <category term="游记" scheme="http://huaziqi.github.io/tags/%E6%B8%B8%E8%AE%B0/"/>
+    <category term="游记" scheme="http://huaziqi.top/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>linux入门笔记（一）</title>
-    <link href="http://huaziqi.github.io/posts/3544467744.html"/>
-    <id>http://huaziqi.github.io/posts/3544467744.html</id>
+    <link href="http://huaziqi.top/posts/3544467744.html"/>
+    <id>http://huaziqi.top/posts/3544467744.html</id>
     <published>2023-01-23T08:28:44.000Z</published>
     <updated>2023-01-24T14:33:05.078Z</updated>
     
@@ -168,8 +168,8 @@
   
   <entry>
     <title>cf_1783b_Matrix of Differences</title>
-    <link href="http://huaziqi.github.io/posts/2733259662.html"/>
-    <id>http://huaziqi.github.io/posts/2733259662.html</id>
+    <link href="http://huaziqi.top/posts/2733259662.html"/>
+    <id>http://huaziqi.top/posts/2733259662.html</id>
     <published>2023-01-22T14:49:58.000Z</published>
     <updated>2023-01-30T07:52:07.513Z</updated>
     
@@ -183,19 +183,19 @@
     
     
     
-    <category term="题集" scheme="http://huaziqi.github.io/categories/%E9%A2%98%E9%9B%86/"/>
+    <category term="题集" scheme="http://huaziqi.top/categories/%E9%A2%98%E9%9B%86/"/>
     
     
-    <category term="codeforces" scheme="http://huaziqi.github.io/tags/codeforces/"/>
+    <category term="codeforces" scheme="http://huaziqi.top/tags/codeforces/"/>
     
-    <category term="找规律" scheme="http://huaziqi.github.io/tags/%E6%89%BE%E8%A7%84%E5%BE%8B/"/>
+    <category term="找规律" scheme="http://huaziqi.top/tags/%E6%89%BE%E8%A7%84%E5%BE%8B/"/>
     
   </entry>
   
   <entry>
     <title>acwing_3422_左儿子右兄弟</title>
-    <link href="http://huaziqi.github.io/posts/1558466644.html"/>
-    <id>http://huaziqi.github.io/posts/1558466644.html</id>
+    <link href="http://huaziqi.top/posts/1558466644.html"/>
+    <id>http://huaziqi.top/posts/1558466644.html</id>
     <published>2023-01-20T13:53:29.000Z</published>
     <updated>2023-01-30T07:54:13.765Z</updated>
     
@@ -209,23 +209,23 @@
     
     
     
-    <category term="题集" scheme="http://huaziqi.github.io/categories/%E9%A2%98%E9%9B%86/"/>
+    <category term="题集" scheme="http://huaziqi.top/categories/%E9%A2%98%E9%9B%86/"/>
     
-    <category term="数据结构" scheme="http://huaziqi.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="http://huaziqi.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-    <category term="数据结构" scheme="http://huaziqi.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="http://huaziqi.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="链表" scheme="http://huaziqi.github.io/tags/%E9%93%BE%E8%A1%A8/"/>
+    <category term="链表" scheme="http://huaziqi.top/tags/%E9%93%BE%E8%A1%A8/"/>
     
-    <category term="贪心" scheme="http://huaziqi.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    <category term="贪心" scheme="http://huaziqi.top/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   
   <entry>
     <title>测试文档</title>
-    <link href="http://huaziqi.github.io/posts/407812189.html"/>
-    <id>http://huaziqi.github.io/posts/407812189.html</id>
+    <link href="http://huaziqi.top/posts/407812189.html"/>
+    <id>http://huaziqi.top/posts/407812189.html</id>
     <published>2023-01-19T14:44:32.000Z</published>
     <updated>2023-01-23T05:38:24.914Z</updated>
     
@@ -239,19 +239,19 @@
     
     
     
-    <category term="其他" scheme="http://huaziqi.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    <category term="其他" scheme="http://huaziqi.top/categories/%E5%85%B6%E4%BB%96/"/>
     
     
   </entry>
   
   <entry>
     <title>Hello-hexo -- hexo + github部署教程</title>
-    <link href="http://huaziqi.github.io/posts/4191647622.html"/>
-    <id>http://huaziqi.github.io/posts/4191647622.html</id>
+    <link href="http://huaziqi.top/posts/4191647622.html"/>
+    <id>http://huaziqi.top/posts/4191647622.html</id>
     <published>2023-01-19T03:51:26.000Z</published>
     <updated>2023-01-23T02:19:26.837Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>Hello hexo！—— hexo + github部署教程</h1><p>前前后后搭了有两三天，终于算是搭好了。</p><p>写一写搭建过程，搭建方法，遇到的问题……反正这篇博客成分复杂</p><ul class="lvl-0"><li class="lvl-2"><p>对历程不感兴趣的可以直接跳到搭建方法</p></li></ul><h2 id="搭建历程">搭建历程</h2><p>开始有搭建的想法大约是高一下学期，那个时候接触了一些技术博客，并尝试着自己写博客。在感受到写博客的快乐与美好之后，搭建一个个人博客网站的想法被一个视频引起。</p><h3 id="第一个想法">第一个想法</h3><p>是一个知乎的视频，它具体教授了如何使用hexo与github pages 搭建博客。可惜我当时对于github完全没有接触，更不知道如何去使用。那个视频中还使用vim来编辑配置文件，当时我看的是一脸懵逼：他是如何保存那个文件的？ctrl s？不是，于是我在视频底下问他，却迟迟没有得到回复。第一次博客搭建计划失败</p><h3 id="money">money</h3><p>在之后，我接触了其他的搭建博客的方法，例如WordPress。然而使用WordPress需要自己去买域名（一年30~50）和服务器（一年100往上）。当时还在学校，资金没有来源，何况这也不是一笔小数目。那个时候在csdn还是博客园上写博客（先是在CSDN，但是由于它不可美化且页面广告太多，也不美观，就转去了博客园）也就安于现状了。</p><p>这期间学会了如何使用github，Markdown等工具，美化了自己的博客园，算是为之后做铺垫。</p><h3 id="vim">vim</h3><p>高二下学期，经过互联网上各路网友的推荐，我去学习了vim，对于它的各种快捷键略知一二了。然而使用起来还是不习惯，平时就没有过多使用。但是我终于知道了vim编辑器的保存方式是 <code>:wq </code>，于是兴冲冲地再去尝试，却被卡在了最后一步<code>hexo d</code>， 怎么都无法上传，网上找了各种方法~~（其实就两种）~~也没用。再一次失败了……</p><h3 id="转机">转机</h3><p>昨天，我再一次尝试搭建博客。<s>这一次，我不能输！</s></p><p>既然github不行，那就用gitee。于是找了网上hexo + gitee的教程。不同于之前github的教程的是，之前用的是repo，而这次使用的是ssh。碰巧看到一个视频就是讲之前的hexo博客搭建实际上已经过时了。</p><p>考虑到gitee是国内网站，访问速度快，github访问不太稳定，于是想要使用gitee pages，可没想到，gitee居然还要实名认证：），实名时间还要1到2个工作日，我寻思有那么多人实名吗，我在博客园申请json权限，5分钟就通过了。更何况实名似乎根本就没有意义，国内的网站、软件环境都是这样，你就这么怕我们说什么东西吗？？</p><p>还有为什么国内每个稍微大一点的网站都要手机号验证？真的蚌埠住，就这么不喜欢邮箱？邮箱不是都绑定过手机号了吗？</p><p>于是转用了github，访问的问题是使用了netlify免费代理。</p><h2 id="搭建方法">搭建方法</h2><p>以下命令均在cmd(windows)/控制台(mac)使用</p><h3 id="本地hexo环境搭建">本地hexo环境搭建</h3><ul class="lvl-0"><li class="lvl-2"><p>首先下载<a class="link" href="https://git-scm.com/downloads">git<i class="fas fa-external-link-alt"></i></a>与<a class="link" href="https://nodejs.org/zh-cn/download/">node<i class="fas fa-external-link-alt"></i></a>（文字上有超链接）</p></li></ul><p>使用<code>git --version</code>检查git是否安装</p><p>使用<code>node -v</code>检查node是否安装</p><ul class="lvl-0"><li class="lvl-2"><p>之后使用node安装hexo：</p></li></ul><p>输入 <code>npm install hexo-cli - g </code> 安装hexo</p><h3 id="开始搭建hexo">开始搭建hexo</h3><p><code>hexo init 文件夹名称（随你写）</code></p><p>比如<code>hexo init huaziqi</code>，就会创建一个叫”huaziqi“的文件夹，该文件夹保存在根目录，找不到可以用计算机搜索功能找一下。</p><p>之后输入<code>cd 你的文件名（你刚刚创建的那个）</code></p><blockquote><p><code>cd 文件夹</code>的意思就是进入文件夹</p><p><code>cd ..</code>是退出文件夹</p><p><code>ls</code>是输出该文件夹下的所有文件夹和文件</p><p>这些都是控制台的基本操作</p></blockquote><p>进入文件夹之后输入<code>npm install</code>，安装基本文件</p><h3 id="hexo中的基本操作">hexo中的基本操作</h3><p><code>hexo g</code> 相当于编译，把你所有对于文件夹中的改变识别到，有错误的话会报错。</p><p>完成之后输入<code>hexo s</code>就可以在本地访问你的网站</p><p><img lazyload="" alt="hexo-s" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/hexo-s.2scnsech7d00.jpg"></p><p>加载完应该是这样，进入 <a class="link" href="http://localhost:4000/">http://localhost:4000/<i class="fas fa-external-link-alt"></i></a> 就是你的博客在本地的样子。</p><p><mark>先别急着优化博客</mark>，确认它能够被流畅访问先，不然失败了的话就很难受</p><h3 id="部署博客到github">部署博客到github</h3><p><code>npm install hexo-deployer-git --save</code> 下载上传的插件</p><h4 id="获取ssh">获取ssh</h4><p><sub>据我所知，现在部署博客有两种方法，一种是用repo，另一种使用ssh密钥。之前失败就是使用的前者。所以现在是用后者。</sub></p><ul class="lvl-0"><li class="lvl-2"><p>注意，这些操作都是在你创建的hexo文件夹里进行的</p></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"你的GitHub用户名"</span></span><br><span class="line">git config --global user.email <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure><p>这两句进行后不会返回任何东西</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure><p>如果他问你<code>Enter file in which to save the key (/Users/TMnoL/.ssh/id_rsa): </code>,你就填id_rsa</p><p>接着他会让你输入密码，注意这个密码自己<mark>一定要记住</mark>，之后每一次部署你的博客都需要你输入一遍</p><p>然后它会在该文件夹内产生两个文件：id_rsa、id_rsa.pub。</p><p><img lazyload="" alt="截屏2023-01-19-15" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.6kpok4h7gs40.jpg"></p><p>把这两个文件移动到上一级目录中的.ssh文件夹。</p><blockquote><p>这个文件夹是隐藏的，如何查看隐藏文件夹，mac是<code>command+shift+.</code>，这东西自己百度就行。</p></blockquote><h4 id="绑定ssh到github">绑定ssh到github</h4><p>然后去github（未注册自行注册，用户名不要乱取哦）</p><p>之后点击自己的头像（右上角），点击settings。</p><p>在左列找到 SSH and GPG keys</p><p><img lazyload="" alt="截屏2023-01-19-15" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.2e6iocxbrh34.jpg"></p><p>点击new SSH key，把刚刚生成的id_rsa.pub里的东西全都粘贴到下面的 key 框里，title随便填就好。</p><p><img lazyload="" alt="截屏2023-01-19-15" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.7hjxtkzrxo00.jpg"></p><p>Add SSH key</p><h3 id="新建github库">新建github库</h3><p><s>建库不会自己去学。</s></p><p>注意：<a class="link" href="http://xn--github+-4t3kv36bha073snngc8bdvwhpopm2dy2ela747n7t1b0k7a.github.io">库的名称一定要是自己github的用户名+.github.io<i class="fas fa-external-link-alt"></i></a></p><p>比如我的用户名是huaziqi，那就要建叫 <a href="http://huaziqi.github.io">huaziqi.github.io</a>，这也是之后你的网站名（当然自己有别的域名是可以改的）</p><p>仓库类型当然是public，公开的。</p><p><img lazyload="" alt="截屏2023-01-19-15" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.3999lsciaoy0.jpg"></p><p>建好仓库以后打开仓库点击那个code，在里面吧SSH代码复制下来。</p><h3 id="FINAL">FINAL</h3><p>回到创建的文件夹，找到<code>_config.yml</code>文件打开。找到deploy，像我一样这么填。repo里填的是刚刚粘贴的SSH代码。保存文件。</p><p><img lazyload="" alt="截屏2023-01-19-15" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.4tjk2l85yag0.jpg"></p><p>到控制台输入<code>hexo g</code>，加载完再输入<code>hexo d</code>，输入生成id_rsa.pub时自己输入的代码，等待片刻就成功了。</p><p><a class="link" href="http://xn--+github-l45kq16a8u9a7s7bkodxq5g213a.io">访问你的用户名+github.io<i class="fas fa-external-link-alt"></i></a>，其实就是你的仓库名。<a class="link" href="http://xn--huaziqi-be7no01ats6b.github.io">我的是huaziqi.github.io<i class="fas fa-external-link-alt"></i></a>，欢迎来访问。</p><h2 id="优化">优化</h2><p>github访问必然是太慢了</p><p>我们可以使用netlify进行优化，访问速度更快。</p><p>前往<a class="link" href="https://www.netlify.com/">netlify站点<i class="fas fa-external-link-alt"></i></a>注册账号，前往个人主界面点击site，然后Add new site, import an exsiting project</p><p>之后按照提示一步一步来就好了，不会的看下面这个教程</p><p><a class="link" href="https://www.cnblogs.com/37Y37/p/12551839.html">netlify教程<i class="fas fa-external-link-alt"></i></a></p><h2 id="更换-markdown渲染器">更换 markdown渲染器</h2><p>竟然只用两个指令</p><ol><li class="lvl-3"><p>卸载原来的渲染器<br><code>npm uninstall hexo-renderer-marked --save</code></p></li><li class="lvl-3"><p>下载新渲染器<br><code>npm i @upupming/hexo-renderer-markdown-it-plus --save</code></p></li></ol><h2 id="博客评论">博客评论</h2><p>不同主题支持的评论不同，当然，不支持的也可以自己配置。</p><p>经过多方选择，我选择的是valine。</p><h3 id="原因">原因</h3><p>gitalk配置失败，找不到issue，主题配置文档里也没更新配置方法，有一两个多出来的变量。</p><p>twikko基于腾讯云，但是，使用未成年不能使用腾讯云（迷）</p><p>waline基于leancloud，但是使用国内版的话需要绑定域名（似乎要花钱），国际版的又被墙了。优点是评论提醒的途径很多，qq微信啥的</p><p>valine 虽然也是基于leancloud，但是他配置国内版的不需要绑定域名。缺点是随便什么人都能发（可能也是优点），但是在后台可以删除修改评论。</p><h3 id="实时监控评论">实时监控评论</h3><p>如果邮箱手机号是没问题的，那使用他自带的邮箱功能当然是最好的了</p><p>但是如果像我这样平时手机都是欠费的学生来说，还有一个办法是使用实时监控网页的变化。去leancloud后台，数据化结构，实时监控Comment右边的数字，也就是评论数。</p><p>监控的道具我是用的是distill web monitor。浏览器拓展插件里搜一下应该就有了。</p><h2 id="美化">美化</h2><p>去hexo.io找主题下载，那里还有官方文档可以参照。</p><p>主题配置每个主题下都有教程。</p><h2 id="各个搜索引擎收录入口">各个搜索引擎收录入口</h2><p>让你的博客被更多的网站收录，访问</p><p>谷歌博客搜索收录入口:<br><a class="link" href="http://blogsearch.google.com/ping">http://blogsearch.google.com/ping<i class="fas fa-external-link-alt"></i></a><br>百度收录入口:<br><a class="link" href="http://www.baidu.com/search/url_submit.html">http://www.baidu.com/search/url_submit.html<i class="fas fa-external-link-alt"></i></a><br>百度博客收录入口:<br><a class="link" href="http://utility.baidu.com/blogsearch/submit.php">http://utility.baidu.com/blogsearch/submit.php<i class="fas fa-external-link-alt"></i></a><br>必应Bing收录入口:<br><a class="link" href="https://www.bing.com/toolbox/submit-site-url">https://www.bing.com/toolbox/submit-site-url<i class="fas fa-external-link-alt"></i></a><br>搜索引擎批量提交:<br><a class="link" href="http://www.freewebsubmission.com/">http://www.freewebsubmission.com/<i class="fas fa-external-link-alt"></i></a><br>soso收录入口:<br><a class="link" href="http://www.soso.com/help/usb/urlsubmit.shtml">http://www.soso.com/help/usb/urlsubmit.shtml<i class="fas fa-external-link-alt"></i></a><br>360搜索引擎登录入口：<br><a class="link" href="http://info.so.360.cn/site_submit.html">http://info.so.360.cn/site_submit.html<i class="fas fa-external-link-alt"></i></a><br>搜狗提交入口:<br><a class="link" href="http://www.sogou.com/feedback/urlfeedback.php">http://www.sogou.com/feedback/urlfeedback.php<i class="fas fa-external-link-alt"></i></a><br>盘古数据开放平台：<br><a class="link" href="http://open.panguso.com/data/resource/url/new">http://open.panguso.com/data/resource/url/new<i class="fas fa-external-link-alt"></i></a><br>简搜搜索引擎登陆口：<br><a class="link" href="http://www.jianso.com/add_site.html">http://www.jianso.com/add_site.html<i class="fas fa-external-link-alt"></i></a><br>雅虎中国网站登录口：<br><a class="link" href="http://sitemap.cn.yahoo.com/">http://sitemap.cn.yahoo.com/<i class="fas fa-external-link-alt"></i></a><br>网易有道搜索引擎登录口：<br><a class="link" href="http://tellbot.youdao.com/report">http://tellbot.youdao.com/report<i class="fas fa-external-link-alt"></i></a><br>中搜免费登录服务：<br><a class="link" href="http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm">http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm<i class="fas fa-external-link-alt"></i></a><br>MSN必应网站登录口：<br><a class="link" href="http://cn.bing.com/docs/submit.aspx?FORM=WSDD2">http://cn.bing.com/docs/submit.aspx?FORM=WSDD2<i class="fas fa-external-link-alt"></i></a><br>Alexa网站登录入口：<br><a class="link" href="http://www.alexa.com/help/webmasters">http://www.alexa.com/help/webmasters<i class="fas fa-external-link-alt"></i></a><br>TOM搜索网站登录口：<br><a class="link" href="http://search.tom.com/tools/weblog/log.php">http://search.tom.com/tools/weblog/log.php<i class="fas fa-external-link-alt"></i></a><br>铭万网B2B(必途)网址登陆口：<br><a class="link" href="http://search.b2b.cn/pageIncluded/AddPage.php">http://search.b2b.cn/pageIncluded/AddPage.php<i class="fas fa-external-link-alt"></i></a><br>蚁搜搜索网站登录口：<br><a class="link" href="http://www.antso.com/apply.asp">http://www.antso.com/apply.asp<i class="fas fa-external-link-alt"></i></a><br>快搜搜索网站登录口：<br><a class="link" href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp<i class="fas fa-external-link-alt"></i></a><br>汕头搜索登录口：<br><a class="link" href="http://www.stsou.com/join.asp">http://www.stsou.com/join.asp<i class="fas fa-external-link-alt"></i></a><br>孙悟空搜索网站登录：<br><a class="link" href="http://www.swkong.com/add.php">http://www.swkong.com/add.php<i class="fas fa-external-link-alt"></i></a><br>天网网站登陆口：<br><a class="link" href="http://home.tianwang.com/denglu.htm">http://home.tianwang.com/denglu.htm<i class="fas fa-external-link-alt"></i></a><br>速搜全球登陆口：<br><a class="link" href="http://www.suso.com.cn/suso/link.asp">http://www.suso.com.cn/suso/link.asp<i class="fas fa-external-link-alt"></i></a><br>酷帝网站目录提交入口：<br><a class="link" href="http://www.coodir.com/accounts/addsite.asp">http://www.coodir.com/accounts/addsite.asp<i class="fas fa-external-link-alt"></i></a><br>快搜网站登陆口：<br><a class="link" href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp<i class="fas fa-external-link-alt"></i></a><br>搜猫搜索引擎登录入口：<br><a class="link" href="http://test.somao123.com/search/url_submit.php">http://test.somao123.com/search/url_submit.php<i class="fas fa-external-link-alt"></i></a><br>泽许搜索网站登录入口：<br><a class="link" href="http://www.zxyt.cn/search/zxsc.php">http://www.zxyt.cn/search/zxsc.php<i class="fas fa-external-link-alt"></i></a><br>一淘网开放搜索申请入口：<br><a class="link" href="http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ">http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ<i class="fas fa-external-link-alt"></i></a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>Hello hexo！—— hexo + github部署教程</h1><p>前前后后搭了有两三天，终于算是搭好了。</p><p>写一写搭建过程，搭建方法，遇到的问题……反正这篇博客成分复杂</p><ul class="lvl-0"><li class="lvl-2"><p>对历程不感兴趣的可以直接跳到搭建方法</p></li></ul><h2 id="搭建历程">搭建历程</h2><p>开始有搭建的想法大约是高一下学期，那个时候接触了一些技术博客，并尝试着自己写博客。在感受到写博客的快乐与美好之后，搭建一个个人博客网站的想法被一个视频引起。</p><h3 id="第一个想法">第一个想法</h3><p>是一个知乎的视频，它具体教授了如何使用hexo与github pages 搭建博客。可惜我当时对于github完全没有接触，更不知道如何去使用。那个视频中还使用vim来编辑配置文件，当时我看的是一脸懵逼：他是如何保存那个文件的？ctrl s？不是，于是我在视频底下问他，却迟迟没有得到回复。第一次博客搭建计划失败</p><h3 id="money">money</h3><p>在之后，我接触了其他的搭建博客的方法，例如WordPress。然而使用WordPress需要自己去买域名（一年30~50）和服务器（一年100往上）。当时还在学校，资金没有来源，何况这也不是一笔小数目。那个时候在csdn还是博客园上写博客（先是在CSDN，但是由于它不可美化且页面广告太多，也不美观，就转去了博客园）也就安于现状了。</p><p>这期间学会了如何使用github，Markdown等工具，美化了自己的博客园，算是为之后做铺垫。</p><h3 id="vim">vim</h3><p>高二下学期，经过互联网上各路网友的推荐，我去学习了vim，对于它的各种快捷键略知一二了。然而使用起来还是不习惯，平时就没有过多使用。但是我终于知道了vim编辑器的保存方式是 <code>:wq </code>，于是兴冲冲地再去尝试，却被卡在了最后一步<code>hexo d</code>， 怎么都无法上传，网上找了各种方法~~（其实就两种）~~也没用。再一次失败了……</p><h3 id="转机">转机</h3><p>昨天，我再一次尝试搭建博客。<s>这一次，我不能输！</s></p><p>既然github不行，那就用gitee。于是找了网上hexo + gitee的教程。不同于之前github的教程的是，之前用的是repo，而这次使用的是ssh。碰巧看到一个视频就是讲之前的hexo博客搭建实际上已经过时了。</p><p>考虑到gitee是国内网站，访问速度快，github访问不太稳定，于是想要使用gitee pages，可没想到，gitee居然还要实名认证：），实名时间还要1到2个工作日，我寻思有那么多人实名吗，我在博客园申请json权限，5分钟就通过了。更何况实名似乎根本就没有意义，国内的网站、软件环境都是这样，你就这么怕我们说什么东西吗？？</p><p>还有为什么国内每个稍微大一点的网站都要手机号验证？真的蚌埠住，就这么不喜欢邮箱？邮箱不是都绑定过手机号了吗？</p><p>于是转用了github，访问的问题是使用了netlify免费代理。</p><h2 id="搭建方法">搭建方法</h2><p>以下命令均在cmd(windows)/控制台(mac)使用</p><h3 id="本地hexo环境搭建">本地hexo环境搭建</h3><ul class="lvl-0"><li class="lvl-2"><p>首先下载<a class="link" href="https://git-scm.com/downloads">git<i class="fas fa-external-link-alt"></i></a>与<a class="link" href="https://nodejs.org/zh-cn/download/">node<i class="fas fa-external-link-alt"></i></a>（文字上有超链接）</p></li></ul><p>使用<code>git --version</code>检查git是否安装</p><p>使用<code>node -v</code>检查node是否安装</p><ul class="lvl-0"><li class="lvl-2"><p>之后使用node安装hexo：</p></li></ul><p>输入 <code>npm install hexo-cli - g </code> 安装hexo</p><h3 id="开始搭建hexo">开始搭建hexo</h3><p><code>hexo init 文件夹名称（随你写）</code></p><p>比如<code>hexo init huaziqi</code>，就会创建一个叫”huaziqi“的文件夹，该文件夹保存在根目录，找不到可以用计算机搜索功能找一下。</p><p>之后输入<code>cd 你的文件名（你刚刚创建的那个）</code></p><blockquote><p><code>cd 文件夹</code>的意思就是进入文件夹</p><p><code>cd ..</code>是退出文件夹</p><p><code>ls</code>是输出该文件夹下的所有文件夹和文件</p><p>这些都是控制台的基本操作</p></blockquote><p>进入文件夹之后输入<code>npm install</code>，安装基本文件</p><h3 id="hexo中的基本操作">hexo中的基本操作</h3><p><code>hexo g</code> 相当于编译，把你所有对于文件夹中的改变识别到，有错误的话会报错。</p><p>完成之后输入<code>hexo s</code>就可以在本地访问你的网站</p><p><img lazyload="" alt="hexo-s" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/hexo-s.2scnsech7d00.jpg"></p><p>加载完应该是这样，进入 <a class="link" href="http://localhost:4000/">http://localhost:4000/<i class="fas fa-external-link-alt"></i></a> 就是你的博客在本地的样子。</p><p><mark>先别急着优化博客</mark>，确认它能够被流畅访问先，不然失败了的话就很难受</p><h3 id="部署博客到github">部署博客到github</h3><p><code>npm install hexo-deployer-git --save</code> 下载上传的插件</p><h4 id="获取ssh">获取ssh</h4><p><sub>据我所知，现在部署博客有两种方法，一种是用repo，另一种使用ssh密钥。之前失败就是使用的前者。所以现在是用后者。</sub></p><ul class="lvl-0"><li class="lvl-2"><p>注意，这些操作都是在你创建的hexo文件夹里进行的</p></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"你的GitHub用户名"</span></span><br><span class="line">git config --global user.email <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure><p>这两句进行后不会返回任何东西</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure><p>如果他问你<code>Enter file in which to save the key (/Users/TMnoL/.ssh/id_rsa): </code>,你就填id_rsa</p><p>接着他会让你输入密码，注意这个密码自己<mark>一定要记住</mark>，之后每一次部署你的博客都需要你输入一遍</p><p>然后它会在该文件夹内产生两个文件：id_rsa、id_rsa.pub。</p><p><img lazyload="" alt="截屏2023-01-19-15" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.6kpok4h7gs40.jpg"></p><p>把这两个文件移动到上一级目录中的.ssh文件夹。</p><blockquote><p>这个文件夹是隐藏的，如何查看隐藏文件夹，mac是<code>command+shift+.</code>，这东西自己百度就行。</p></blockquote><h4 id="绑定ssh到github">绑定ssh到github</h4><p>然后去github（未注册自行注册，用户名不要乱取哦）</p><p>之后点击自己的头像（右上角），点击settings。</p><p>在左列找到 SSH and GPG keys</p><p><img lazyload="" alt="截屏2023-01-19-15" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.2e6iocxbrh34.jpg"></p><p>点击new SSH key，把刚刚生成的id_rsa.pub里的东西全都粘贴到下面的 key 框里，title随便填就好。</p><p><img lazyload="" alt="截屏2023-01-19-15" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.7hjxtkzrxo00.jpg"></p><p>Add SSH key</p><h3 id="新建github库">新建github库</h3><p><s>建库不会自己去学。</s></p><p>注意：<a class="link" href="http://xn--github+-4t3kv36bha073snngc8bdvwhpopm2dy2ela747n7t1b0k7a.github.io">库的名称一定要是自己github的用户名+.github.io<i class="fas fa-external-link-alt"></i></a></p><p>比如我的用户名是huaziqi，那就要建叫 <a class="link" href="http://huaziqi.github.io">huaziqi.github.io<i class="fas fa-external-link-alt"></i></a>，这也是之后你的网站名（当然自己有别的域名是可以改的）</p><p>仓库类型当然是public，公开的。</p><p><img lazyload="" alt="截屏2023-01-19-15" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.3999lsciaoy0.jpg"></p><p>建好仓库以后打开仓库点击那个code，在里面吧SSH代码复制下来。</p><h3 id="FINAL">FINAL</h3><p>回到创建的文件夹，找到<code>_config.yml</code>文件打开。找到deploy，像我一样这么填。repo里填的是刚刚粘贴的SSH代码。保存文件。</p><p><img lazyload="" alt="截屏2023-01-19-15" data-src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.4tjk2l85yag0.jpg"></p><p>到控制台输入<code>hexo g</code>，加载完再输入<code>hexo d</code>，输入生成id_rsa.pub时自己输入的代码，等待片刻就成功了。</p><p><a class="link" href="http://xn--+github-l45kq16a8u9a7s7bkodxq5g213a.io">访问你的用户名+github.io<i class="fas fa-external-link-alt"></i></a>，其实就是你的仓库名。<a class="link" href="http://xn--huaziqi-be7no01ats6b.github.io">我的是huaziqi.github.io<i class="fas fa-external-link-alt"></i></a>，欢迎来访问。</p><h2 id="优化">优化</h2><p>github访问必然是太慢了</p><p>我们可以使用netlify进行优化，访问速度更快。</p><p>前往<a class="link" href="https://www.netlify.com/">netlify站点<i class="fas fa-external-link-alt"></i></a>注册账号，前往个人主界面点击site，然后Add new site, import an exsiting project</p><p>之后按照提示一步一步来就好了，不会的看下面这个教程</p><p><a class="link" href="https://www.cnblogs.com/37Y37/p/12551839.html">netlify教程<i class="fas fa-external-link-alt"></i></a></p><h2 id="更换-markdown渲染器">更换 markdown渲染器</h2><p>竟然只用两个指令</p><ol><li class="lvl-3"><p>卸载原来的渲染器<br><code>npm uninstall hexo-renderer-marked --save</code></p></li><li class="lvl-3"><p>下载新渲染器<br><code>npm i @upupming/hexo-renderer-markdown-it-plus --save</code></p></li></ol><h2 id="博客评论">博客评论</h2><p>不同主题支持的评论不同，当然，不支持的也可以自己配置。</p><p>经过多方选择，我选择的是valine。</p><h3 id="原因">原因</h3><p>gitalk配置失败，找不到issue，主题配置文档里也没更新配置方法，有一两个多出来的变量。</p><p>twikko基于腾讯云，但是，使用未成年不能使用腾讯云（迷）</p><p>waline基于leancloud，但是使用国内版的话需要绑定域名（似乎要花钱），国际版的又被墙了。优点是评论提醒的途径很多，qq微信啥的</p><p>valine 虽然也是基于leancloud，但是他配置国内版的不需要绑定域名。缺点是随便什么人都能发（可能也是优点），但是在后台可以删除修改评论。</p><h3 id="实时监控评论">实时监控评论</h3><p>如果邮箱手机号是没问题的，那使用他自带的邮箱功能当然是最好的了</p><p>但是如果像我这样平时手机都是欠费的学生来说，还有一个办法是使用实时监控网页的变化。去leancloud后台，数据化结构，实时监控Comment右边的数字，也就是评论数。</p><p>监控的道具我是用的是distill web monitor。浏览器拓展插件里搜一下应该就有了。</p><h2 id="美化">美化</h2><p>去hexo.io找主题下载，那里还有官方文档可以参照。</p><p>主题配置每个主题下都有教程。</p><h2 id="各个搜索引擎收录入口">各个搜索引擎收录入口</h2><p>让你的博客被更多的网站收录，访问</p><p>谷歌博客搜索收录入口:<br><a class="link" href="http://blogsearch.google.com/ping">http://blogsearch.google.com/ping<i class="fas fa-external-link-alt"></i></a><br>百度收录入口:<br><a class="link" href="http://www.baidu.com/search/url_submit.html">http://www.baidu.com/search/url_submit.html<i class="fas fa-external-link-alt"></i></a><br>百度博客收录入口:<br><a class="link" href="http://utility.baidu.com/blogsearch/submit.php">http://utility.baidu.com/blogsearch/submit.php<i class="fas fa-external-link-alt"></i></a><br>必应Bing收录入口:<br><a class="link" href="https://www.bing.com/toolbox/submit-site-url">https://www.bing.com/toolbox/submit-site-url<i class="fas fa-external-link-alt"></i></a><br>搜索引擎批量提交:<br><a class="link" href="http://www.freewebsubmission.com/">http://www.freewebsubmission.com/<i class="fas fa-external-link-alt"></i></a><br>soso收录入口:<br><a class="link" href="http://www.soso.com/help/usb/urlsubmit.shtml">http://www.soso.com/help/usb/urlsubmit.shtml<i class="fas fa-external-link-alt"></i></a><br>360搜索引擎登录入口：<br><a class="link" href="http://info.so.360.cn/site_submit.html">http://info.so.360.cn/site_submit.html<i class="fas fa-external-link-alt"></i></a><br>搜狗提交入口:<br><a class="link" href="http://www.sogou.com/feedback/urlfeedback.php">http://www.sogou.com/feedback/urlfeedback.php<i class="fas fa-external-link-alt"></i></a><br>盘古数据开放平台：<br><a class="link" href="http://open.panguso.com/data/resource/url/new">http://open.panguso.com/data/resource/url/new<i class="fas fa-external-link-alt"></i></a><br>简搜搜索引擎登陆口：<br><a class="link" href="http://www.jianso.com/add_site.html">http://www.jianso.com/add_site.html<i class="fas fa-external-link-alt"></i></a><br>雅虎中国网站登录口：<br><a class="link" href="http://sitemap.cn.yahoo.com/">http://sitemap.cn.yahoo.com/<i class="fas fa-external-link-alt"></i></a><br>网易有道搜索引擎登录口：<br><a class="link" href="http://tellbot.youdao.com/report">http://tellbot.youdao.com/report<i class="fas fa-external-link-alt"></i></a><br>中搜免费登录服务：<br><a class="link" href="http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm">http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm<i class="fas fa-external-link-alt"></i></a><br>MSN必应网站登录口：<br><a class="link" href="http://cn.bing.com/docs/submit.aspx?FORM=WSDD2">http://cn.bing.com/docs/submit.aspx?FORM=WSDD2<i class="fas fa-external-link-alt"></i></a><br>Alexa网站登录入口：<br><a class="link" href="http://www.alexa.com/help/webmasters">http://www.alexa.com/help/webmasters<i class="fas fa-external-link-alt"></i></a><br>TOM搜索网站登录口：<br><a class="link" href="http://search.tom.com/tools/weblog/log.php">http://search.tom.com/tools/weblog/log.php<i class="fas fa-external-link-alt"></i></a><br>铭万网B2B(必途)网址登陆口：<br><a class="link" href="http://search.b2b.cn/pageIncluded/AddPage.php">http://search.b2b.cn/pageIncluded/AddPage.php<i class="fas fa-external-link-alt"></i></a><br>蚁搜搜索网站登录口：<br><a class="link" href="http://www.antso.com/apply.asp">http://www.antso.com/apply.asp<i class="fas fa-external-link-alt"></i></a><br>快搜搜索网站登录口：<br><a class="link" href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp<i class="fas fa-external-link-alt"></i></a><br>汕头搜索登录口：<br><a class="link" href="http://www.stsou.com/join.asp">http://www.stsou.com/join.asp<i class="fas fa-external-link-alt"></i></a><br>孙悟空搜索网站登录：<br><a class="link" href="http://www.swkong.com/add.php">http://www.swkong.com/add.php<i class="fas fa-external-link-alt"></i></a><br>天网网站登陆口：<br><a class="link" href="http://home.tianwang.com/denglu.htm">http://home.tianwang.com/denglu.htm<i class="fas fa-external-link-alt"></i></a><br>速搜全球登陆口：<br><a class="link" href="http://www.suso.com.cn/suso/link.asp">http://www.suso.com.cn/suso/link.asp<i class="fas fa-external-link-alt"></i></a><br>酷帝网站目录提交入口：<br><a class="link" href="http://www.coodir.com/accounts/addsite.asp">http://www.coodir.com/accounts/addsite.asp<i class="fas fa-external-link-alt"></i></a><br>快搜网站登陆口：<br><a class="link" href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp<i class="fas fa-external-link-alt"></i></a><br>搜猫搜索引擎登录入口：<br><a class="link" href="http://test.somao123.com/search/url_submit.php">http://test.somao123.com/search/url_submit.php<i class="fas fa-external-link-alt"></i></a><br>泽许搜索网站登录入口：<br><a class="link" href="http://www.zxyt.cn/search/zxsc.php">http://www.zxyt.cn/search/zxsc.php<i class="fas fa-external-link-alt"></i></a><br>一淘网开放搜索申请入口：<br><a class="link" href="http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ">http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ<i class="fas fa-external-link-alt"></i></a></p>]]></content>
     
     
       
@@ -261,19 +261,19 @@
     
     
     
-    <category term="其他" scheme="http://huaziqi.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    <category term="其他" scheme="http://huaziqi.top/categories/%E5%85%B6%E4%BB%96/"/>
     
     
-    <category term="hexo" scheme="http://huaziqi.github.io/tags/hexo/"/>
+    <category term="hexo" scheme="http://huaziqi.top/tags/hexo/"/>
     
-    <category term="博客搭建" scheme="http://huaziqi.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="http://huaziqi.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
     <title>acwing_4700_何以包邮</title>
-    <link href="http://huaziqi.github.io/posts/3345621692.html"/>
-    <id>http://huaziqi.github.io/posts/3345621692.html</id>
+    <link href="http://huaziqi.top/posts/3345621692.html"/>
+    <id>http://huaziqi.top/posts/3345621692.html</id>
     <published>2023-01-16T01:55:09.000Z</published>
     <updated>2023-01-30T07:52:29.756Z</updated>
     
@@ -287,21 +287,21 @@
     
     
     
-    <category term="题集" scheme="http://huaziqi.github.io/categories/%E9%A2%98%E9%9B%86/"/>
+    <category term="题集" scheme="http://huaziqi.top/categories/%E9%A2%98%E9%9B%86/"/>
     
     
-    <category term="dfs" scheme="http://huaziqi.github.io/tags/dfs/"/>
+    <category term="dfs" scheme="http://huaziqi.top/tags/dfs/"/>
     
-    <category term="状压" scheme="http://huaziqi.github.io/tags/%E7%8A%B6%E5%8E%8B/"/>
+    <category term="状压" scheme="http://huaziqi.top/tags/%E7%8A%B6%E5%8E%8B/"/>
     
-    <category term="dp" scheme="http://huaziqi.github.io/tags/dp/"/>
+    <category term="dp" scheme="http://huaziqi.top/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>远足——从黑天到天黑</title>
-    <link href="http://huaziqi.github.io/posts/4291963409.html"/>
-    <id>http://huaziqi.github.io/posts/4291963409.html</id>
+    <link href="http://huaziqi.top/posts/4291963409.html"/>
+    <id>http://huaziqi.top/posts/4291963409.html</id>
     <published>2022-11-13T01:53:37.000Z</published>
     <updated>2023-01-19T01:56:17.071Z</updated>
     
@@ -315,17 +315,17 @@
     
     
     
-    <category term="自讫漫记" scheme="http://huaziqi.github.io/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/"/>
+    <category term="自讫漫记" scheme="http://huaziqi.top/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/"/>
     
     
-    <category term="记录" scheme="http://huaziqi.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    <category term="记录" scheme="http://huaziqi.top/tags/%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
   <entry>
     <title>排序算法整理C++</title>
-    <link href="http://huaziqi.github.io/posts/3660077721.html"/>
-    <id>http://huaziqi.github.io/posts/3660077721.html</id>
+    <link href="http://huaziqi.top/posts/3660077721.html"/>
+    <id>http://huaziqi.top/posts/3660077721.html</id>
     <published>2022-09-04T01:51:34.000Z</published>
     <updated>2023-01-19T01:56:17.067Z</updated>
     
@@ -339,19 +339,19 @@
     
     
     
-    <category term="算法" scheme="http://huaziqi.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://huaziqi.top/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="算法" scheme="http://huaziqi.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://huaziqi.top/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="排序" scheme="http://huaziqi.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    <category term="排序" scheme="http://huaziqi.top/tags/%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>风</title>
-    <link href="http://huaziqi.github.io/posts/3596120880.html"/>
-    <id>http://huaziqi.github.io/posts/3596120880.html</id>
+    <link href="http://huaziqi.top/posts/3596120880.html"/>
+    <id>http://huaziqi.top/posts/3596120880.html</id>
     <published>2022-08-27T01:44:21.000Z</published>
     <updated>2023-01-19T01:56:17.073Z</updated>
     
@@ -365,17 +365,17 @@
     
     
     
-    <category term="自讫漫记" scheme="http://huaziqi.github.io/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/"/>
+    <category term="自讫漫记" scheme="http://huaziqi.top/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/"/>
     
     
-    <category term="回忆" scheme="http://huaziqi.github.io/tags/%E5%9B%9E%E5%BF%86/"/>
+    <category term="回忆" scheme="http://huaziqi.top/tags/%E5%9B%9E%E5%BF%86/"/>
     
   </entry>
   
   <entry>
     <title>luogu_p1488_肥猫的游戏</title>
-    <link href="http://huaziqi.github.io/posts/2585761111.html"/>
-    <id>http://huaziqi.github.io/posts/2585761111.html</id>
+    <link href="http://huaziqi.top/posts/2585761111.html"/>
+    <id>http://huaziqi.top/posts/2585761111.html</id>
     <published>2022-08-19T01:41:23.000Z</published>
     <updated>2023-01-30T07:52:46.868Z</updated>
     
@@ -389,17 +389,17 @@
     
     
     
-    <category term="题集" scheme="http://huaziqi.github.io/categories/%E9%A2%98%E9%9B%86/"/>
+    <category term="题集" scheme="http://huaziqi.top/categories/%E9%A2%98%E9%9B%86/"/>
     
     
-    <category term="算法" scheme="http://huaziqi.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://huaziqi.top/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>哈夫曼编码详解</title>
-    <link href="http://huaziqi.github.io/posts/3737033367.html"/>
-    <id>http://huaziqi.github.io/posts/3737033367.html</id>
+    <link href="http://huaziqi.top/posts/3737033367.html"/>
+    <id>http://huaziqi.top/posts/3737033367.html</id>
     <published>2022-08-17T01:39:28.000Z</published>
     <updated>2023-01-30T07:52:56.822Z</updated>
     
@@ -413,17 +413,17 @@
     
     
     
-    <category term="数据结构" scheme="http://huaziqi.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="http://huaziqi.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-    <category term="哈夫曼编码" scheme="http://huaziqi.github.io/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/"/>
+    <category term="哈夫曼编码" scheme="http://huaziqi.top/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/"/>
     
   </entry>
   
   <entry>
     <title>正睿-1139-序列</title>
-    <link href="http://huaziqi.github.io/posts/3514781743.html"/>
-    <id>http://huaziqi.github.io/posts/3514781743.html</id>
+    <link href="http://huaziqi.top/posts/3514781743.html"/>
+    <id>http://huaziqi.top/posts/3514781743.html</id>
     <published>2022-08-05T01:37:30.000Z</published>
     <updated>2023-01-30T07:53:02.287Z</updated>
     
@@ -437,19 +437,19 @@
     
     
     
-    <category term="题集" scheme="http://huaziqi.github.io/categories/%E9%A2%98%E9%9B%86/"/>
+    <category term="题集" scheme="http://huaziqi.top/categories/%E9%A2%98%E9%9B%86/"/>
     
     
-    <category term="算法" scheme="http://huaziqi.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://huaziqi.top/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="优先队列" scheme="http://huaziqi.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    <category term="优先队列" scheme="http://huaziqi.top/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
   <entry>
     <title>luogu_P1311_选择客栈</title>
-    <link href="http://huaziqi.github.io/posts/3671682965.html"/>
-    <id>http://huaziqi.github.io/posts/3671682965.html</id>
+    <link href="http://huaziqi.top/posts/3671682965.html"/>
+    <id>http://huaziqi.top/posts/3671682965.html</id>
     <published>2022-07-20T01:31:17.000Z</published>
     <updated>2023-01-30T07:53:28.608Z</updated>
     
@@ -463,17 +463,17 @@
     
     
     
-    <category term="题集" scheme="http://huaziqi.github.io/categories/%E9%A2%98%E9%9B%86/"/>
+    <category term="题集" scheme="http://huaziqi.top/categories/%E9%A2%98%E9%9B%86/"/>
     
     
-    <category term="算法" scheme="http://huaziqi.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://huaziqi.top/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>luogu_p1129_矩阵游戏</title>
-    <link href="http://huaziqi.github.io/posts/2703488407.html"/>
-    <id>http://huaziqi.github.io/posts/2703488407.html</id>
+    <link href="http://huaziqi.top/posts/2703488407.html"/>
+    <id>http://huaziqi.top/posts/2703488407.html</id>
     <published>2022-07-19T01:24:22.000Z</published>
     <updated>2023-01-30T07:53:35.447Z</updated>
     
@@ -487,17 +487,17 @@
     
     
     
-    <category term="题集" scheme="http://huaziqi.github.io/categories/%E9%A2%98%E9%9B%86/"/>
+    <category term="题集" scheme="http://huaziqi.top/categories/%E9%A2%98%E9%9B%86/"/>
     
     
-    <category term="二分图匹配" scheme="http://huaziqi.github.io/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/"/>
+    <category term="二分图匹配" scheme="http://huaziqi.top/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/"/>
     
   </entry>
   
   <entry>
     <title>字典树</title>
-    <link href="http://huaziqi.github.io/posts/4003859050.html"/>
-    <id>http://huaziqi.github.io/posts/4003859050.html</id>
+    <link href="http://huaziqi.top/posts/4003859050.html"/>
+    <id>http://huaziqi.top/posts/4003859050.html</id>
     <published>2022-05-14T01:22:23.000Z</published>
     <updated>2023-01-19T01:56:17.066Z</updated>
     
@@ -511,10 +511,10 @@
     
     
     
-    <category term="数据结构" scheme="http://huaziqi.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="http://huaziqi.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-    <category term="数据结构" scheme="http://huaziqi.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="http://huaziqi.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
