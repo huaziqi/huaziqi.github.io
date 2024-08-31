@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>富山感遇2023 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="富山感遇这两天用PySimpleGUI做了个打卡升级的自动化办公软件。没想到因为没日没夜在改bug，导致本来已经伤愈的右手又肿起来了。今天早上要去富山，我跟我妈说了这件事，本来说要带去的电脑被扣留在了家里。 富山是哪从我记事起，几乎每年都会去的地方。外婆的老房子，石板下流过的清澈溪水，武侠剧里的竹林，再往上爬，是寺庙香火缭绕的地方。总之，就是这样一个世外桃源，每一次来都会有不一样的感受与遇见。 上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="富山感遇2023">
+<meta property="og:url" content="http://example.com/2023/01/25/%E5%AF%8C%E5%B1%B1%E6%84%9F%E9%81%872023/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="富山感遇这两天用PySimpleGUI做了个打卡升级的自动化办公软件。没想到因为没日没夜在改bug，导致本来已经伤愈的右手又肿起来了。今天早上要去富山，我跟我妈说了这件事，本来说要带去的电脑被扣留在了家里。 富山是哪从我记事起，几乎每年都会去的地方。外婆的老房子，石板下流过的清澈溪水，武侠剧里的竹林，再往上爬，是寺庙香火缭绕的地方。总之，就是这样一个世外桃源，每一次来都会有不一样的感受与遇见。 上">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-01-25T02:14:00.000Z">
+<meta property="article:modified_time" content="2023-02-05T17:19:30.880Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="记录">
+<meta property="article:tag" content="游记">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-富山感遇2023" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/25/%E5%AF%8C%E5%B1%B1%E6%84%9F%E9%81%872023/" class="article-date">
+  <time class="dt-published" datetime="2023-01-25T02:14:00.000Z" itemprop="datePublished">2023-01-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/">自讫漫记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      富山感遇2023
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="富山感遇"><a href="#富山感遇" class="headerlink" title="富山感遇"></a>富山感遇</h1><p>这两天用PySimpleGUI做了个打卡升级的自动化办公软件。没想到因为没日没夜在改bug，导致本来已经伤愈的右手又肿起来了。今天早上要去富山，我跟我妈说了这件事，本来说要带去的电脑被扣留在了家里。</p>
+<h2 id="富山是哪"><a href="#富山是哪" class="headerlink" title="富山是哪"></a>富山是哪</h2><p>从我记事起，几乎每年都会去的地方。外婆的老房子，石板下流过的清澈溪水，武侠剧里的竹林，再往上爬，是寺庙香火缭绕的地方。总之，就是这样一个世外桃源，每一次来都会有不一样的感受与遇见。</p>
+<h2 id="上山"><a href="#上山" class="headerlink" title="上山"></a>上山</h2><p>上山前跟我妹打了一架，没错，是打了一架。具体的情况我不愿多说，原因有多方面，最重要的一方面应该就是情绪。对于陌生人，我们应以平等的姿态面对，别人打你一巴掌，你也要打回去一巴掌，甚至两巴掌。否则岂不是别人欺侮了。对于重要的人不应如此。克制自己的情绪。</p>
+<p>人类不喜欢用暴力解决问题，因为暴力是最有效也最有害的方法，它损害钱财，损害感情，甚至生命。</p>
+<p>上山的旅程很是艰辛，我妹吐了好几次，我也有些不适。直到我发现晕车的本质所在。</p>
+<p>初中时期我们就学过：大脑中有个器官能判断自己所处的位置。晕车正是因为大脑无法正确判断接下来的走向。因此只要一直看着前面，假装自己是司机，大脑就会清楚地知道接下来的位置，就不会晕车了。<del>亲测有效</del>。这大概就是司机不晕车的原因了。</p>
+<h2 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h2><p>上午晚上没有什么感受，因为一直在玩手机。</p>
+<p>远方的竹林不再拨动我的心弦，我害怕他是不是断了。</p>
+<p>下午两三点钟时去拜访了一下就未谋面的娘舅。路上我睡着了，大抵是昨晚打cf累了。到了之后，娘舅早早便出来迎接。大大小小的饮料、土特产从后备箱拿出。</p>
+<p>屋子黑漆漆的，屋里基本没什么家具。来到卧室，一群人围着火盆坐下。不一会便端来了一碗碗荔枝汤，还挺甜。</p>
+<p>电视机前，我妹还是一如既往跟我抢遥控板。</p>
+<p>喝汤的时候，因为荔枝有核嘛，我妹就懂事地把垃圾桶拿过来放在中间。于是众人纷纷夸奖她有眼力见，而这眼力见又是我总被父母数落的东西。一个4、 5岁的小孩，竟像个大人一般，吃饭记得关电视，吃饭的时候夹菜给别人，想我妈一样数落我。而我很难做到这些。也许是生性如此，我不愿展现自己，却又希望得到表扬，于是外人常说我很老实，于是我也慢慢接受这个标签。但是只有我自己知道：我没有他们所说的那么“老实”。</p>
+<p>我也会有小心思，甚至有的时候总会想得太多。“妹妹把我的话给抢完了”，我妈是这样说的。然而在学校，我总是尽可能展现自己，而非像是在长辈亲戚面前那么矜持。</p>
+<p>在我的心里，亲戚不过是系统默认好友，而实际上，你跟他们中的大部分根本不熟。我是一个讨厌封建礼教的人，也就是孩子不能顶嘴，遇到长辈要叫什么的。求神拜佛之类也只有在我小时候懵懂无知时才相信。至少现在我是不相信佛祖的存在，至少神并非生物。</p>
+<p>不一会，舅公拿着两个红包笑嘻嘻地走了过来。他说：“你现在还没赚钱，这压岁钱先收着。等你以后挣钱了，记得回来看看我就好。”推搡一番后，我便收下了。他所说的那番话确实令我有所感触。明明我印象中只与他有过两面之缘，他却拿出800元的红包。这或许就是老人家心中的铁律。一年攒下几个钱，过年就全发出去了。</p>
+<blockquote>
+<p>如果几年之后我仍记得他，我一定会回去看看。</p>
+</blockquote>
+<h2 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h2><p>一大早起来，外公说要带我们去山里看看。拿着外公自制的登山棍（两根细竹棍），我走在前面。此时，外公口中人一样大的狼狗吓了我们一跳，连忙把棍子收起来，换了条路走。</p>
+<p>路过一排排民居，远方的竹林绵延成山。</p>
+<p>外公肩扛锄头，腰间木质“腰带”别着镰刀，头上还带着毡帽。平日里他不怎么说话，跟外婆比起来存在感自然较低。先前住在路桥的时候，我还听说过外公的光辉事迹：骑着自行车跟鬼火少年飙车，属实是人老心不老了。有人问问题时，他总能尽可能答上，没人回应也会和蔼地笑笑，算是缓解尴尬。</p>
+<p>走过竹林夹道的山间小路，突然间，经过一个上坡后，眼前的景色瞬间开阔。一片片的田地错落有致，让人忍不住想躺在田里一整天。这简直和我想象中的晚年生活别无二致。住在偏僻的山里，乡镇不大，人们都互相认识。拥有自己的田地两亩，时不时扛着锄头来看看，翻翻土。偶尔去赶赶集，还可以把自己种起来的白菜萝卜摆到集市上，不为赚钱，但求清闲。</p>
+<p>继续往上走是杨梅林。杨梅林中竟有一间上了锁的小屋，现在大抵没人在的。</p>
+<p>一路走一路聊，正尽兴之时，一通电话扫了兴。不知道是谁打来的，只看见我妈脸上不怎么高兴。似乎是来了些不速之客，我们只好下山。下山路的一个转角，竟猛地有只类似于鸡的野禽飞了出来，羽毛还挺好看，算是长见识了。</p>
+<h3 id="中午"><a href="#中午" class="headerlink" title="中午"></a>中午</h3><p>大概知道了是一群上山拜佛的人过来蹭饭，大约有8、 9个。知道这个消息倒还没什么，直到中午一群人莫名其妙就来了。其中有个小孩大约小学一年级的样子。</p>
+<p>我和我妹还在外面玩土，屋里叫饭好了。本想着可以吃饭了，没想到那一群人整整齐齐算是把圆桌围满了，真是迅雷不及掩耳之势，都不知道他们什么时候进来的。想给我妹乘碗饭，没成想又有两个人挤过来，真的是“无地自容”了。见此情形，爸妈就说让我们先别吃，等他们吃完。我心里自然是不高兴，但是没办法，我也不想跟群不速之客抢食吃。</p>
+<p>吃着他们吃剩下的饭菜，心里总不是滋味。没想到，这群人的头头，拿着500块钱交给外婆就说要走了。什么纯纯的逆天，当这里是饭店呢？的亏还是个老板，这么一桌子菜。更何况他妈跟外婆还是姐妹。属实难绷。当我们服务员怎么着，傻逼。</p>
+<p>下午写了会作业。我妹说还想住一晚就多住了一晚。</p>
+<h2 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h2><p>一大清早起来吃完早饭。收拾收拾我们就走了。</p>
+<p>第一件事不是回家而是去医院。前两天手不是肿了吗，去了黄岩的一家医院看。没拍CT前就觉得那个医生不对劲。我手刚断的时候，那家椒江的医院拍的都是普通片，而非CT。结果这个医生忽悠着什么CT更清楚，但是最后片拍出来看起来的效果跟普通片没什么区别。</p>
+<p>看了片子，他竟然又说我骨头错位了，如果不保护好可能会导致手的什么功能障碍。这不仅把我吓了一跳，我妈也开始骂我了。而我的手明明已经丝毫没有痛觉了。</p>
+<p>然后他给我开了点药，医保保完60。我就寻思那种止痛贴对于骨头错位有用吗。</p>
+<p>这次的误判可以说是之后几天家庭关系走向冰点的导火索。我妈一口咬定是我玩电脑玩多了，于是缩短了我使用电脑的时间。明知冤枉，但我妈的性格我还是清楚的，她咬定的东西绝不会退让。另一方面，我对于自己的判断也产生了怀疑，并开始担心未来这手对于我的影响。</p>
+<p>之后发生了很多事，本都可以和平解决，但由于我的心情极差，差到开始思考人生的意义。以至于家庭矛盾尖锐（当然这也与家庭教育方式有很大的关系）。</p>
+<p>直到之后去了一家骨科医院，才为我洗清冤屈。</p>
+<p>对于此事，我不知道那个医生是故意想捞钱还是本身技术不高，我只知道他对他的工作没有负责任的态度，更没有抱着一颗热爱的心去工作。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/25/%E5%AF%8C%E5%B1%B1%E6%84%9F%E9%81%872023/" data-id="cm0hrwxx50010dkwaexat5fnd" data-title="富山感遇2023" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/01/28/clock-levelup/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          clock-levelup
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/01/22/cf_1783b_Matrix%20of%20Differences/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">cf_1783b_Matrix of Differences</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/python%E5%8A%9E%E5%85%AC/">python办公</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B9%A6%E8%AF%84/">书评</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/">自讫漫记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E6%B3%95/">语法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E9%9B%86/">题集</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/USACO07MAR/" rel="tag">USACO07MAR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codeforces/" rel="tag">codeforces</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/" rel="tag">dfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag">dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/noip/" rel="tag">noip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B/" rel="tag">《黑客与画家》</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%A6%E8%AF%84/" rel="tag">书评</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/" rel="tag">二分图匹配</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" rel="tag">优先队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/" rel="tag">哈夫曼编码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86/" rel="tag">回忆</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag">图论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%93%E5%8D%A1/" rel="tag">打卡</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%BE%E8%A7%84%E5%BE%8B/" rel="tag">找规律</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88/" rel="tag">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8A%B6%E5%8E%8B/" rel="tag">状压</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" rel="tag">离散化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/" rel="tag">自动化办公</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B4%AA%E5%BF%83/" rel="tag">贪心</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/USACO07MAR/" style="font-size: 10px;">USACO07MAR</a> <a href="/tags/codeforces/" style="font-size: 10px;">codeforces</a> <a href="/tags/dfs/" style="font-size: 10px;">dfs</a> <a href="/tags/dp/" style="font-size: 10px;">dp</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/noip/" style="font-size: 10px;">noip</a> <a href="/tags/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B/" style="font-size: 10px;">《黑客与画家》</a> <a href="/tags/%E4%B9%A6%E8%AF%84/" style="font-size: 10px;">书评</a> <a href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/" style="font-size: 10px;">二分图匹配</a> <a href="/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" style="font-size: 10px;">优先队列</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">博客搭建</a> <a href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/" style="font-size: 10px;">哈夫曼编码</a> <a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 10px;">回忆</a> <a href="/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 10px;">图论</a> <a href="/tags/%E6%89%93%E5%8D%A1/" style="font-size: 10px;">打卡</a> <a href="/tags/%E6%89%BE%E8%A7%84%E5%BE%8B/" style="font-size: 10px;">找规律</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 10px;">排序</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16.67px;">数据结构</a> <a href="/tags/%E6%A0%88/" style="font-size: 10px;">栈</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 10px;">游记</a> <a href="/tags/%E7%8A%B6%E5%8E%8B/" style="font-size: 10px;">状压</a> <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" style="font-size: 10px;">离散化</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 20px;">算法</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/" style="font-size: 10px;">自动化办公</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 13.33px;">记录</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 10px;">语法</a> <a href="/tags/%E8%B4%AA%E5%BF%83/" style="font-size: 10px;">贪心</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/08/31/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%B4%E7%90%86C/">排序算法整理C++</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/08/%E7%AE%80%E8%AF%84%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B/">简评《黑客与画家》</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/05/%E7%BD%91%E7%BB%9C%E7%BB%84%E6%88%90%E4%B8%8E%E6%9E%84%E5%BB%BA/">网络组成与构建</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/28/clock-levelup/">clock-levelup</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/25/%E5%AF%8C%E5%B1%B1%E6%84%9F%E9%81%872023/">富山感遇2023</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

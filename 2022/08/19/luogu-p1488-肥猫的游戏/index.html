@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Archives: 2024/8 | Hexo</title>
+  <title>luogu_p1488_肥猫的游戏 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2024/08/index.html">
+  <meta name="description" content="肥猫的游戏P1488 肥猫的游戏 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn) 题目描述野猫与胖子，合起来简称肥猫，是一个班的同学，他们也都是数学高手，所以经常在一起讨论数学问题也就不足为奇了。 一次，野猫遇到了一道有趣的几何游戏题目，便拿给胖子看。游戏要求在一个有 n 个顶点凸多边形上进行，这个凸多边形的 n-3 条对角线将多边形分成 n-2 个三角形，这 n-3 条对角线在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="luogu_p1488_肥猫的游戏">
+<meta property="og:url" content="http://example.com/2022/08/19/luogu-p1488-%E8%82%A5%E7%8C%AB%E7%9A%84%E6%B8%B8%E6%88%8F/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="肥猫的游戏P1488 肥猫的游戏 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn) 题目描述野猫与胖子，合起来简称肥猫，是一个班的同学，他们也都是数学高手，所以经常在一起讨论数学问题也就不足为奇了。 一次，野猫遇到了一道有趣的几何游戏题目，便拿给胖子看。游戏要求在一个有 n 个顶点凸多边形上进行，这个凸多边形的 n-3 条对角线将多边形分成 n-2 个三角形，这 n-3 条对角线在">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-08-19T01:41:23.000Z">
+<meta property="article:modified_time" content="2023-01-30T07:52:46.860Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -29,7 +34,119 @@
 
   
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body>
   <div id="container">
@@ -67,39 +184,133 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/08/31/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%B4%E7%90%86C/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-08-31T06:32:54.073Z" itemprop="datePublished">Aug 31</time>
+        <section id="main"><article id="post-luogu-p1488-肥猫的游戏" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/19/luogu-p1488-%E8%82%A5%E7%8C%AB%E7%9A%84%E6%B8%B8%E6%88%8F/" class="article-date">
+  <time class="dt-published" datetime="2022-08-19T01:41:23.000Z" itemprop="datePublished">2022-08-19</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%A2%98%E9%9B%86/">题集</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/08/31/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%B4%E7%90%86C/">排序算法整理C++</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      luogu_p1488_肥猫的游戏
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="肥猫的游戏"><a href="#肥猫的游戏" class="headerlink" title="肥猫的游戏"></a>肥猫的游戏</h1><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1488">P1488 肥猫的游戏 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>野猫与胖子，合起来简称肥猫，是一个班的同学，他们也都是数学高手，所以经常在一起讨论数学问题也就不足为奇了。</p>
+<p>一次，野猫遇到了一道有趣的几何游戏题目，便拿给胖子看。游戏要求在一个有 n 个顶点凸多边形上进行，这个凸多边形的 n-3 条对角线将多边形分成 n-2 个三角形，这 n-3 条对角线在多边形的顶点相交。三角形中的一个被染成黑色，其余是白色。</p>
+<p>双方轮流进行游戏，当轮到一方时，他必须沿着画好的对角线，从多边形上切下一个三角形。切下黑色三角形的一方获胜。胖子一看觉得确实很有趣，不如就一起玩玩吧。假设游戏由野猫先开始，那么野猫是否有必胜的策略呢？请写一个程序帮助野猫算一算。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行为一个整数 n，表示多边形的顶点数，多边形的顶点由 0 至 n-1 顺时针标号。</p>
+<p>接着的 n-2 行描述组成多边形的三角形。第 i+1 行  有三个空格分隔的非负整数 a 、b 、c ，它们是第 i 个三角形的顶点编号。第一个给出的三角形是黑色的。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>只有一行，倘若野猫有必胜策略，输出 <code>JMcat Win</code>；否则，输出 <code>PZ Win</code>（注意大小写和空格）。</p>
+<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">0 1 2</span><br><span class="line">2 4 3</span><br><span class="line">4 2 0</span><br><span class="line">0 5 4</span><br></pre></td></tr></table></figure>
+
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JMcat Win</span><br></pre></td></tr></table></figure>
+
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>4 &lt;= n &lt;= 50000</p>
+<p>如果连接一个多边形中任意两点的线段都完全包含于这个多边形，则称这个多边形为凸多边形。</p>
+<p>题解在代码里</p>
+<pre><code class="cpp">#include&lt;iostream&gt;
+using namespace std;
+
+int n, a, b, c;
+
+int main()
+{
+    cin &gt;&gt; n;
+    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+    if(a &gt; b)
+        swap(a, b);
+    if(a &gt; c)
+        swap(a, c);
+    if(b &gt; c)
+        swap(b, c);
+    if((a + 1 == b &amp;&amp; b + 1 == c) || (a == 0 &amp;&amp; c == n - 1))
+    {
+        puts("JMcat Win");
+        return 0;
+    }
+/*
+假如顶点连续，则代表这个黑色三角形在外面。
+就像是一个多边形上连续三个点构成的三角形必然在外面
+那么先手的野猫就赢了
+当然还有一个特殊情况：假如黑色三角形同时包括 0 点和 n 点（首尾相连）
+就比如：
+6
+0 5 4
+0 1 2
+2 4 3
+4 2 0
+所以要特判一下这种情况
+*/
+    else if((n - 2) % 2 == 0)
+    {
+        puts("JMcat Win");
+        return 0;
+    }
+/*
+假如黑色三角形被包在里面
+先放着别的三角形不管
+假设最后只剩三个个三角形包着黑三角
+谁把其中一个三角切了谁就输了
+胜负就出来了
+所以只要考虑三角形个数的奇偶性就行了
+*/
+    else
+        puts("PZ Win");
+
+    return 0;
+}
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/08/19/luogu-p1488-%E8%82%A5%E7%8C%AB%E7%9A%84%E6%B8%B8%E6%88%8F/" data-id="cm0hrwxx3000mdkwa0y9ba2ft" data-title="luogu_p1488_肥猫的游戏" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/08/27/%E9%A3%8E/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          风
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/08/17/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81%E8%AF%A6%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">哈夫曼编码详解</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
