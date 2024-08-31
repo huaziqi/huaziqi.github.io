@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hello-hexo -- hexo + github部署教程 | ziqi的小窝</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Hello hexo！—— hexo + github部署教程前前后后搭了有两三天，终于算是搭好了。 写一写搭建过程，搭建方法，遇到的问题……反正这篇博客成分复杂  对历程不感兴趣的可以直接跳到搭建方法  搭建历程开始有搭建的想法大约是高一下学期，那个时候接触了一些技术博客，并尝试着自己写博客。在感受到写博客的快乐与美好之后，搭建一个个人博客网站的想法被一个视频引起。 第一个想法是一个知乎的视频，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello-hexo -- hexo + github部署教程">
+<meta property="og:url" content="https://www.huaziqi.top/2023/01/19/Hello-hexo/index.html">
+<meta property="og:site_name" content="ziqi的小窝">
+<meta property="og:description" content="Hello hexo！—— hexo + github部署教程前前后后搭了有两三天，终于算是搭好了。 写一写搭建过程，搭建方法，遇到的问题……反正这篇博客成分复杂  对历程不感兴趣的可以直接跳到搭建方法  搭建历程开始有搭建的想法大约是高一下学期，那个时候接触了一些技术博客，并尝试着自己写博客。在感受到写博客的快乐与美好之后，搭建一个个人博客网站的想法被一个视频引起。 第一个想法是一个知乎的视频，">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/hexo-s.2scnsech7d00.jpg">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.6kpok4h7gs40.jpg">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.2e6iocxbrh34.jpg">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.7hjxtkzrxo00.jpg">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.3999lsciaoy0.jpg">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.4tjk2l85yag0.jpg">
+<meta property="article:published_time" content="2023-01-19T03:51:26.000Z">
+<meta property="article:modified_time" content="2023-01-23T02:19:26.830Z">
+<meta property="article:author" content="huaziqi">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="博客搭建">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/hexo-s.2scnsech7d00.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="ziqi的小窝" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ziqi的小窝</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://www.huaziqi.top"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Hello-hexo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/19/Hello-hexo/" class="article-date">
+  <time class="dt-published" datetime="2023-01-19T03:51:26.000Z" itemprop="datePublished">2023-01-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Hello-hexo -- hexo + github部署教程
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Hello-hexo！——-hexo-github部署教程"><a href="#Hello-hexo！——-hexo-github部署教程" class="headerlink" title="Hello hexo！—— hexo + github部署教程"></a>Hello hexo！—— hexo + github部署教程</h1><p>前前后后搭了有两三天，终于算是搭好了。</p>
+<p>写一写搭建过程，搭建方法，遇到的问题……反正这篇博客成分复杂</p>
+<ul>
+<li>对历程不感兴趣的可以直接跳到搭建方法</li>
+</ul>
+<h2 id="搭建历程"><a href="#搭建历程" class="headerlink" title="搭建历程"></a>搭建历程</h2><p>开始有搭建的想法大约是高一下学期，那个时候接触了一些技术博客，并尝试着自己写博客。在感受到写博客的快乐与美好之后，搭建一个个人博客网站的想法被一个视频引起。</p>
+<h3 id="第一个想法"><a href="#第一个想法" class="headerlink" title="第一个想法"></a>第一个想法</h3><p>是一个知乎的视频，它具体教授了如何使用hexo与github pages 搭建博客。可惜我当时对于github完全没有接触，更不知道如何去使用。那个视频中还使用vim来编辑配置文件，当时我看的是一脸懵逼：他是如何保存那个文件的？ctrl s？不是，于是我在视频底下问他，却迟迟没有得到回复。第一次博客搭建计划失败</p>
+<h3 id="money"><a href="#money" class="headerlink" title="money"></a>money</h3><p>在之后，我接触了其他的搭建博客的方法，例如WordPress。然而使用WordPress需要自己去买域名（一年30~50）和服务器（一年100往上）。当时还在学校，资金没有来源，何况这也不是一笔小数目。那个时候在csdn还是博客园上写博客（先是在CSDN，但是由于它不可美化且页面广告太多，也不美观，就转去了博客园）也就安于现状了。</p>
+<p>这期间学会了如何使用github，Markdown等工具，美化了自己的博客园，算是为之后做铺垫。</p>
+<h3 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h3><p>高二下学期，经过互联网上各路网友的推荐，我去学习了vim，对于它的各种快捷键略知一二了。然而使用起来还是不习惯，平时就没有过多使用。但是我终于知道了vim编辑器的保存方式是 <code>:wq </code>，于是兴冲冲地再去尝试，却被卡在了最后一步<code>hexo d</code>， 怎么都无法上传，网上找了各种方法<del>（其实就两种）</del>也没用。再一次失败了……</p>
+<h3 id="转机"><a href="#转机" class="headerlink" title="转机"></a>转机</h3><p>昨天，我再一次尝试搭建博客。<del>这一次，我不能输！</del></p>
+<p>既然github不行，那就用gitee。于是找了网上hexo + gitee的教程。不同于之前github的教程的是，之前用的是repo，而这次使用的是ssh。碰巧看到一个视频就是讲之前的hexo博客搭建实际上已经过时了。</p>
+<p>考虑到gitee是国内网站，访问速度快，github访问不太稳定，于是想要使用gitee pages，可没想到，gitee居然还要实名认证：），实名时间还要1到2个工作日，我寻思有那么多人实名吗，我在博客园申请json权限，5分钟就通过了。更何况实名似乎根本就没有意义，国内的网站、软件环境都是这样，你就这么怕我们说什么东西吗？？</p>
+<p>还有为什么国内每个稍微大一点的网站都要手机号验证？真的蚌埠住，就这么不喜欢邮箱？邮箱不是都绑定过手机号了吗？</p>
+<p>于是转用了github，访问的问题是使用了netlify免费代理。</p>
+<h2 id="搭建方法"><a href="#搭建方法" class="headerlink" title="搭建方法"></a>搭建方法</h2><p>以下命令均在cmd(windows)/控制台(mac)使用</p>
+<h3 id="本地hexo环境搭建"><a href="#本地hexo环境搭建" class="headerlink" title="本地hexo环境搭建"></a>本地hexo环境搭建</h3><ul>
+<li>首先下载<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">git</a>与<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">node</a>（文字上有超链接）</li>
+</ul>
+<p>使用<code>git --version</code>检查git是否安装</p>
+<p>使用<code>node -v</code>检查node是否安装</p>
+<ul>
+<li>之后使用node安装hexo：</li>
+</ul>
+<p>输入 <code>npm install hexo-cli - g </code> 安装hexo</p>
+<h3 id="开始搭建hexo"><a href="#开始搭建hexo" class="headerlink" title="开始搭建hexo"></a>开始搭建hexo</h3><p><code>hexo init 文件夹名称（随你写）</code></p>
+<p>比如<code>hexo init huaziqi</code>，就会创建一个叫”huaziqi“的文件夹，该文件夹保存在根目录，找不到可以用计算机搜索功能找一下。</p>
+<p>之后输入<code>cd 你的文件名（你刚刚创建的那个）</code></p>
+<blockquote>
+<p><code>cd 文件夹</code>的意思就是进入文件夹</p>
+<p><code>cd ..</code>是退出文件夹</p>
+<p><code>ls</code>是输出该文件夹下的所有文件夹和文件</p>
+<p>这些都是控制台的基本操作</p>
+</blockquote>
+<p>进入文件夹之后输入<code>npm install</code>，安装基本文件</p>
+<h3 id="hexo中的基本操作"><a href="#hexo中的基本操作" class="headerlink" title="hexo中的基本操作"></a>hexo中的基本操作</h3><p><code>hexo g</code> 相当于编译，把你所有对于文件夹中的改变识别到，有错误的话会报错。</p>
+<p>完成之后输入<code>hexo s</code>就可以在本地访问你的网站</p>
+<p><img src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/hexo-s.2scnsech7d00.jpg" alt="hexo-s"></p>
+<p>加载完应该是这样，进入 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 就是你的博客在本地的样子。</p>
+<p>==先别急着优化博客==，确认它能够被流畅访问先，不然失败了的话就很难受</p>
+<h3 id="部署博客到github"><a href="#部署博客到github" class="headerlink" title="部署博客到github"></a>部署博客到github</h3><p><code>npm install hexo-deployer-git --save</code> 下载上传的插件</p>
+<h4 id="获取ssh"><a href="#获取ssh" class="headerlink" title="获取ssh"></a>获取ssh</h4><p><del>据我所知，现在部署博客有两种方法，一种是用repo，另一种使用ssh密钥。之前失败就是使用的前者。所以现在是用后者。</del></p>
+<ul>
+<li>注意，这些操作都是在你创建的hexo文件夹里进行的</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"你的GitHub用户名"</span></span><br><span class="line">git config --global user.email <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure>
+
+<p>这两句进行后不会返回任何东西</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure>
+
+<p>如果他问你<code>Enter file in which to save the key (/Users/TMnoL/.ssh/id_rsa): </code>,你就填id_rsa</p>
+<p>接着他会让你输入密码，注意这个密码自己==一定要记住==，之后每一次部署你的博客都需要你输入一遍</p>
+<p>然后它会在该文件夹内产生两个文件：id_rsa、id_rsa.pub。</p>
+<p><img src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.6kpok4h7gs40.jpg" alt="截屏2023-01-19-15"></p>
+<p>把这两个文件移动到上一级目录中的.ssh文件夹。</p>
+<blockquote>
+<p>这个文件夹是隐藏的，如何查看隐藏文件夹，mac是<code>command+shift+.</code>，这东西自己百度就行。</p>
+</blockquote>
+<h4 id="绑定ssh到github"><a href="#绑定ssh到github" class="headerlink" title="绑定ssh到github"></a>绑定ssh到github</h4><p>然后去github（未注册自行注册，用户名不要乱取哦）</p>
+<p>之后点击自己的头像（右上角），点击settings。</p>
+<p>在左列找到 SSH and GPG keys</p>
+<p><img src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.2e6iocxbrh34.jpg" alt="截屏2023-01-19-15"></p>
+<p>点击new SSH key，把刚刚生成的id_rsa.pub里的东西全都粘贴到下面的 key 框里，title随便填就好。</p>
+<p><img src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.7hjxtkzrxo00.jpg" alt="截屏2023-01-19-15"></p>
+<p>Add SSH key</p>
+<h3 id="新建github库"><a href="#新建github库" class="headerlink" title="新建github库"></a>新建github库</h3><p><del>建库不会自己去学。</del></p>
+<p>注意：库的名称一定要是自己github的用户名+.github.io</p>
+<p>比如我的用户名是huaziqi，那就要建叫 huaziqi.github.io，这也是之后你的网站名（当然自己有别的域名是可以改的）</p>
+<p>仓库类型当然是public，公开的。</p>
+<p><img src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.3999lsciaoy0.jpg" alt="截屏2023-01-19-15"></p>
+<p>建好仓库以后打开仓库点击那个code，在里面吧SSH代码复制下来。</p>
+<h3 id="FINAL"><a href="#FINAL" class="headerlink" title="FINAL"></a>FINAL</h3><p>回到创建的文件夹，找到<code>_config.yml</code>文件打开。找到deploy，像我一样这么填。repo里填的是刚刚粘贴的SSH代码。保存文件。</p>
+<p><img src="https://cdn.staticaly.com/gh/huaziqi/my-Figure-bed@main/20230123/%E6%88%AA%E5%B1%8F2023-01-19-15.4tjk2l85yag0.jpg" alt="截屏2023-01-19-15"></p>
+<p>到控制台输入<code>hexo g</code>，加载完再输入<code>hexo d</code>，输入生成id_rsa.pub时自己输入的代码，等待片刻就成功了。</p>
+<p>访问你的用户名+github.io，其实就是你的仓库名。我的是huaziqi.github.io，欢迎来访问。</p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>github访问必然是太慢了</p>
+<p>我们可以使用netlify进行优化，访问速度更快。</p>
+<p>前往<a target="_blank" rel="noopener" href="https://www.netlify.com/">netlify站点</a>注册账号，前往个人主界面点击site，然后Add new site, import an exsiting project</p>
+<p>之后按照提示一步一步来就好了，不会的看下面这个教程</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/37Y37/p/12551839.html">netlify教程</a></p>
+<h2 id="更换-markdown渲染器"><a href="#更换-markdown渲染器" class="headerlink" title="更换 markdown渲染器"></a>更换 markdown渲染器</h2><p>竟然只用两个指令</p>
+<ol>
+<li>卸载原来的渲染器<br><code>npm uninstall hexo-renderer-marked --save</code></li>
+<li>下载新渲染器<br><code>npm i @upupming/hexo-renderer-markdown-it-plus --save</code></li>
+</ol>
+<h2 id="博客评论"><a href="#博客评论" class="headerlink" title="博客评论"></a>博客评论</h2><p>不同主题支持的评论不同，当然，不支持的也可以自己配置。</p>
+<p>经过多方选择，我选择的是valine。</p>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>gitalk配置失败，找不到issue，主题配置文档里也没更新配置方法，有一两个多出来的变量。</p>
+<p>twikko基于腾讯云，但是，使用未成年不能使用腾讯云（迷）</p>
+<p>waline基于leancloud，但是使用国内版的话需要绑定域名（似乎要花钱），国际版的又被墙了。优点是评论提醒的途径很多，qq微信啥的</p>
+<p>valine 虽然也是基于leancloud，但是他配置国内版的不需要绑定域名。缺点是随便什么人都能发（可能也是优点），但是在后台可以删除修改评论。</p>
+<h3 id="实时监控评论"><a href="#实时监控评论" class="headerlink" title="实时监控评论"></a>实时监控评论</h3><p>如果邮箱手机号是没问题的，那使用他自带的邮箱功能当然是最好的了</p>
+<p>但是如果像我这样平时手机都是欠费的学生来说，还有一个办法是使用实时监控网页的变化。去leancloud后台，数据化结构，实时监控Comment右边的数字，也就是评论数。</p>
+<p>监控的道具我是用的是distill web monitor。浏览器拓展插件里搜一下应该就有了。</p>
+<h2 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h2><p>去hexo.io找主题下载，那里还有官方文档可以参照。</p>
+<p>主题配置每个主题下都有教程。</p>
+<h2 id="各个搜索引擎收录入口"><a href="#各个搜索引擎收录入口" class="headerlink" title="各个搜索引擎收录入口"></a>各个搜索引擎收录入口</h2><p>让你的博客被更多的网站收录，访问</p>
+<p>谷歌博客搜索收录入口:<br><a target="_blank" rel="noopener" href="http://blogsearch.google.com/ping">http://blogsearch.google.com/ping</a><br>百度收录入口:<br><a target="_blank" rel="noopener" href="http://www.baidu.com/search/url_submit.html">http://www.baidu.com/search/url_submit.html</a><br>百度博客收录入口:<br><a target="_blank" rel="noopener" href="http://utility.baidu.com/blogsearch/submit.php">http://utility.baidu.com/blogsearch/submit.php</a><br>必应Bing收录入口:<br><a target="_blank" rel="noopener" href="https://www.bing.com/toolbox/submit-site-url">https://www.bing.com/toolbox/submit-site-url</a><br>搜索引擎批量提交:<br><a target="_blank" rel="noopener" href="http://www.freewebsubmission.com/">http://www.freewebsubmission.com/</a><br>soso收录入口:<br><a target="_blank" rel="noopener" href="http://www.soso.com/help/usb/urlsubmit.shtml">http://www.soso.com/help/usb/urlsubmit.shtml</a><br>360搜索引擎登录入口：<br><a target="_blank" rel="noopener" href="http://info.so.360.cn/site_submit.html">http://info.so.360.cn/site_submit.html</a><br>搜狗提交入口:<br><a target="_blank" rel="noopener" href="http://www.sogou.com/feedback/urlfeedback.php">http://www.sogou.com/feedback/urlfeedback.php</a><br>盘古数据开放平台：<br><a target="_blank" rel="noopener" href="http://open.panguso.com/data/resource/url/new">http://open.panguso.com/data/resource/url/new</a><br>简搜搜索引擎登陆口：<br><a target="_blank" rel="noopener" href="http://www.jianso.com/add_site.html">http://www.jianso.com/add_site.html</a><br>雅虎中国网站登录口：<br><a target="_blank" rel="noopener" href="http://sitemap.cn.yahoo.com/">http://sitemap.cn.yahoo.com/</a><br>网易有道搜索引擎登录口：<br><a target="_blank" rel="noopener" href="http://tellbot.youdao.com/report">http://tellbot.youdao.com/report</a><br>中搜免费登录服务：<br><a target="_blank" rel="noopener" href="http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm">http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm</a><br>MSN必应网站登录口：<br><a target="_blank" rel="noopener" href="http://cn.bing.com/docs/submit.aspx?FORM=WSDD2">http://cn.bing.com/docs/submit.aspx?FORM=WSDD2</a><br>Alexa网站登录入口：<br><a target="_blank" rel="noopener" href="http://www.alexa.com/help/webmasters">http://www.alexa.com/help/webmasters</a><br>TOM搜索网站登录口：<br><a target="_blank" rel="noopener" href="http://search.tom.com/tools/weblog/log.php">http://search.tom.com/tools/weblog/log.php</a><br>铭万网B2B(必途)网址登陆口：<br><a target="_blank" rel="noopener" href="http://search.b2b.cn/pageIncluded/AddPage.php">http://search.b2b.cn/pageIncluded/AddPage.php</a><br>蚁搜搜索网站登录口：<br><a target="_blank" rel="noopener" href="http://www.antso.com/apply.asp">http://www.antso.com/apply.asp</a><br>快搜搜索网站登录口：<br><a target="_blank" rel="noopener" href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp</a><br>汕头搜索登录口：<br><a target="_blank" rel="noopener" href="http://www.stsou.com/join.asp">http://www.stsou.com/join.asp</a><br>孙悟空搜索网站登录：<br><a target="_blank" rel="noopener" href="http://www.swkong.com/add.php">http://www.swkong.com/add.php</a><br>天网网站登陆口：<br><a target="_blank" rel="noopener" href="http://home.tianwang.com/denglu.htm">http://home.tianwang.com/denglu.htm</a><br>速搜全球登陆口：<br><a target="_blank" rel="noopener" href="http://www.suso.com.cn/suso/link.asp">http://www.suso.com.cn/suso/link.asp</a><br>酷帝网站目录提交入口：<br><a target="_blank" rel="noopener" href="http://www.coodir.com/accounts/addsite.asp">http://www.coodir.com/accounts/addsite.asp</a><br>快搜网站登陆口：<br><a target="_blank" rel="noopener" href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp</a><br>搜猫搜索引擎登录入口：<br><a target="_blank" rel="noopener" href="http://test.somao123.com/search/url_submit.php">http://test.somao123.com/search/url_submit.php</a><br>泽许搜索网站登录入口：<br><a target="_blank" rel="noopener" href="http://www.zxyt.cn/search/zxsc.php">http://www.zxyt.cn/search/zxsc.php</a><br>一淘网开放搜索申请入口：<br><a target="_blank" rel="noopener" href="http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ">http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.huaziqi.top/2023/01/19/Hello-hexo/" data-id="cm0ibmf9d0003zkwabd2l3ccm" data-title="Hello-hexo -- hexo + github部署教程" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/01/19/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          测试文档
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/01/16/acwing-4700-%E4%BD%95%E4%BB%A5%E5%8C%85%E9%82%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">acwing_4700_何以包邮</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/python%E5%8A%9E%E5%85%AC/">python办公</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B9%A6%E8%AF%84/">书评</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E8%AE%AB%E6%BC%AB%E8%AE%B0/">自讫漫记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E6%B3%95/">语法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E9%9B%86/">题集</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/USACO07MAR/" rel="tag">USACO07MAR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codeforces/" rel="tag">codeforces</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/" rel="tag">dfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag">dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/noip/" rel="tag">noip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B/" rel="tag">《黑客与画家》</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%A6%E8%AF%84/" rel="tag">书评</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/" rel="tag">二分图匹配</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" rel="tag">优先队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/" rel="tag">哈夫曼编码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86/" rel="tag">回忆</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag">图论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%93%E5%8D%A1/" rel="tag">打卡</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%BE%E8%A7%84%E5%BE%8B/" rel="tag">找规律</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88/" rel="tag">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8A%B6%E5%8E%8B/" rel="tag">状压</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" rel="tag">离散化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/" rel="tag">自动化办公</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B4%AA%E5%BF%83/" rel="tag">贪心</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/USACO07MAR/" style="font-size: 10px;">USACO07MAR</a> <a href="/tags/codeforces/" style="font-size: 10px;">codeforces</a> <a href="/tags/dfs/" style="font-size: 10px;">dfs</a> <a href="/tags/dp/" style="font-size: 10px;">dp</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/noip/" style="font-size: 10px;">noip</a> <a href="/tags/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B/" style="font-size: 10px;">《黑客与画家》</a> <a href="/tags/%E4%B9%A6%E8%AF%84/" style="font-size: 10px;">书评</a> <a href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/" style="font-size: 10px;">二分图匹配</a> <a href="/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" style="font-size: 10px;">优先队列</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">博客搭建</a> <a href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/" style="font-size: 10px;">哈夫曼编码</a> <a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 10px;">回忆</a> <a href="/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 10px;">图论</a> <a href="/tags/%E6%89%93%E5%8D%A1/" style="font-size: 10px;">打卡</a> <a href="/tags/%E6%89%BE%E8%A7%84%E5%BE%8B/" style="font-size: 10px;">找规律</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 10px;">排序</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16.67px;">数据结构</a> <a href="/tags/%E6%A0%88/" style="font-size: 10px;">栈</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 10px;">游记</a> <a href="/tags/%E7%8A%B6%E5%8E%8B/" style="font-size: 10px;">状压</a> <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" style="font-size: 10px;">离散化</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 20px;">算法</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/" style="font-size: 10px;">自动化办公</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 13.33px;">记录</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 10px;">语法</a> <a href="/tags/%E8%B4%AA%E5%BF%83/" style="font-size: 10px;">贪心</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/08/31/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%B4%E7%90%86C/">排序算法整理C++</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/08/%E7%AE%80%E8%AF%84%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B/">简评《黑客与画家》</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/05/%E7%BD%91%E7%BB%9C%E7%BB%84%E6%88%90%E4%B8%8E%E6%9E%84%E5%BB%BA/">网络组成与构建</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/28/clock-levelup/">clock-levelup</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/25/%E5%AF%8C%E5%B1%B1%E6%84%9F%E9%81%872023/">富山感遇2023</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 huaziqi<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
