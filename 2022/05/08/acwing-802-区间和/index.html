@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ziqi的小屋</title>
+    <title>ziqi的网络日志</title>
     <meta charset="utf-8">
     
 <link rel="stylesheet" href="/css/main.css">
 
-    <link
-    href="/your_path_to_version_6_files/css/fontawesome.css"
-    rel="stylesheet"
-    />
+
 <meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -127,8 +124,9 @@ mjx-container[display="true"] + br {
 
     <main>
         <header id = "header">
-            <ul id = "headerLinks">
-
+            
+<h1 id = "blogTitle">ziqi的网络日志</h1>
+<ul id = "headerLinks">
     
     <li class = "inlineD">
         <a id = "headerLink" href = "/">主页</a>
@@ -159,8 +157,16 @@ mjx-container[display="true"] + br {
 
         </aside>
         <div id = "content">
-            
-<h1 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h1><hr>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h1><hr>
 <ul>
 <li>就题论题来讲</li>
 </ul>
@@ -184,6 +190,9 @@ mjx-container[display="true"] + br {
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 300010</span></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; PII;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m,x,c,a[N],s[N];</span><br><span class="line">vector&lt;PII&gt; adds,query;<span class="comment">//add 存储所给的点和数据，query存储要求的区间</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; point;<span class="comment">//point 存储的是包括 x（题中给出的有数据的点）及 l , r(要求的区间)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">    <span class="type">int</span> l=<span class="number">0</span>,r=point.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l&lt;r){</span><br><span class="line">        <span class="type">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (point[mid]&gt;=x)</span><br><span class="line">            r=mid;</span><br><span class="line">        <span class="keyword">else</span> l=mid<span class="number">+1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> r<span class="number">+1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n;i ++){</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;c);</span><br><span class="line">        adds.<span class="built_in">push_back</span>({x,c});</span><br><span class="line">        point.<span class="built_in">push_back</span>(x);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++){</span><br><span class="line">        <span class="type">int</span> l,r;</span><br><span class="line">        cin&gt;&gt;l&gt;&gt;r;</span><br><span class="line">        query.<span class="built_in">push_back</span>({l,r});</span><br><span class="line">        point.<span class="built_in">push_back</span>(l);</span><br><span class="line">        point.<span class="built_in">push_back</span>(r);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">sort</span>(point.<span class="built_in">begin</span>(),point.<span class="built_in">end</span>());</span><br><span class="line">    point.<span class="built_in">erase</span>(<span class="built_in">unique</span>(point.<span class="built_in">begin</span>(),point.<span class="built_in">end</span>()),point.<span class="built_in">end</span>());<span class="comment">//去重</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> opt : adds){</span><br><span class="line">        <span class="type">int</span> num=<span class="built_in">find</span>(opt.first);</span><br><span class="line">        a[num]+=opt.second;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=point.<span class="built_in">size</span>();i++)</span><br><span class="line">        s[i]=s[i<span class="number">-1</span>]+a[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> opt : query){</span><br><span class="line">        <span class="type">int</span> l=<span class="built_in">find</span>(opt.first),r=<span class="built_in">find</span>(opt.second);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,s[r]-s[l<span class="number">-1</span>]);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
 <p>2022-05-02 15:03:35 完结</p>
+
+</body>
+</html>
 
         </div>
     </main>

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ziqi的小屋</title>
+    <title>ziqi的网络日志</title>
     <meta charset="utf-8">
     
 <link rel="stylesheet" href="/css/main.css">
 
-    <link
-    href="/your_path_to_version_6_files/css/fontawesome.css"
-    rel="stylesheet"
-    />
+
 <meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -127,8 +124,9 @@ mjx-container[display="true"] + br {
 
     <main>
         <header id = "header">
-            <ul id = "headerLinks">
-
+            
+<h1 id = "blogTitle">ziqi的网络日志</h1>
+<ul id = "headerLinks">
     
     <li class = "inlineD">
         <a id = "headerLink" href = "/">主页</a>
@@ -159,8 +157,16 @@ mjx-container[display="true"] + br {
 
         </aside>
         <div id = "content">
-            
-<h1 id="排序算法整理"><a href="#排序算法整理" class="headerlink" title="排序算法整理"></a>排序算法整理</h1><h2 id="常见考点"><a href="#常见考点" class="headerlink" title="常见考点"></a>常见考点</h2><ol>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="排序算法整理"><a href="#排序算法整理" class="headerlink" title="排序算法整理"></a>排序算法整理</h1><h2 id="常见考点"><a href="#常见考点" class="headerlink" title="常见考点"></a>常见考点</h2><ol>
 <li>将一个乱掉的字符串排回有序（以交换为基本操作）的最少操作，就是<a href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F">冒泡排序</a>。</li>
 <li><a href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7">排序算法的稳定性</a>（考的多）</li>
 <li><a href="#%E5%90%84%E4%B8%AA%E7%AE%97%E6%B3%95%E7%BB%86%E9%94%81">排序算法的时间复杂度</a>（考的比较少）</li>
@@ -213,6 +219,9 @@ mjx-container[display="true"] + br {
 
 <h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p>2024年07月04日，又敲了一遍快排，发现一直报<code>SIGFPE</code>(除0)的错，查了半天发现是函数结束条件<code>if(l &gt; r)</code>写成了<code>    if(l == r)</code>导致可能<code>l &gt; r</code>还不return函数。引以为戒。</p>
 <p>还有一个☝🏻问题，就是指针<strong>i</strong>初始化时必须让<code>i = l</code>，我写的时候将<code>i = l + 1</code>。问题在哪里呢？当仅仅排序两个数字时，模拟一下就会发现是会排反的。</p>
+
+</body>
+</html>
 
         </div>
     </main>
