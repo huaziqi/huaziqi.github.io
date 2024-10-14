@@ -133,7 +133,7 @@ mjx-container[display="true"] + br {
     </li>
     
     <li class = "inlineD">
-        <a id = "headerLink" href = "/category">分类</a>
+        <a id = "headerLink" href = "/categories">分类</a>
     </li>
     
     <li class = "inlineD">
@@ -149,24 +149,9 @@ mjx-container[display="true"] + br {
     <nav id = "asideLinks">
         
     </nav>
-    <div>文章：<div class = "postsNum inlineD"><a href = "/">25</a></div></div>
+    <div>文章：<div class = "postsNum inlineD"><a href = "/">26</a></div></div>
 </div>
 <div id = "asidePostsInfo">
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
     
 </div>
 
@@ -181,9 +166,7 @@ mjx-container[display="true"] + br {
 </head>
 <body>
     
-    <h1 id="C-中的输入输出"><a href="#C-中的输入输出" class="headerlink" title="C++中的输入输出"></a>C++中的输入输出</h1><hr>
-<h2 id="cin与cout"><a href="#cin与cout" class="headerlink" title="cin与cout"></a>cin与cout</h2><p>C++中的标准输入输出流对象，在头文件iostream内。</p>
-<h3 id="关于缓冲区"><a href="#关于缓冲区" class="headerlink" title="关于缓冲区"></a>关于缓冲区</h3><p>缓冲区就是暂时存储数据的地方，可大大提升电脑运行效率。暂时把内容放在一个特定存储区域，而不是存入硬盘，就减少了硬盘的读写。<br>就像打印一张文件之前，先存入电脑，以便修改。<br>cin输入时会将会把换行符 \n 也算作一个字节放入缓冲区。</p>
+    <h2 id="cin与cout"><a href="#cin与cout" class="headerlink" title="cin与cout"></a>cin与cout</h2><h3 id="关于缓冲区"><a href="#关于缓冲区" class="headerlink" title="关于缓冲区"></a>关于缓冲区</h3><p>缓冲区就是暂时存储数据的地方，可大大提升电脑运行效率。暂时把内容放在一个特定存储区域，而不是存入硬盘，就减少了硬盘的读写。<br>就像打印一张文件之前，先存入电脑，以便修改。<br>cin输入时会将会把换行符 \n 也算作一个字节放入缓冲区。</p>
 <ul>
 <li>cin 以tab，空格，换行作为分隔符读入。</li>
 <li>string类型字符串最好用 cin 输入，cout 输出.~~ 其他的我也打不来 ~~</li>
@@ -217,7 +200,7 @@ mjx-container[display="true"] + br {
 <p>xxxxxxxxxx30 1#include<iostream>2#include<cstring>3using namespace std;4​5const int N = 50;6const int M = 3000010;7const int inf = 1e8;8​9int n, m, sum, re;10int a[N], minn = inf;11int v[M];12​13int main()14{15    16    cin &gt;&gt; n &gt;&gt; m;17    for(int i = 1; i &lt;= n; i ++)18        cin &gt;&gt; a[i], sum += a[i];19    re = sum - m;20    for(int i = 1; i &lt;= n; i ++)21    {22        for(int j = re; j &gt;= a[i]; j –)23        {24            v[j] = max(v[j - a[i]] + a[i], v[j]);25        }26    }27    28    cout &lt;&lt; sum - v[re] &lt;&lt; endl;29    return 0;30}cpp</cstring></iostream></p>
 </blockquote>
 <ul>
-<li>总结下来感觉还是double好用</li>
+<li>xxxxxxxxxx30 1#include<iostream>2#include<cstring>3using namespace std;4​5const int N = 50;6const int M = 3000010;7const int inf = 1e8;8​9int n, m, sum, re;10int a[N], minn = inf;11int v[M];12​13int main()14{15    16    cin &gt;&gt; n &gt;&gt; m;17    for(int i = 1; i &lt;= n; i ++)18        cin &gt;&gt; a[i], sum += a[i];19    re = sum - m;20    for(int i = 1; i &lt;= n; i ++)21    {22        for(int j = re; j &gt;= a[i]; j –)23        {24            v[j] = max(v[j - a[i]] + a[i], v[j]);25        }26    }27    28    cout &lt;&lt; sum - v[re] &lt;&lt; endl;29    return 0;30}cpp</cstring></iostream></li>
 </ul>
 <h3 id="long-long-1"><a href="#long-long-1" class="headerlink" title="long long"></a>long long</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="type">long</span> a=<span class="number">1000</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%lld"</span>,a);</span><br></pre></td></tr></table></figure>
 
@@ -242,11 +225,9 @@ mjx-container[display="true"] + br {
 </body>
 </html>
 
-        </div>
+        </div>      
     </main>
 
-    
-<script src="/js/main.js"></script>
 
 </body>
 </html>

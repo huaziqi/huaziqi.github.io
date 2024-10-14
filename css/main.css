@@ -20,6 +20,7 @@ li{
 }
 
 header{
+    z-index: 999;
     height: 100px;
     width: 100%;
     position: fixed;
@@ -54,7 +55,7 @@ header{
 aside{
     position: fixed;
     top: 120px;
-    right: 10px;
+    right: 78px;
     width: 20%;
     min-width: 130px;
     max-width: 250px;
@@ -78,21 +79,41 @@ aside{
     margin: 120px 50px auto auto;
 }
 
-@media (max-width : 540px){
+@media (max-width : 650px){
     #content{
-        margin-left: 5%;
+        margin-left: 15%;
+    }
+    aside{
+        right: 5%;
     }
 }
 
 
-.indexArticle{
+/* .indexArticle{
     height: 200px;
     width: 70%;
     margin-bottom: 20px;
     border: 1px solid black;
     display: flex;
     justify-content: end;
+} */
+.indexArticle {
+    height: 70px; /* 可以适当调整高度 */
+    width: 63%;
+    margin-bottom: 5px; /* 增加底部间距 */
+    border: 1px solid #ccc; /* 改变边框颜色使其更加柔和 */
+    display: flex;
+    justify-content: end;
+    background-color: #f9f9f9; /* 添加背景颜色 */
+    border-radius: 5px; /* 圆角边框 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    transition: transform 0.4s; /* 添加过渡效果 */
 }
+
+.indexArticle:hover {
+    transform: scale(1.02); /* 悬停时放大效果 */
+}
+
 
 .beautifyA{
     height: 60%;
@@ -100,16 +121,45 @@ aside{
 }
 
 .articleInfo{
-    width: 40%;
-    height: 100%
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    
 }
 
-.more{
-    height: calc(100%);
+.articleInfo h2{
+    font-size: 18px;
+    font-weight: 100;
+    margin: auto;
+
+}
+
+.more {
+    position: relative; /* 添加相对定位 */
+    height: calc(100%); /* 保证容器高度 */
     width: 30%;
     max-width: 200px;
-    border-radius: 3%;;
+    border-radius: 3%;
     background: linear-gradient(90deg, #fff, rgba(127, 128, 131, 0.115));
+}
+
+/* 设置 jt 类 */
+.jt {
+    position: absolute; /* 绝对定位 */
+    top: 50%; /* 垂直居中 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-50%, -50%); /* 调整位置使其正好居中 */
+    width: 0; /* 通过边框创建三角形 */
+    height: 0; /* 通过边框创建三角形 */
+    border-right: 20px solid transparent; /* 左边框 */
+    border-bottom: 20px solid transparent; /* 右边框 */
+    border-top: 20px solid transparent; /* 右边框 */
+    border-left: 22px solid var(--main-blue); /* 下边框，形成箭头 */
+}
+
+/* 增加悬停效果 (可选) */
+.more:hover .jt {
+    border-left-color: rgb(0, 0, 0); /* 悬停时可以改变颜色 */
 }
 
 .abstract{
