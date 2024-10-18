@@ -74,9 +74,9 @@ aside{
 }
 
 #content{
-    width: 70%;
+    width: 50%;
     height: auto;
-    margin: 120px 50px auto auto;
+    margin: 120px 350px auto auto;
 }
 
 @media (max-width : 650px){
