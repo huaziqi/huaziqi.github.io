@@ -1,0 +1,58 @@
+
+#indexPartial{
+    margin: 50px ;
+}
+
+#indexRecentPosts{
+    margin-bottom: 10px;
+}
+
+#indexRecentPosts span{
+    
+    background: linear-gradient(to right, var(--main-blue), black) no-repeat right bottom;
+    background-size: 0 2px;
+    transition: background-size 0.4s;
+}
+
+#indexRecentPosts span:hover{
+    background-position-x: left;
+    background-size: 100% 2px;
+}
+
+#indexPostsHr{
+    margin-bottom: 10px;
+}
+
+.indexArticle {
+    margin-bottom: 10px; 
+    
+    display: flex;
+    justify-content: flex-start;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    transition: transform 0.4s; 
+}
+
+.indexArticle:hover {
+    transform: scale(1.02);
+}
+
+.indexArticleInfo{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+
+}
+
+.indexArticleTitle{
+    font-size: 18px;
+    font-weight: 100;
+    margin: auto;
+
+}
+
+.indexArticleInfo .indexArticleDate{
+    width: auto;
+}

@@ -1,0 +1,17 @@
+
+
+#asideMain {
+    border: 1px solid black;
+}
+#asideMain{
+    z-index: 999;
+    width: 200px;
+    padding: 10px;
+    
+}
+
+#asideMain #asideAvatar{
+    width: 100px;
+    height: auto;
+    right: 10px;
+}
