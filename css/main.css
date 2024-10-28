@@ -4,17 +4,6 @@
     box-sizing: border-box;
 }
 
-body{
-    display: grid;
-    gap: 10px;
-    grid-template-areas: 
-        "backgroundPic backgroundPic backgroundPic backgroundPic"
-        "main main main aside"
-        "footer footer footer footer"
-        "more more more more";
-    grid-template-columns: 1fr 1fr 1fr 250px;
-}
-
 a{
     color: rgb(115, 115, 115);
     text-decoration: none;
@@ -37,59 +26,10 @@ li{
 .inlineDisplay{
     display: inline;
 }
+/* 预先设定 */
 
-
-#backgroundPic{
-    position: relative;
-    margin-top: 100px;
-    background-color: #e6e7eb;
-    
-    height: 60%;
-    width: auto;
-    grid-area: backgroundPic;
-}
-
-#backgroundPic img{
-    width: 100%;
-}
-
-#indexDescription{
-    position: absolute;
-    top: 45%;
-    left: 35%;
-    color: rgb(125, 196, 229);
-    font-size : 35px;
-}
-
-#indexDescription span{
-    display: inline-block;
-    width: 21ch;
-
-    overflow: hidden;
-    white-space: nowrap;
-
-    border-right: 1px solid transparent;
-    animation: typing 4s steps(11), caret .4s steps(1) infinite;
-}
-@keyframes typing{
-    from {
-        width: 0;
-    }
-  }
-  @keyframes caret{
-    50% { border-right-color: currentColor}
-  }
-
-main{
-    grid-area: main;
-}
-
-#aside{
-    grid-area: aside;
-    height: 300px;
-    width: 200px;
-    position: sticky;
-    top: 110px;
+#content{
+    margin-top: 110px;
 }
 
 footer{
@@ -101,15 +41,3 @@ footer{
     grid-area: more;
 }
 
-@media screen and (max-width: 750px){
-    body{
-        grid-template-areas:
-            "backgroundPic backgroundPic backgroundPic backgroundPic"
-            "main main main main"
-            "footer footer footer footer"
-            "more more more more";
-    }
-    #aside{
-        display: none;
-    }
-}

@@ -122,18 +122,11 @@ mjx-container[display="true"] + br {
 </style></head>
 <body>
 
-    <div id = "backgroundPic">
-        <img src = "https://github.com/huaziqi/picx-images-hosting/raw/master/20241025/bg.969qr6io9r.webp"/>
-        <div id = "indexDescription">
-            <span>无关风月，我题序等你回</span>
-            
-        </div>
-    </div>
-    
 
-    <main>
-        <header id = "header">
-            
+
+    
+    <header id = "header">
+        
 <h1 id = "headerTitle">ziqi的网络日志</h1>
 <ul id = "headerLinks">
     
@@ -153,19 +146,13 @@ mjx-container[display="true"] + br {
 
 <link rel="stylesheet" href="/css/header.css">
 
-        </header>
+    </header>
+
         
-        
-        <div id = "content">
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
     
+    <div id = "content">
+        
+<main id = "postAll">
     <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>Farmer John has arranged his N (1 ≤ N ≤ 5,000) cows in a row and many of them are facing forward, like good cows. Some of them are facing backward, though, and he needs them all to face forward to make his life perfect.</p>
 <p>Fortunately, FJ recently bought an automatic cow turning machine. Since he purchased the discount model, it must be irrevocably preset to turn K (1 ≤ K ≤ N) cows at once, and it can only turn cows that are all standing next to each other in line. Each time the machine is used, it reverses the facing direction of a contiguous group of K cows in the line (one cannot use it on fewer than K cows, e.g., at the either end of the line of cows). Each cow remains in the same *location* as before, but ends up facing the *opposite direction*. A cow that starts out facing forward will be turned backward by the machine and vice-versa.</p>
 <p>Because FJ must pick a single, never-changing value of K, please help him determine the minimum value of K that minimizes the number of operations required by the machine to make all the cows face forward. Also determine M, the minimum number of machine operations required to get all the cows facing forward using that value of K.</p>
@@ -188,32 +175,13 @@ mjx-container[display="true"] + br {
 </blockquote>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 5010</span></span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> cha[N];</span><br><span class="line"><span class="type">int</span> n, a[N];</span><br><span class="line"><span class="type">int</span> now, ans1 = <span class="number">0x3f3f3f3f</span>, ans2, tot;</span><br><span class="line"><span class="type">char</span> ch;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i ++)</span><br><span class="line">    {</span><br><span class="line">        cin &gt;&gt; ch;</span><br><span class="line">        <span class="keyword">if</span>(ch == <span class="string">'F'</span>)</span><br><span class="line">            a[i] = <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">1</span>; k &lt;= n; k ++)<span class="comment">//遍历区间长度</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">memset</span>(cha, <span class="number">0</span>, <span class="built_in">sizeof</span>(cha));</span><br><span class="line">        <span class="type">int</span> flag = <span class="number">1</span>, tot = <span class="number">0</span>, now = <span class="number">0</span>;<span class="comment">//now表示这一段区域是否翻转</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i ++)</span><br><span class="line">        {</span><br><span class="line">            now ^= cha[i];<span class="comment">//遇到变化区间的末尾时，再变回来</span></span><br><span class="line">            <span class="keyword">if</span>(a[i] ^ now == <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                <span class="keyword">if</span>(i + k - <span class="number">1</span> &gt; n)<span class="comment">//超出范围</span></span><br><span class="line">                {</span><br><span class="line">                    flag = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">break</span>;                    </span><br><span class="line">                }</span><br><span class="line">                tot ++;</span><br><span class="line">                cha[i + k] ^= <span class="number">1</span>;</span><br><span class="line">                now ^= <span class="number">1</span>;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(flag == <span class="number">1</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span>(tot &lt; ans1)<span class="comment">//记录一下再少变化数量</span></span><br><span class="line">            {</span><br><span class="line">                ans1 = tot;</span><br><span class="line">                ans2 = k;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    cout &lt;&lt; ans2 &lt;&lt; <span class="string">" "</span> &lt;&lt; ans1 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
-</body>
-</html>
+</main>
 
-        </div>
- 
-    </main>
-    <aside id = "aside">
-        
+<link rel="stylesheet" href="/css/post.css">
 
-<div id = "asideMain">
-    <div id = "asideAuthorInfo">
-        <img id = "asideAvatar" src = "/img/tou.png" />
-        <div>作者：<div class = "authorName inlineDisplay">huaziqi</div></div>
-        <div>文章：<div class = "postsNum inlineDisplay"><a href = "categories/">26</a></div></div>
-        
     </div>
-    <div id = "time-consumed"></div>
+ 
 
-</div>
-
-
-
-
-<link rel="stylesheet" href="/css/aside.css">
-
-    </aside>
     <footer id = "footer">
         
     </footer>

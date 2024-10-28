@@ -1,6 +1,51 @@
 
+#indexAll{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.indexSpace0{
+    width: 5%;
+}
+
+#backgroundPic{
+
+    background-color: #e6e7eb;
+    width: 90%;
+    grid-area: backgroundPic;
+    display: flex;
+    justify-content: center;
+}
+
+#backgroundPic img{
+    width: 100%;
+}
+
+#indexDescription{
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    color: rgb(125, 196, 229);
+    font-size : 35px;
+}
+
+#indexDescription::after{
+    content: "_";
+    animation: blink 0.5s infinite;
+}
+
+@keyframes blink{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
 #indexPartial{
-    margin: 50px ;
+    width: calc(100% - 260px);   
 }
 
 #indexRecentPosts{
@@ -22,6 +67,8 @@
 #indexPostsHr{
     margin-bottom: 10px;
 }
+
+
 
 .indexArticle {
     margin-bottom: 10px; 
@@ -55,4 +102,14 @@
 
 .indexArticleInfo .indexArticleDate{
     width: auto;
+}
+
+.indexSpace1{
+    width: 30px;
+}
+
+#indexAside{
+    grid-area: indexAside;
+    width: 200px;
+
 }

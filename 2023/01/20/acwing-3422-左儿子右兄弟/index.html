@@ -122,18 +122,11 @@ mjx-container[display="true"] + br {
 </style></head>
 <body>
 
-    <div id = "backgroundPic">
-        <img src = "https://github.com/huaziqi/picx-images-hosting/raw/master/20241025/bg.969qr6io9r.webp"/>
-        <div id = "indexDescription">
-            <span>无关风月，我题序等你回</span>
-            
-        </div>
-    </div>
-    
 
-    <main>
-        <header id = "header">
-            
+
+    
+    <header id = "header">
+        
 <h1 id = "headerTitle">ziqi的网络日志</h1>
 <ul id = "headerLinks">
     
@@ -153,19 +146,13 @@ mjx-container[display="true"] + br {
 
 <link rel="stylesheet" href="/css/header.css">
 
-        </header>
+    </header>
+
         
-        
-        <div id = "content">
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
     
+    <div id = "content">
+        
+<main id = "postAll">
     <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>对于一棵多叉树，我们可以通过 “左孩子右兄弟” 表示法，将其转化成一棵二叉树。</p>
 <p>如果我们认为每个结点的子结点是无序的，那么得到的二叉树可能不唯一。</p>
 <p>换句话说，每个结点可以选任意子结点作为左孩子，并按任意顺序连接右兄弟。</p>
@@ -203,32 +190,13 @@ mjx-container[display="true"] + br {
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span>{</span><br><span class="line">	<span class="type">int</span> v, nxt;</span><br><span class="line">}e[N];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, idx, h[N], u;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>{<span class="comment">//链式前向星存点</span></span><br><span class="line">	e[++idx].v = b;</span><br><span class="line">	e[idx].nxt = h[a];</span><br><span class="line">	h[a] = idx;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> now)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="type">int</span> maxn = <span class="number">0</span>, cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = h[now]; ~i; i = e[i].nxt)</span><br><span class="line">	{</span><br><span class="line">		<span class="type">int</span> j = e[i].v;</span><br><span class="line">		maxn = <span class="built_in">max</span>(maxn, <span class="built_in">dfs</span>(j));</span><br><span class="line">		cnt ++;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> cnt + maxn;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="built_in">memset</span>(h, <span class="number">-1</span>, <span class="built_in">sizeof</span>(h));</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; i ++)</span><br><span class="line">	{</span><br><span class="line">		cin &gt;&gt; u;</span><br><span class="line">		<span class="built_in">add</span>(u, i);</span><br><span class="line">	}</span><br><span class="line">	cout &lt;&lt; <span class="built_in">dfs</span>(<span class="number">1</span>) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
 
-</body>
-</html>
+</main>
 
-        </div>
- 
-    </main>
-    <aside id = "aside">
-        
+<link rel="stylesheet" href="/css/post.css">
 
-<div id = "asideMain">
-    <div id = "asideAuthorInfo">
-        <img id = "asideAvatar" src = "/img/tou.png" />
-        <div>作者：<div class = "authorName inlineDisplay">huaziqi</div></div>
-        <div>文章：<div class = "postsNum inlineDisplay"><a href = "categories/">26</a></div></div>
-        
     </div>
-    <div id = "time-consumed"></div>
+ 
 
-</div>
-
-
-
-
-<link rel="stylesheet" href="/css/aside.css">
-
-    </aside>
     <footer id = "footer">
         
     </footer>
