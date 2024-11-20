@@ -11,11 +11,16 @@
 
 #backgroundPic{
 
-    background-color: #e6e7eb;
-    width: 90%;
-    grid-area: backgroundPic;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://pic.imgdb.cn/item/66e2ec0ad9c307b7e92bc436.png');
+    background-size: cover;
+    background-position: center;
     display: flex;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    color: white;
 }
 
 #backgroundPic img{

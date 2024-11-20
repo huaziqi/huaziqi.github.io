@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ziqi的网络日志</title>
+    <meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+<body>
+
+
+
+    
+    <header id = "header">
+        
+<h1 id = "headerTitle">ziqi的网络日志</h1>
+<ul id = "headerLinks">
+    
+    <li class = "inlineDisplay">
+        <a id = "headerLink" href = "/">主页</a>
+    </li>
+    
+    <li class = "inlineDisplay">
+        <a id = "headerLink" href = "/categories">分类</a>
+    </li>
+    
+    <li class = "inlineDisplay">
+        <a id = "headerLink" href = "/about">关于</a>
+    </li>
+    
+</ul>
+
+<link rel="stylesheet" href="/css/header.css">
+
+    </header>
+
+        
+    
+    <div id = "content">
+        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用easyX制作一个胀！棋</title>
+</head>
+<body>
+    <main id = "postAll">
+        <h1>用easyX制作一个胀！棋</h1>
+        <h1 id="用easyX制作一个胀！棋"><a href="#用easyX制作一个胀！棋" class="headerlink" title="用easyX制作一个胀！棋"></a>用easyX制作一个胀！棋</h1><p><a target="_blank" rel="noopener" href="https://github.com/huaziqi/projects-collection/tree/main/zhang!chess">代码</a></p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="为什么叫胀！棋"><a href="#为什么叫胀！棋" class="headerlink" title="为什么叫胀！棋"></a>为什么叫胀！棋</h3><p>说来话长，长话短说就是高中班主任姓张，我们喜欢戏称他为胀老师。而且胀老师本人比较有特色，执教了我和魏旭三年，教了鱿鱼两年，回忆起高中往事时，难免不喊一句：噫嘘唏，胀！。</p>
+<hr>
+<p>如标题所见，这个游戏是使用<a target="_blank" rel="noopener" href="https://easyx.cn/">easyX</a>制作的。笔者第一次正式用多文件来写项目，依稀记得上一次的python项目一个文件写了几千行。</p>
+<p>多文件的好处显而易见，使我的代码逻辑清晰。</p>
+<h2 id="游戏玩法"><a href="#游戏玩法" class="headerlink" title="游戏玩法"></a>游戏玩法</h2><p>借鉴了《无人深空》的玩法，棋盘上每一个棋格起初都是未知的，棋子通过移动来探索未知棋格。</p>
+<p>棋盘分成四个区域，每次游戏开始区域随机分配。每个区域能爆出来的东西<a href="##%E5%9B%9B%E7%A7%8D%E6%A3%8B%E7%9B%98%E5%8C%BA%E5%9F%9F">不一样</a>，包括资源星球，虫洞和什么都没有。虫洞可以随机传送，两个大炮都是用来进攻的（选中己方棋子后，点击对方棋子），中子大炮更厉害，能穿过护盾。飞船推进器用来增加飞行距离（曼哈顿距离），修复套件回复生命。</p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><h3 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">srand</span>((<span class="type">unsigned</span>)<span class="built_in">time</span>(<span class="number">0</span>));</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">rand</span>();</span><br></pre></td></tr></table></figure>
+
+<p>这样的随机数生成会莫名其妙出现报错，报错信息在time.h里。本以为是同一时间调用了太多次rand()导致的(要生成坐标(x, y)，且不能重复)。然后改进了一下，每一次只调用一次rand()，发现还是会产生这样的问题，而且数字的随机性也会有所降低。</p>
+<p>于是在<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1GHpueFE3S">bilibili</a>上得知了这样一种获取随机数的方法:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;random&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">generateRondom</span><span class="params">(<span class="type">int</span> low, <span class="type">int</span> high)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::random_device rd;</span><br><span class="line">    <span class="function">std::uniform_int_distribution&lt;<span class="type">int</span>&gt; <span class="title">dist</span><span class="params">(low, high)</span></span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">dist</span>(rd);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<p>非常好用 :)</p>
+<p>这下可以实现全地图乱飞了</p>
+<h3 id="wchar-t造成的各种问题"><a href="#wchar-t造成的各种问题" class="headerlink" title="wchar_t造成的各种问题"></a>wchar_t造成的各种问题</h3><p>easyX函数使用的字符串都是宽字符问题的，然而如果要将char转wchar_t又会很麻烦。并且我还要把飞船的各种信息（包括int类型）用wchar_t表示出来。中间涉及的类型转换折磨了我很久，最终我找到了一个解决方案。</p>
+<p>那就是使用wstring类型</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;wchar.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> num;</span><br><span class="line">std::wstring sInfo = std::<span class="built_in">to_wstring</span>(num);<span class="comment">//int转wstring</span></span><br><span class="line">sInfo = <span class="string">L"other information"</span> + sInfo;<span class="comment">//string就好在可以直接连接</span></span><br><span class="line"><span class="type">const</span> <span class="type">wchar_t</span>* wInfo = sInfo.<span class="built_in">c_str</span>();<span class="comment">//wstring转wchar_t</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="跨文件访问变量"><a href="#跨文件访问变量" class="headerlink" title="跨文件访问变量"></a>跨文件访问变量</h3><p>当你想要使用另一个文件中的变量时，函数传输太过于繁琐，这时候extern 声明便可以派上用场。只要在声明前加上一个extern，你就可以访问到其他文件的同名变量。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a.cpp</span><br><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line">b.cpp</span><br><span class="line"><span class="keyword">extern</span> <span class="type">int</span> a;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; endl; <span class="comment">//结果为1</span></span><br></pre></td></tr></table></figure>
+
+<p>而且变量的变化是全局的</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>多文件固然好，但是如果是做一步算一步，就会导致整个代码逻辑混乱，变量声明不规范。</p>
+<p>这些意识只有多做一些项目才能积累起来。以后写项目时，应该先想好项目逻辑，将其中的对象封装为struct；以及将一些UI和操作批量封装。比如按钮绘画，按钮判定，文字输出等等。</p>
+<h2 id="四种棋盘区域"><a href="#四种棋盘区域" class="headerlink" title="四种棋盘区域"></a>四种棋盘区域</h2><h4 id="炙热空间"><a href="#炙热空间" class="headerlink" title="炙热空间"></a>炙热空间</h4><p>颜色为红色。</p>
+<ul>
+<li><p>找到资源星球的权重为50/100。</p>
+</li>
+<li><ul>
+<li>资源星球上发现熔岩（血量或护盾减少）权重为1<br>- 光子大炮：4<br>- 中子大炮：2<br>- 飞船修复套件：1<br>- 护盾：1<br>- 飞船推进器：3</li>
+</ul>
+</li>
+<li><p>找到虫洞的概率为5/100。</p>
+</li>
+</ul>
+<h3 id="生命空间"><a href="#生命空间" class="headerlink" title="生命空间"></a>生命空间</h3><p>颜色为绿</p>
+<ul>
+<li><p>找到资源星球的权重为60/100。</p>
+</li>
+<li><ul>
+<li><ul>
+<li>光子大炮：3<ul>
+<li>中子大炮：1</li>
+<li>飞船修复套件：3</li>
+<li>护盾：2</li>
+<li>飞船推进器：3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>找到虫洞的概率为3/100。</p>
+</li>
+</ul>
+<h3 id="海洋空间"><a href="#海洋空间" class="headerlink" title="海洋空间"></a>海洋空间</h3><p>颜色为蓝</p>
+<ul>
+<li>找到资源星球的权重为65/100</li>
+<li><ul>
+<li><ul>
+<li>光子大炮：2<ul>
+<li>中子大炮：3</li>
+<li>飞船修复套件：2</li>
+<li>护盾：1</li>
+<li>飞船推进器：2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>找到虫洞概率为3/100</li>
+</ul>
+<h3 id="矿物空间"><a href="#矿物空间" class="headerlink" title="矿物空间"></a>矿物空间</h3><p>颜色为蓝</p>
+<ul>
+<li><p>找到资源星球的权重为55/100</p>
+</li>
+<li><ul>
+<li><ul>
+<li>光子大炮：3<ul>
+<li>中子大炮：3</li>
+<li>飞船修复套件：2</li>
+<li>护盾：4</li>
+<li>飞船推进器：1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>找到虫洞概率为6/100</p>
+</li>
+</ul>
+
+    </main>
+    
+<link rel="stylesheet" href="/css/post.css">
+
+</body>
+</html>
+
+
+    </div>
+ 
+
+    <footer id = "footer">
+        
+    </footer>
+    <div id = "more">
+
+    </div>
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+
+    
+<script src="/js/main.js"></script>
+
+      
+
+
+
+</body>
+</html>
