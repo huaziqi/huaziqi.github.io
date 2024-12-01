@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ziqi的网络日志</title>
+    <meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+<body>
+
+
+
+    
+    <header id = "header">
+        
+<h1 id = "headerTitle">ziqi的网络日志</h1>
+<ul id = "headerLinks">
+    
+    <li class = "inlineDisplay">
+        <a id = "headerLink" href = "/">主页</a>
+    </li>
+    
+    <li class = "inlineDisplay">
+        <a id = "headerLink" href = "/categories">分类</a>
+    </li>
+    
+    <li class = "inlineDisplay">
+        <a id = "headerLink" href = "/about">关于</a>
+    </li>
+    
+</ul>
+
+<link rel="stylesheet" href="/css/header.css">
+
+    </header>
+
+        
+    
+    <div id = "content">
+        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一周新鲜事（二）</title>
+</head>
+<body>
+    <main id = "postAll">
+        <h1>一周新鲜事（二）</h1>
+        <h3 id="船新的b站爬虫"><a href="#船新的b站爬虫" class="headerlink" title="船新的b站爬虫"></a>船新的b站爬虫</h3><h4 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h4><p>上一周的新鲜事中，我分享了一个b站爬虫，实现相对简单。然而这个星期再去看时，发现竟然用不了了。b站返回的网页源码似乎发生了变化，导致无法获取到视频和音频的链接。</p>
+<p>然而我的新项目muzit希望能从b站获取到音乐资源。这个项目起因于Listen1，一个音乐播放器。它可以从各个平台获取到音乐，包括b站，但是无法直接下载。于是我就想要做一个本地的私人音乐库，管理本地的音乐。想要更实用，自然就能够需要下载音乐资源。由于这个项目同时也是为了C语言课的期末个人项目而写，于是我决定用Qt来编写。</p>
+<h4 id="思路源头"><a href="#思路源头" class="headerlink" title="思路源头"></a>思路源头</h4><p>偶然的一次，在Listen1应用中按下了F12，发现这个软件能够跟浏览器一样获取网页源码。于是这时我就想从它的源码中学习如何获取b站资源。</p>
+<p>点开network，发现每次播放音乐，它都会有一个playurl的请求，获取到了一个json文件，稍微探索一下就能发现里面有视频和音频链接。此时我觉得只差临门一脚了，可没想到这一脚花了不少时间。在一个C语言交流群中，我问了如何能够获取到这个playurl文件，但是没有得到想要的答案，只获得了一些信息。之后我在各个平台上提问，CSDN回答得挺快，但是回答的是AI，根本没法解决问题，贴吧迟迟没有回复。问了几个大佬，也都被推辞了。</p>
+<p>之后我只能自己寻找解决办法。没想到一琢磨，在headers中找到了这个请求的url，只需要bvid和cid就能获取到这些数据！在网页源码中也可以找到cid。</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>获取到要下载视频的bv号，在网站源码中找到cid，接着请求playurl，转化为json，找到链接，下载到文件。需要注意的是QT中写入二进制文件不要用out，而要用file.write()。现在最后一步就是将下载到的m4s文件转为mp3文件。</p>
+<h3 id="没有链接的互联网"><a href="#没有链接的互联网" class="headerlink" title="没有链接的互联网"></a>没有链接的互联网</h3><p>看到了这周阮一峰的<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2024/11/weekly-issue-327.html">科技爱好者周刊</a>，感受到了一些危机。难道说未来的个人网站的流量会越来越少吗？但是细细一想，影响或许不会有想象中的那么大。至少目前AI能够解决的问题有限，一些技术问题我更愿意自己去浏览器搜索，一些个人博客的质量确实优秀。</p>
+<p>然而之后AI的能力变强，是否会取代浏览器？博客的传播依赖于浏览器，那到时是否就会迎来没落。互联网的越来越中心化，集权化，然而个人博客的搭建和维护需要时间和精力，远不及大众化的平台方便。当然博客有它的优点，就是高度个性化。</p>
+<p>所以未来的出路是否会是将个人博客中心化。搭建一个平台，便捷地获取域名、服务器，同时可以随意地个性化。用户寻找高质量博客内容时也能够更方便。</p>
+<h3 id="程序员的工具箱"><a href="#程序员的工具箱" class="headerlink" title="程序员的工具箱"></a>程序员的工具箱</h3><p><a target="_blank" rel="noopener" href="https://wangchujiang.com/#/projects">王楚江的博客</a></p>
+<p>真是我博客理想中的样子，聚集了一堆好用的小工具。包括生成代码图片，linux命令速查，导航网站等等</p>
+
+    </main>
+    
+<link rel="stylesheet" href="/css/post.css">
+
+</body>
+</html>
+
+
+    </div>
+ 
+
+    <footer id = "footer">
+        
+    </footer>
+    <div id = "more">
+
+    </div>
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+
+    
+<script src="/js/main.js"></script>
+
+      
+
+
+
+</body>
+</html>
