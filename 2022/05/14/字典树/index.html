@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
-    <title>ziqi的网络日志</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        字典树 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
     
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/aircloud.css">
 
     
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
 <meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -120,48 +151,121 @@ mjx-container[display="true"] + br {
   display: none;
 }
 </style></head>
+
 <body>
 
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
 
+<div class="index-about">
+    <i>  </i>
+</div>
 
+<div class="index-container">
     
-    <header id = "header">
+    <div class="index-left">
         
-<h1 id = "headerTitle">ziqi的网络日志</h1>
-<ul id = "headerLinks">
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/" />
+        </div>
+        <div class="name">
+            <i>huaziqi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>COLLECT</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
     
-    <li class = "inlineDisplay">
-        <a id = "headerLink" href = "/">主页</a>
-    </li>
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#tire-%E5%AD%97%E5%85%B8%E6%A0%91"><span class="toc-text">tire 字典树</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E6%9D%A5%E4%B8%AA%E6%A8%A1%E6%9D%BF"><span class="toc-text">先来个模板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E5%85%B8%E6%A0%91%E5%91%A2%EF%BC%9F"><span class="toc-text">什么是字典树呢？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BB%BA%E6%A0%91"><span class="toc-text">建树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2"><span class="toc-text">搜索</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6"><span class="toc-text">进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="toc-text">数据范围</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-text">输入样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-text">输出样例：</span></a></li></ol></li></ol></li></ol></li></ol>
+</div>
     
-    <li class = "inlineDisplay">
-        <a id = "headerLink" href = "/categories">分类</a>
-    </li>
-    
-    <li class = "inlineDisplay">
-        <a id = "headerLink" href = "/about">关于</a>
-    </li>
-    
-</ul>
+</div>
 
-<link rel="stylesheet" href="/css/header.css">
 
-    </header>
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
 
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
         
-    
-    <div id = "content">
+
+
+<div class="post-container">
+    <div class="post-title">
+        字典树
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2022-05-14 09:22:23</span></span>
         
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>字典树</title>
-</head>
-<body>
-    <main id = "postAll">
-        <h1>字典树</h1>
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#数据结构" title="数据结构">数据结构</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
         <h1 id="tire-字典树"><a href="#tire-字典树" class="headerlink" title="tire 字典树"></a>tire 字典树</h1><h2 id="先来个模板"><a href="#先来个模板" class="headerlink" title="先来个模板"></a>先来个模板</h2><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/144/">142. 前缀统计 - AcWing题库</a></p>
 <h3 id="什么是字典树呢？"><a href="#什么是字典树呢？" class="headerlink" title="什么是字典树呢？"></a>什么是字典树呢？</h3><p><del>就是存字典的树嘛</del>，差不多的赶脚。</p>
 <p>确实是将所有字符存入其中，方便查找（多是查找前缀）。怎么存捏？如下图</p>
@@ -198,32 +302,65 @@ mjx-container[display="true"] + br {
 
 <p>2022-5-12 21:34:32</p>
 
-    </main>
-    
-<link rel="stylesheet" href="/css/post.css">
-
-</body>
-</html>
-
-
-    </div>
- 
-
-    <footer id = "footer">
         
-    </footer>
-    <div id = "more">
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
 
     </div>
-    
-<script src="/lib/jquery-3.4.1.min.js"></script>
+</div>
 
-    
-<script src="/js/main.js"></script>
 
-      
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
 
 
 
 </body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
 </html>

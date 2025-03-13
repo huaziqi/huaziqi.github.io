@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
-    <title>ziqi的网络日志</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        用easyX制作一个胀！棋 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
     
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/aircloud.css">
 
     
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
 <meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -120,48 +151,115 @@ mjx-container[display="true"] + br {
   display: none;
 }
 </style></head>
+
 <body>
 
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
 
+<div class="index-about">
+    <i>  </i>
+</div>
 
+<div class="index-container">
     
-    <header id = "header">
+    <div class="index-left">
         
-<h1 id = "headerTitle">ziqi的网络日志</h1>
-<ul id = "headerLinks">
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/" />
+        </div>
+        <div class="name">
+            <i>huaziqi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>COLLECT</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
     
-    <li class = "inlineDisplay">
-        <a id = "headerLink" href = "/">主页</a>
-    </li>
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%AB%E8%83%80%EF%BC%81%E6%A3%8B"><span class="toc-text">为什么叫胀！棋</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E7%8E%A9%E6%B3%95"><span class="toc-text">游戏玩法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90"><span class="toc-text">随机数生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wchar-t%E9%80%A0%E6%88%90%E7%9A%84%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98"><span class="toc-text">wchar_t造成的各种问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%A8%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%E5%8F%98%E9%87%8F"><span class="toc-text">跨文件访问变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%83%E5%BE%97"><span class="toc-text">心得</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E7%A7%8D%E6%A3%8B%E7%9B%98%E5%8C%BA%E5%9F%9F"><span class="toc-text">四种棋盘区域</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%82%99%E7%83%AD%E7%A9%BA%E9%97%B4"><span class="toc-text">炙热空间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E7%A9%BA%E9%97%B4"><span class="toc-text">生命空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%B7%E6%B4%8B%E7%A9%BA%E9%97%B4"><span class="toc-text">海洋空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%BF%E7%89%A9%E7%A9%BA%E9%97%B4"><span class="toc-text">矿物空间</span></a></li></ol></li></ol>
+</div>
     
-    <li class = "inlineDisplay">
-        <a id = "headerLink" href = "/categories">分类</a>
-    </li>
-    
-    <li class = "inlineDisplay">
-        <a id = "headerLink" href = "/about">关于</a>
-    </li>
-    
-</ul>
+</div>
 
-<link rel="stylesheet" href="/css/header.css">
 
-    </header>
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
 
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
         
-    
-    <div id = "content">
+
+
+<div class="post-container">
+    <div class="post-title">
+        用easyX制作一个胀！棋
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2024-10-29 23:01:27</span></span>
         
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>用easyX制作一个胀！棋</title>
-</head>
-<body>
-    <main id = "postAll">
-        <h1>用easyX制作一个胀！棋</h1>
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
         <p><a target="_blank" rel="noopener" href="https://github.com/huaziqi/projects-collection/tree/main/zhang!chess">代码</a></p>
 <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="为什么叫胀！棋"><a href="#为什么叫胀！棋" class="headerlink" title="为什么叫胀！棋"></a>为什么叫胀！棋</h3><p>说来话长，长话短说就是高中班主任姓张，我们喜欢戏称他为胀老师。而且胀老师本人比较有特色，执教了我和魏旭三年，教了鱿鱼两年，回忆起高中往事时，难免不喊一句：噫嘘唏，胀！。</p>
 <hr>
@@ -257,32 +355,65 @@ mjx-container[display="true"] + br {
 </li>
 </ul>
 
-    </main>
-    
-<link rel="stylesheet" href="/css/post.css">
-
-</body>
-</html>
-
-
-    </div>
- 
-
-    <footer id = "footer">
         
-    </footer>
-    <div id = "more">
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
 
     </div>
-    
-<script src="/lib/jquery-3.4.1.min.js"></script>
+</div>
 
-    
-<script src="/js/main.js"></script>
 
-      
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
 
 
 
 </body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
 </html>

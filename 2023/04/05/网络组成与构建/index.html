@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
-    <title>ziqi的网络日志</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        网络组成与构建 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
     
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/aircloud.css">
 
     
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
 <meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -120,48 +151,121 @@ mjx-container[display="true"] + br {
   display: none;
 }
 </style></head>
+
 <body>
 
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
 
+<div class="index-about">
+    <i>  </i>
+</div>
 
+<div class="index-container">
     
-    <header id = "header">
+    <div class="index-left">
         
-<h1 id = "headerTitle">ziqi的网络日志</h1>
-<ul id = "headerLinks">
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/" />
+        </div>
+        <div class="name">
+            <i>huaziqi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>COLLECT</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
     
-    <li class = "inlineDisplay">
-        <a id = "headerLink" href = "/">主页</a>
-    </li>
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-text">网络的组成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F"><span class="toc-text">计算机系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF"><span class="toc-text">终端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">服务器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F"><span class="toc-text">数据信息系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8"><span class="toc-text">传输介质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E4%BA%92%E8%81%94%E8%AE%BE%E5%A4%87"><span class="toc-text">网络互联设备</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%BD%AF%E4%BB%B6%E5%92%8C%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="toc-text">网络软件和网络协议</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%BD%AF%E4%BB%B6"><span class="toc-text">网络软件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="toc-text">网络协议</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%9A%84%E6%9E%84%E5%BB%BA"><span class="toc-text">网络的构建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84"><span class="toc-text">确定网络结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87"><span class="toc-text">连接网络设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%85%A5%E4%BA%92%E8%81%94%E7%BD%91"><span class="toc-text">接入互联网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%BF%9E%E9%80%9A%E6%80%A7%E6%B5%8B%E8%AF%95"><span class="toc-text">网络连通性测试</span></a></li></ol></li></ol>
+</div>
     
-    <li class = "inlineDisplay">
-        <a id = "headerLink" href = "/categories">分类</a>
-    </li>
-    
-    <li class = "inlineDisplay">
-        <a id = "headerLink" href = "/about">关于</a>
-    </li>
-    
-</ul>
+</div>
 
-<link rel="stylesheet" href="/css/header.css">
 
-    </header>
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
 
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
         
-    
-    <div id = "content">
+
+
+<div class="post-container">
+    <div class="post-title">
+        网络组成与构建
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2023-04-05 10:27:53</span></span>
         
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网络组成与构建</title>
-</head>
-<body>
-    <main id = "postAll">
-        <h1>网络组成与构建</h1>
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#网络" title="网络">网络</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
         <p><del>由于选到了一个比较难的讲题（必修二），做一个基本知识的整理</del></p>
 <p>通常我们上网都会输入一个网址，例如：</p>
 <p><a target="_blank" rel="noopener" href="http://www.gov.cn/index.htm">http://www.gov.cn/index.htm</a></p>
@@ -251,32 +355,65 @@ mjx-container[display="true"] + br {
 <p>移动设备要接入，必须开启路由器的无线网络功能。需要设置SSID（网络名字），加密方式、共享密钥。移动终端打开WLAN，搜索到无线网络，输入账号密码即可连接。</p>
 <h3 id="网络连通性测试"><a href="#网络连通性测试" class="headerlink" title="网络连通性测试"></a>网络连通性测试</h3><p>架设完成后对网络进行连通性测试，确定网络是否正常工作。可以通过终端浏览网页是否正常等简单方法来测试</p>
 
-    </main>
-    
-<link rel="stylesheet" href="/css/post.css">
-
-</body>
-</html>
-
-
-    </div>
- 
-
-    <footer id = "footer">
         
-    </footer>
-    <div id = "more">
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
 
     </div>
-    
-<script src="/lib/jquery-3.4.1.min.js"></script>
+</div>
 
-    
-<script src="/js/main.js"></script>
 
-      
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
 
 
 
 </body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
 </html>
