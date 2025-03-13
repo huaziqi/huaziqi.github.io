@@ -51,7 +51,7 @@
 </div>
 
 <div class="index-about">
-    <i>  </i>
+    <i> ziqi的网络日志 </i>
 </div>
 
 <div class="index-container">
@@ -100,6 +100,13 @@
                 </a>
             </li> -->
             
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
         </ul>
     </div>
     
@@ -121,7 +128,7 @@
 </div>
 
         <div class="index-about-mobile">
-            <i>  </i>
+            <i> ziqi的网络日志 </i>
         </div>
     </div>
     
@@ -265,6 +272,20 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
+        <a href="/2024/09/13/失踪三个月之我重生在西大/">
+            <h2 class="post-title">
+                失踪三个月之我在西大写博客
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
         <a href="/2024/11/18/一周新鲜事（一）/">
             <h2 class="post-title">
                 一周新鲜事（一）
@@ -282,20 +303,6 @@
         <a href="/2024/11/29/一周新鲜事（二）/">
             <h2 class="post-title">
                 一周新鲜事（二）
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2024/09/13/失踪三个月之我重生在西大/">
-            <h2 class="post-title">
-                失踪三个月之我在西大写博客
             </h2>
             
         </a>
@@ -461,9 +468,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2023/01/20/acwing-3422-左儿子右兄弟/">
+        <a href="/2023/01/16/acwing-4700-何以包邮/">
             <h2 class="post-title">
-                acwing_3422_左儿子右兄弟
+                acwing_4700_何以包邮
             </h2>
             
         </a>
@@ -475,9 +482,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2023/01/16/acwing-4700-何以包邮/">
+        <a href="/2023/01/20/acwing-3422-左儿子右兄弟/">
             <h2 class="post-title">
-                acwing_4700_何以包邮
+                acwing_3422_左儿子右兄弟
             </h2>
             
         </a>
@@ -789,7 +796,7 @@
 
 <script>
     // We expose some of the variables needed by the front end
-    window.hexo_search_path = ""
+    window.hexo_search_path = "search.json"
     window.hexo_root = "/"
     window.isPost = false
 </script>
