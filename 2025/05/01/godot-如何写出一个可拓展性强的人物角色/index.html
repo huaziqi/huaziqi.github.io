@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        【godot】如何写出一个可拓展性强的角色 - ziqi的网络日志
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> ziqi的网络日志 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="https://github.com/huaziqi/picx-images-hosting/raw/master/20250313/tou.73u3n5c6ys.webp" />
+        </div>
+        <div class="name">
+            <i>huaziqi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/categories">
+                    <i class="iconfont icon-fenlei1"></i>
+                    <span>分类</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>COLLECT</span>
+                </a>
+            </li>
+            <!-- <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li> -->
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="toc-text">状态机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#State"><span class="toc-text">State</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#State-machine"><span class="toc-text">State_machine</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%93%8D%E4%BD%9C"><span class="toc-text">状态操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%9B%B4%E6%96%B0"><span class="toc-text">状态更新</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> ziqi的网络日志 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        【godot】如何写出一个可拓展性强的角色
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2025-05-01 23:24:59</span></span>
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="状态机"><a href="#状态机" class="headerlink" title="状态机"></a>状态机</h2><p>之前写过的一个项目将状态机和每个状态的处理都写到了同一个代码文件中，为了让后期代码不那么混乱，肯定要将状态机独立出来。</p>
+<p>于是，我们可以让状态机作为根节点，包含一系列的状态子节点。</p>
+<h3 id="State"><a href="#State" class="headerlink" title="State"></a>State</h3><p>先从最底层思考起，一个状态应该是怎样的？</p>
+<ul>
+<li>首先，进入该状态要进行怎样的操作。</li>
+<li>其次，在状态每一帧要进行怎样的操作</li>
+<li>同时，每一帧判断是否要更新到下一个状态</li>
+<li>最后，退出该状态要进行的操作</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">extends Node</span><br><span class="line">class_name  State</span><br><span class="line"><span class="comment">#状态模板函数</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@onready var state_machine = get_parent()</span></span><br><span class="line"></span><br><span class="line">func enter_state(): <span class="comment">#进入该状态如何处理</span></span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">	</span><br><span class="line">func exit_state(): <span class="comment">#退出该状态如何处理</span></span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">	</span><br><span class="line">func update_state(delta): <span class="comment">#判断何时需要改变状态</span></span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">	</span><br><span class="line">func tick_physics(delta):</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">func transition_state(next_state):  <span class="comment">#更改状态 /或者用发送信号实现，可以不需要这个函数？/先用着吧</span></span><br><span class="line">	<span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="State-machine"><a href="#State-machine" class="headerlink" title="State_machine"></a>State_machine</h3><p>state_machine要如何获取到所有的节点呢。一种做法是没增加一个状态就在state_machine中手动添加。还有一种更方便的做法是遍历所有state_machine的子节点，将状态存储起来。</p>
+<ul>
+<li>也就是这样</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">func _ready() -&gt; void:</span><br><span class="line">	<span class="keyword">for</span> child <span class="keyword">in</span> get_children(): <span class="comment">#获取子节点中所有的状态，为了可拓展性，因为后续可以加上其他状态</span></span><br><span class="line">		<span class="keyword">if</span> child <span class="keyword">is</span> State: <span class="comment">#如果子节点是一个状态</span></span><br><span class="line">			state_dir[child.name.to_lower()] = child</span><br><span class="line">	<span class="keyword">if</span> initial_state: <span class="comment">#设置初始状态</span></span><br><span class="line">		current_state = initial_state</span><br><span class="line">		initial_state.enter_state()</span><br></pre></td></tr></table></figure>
+
+<h4 id="状态操作"><a href="#状态操作" class="headerlink" title="状态操作"></a>状态操作</h4><p>由于在状态中我们已经实现了每一帧中状态要进行的操作，所以在状态机中只需要调用就行了。</p>
+<ul>
+<li>这样</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">func _process(delta: <span class="built_in">float</span>) -&gt; void:</span><br><span class="line">	<span class="keyword">if</span>(current_state):</span><br><span class="line">		current_state.update_state(delta) <span class="comment">#更新节点状态</span></span><br><span class="line"></span><br><span class="line">func _physics_process(delta: <span class="built_in">float</span>) -&gt; void:</span><br><span class="line">	<span class="keyword">if</span>(current_state):</span><br><span class="line">		current_state.tick_physics(delta) <span class="comment">#当前状态每一帧人物如何移动等等..</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="状态更新"><a href="#状态更新" class="headerlink" title="状态更新"></a>状态更新</h4><p>获取到状态节点的更新状态请求时，先判断一下给出的状态是否都存在。如果存在，进行上一个状态的退出操作，以及下一个状态的进入操作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func switch_state(last_state : State, next_state_name): <span class="comment">#这里的newState是字符串，需要在states里找，因为该函数要在State中调用，每个State不好获取同级的其他State</span></span><br><span class="line">	<span class="keyword">if</span> last_state != current_state: <span class="comment">#判断是否在处理当前状态</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	var next_state : State = state_dir.get(next_state_name.to_lower()) <span class="comment">#获取下一个节点</span></span><br><span class="line">	<span class="keyword">if</span> !next_state: <span class="comment">#如果没有找到</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	last_state.exit_state()</span><br><span class="line">	next_state.enter_state()</span><br><span class="line">	current_state = next_state</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>状态机的思想非常好用，可以简化很多问题。</p>
+<p>比如，它可以实现一段代码逐步执行。只需要将每一行代码看作是一个状态，某一行代码运行后判断下一个状态（也就是代码行）是哪一个。这样就可以手动控制代码的运行，在每一行代码运行时，也可以进行很多操作。比如，在可视化排序的过程中，可以将排序过程画出来。</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+</html>
