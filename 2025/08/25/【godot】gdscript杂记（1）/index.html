@@ -12,7 +12,7 @@
 
     <title>
         
-        【汇编】内存的一些问题 - ziqi的网络日志
+        【godot】gdscript杂记（1） - ziqi的网络日志
         
     </title>
 
@@ -230,7 +230,7 @@ mjx-container[display="true"] + br {
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A0%86%E6%A0%88%E9%87%8C%E6%9C%89%E6%A0%88%E5%90%97"><span class="toc-text">堆栈里有栈吗</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96circle-collision-2d%E7%9A%84%E5%8D%8A%E5%BE%84"><span class="toc-text">获取circle collision_2d的半径</span></a></li></ol>
 </div>
     
 </div>
@@ -262,17 +262,11 @@ mjx-container[display="true"] + br {
 
 <div class="post-container">
     <div class="post-title">
-        【汇编】内存的一些问题
+        【godot】gdscript杂记（1）
     </div>
 
     <div class="post-meta">
-        <span class="attr">Post：<span>2025-05-23 20:14:00</span></span>
-        
-        <span class="attr">Tags：/
-        
-        <a class="tag" href="/tags/#汇编" title="汇编">汇编</a>
-        <span>/</span>
-        
+        <span class="attr">Post：<span>2025-08-25 22:40:13</span></span>
         
         </span>
         <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
@@ -280,14 +274,8 @@ mjx-container[display="true"] + br {
 </span>
     </div>
     <div class="post-content ">
-        <h2 id="堆栈里有栈吗"><a href="#堆栈里有栈吗" class="headerlink" title="堆栈里有栈吗"></a>堆栈里有栈吗</h2><p>今天在复习汇编的时候，对堆栈产生了一点疑问。跟GPT聊了几句之后，发现之前认知的一些误区。</p>
-<ul>
-<li>计算机中的堆实际上不是数据结构中的堆。它的实现方法在高中技术考试上碰到过，就是将所有空闲的空间用链表连接起来。要使用空间时，遍历链表，并找到合适大小的空间释放掉。</li>
-<li>而汇编中提到的堆栈实际上并不包含堆。它叫堆栈是翻译的问题，因为栈的实现就像是把一堆数据叠在一起。堆栈的英文实际上就是(stack)</li>
-</ul>
-<blockquote>
-<p>DI的默认寄存器，正常状况下是DS，特殊情况（MOVS）是ES</p>
-</blockquote>
+        <h3 id="获取circle-collision-2d的半径"><a href="#获取circle-collision-2d的半径" class="headerlink" title="获取circle collision_2d的半径"></a>获取circle collision_2d的半径</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var circle = collision_shape_2d.shape <span class="keyword">as</span> CircleShape2D</span><br><span class="line">r = circle.radius</span><br></pre></td></tr></table></figure>
+
 
         
         <br />

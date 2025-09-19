@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        godot4.5重磅更新！让我们来看看更新了些什么 - ziqi的网络日志
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> ziqi的网络日志 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="https://github.com/huaziqi/picx-images-hosting/raw/master/20250313/tou.73u3n5c6ys.webp" />
+        </div>
+        <div class="name">
+            <i>huaziqi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/categories">
+                    <i class="iconfont icon-fenlei1"></i>
+                    <span>分类</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>COLLECT</span>
+                </a>
+            </li>
+            <!-- <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li> -->
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8uid"><span class="toc-text">资源引用默认使用uid</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4%E7%89%88%E6%9C%AC"><span class="toc-text">4.4版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5%E7%89%88%E6%9C%AC"><span class="toc-text">4.5版本</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E7%81%B5%E6%B4%BB%E7%9A%84Variant"><span class="toc-text">更灵活的Variant</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E4%BC%BC%E4%BA%8E%E5%AD%97%E5%85%B8%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9"><span class="toc-text">类似于字典中的类型选择</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gdscript%E5%BC%80%E5%A7%8B%E6%94%AF%E6%8C%81%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-text">gdscript开始支持抽象类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gdscript%E5%87%BD%E6%95%B0%E5%8F%AF%E4%BB%A5%E6%8E%A5%E5%8F%97%E4%BB%BB%E6%84%8F%E6%95%B0%E9%87%8F%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-text">gdscript函数可以接受任意数量的参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%BA%86%E4%B8%80%E4%B8%AA%E5%85%A8%E6%96%B0%E7%9A%84%E5%AE%B9%E5%99%A8FoldableContainer"><span class="toc-text">添加了一个全新的容器FoldableContainer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#debug%E6%B8%B8%E6%88%8F%E6%97%B6%E8%83%BD%E4%B8%80%E9%94%AE%E9%9D%99%E9%9F%B3"><span class="toc-text">debug游戏时能一键静音</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E5%BC%BA%E7%9A%84%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95"><span class="toc-text">更强的远程调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E4%BA%86SDL3"><span class="toc-text">集成了SDL3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81SIMD"><span class="toc-text">支持SIMD</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> ziqi的网络日志 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        godot4.5重磅更新！让我们来看看更新了些什么
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2025-09-19 14:59:22</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#godot" title="godot">godot</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p><a target="_blank" rel="noopener" href="https://godotengine.org/releases/4.5/">https://godotengine.org/releases/4.5/</a></p>
+<p>全部更新内容在这里↑</p>
+<h3 id="资源引用默认使用uid"><a href="#资源引用默认使用uid" class="headerlink" title="资源引用默认使用uid"></a>资源引用默认使用uid</h3><p>4.4版本中，引用资源默认使用的是资源的路径，这就导致资源移动之后会有很大的麻烦。4.5版本中使用uid引用资源就能够不用考虑资源移动位置的问题。</p>
+<h4 id="4-4版本"><a href="#4-4版本" class="headerlink" title="4.4版本"></a>4.4版本</h4><p><img src="https://imgheybox.max-c.com/web/bbs/2025/09/16/eeca6eadce1053626c2bb2fe73ea68d5/thumb.png?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1" alt="img"></p>
+<h4 id="4-5版本"><a href="#4-5版本" class="headerlink" title="4.5版本"></a>4.5版本</h4><p><img src="https://imgheybox.max-c.com/web/bbs/2025/09/16/21e1c81f98300fed22b8607025afa1db/thumb.png?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1"></p>
+<h3 id="更灵活的Variant"><a href="#更灵活的Variant" class="headerlink" title="更灵活的Variant"></a>更灵活的Variant</h3><p>4.5中Variant可以被export，并且在检查器中可以选择类型并填入数值。这一新增特性可以说带来了很大便捷。</p>
+<p><img src="https://imgheybox.max-c.com/web/bbs/2025/09/16/1ba663247b20526e57e83a6acac832e5/thumb.png?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1" alt="img"></p>
+<p><img src="https://imgheybox.max-c.com/web/bbs/2025/09/16/52914c386b202764b6779e707900718e/thumb.png?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1" alt="img"></p>
+<h4 id="类似于字典中的类型选择"><a href="#类似于字典中的类型选择" class="headerlink" title="类似于字典中的类型选择"></a>类似于字典中的类型选择</h4><h3 id="gdscript开始支持抽象类"><a href="#gdscript开始支持抽象类" class="headerlink" title="gdscript开始支持抽象类"></a>gdscript开始支持抽象类</h3><p>gdscript新增@abstract注解，可以定义抽象类和抽象方法，使用方法类似于C++中的抽象类和纯虚函数。这次更新让gdscript变成了更强大的语言！</p>
+<p><img src="https://imgheybox.max-c.com/web/bbs/2025/09/16/00d6300851925a1e24b37ecf6df6bcb1/thumb.png?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1" alt="img"></p>
+<blockquote>
+<p>若类中包含抽象函数，就必须定义为抽象类，但抽象类中可以不包含抽象函数</p>
+</blockquote>
+<p><img src="https://imgheybox.max-c.com/web/bbs/2025/09/16/cdc84c694459e808fa5b60b6e1ad264b/thumb.png?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1" alt="img"></p>
+<blockquote>
+<p> 没有抽象函数的抽象类</p>
+</blockquote>
+<p>官方文档：</p>
+<blockquote>
+<p>@abstract 将类或方法标记为抽象。 抽象类是一种无法直接实例化的类，主要功能是被其他类继承。尝试实例化抽象类会报错。 抽象方法是一种没有实现的方法，因此函数头之后应当为换行或分号。抽象方法定义的是派生类所必须遵守的契约，覆盖方法时签名必须兼容。派生类必须为所有抽象方法都提供实现，否则就必须将它标记为抽象类。如果类中至少存在一个抽象方法（可以是自己定义的，也可以是继承但没实现的），那么也必须标记为抽象类。 反之则不然：抽象类可以不包含抽象方法。</p>
+</blockquote>
+<h3 id="gdscript函数可以接受任意数量的参数"><a href="#gdscript函数可以接受任意数量的参数" class="headerlink" title="gdscript函数可以接受任意数量的参数"></a>gdscript函数可以接受任意数量的参数</h3><p>可以使用 …v : Array接受任意数量的参数，这些参数可以放在在可选参数的后面，存储在数组里。</p>
+<p><img src="https://imgheybox.max-c.com/web/bbs/2025/09/16/32a01f4f05c789049af2b6a1392807e5/thumb.png?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1" alt="img"></p>
+<h3 id="添加了一个全新的容器FoldableContainer"><a href="#添加了一个全新的容器FoldableContainer" class="headerlink" title="添加了一个全新的容器FoldableContainer"></a>添加了一个全新的容器FoldableContainer</h3><p>相当于整合了之前需要按钮和容器来实现折叠的功能，适合用来在屏幕上显示大量的游戏数据。</p>
+<p><img src="https://imgheybox.max-c.com/web/bbs/2025/09/16/800343ba51e8af636a9bde5d697679a0/thumb.png?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1" alt="img"></p>
+<p><img src="https://imgheybox.max-c.com/web/bbs/2025/09/16/31e3c2576fbd48dc8c42db635a7f2b37/thumb.png?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1" alt="img"></p>
+<h3 id="debug游戏时能一键静音"><a href="#debug游戏时能一键静音" class="headerlink" title="debug游戏时能一键静音"></a>debug游戏时能一键静音</h3><p><img src="https://imgheybox.max-c.com/web/bbs/2025/09/16/98e7c7350b9daad8c9ba486a6d53b44b/thumb.png?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1" alt="img"></p>
+<p>你是否也被游戏测试时的音乐搞得心烦？这次更新能让你一键屏蔽游戏中的声音，安心debug。</p>
+<h3 id="更强的远程调试"><a href="#更强的远程调试" class="headerlink" title="更强的远程调试"></a>更强的远程调试</h3><p>可以选择多个远程节点，同时对他们的共有属性进行编辑。</p>
+<p><img src="https://imgheybox.max-c.com/web/bbs/2025/09/16/56a9ca250b3f4d0d076dcd6e70a8ff00/thumb.png?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1" alt="img"></p>
+<h3 id="集成了SDL3"><a href="#集成了SDL3" class="headerlink" title="集成了SDL3"></a>集成了SDL3</h3><p>这意味着将大幅提升手柄连接的稳定性</p>
+<p>sdl官网：<a target="_blank" rel="noopener" href="https://libsdl.org/">https://libsdl.org/</a></p>
+<h3 id="支持SIMD"><a href="#支持SIMD" class="headerlink" title="支持SIMD"></a>支持SIMD</h3><p>4.5版本支持SIMD，能够使游戏的网页版性能更佳。而开发者不需要任何操作就可以获得更好的网页端游戏性能。</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+</html>
