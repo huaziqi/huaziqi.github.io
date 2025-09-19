@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        SpringBoot-Vue3博客项目笔记【2】vue3学习（1） - ziqi的网络日志
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> ziqi的网络日志 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="https://github.com/huaziqi/picx-images-hosting/raw/master/20250313/tou.73u3n5c6ys.webp" />
+        </div>
+        <div class="name">
+            <i>huaziqi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/categories">
+                    <i class="iconfont icon-fenlei1"></i>
+                    <span>分类</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>COLLECT</span>
+                </a>
+            </li>
+            <!-- <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li> -->
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup%E8%AF%AD%E6%B3%95%E7%B3%96"><span class="toc-text">Setup语法糖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ref%E5%92%8CReactive"><span class="toc-text">Ref和Reactive</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">ref使用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reactive%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">reactive使用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ref%E5%AF%B9%E6%AF%94reactive"><span class="toc-text">ref对比reactive</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> ziqi的网络日志 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        SpringBoot-Vue3博客项目笔记【2】vue3学习（1）
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2025-09-19 16:18:35</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#SpringBoot" title="SpringBoot">SpringBoot</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#Vue" title="Vue">Vue</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="Setup语法糖"><a href="#Setup语法糖" class="headerlink" title="Setup语法糖"></a>Setup语法糖</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script lang="ts"&gt;</span><br><span class="line">export default{</span><br><span class="line">    name: "Test",</span><br><span class="line">    setup() {</span><br><span class="line">        let a = 1;</span><br><span class="line">        let b = 2;</span><br><span class="line">        function change() {</span><br><span class="line">            a = 3;</span><br><span class="line">            b = 4;</span><br><span class="line">        }</span><br><span class="line">        return { a, b, change };</span><br><span class="line">    },</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>vue2中使用data和method来分开数据和方法</p>
+<p>vue3中将数据和方法直接放到了setup()中。</p>
+<p>至于vue2中的data和method，setup无法使用，但是data和method可以使用setup中return的数据。所以一个vue项目中要明确使用vue2还是vue3的语法，前者叫<strong>Options API</strong>，后者叫<strong>Composition API</strong>。</p>
+<p>如果要在<template>中用到这些数据必须return。</template></p>
+<p>还有一种更方便的方法让你无需return，就能将数据和函数暴露给<template>那就是setup语法糖</template></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>但是这里面不能写<code>export defalt{}</code>，所以name的定义要另外写一个不包含setup的script，或者是用插件实现在script标签里定义name</p>
+<p>接下来讨论的就是compositionAPI</p>
+<h2 id="Ref和Reactive"><a href="#Ref和Reactive" class="headerlink" title="Ref和Reactive"></a>Ref和Reactive</h2><p>setup中的一般数据不是响应式的，也就是在方法中改变了数据时，template里的这个数据不会改变，会按照旧值继续显示。而ref和reactive就是两个能让数据变为响应式的方法。</p>
+<h3 id="ref使用方法"><a href="#ref使用方法" class="headerlink" title="ref使用方法"></a>ref使用方法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;script lang="ts"&gt;</span><br><span class="line">export default {</span><br><span class="line">  name: 'Person',</span><br><span class="line">};</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line">import { ref } from 'vue';</span><br><span class="line"></span><br><span class="line">let count = ref&lt;number&gt;(0);</span><br><span class="line"></span><br><span class="line">function changeCount() {</span><br><span class="line">  count.value++;</span><br><span class="line">}</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id = 'person'&gt;</span><br><span class="line">    数字：{{ count }}</span><br><span class="line">    &lt;button @click="changeCount"&gt;+&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这就是ref定义基本数据类型的方法，注意到需要修改count的对象时，修改的是count.value。这是因为ref创建的是一个对象，value是我们用到的修改内容的地方。</p>
+<p>ref也可以定义对象，同样也要用value获取值</p>
+<h3 id="reactive使用方法"><a href="#reactive使用方法" class="headerlink" title="reactive使用方法"></a>reactive使用方法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">&lt;script lang="ts"&gt;</span><br><span class="line">export default {</span><br><span class="line">  name: 'Person',</span><br><span class="line">};</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line">import { reactive } from 'vue';</span><br><span class="line"></span><br><span class="line">let car = reactive({</span><br><span class="line">  brand: 'Ford',</span><br><span class="line">  model: 'Mustang',</span><br><span class="line">  year: 1969,</span><br><span class="line">  color: 'red'</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">let books = reactive([</span><br><span class="line">  {</span><br><span class="line">    name: 'vue3',</span><br><span class="line">    id: 1</span><br><span class="line">  },</span><br><span class="line">  {</span><br><span class="line">    name: 'vue2',</span><br><span class="line">    id: 2</span><br><span class="line">  }</span><br><span class="line">]);</span><br><span class="line">function changeYear() {</span><br><span class="line">  car.year = 2024;</span><br><span class="line">}</span><br><span class="line">function changeName() {</span><br><span class="line">  books[0].name = 'react';</span><br><span class="line">}</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id = 'person'&gt;</span><br><span class="line">    &lt;h1&gt;{{ car.brand }} {{ car.model }}&lt;/h1&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">      &lt;li v-for="book in books" v-bind:key="book.id"&gt;{{book.name}}&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;button @click="changeName"&gt;Change Name&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>reactive只能定义一个对象，但是它不需要用value来访问数据。</p>
+<h3 id="ref对比reactive"><a href="#ref对比reactive" class="headerlink" title="ref对比reactive"></a>ref对比reactive</h3><ul>
+<li>ref能定义基本类型和对象，reactive只能定义对象</li>
+<li>ref访问数据要用value，但是reactive不需要</li>
+<li>reactive定义的数据如果说被重新分配，将会失去响应式的能力，必须使用assign方法</li>
+</ul>
+<p>原则：创建基本类型用ref，创建对象两者均可，层级深的对象用reactive（不用写value）</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+</html>
