@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        SpringBoot-Vue3博客项目笔记【2】vue3学习（2） - ziqi的网络日志
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> ziqi的网络日志 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="https://github.com/huaziqi/picx-images-hosting/raw/master/20250313/tou.73u3n5c6ys.webp" />
+        </div>
+        <div class="name">
+            <i>huaziqi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/categories">
+                    <i class="iconfont icon-fenlei1"></i>
+                    <span>分类</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>COLLECT</span>
+                </a>
+            </li>
+            <!-- <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li> -->
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#watch%E7%9B%91%E8%A7%86%E7%9A%84%E5%9B%9B%E7%A7%8D%E7%B1%BB%E5%9E%8B"><span class="toc-text">watch监视的四种类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%91%E8%A7%86ref"><span class="toc-text">监视ref</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%91%E8%A7%86ref%E5%AE%9A%E4%B9%89%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="toc-text">监视ref定义的对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%91%E8%A7%86reactive"><span class="toc-text">监视reactive</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%91%E8%A7%86%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-text">监视对象中的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%91%E8%A7%86%E6%95%B0%E7%BB%84"><span class="toc-text">监视数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#watchEffect"><span class="toc-text">watchEffect</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> ziqi的网络日志 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        SpringBoot-Vue3博客项目笔记【2】vue3学习（2）
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2025-09-26 22:04:22</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#SpringBoot" title="SpringBoot">SpringBoot</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#Vue" title="Vue">Vue</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="watch监视的四种类型"><a href="#watch监视的四种类型" class="headerlink" title="watch监视的四种类型"></a>watch监视的四种类型</h2><ol>
+<li>ref定义的基本数据</li>
+<li>ref定义的对象类型</li>
+<li>reactive定义的数据</li>
+<li>函数的返回值(getter)</li>
+<li>包含上述内容的数组</li>
+</ol>
+<h2 id="监视ref"><a href="#监视ref" class="headerlink" title="监视ref"></a>监视ref</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line"></span><br><span class="line">import { watch, ref } from 'vue';</span><br><span class="line">let sum = ref(0);</span><br><span class="line">const stopWatch = watch(sum, (newValue, oldValue) =&gt; { //导入的变量含义只和顺序有关(value0, value1)同效，如果只导入一个(value0)，value0就相当于newValue</span><br><span class="line">  console.log(`Sum changed from ${oldValue} to ${newValue}`);</span><br><span class="line">  if(newValue &gt;= 5){ // newValue大于等于5后停止监视</span><br><span class="line">    stopWatch();</span><br><span class="line">  }</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">function addSum() {</span><br><span class="line">  sum.value += 1;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="监视ref定义的对象"><a href="#监视ref定义的对象" class="headerlink" title="监视ref定义的对象"></a>监视ref定义的对象</h2><p>监视对象和监视ref的基本语法没什么区别，重要的是watch后面的一个配置项。</p>
+<p>要注意的是，如果没有添加任何配置项，仅仅改变对象的属性不会被监视到。只有改变整个对象的值才会被监视到。如果要让改变对象的属性也能被监视到，就需要添加一个{deep:true}的配置项。</p>
+<p><strong>注意</strong>：{deep:true} 监视对象的属性时，属性发生改变后，传入的oldValue和newValue是一样的。这是因为在监视之前，对象的属性就已经被改变了，这时不管如何监视，都已经找不到旧值了。那为什么覆盖整个对象时oldValue可以被监视到？可以这样理解：覆盖整个对象时，它在内存里创建了一个新的地址赋值给对象，所以 旧值得以保留。而当改变属性时，并没有新的地址，而是在原地址的数据上进行的修改。这个解释放到改变普通ref变量上可以正常监视，也能说的通。</p>
+<p>{immedia:true} 的意思是在初始化定义该对象时，也触发对其的监视。oldValue为undefined。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line"></span><br><span class="line">import { watch, ref } from 'vue';</span><br><span class="line">let person = ref({</span><br><span class="line">  name: 'john',</span><br><span class="line">  age: 12</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">const stopWatch = watch(person, (newValue, oldValue)=&gt; {</span><br><span class="line">  console.log('person changed:', newValue, oldValue);</span><br><span class="line">  </span><br><span class="line">}, {deep: true, immediate: true});</span><br><span class="line"></span><br><span class="line">function changName(){</span><br><span class="line">  person.value.name += 'mary';</span><br><span class="line">}</span><br><span class="line">function changAge(){</span><br><span class="line">  person.value.age += 1;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">function changeALl(){</span><br><span class="line">  person.value = {</span><br><span class="line">    name: 'newName',</span><br><span class="line">    age: 20</span><br><span class="line">  };</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="监视reactive"><a href="#监视reactive" class="headerlink" title="监视reactive"></a>监视reactive</h2><p>使用方法与ref相比除了不需要使用.value基本没有区别。</p>
+<p>但是需要注意的是，reactive定义的对象不能直接用等号覆盖，必须要使用Object.assign来改值。这就导致覆盖reactive对象时实际上并没有给这个对象创建一个新的地址，而是使用一个函数将对象的值一个一个改变，这就导致oldValue与newValue是一致的。</p>
+<p>还有一个区别是监视reactive时，是默认开启{deep:true}的，而且是无法关闭的。这对reactive管理深层次属性的特性有帮助。</p>
+<h2 id="监视对象中的属性"><a href="#监视对象中的属性" class="headerlink" title="监视对象中的属性"></a>监视对象中的属性</h2><p>如果直接写</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">watch</span>(person.<span class="property">name</span>, <span class="function">(<span class="params">newName, oldName</span>) =&gt;</span> {</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Name changed from <span class="subst">${oldName}</span> to <span class="subst">${newName}</span>`</span>);</span><br><span class="line">});</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>是会报错的。</p>
+<p>监视对象的属性需要使用箭头函数的形式。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">watch</span>(<span class="function">() =&gt;</span> person.<span class="property">name</span>, <span class="function">(<span class="params">newName, oldName</span>) =&gt;</span> {</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Name changed from <span class="subst">${oldName}</span> to <span class="subst">${newName}</span>`</span>);</span><br><span class="line">});</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>同时，如果要监视的属性也是对象，需要启用deep才能监视到内部的属性。</p>
+<h2 id="监视数组"><a href="#监视数组" class="headerlink" title="监视数组"></a>监视数组</h2><p>只需要在监视对象的参数上用一个[]将所有要监视的对象括起来就可以了。</p>
+<p>就像这样</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line"></span><br><span class="line">import { watch, reactive, ref } from 'vue';</span><br><span class="line"></span><br><span class="line">let test = ref("Hello World");</span><br><span class="line"></span><br><span class="line">let person = reactive({</span><br><span class="line">  name: 'John Doe',</span><br><span class="line">  age: 30,</span><br><span class="line">  car: {</span><br><span class="line">    model: 'Toyota',</span><br><span class="line">    year: 2020,</span><br><span class="line">  }</span><br><span class="line">})</span><br><span class="line"></span><br><span class="line">watch([() =&gt; person.name, () =&gt; person.car], (newName, oldName) =&gt; {</span><br><span class="line">  console.log(oldName, '-&gt;', newName);</span><br><span class="line">}, {deep : true});</span><br><span class="line"></span><br><span class="line">function updateName() {</span><br><span class="line">  person.name = 'Jane Smith';</span><br><span class="line">}</span><br><span class="line">function updateCar() {</span><br><span class="line">  person.car = { model: 'Ford', year: 2021 };</span><br><span class="line">}</span><br><span class="line">function updateCarModel() {</span><br><span class="line">  person.car.model = 'Honda';</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="watchEffect"><a href="#watchEffect" class="headerlink" title="watchEffect"></a>watchEffect</h2><p>是一个自动监视的函数。何为自动？就是不需要自己指出监视哪些变量，只要你用到了这个对象，他就会帮你自动监视。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line"></span><br><span class="line">import { ref, watchEffect} from 'vue';</span><br><span class="line"></span><br><span class="line">let num = ref(0);</span><br><span class="line">watchEffect(() =&gt; {</span><br><span class="line">  console.log(`num is: ${num.value}`);</span><br><span class="line">  if(num.value &gt; 5) {</span><br><span class="line">    num.value = 0;</span><br><span class="line">  }</span><br><span class="line">});</span><br><span class="line">function updateNum() {</span><br><span class="line">  num.value++;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>有点强</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+</html>
