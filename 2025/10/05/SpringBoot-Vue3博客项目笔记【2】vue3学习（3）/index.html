@@ -230,7 +230,7 @@ mjx-container[display="true"] + br {
     </div>
     
         <div id="toc" class="toc-article">
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3interface"><span class="toc-text">接口interface</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-%E7%AC%A6%E5%8F%B7"><span class="toc-text">配置@符号</span></a></li></ol>
 </div>
     
 </div>
@@ -283,7 +283,18 @@ mjx-container[display="true"] + br {
 </span>
     </div>
     <div class="post-content ">
-        
+        <h2 id="接口interface"><a href="#接口interface" class="headerlink" title="接口interface"></a>接口interface</h2><p>就相当于一个结构体，语法：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">interface</span> cry{</span><br><span class="line">    <span class="attr">time</span>: <span class="title class_">Date</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="built_in">string</span>,</span><br><span class="line">}</span><br><span class="line"><span class="comment">//导入</span></span><br><span class="line"><span class="keyword">import</span> {<span class="keyword">type</span> cry} <span class="keyword">from</span> <span class="string">"@/types"</span>;</span><br><span class="line"><span class="keyword">let</span> crys : <span class="title class_">Array</span>&lt;cry&gt; = [</span><br><span class="line">    {<span class="number">2025</span>-<span class="number">11</span>-10<span class="attr">T08</span>:<span class="number">00</span>:00Z, <span class="string">"devil may cry"</span>}</span><br><span class="line">] </span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="配置-符号"><a href="#配置-符号" class="headerlink" title="配置@符号"></a>配置@符号</h2><p>通常将@符表示以src为根路径，比如@/types/就表示src/types，但是这个符号并非默认，需要手动配置。打开tsconfig.json，添加：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"CompilerOptions"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">		<span class="attr">"baseUrl"</span> <span class="punctuation">:</span> <span class="string">"."</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">"paths"</span><span class="punctuation">:</span><span class="punctuation">{</span></span><br><span class="line">            <span class="attr">"@/*"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"src/*"</span><span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">}</span></span><br><span class="line">    <span class="punctuation">}</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></table></figure>
+
+<p>为什么”@/*”后面映射的是括号？gpt说里面可以包含多个路径，按照数组的顺序，找不到就找下一个。</p>
+
         
         <br />
         <div id="comment-container">
